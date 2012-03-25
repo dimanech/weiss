@@ -1,0 +1,96 @@
+/* ============================================================================
+    Design specific
+    
+    Import from THEMED.scss
+============================================================================= */
+
+/* ============================================================================
+    Header
+============================================================================= */
+
+#header {
+    margin-bottom: 1.5em;
+    
+  .left-side,
+  .right-side {
+    width: 45%;
+    float:left;
+  }
+  
+  .right-side {
+    float:right;
+  }
+  
+}
+
+#site-name {}
+
+#site-slogan {}
+
+#nav {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    clear:both;
+    
+  li {
+    list-style: none;
+    background:none;
+    margin: 0;
+    padding: 0;
+    display:inline;
+    
+    a {
+      .active, &:hover, &:focus {
+        color:#333;
+      }
+    }
+  }
+  
+}
+
+
+/* ============================================================================
+    Main
+============================================================================= */
+
+
+
+/* ============================================================================
+    Footer
+============================================================================= */
+
+#footer {
+    font-size: .9em;
+    padding: 1em 0;
+    
+  .left-side, .right-side {
+    width: 45%;
+  }
+
+  .left-side {
+    float: left;
+  }
+
+  .right-side {
+    float: right;
+    text-align: right;
+  }
+    
+  p {
+    padding: 0 1em;
+    
+    &.copy span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      padding-bottom: .2em;
+    }
+    
+    &.develop img {
+      vertical-align: middle;
+    }
+    
+  }
+  
+}

@@ -1,0 +1,287 @@
+/* ============================================================================
+    Import from masterclasses.scss
+
+    Master-classes
+============================================================================= */
+
+ul.unstyled {
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+    }
+}
+
+/* clear floats */
+
+.clearfix {
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+
+  .ie-old & {zoom: 1;}
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+/*
+  Develop support
+ */
+
+.grid {
+    background: url(../images/12_col.gif);
+}
+
+#header, #footer, #content, .aside, #before-content, #under-content, .block {
+    outline: 1px dashed #ccc;
+}
+
+/* ============================================================================
+    buttons universal
+============================================================================= */
+
+.bt {
+    display:inline-block;
+    padding: 0 7px;
+    vertical-align: text-bottom;
+
+    .ie-old & {
+      display:inline;
+      zoom: 1;
+    }
+
+  .b-left-side,
+  .b-middle,
+  .b-right-side {
+    display:inline-block;
+    float:left;
+    vertical-align: top;
+    background-repeat: repeat-y;
+    .ie-old {
+     display:inline;
+     zoom: 1;
+    }
+  }
+
+  input {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .b-left-side,
+  .b-right-side {
+    width: 7px;
+  }
+
+  .b-middle {
+    background-position: center top;
+  }
+
+  .b-left-side {
+    background-position: left top;
+  }
+
+  .b-right-side {
+    background-position: right top;
+  }
+
+  &:hover {
+    span {
+      opacity: .92;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+      filter: alpha(opacity = 92);
+    }
+  }
+
+}
+
+.bt-green-med {
+   height: 31px;
+   line-height: 31px;
+   font-size: 18px;
+
+  .b-left-side,
+  .b-middle,
+  .b-right-side {
+    /* background-image: url(../images/button-green-medium.png); */
+    height: 31px;
+    line-height: 31px;
+  }
+
+  .b-middle {
+    padding: 0 .4em;
+  }
+
+}
+
+/* ============================================================================
+    Forms support
+============================================================================= */
+
+.form-row {
+  width: 100%;
+  overflow:hidden;
+  clear:both;
+  padding: .4em 0;
+}
+
+.input-container {
+    display: inline-block;
+    padding: .2em .2em .1em;
+    /* background: url(../images/input.png) 0 0 no-repeat; */
+    vertical-align: bottom;
+
+    .ie-old {
+      display:inline;
+      zoom: 1;
+    }
+
+    input {
+      padding: 0 .4em;
+      margin: 0;
+      background: transparent;
+      border: none;
+    }
+}
+
+/* ============================================================================
+    blocks
+============================================================================= */
+
+.c-container {
+    width: $conatiner-width;
+    margin: 0 auto;
+    background-color: $main-bg-color;
+}
+
+.block {
+    position: relative;
+}
+
+.left-side {
+    float:left;
+}
+
+.right-side {
+    float:right;
+}
+
+span.flush {
+    display:block;
+}
+
+/* ============================================================================
+    stylize text
+============================================================================= */
+
+.emph {
+    font-style: italic;
+}
+
+.emph-fz-sm {
+    font-size: .8em;
+}
+
+.emph-fz-md {
+    font-size: 1.28em;
+}
+
+.emph-fz-big {
+    font-size: 1.57em;
+    line-height: 1.1em;
+}
+
+.emph-fz-bigest {}
+
+.emph-serif {
+    font-family: $serif;
+}
+
+.emph-sans {
+    font-family: $sans;
+}
+
+.emph-c {
+    color: $emph-c;
+}
+
+.emph-c-ln {
+    color: $link-color;
+}
+
+.emph-c-dark {
+    color: darken($base-color, 20%);
+}
+
+.emph-c-ligh {
+    color: lighten($base-color, 20%);
+}
+
+.tagline,
+.alt-title {
+    font-style: italic;
+}
+
+.psln {
+  color: $link-color;
+  border-bottom: 1px dashed;
+  position: relative;
+  cursor:pointer;
+
+  &:hover, &:focus {
+    color: lighten($link-color, 20%);
+  }
+}
+
+/* ============================================================================
+    sprite support
+============================================================================= */
+
+span.ico {
+    display: inline-block;
+}
+
+.ie-old span.ico {
+    display: inline;
+    zoom: 1;
+}

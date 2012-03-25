@@ -1,0 +1,338 @@
+/* ============================================================================
+    Import from screen.scss 
+    
+    14.MEDIA QUERIES
+============================================================================= */
+
+@media screen and (min-width:1281px) {
+    #device-visualizer {
+        background-position: 9px center;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    /* Desktop */
+    /* =========================== main ============================= */
+
+    #device-visualizer {
+        background-position: -113px center;
+    }
+
+    /* end @media*/
+}
+
+@media screen and (max-width:1024px) {
+    /* tablet landscape */
+    /* ========================== layout ============================ */
+
+    /* by default inherit from PC */
+
+    #main-container {
+        padding: 0 1em;
+    }
+
+    #main-inner {
+        width: 100%;
+    }
+
+    body.two-sidebars #main-container {
+        padding: 0;
+    }
+
+    /* =========================== footer =========================== */
+
+    #footer #footer-inner {
+        width: 100%;
+    }
+
+    /* =========================== other ============================ */
+
+    #device-visualizer {
+        background-position: -230px center;
+    }
+
+    /* end @media*/
+}
+
+@media screen and (max-width:768px) {
+    /* tablet portraite */
+
+    /* ========================== layout ============================== */
+
+    #main,
+    body.sidebar-second #main,
+    body.sidebar-first #main {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    body.sidebar-second .aside,
+    body.sidebar-first .aside {
+        width: 100%;
+        float: none;
+    }
+
+    body.two-sidebars #main {
+        float: right;
+        width: 74.4%;
+        margin: 0 0 1.5em;
+    }
+
+    body.two-sidebars #sidebar-first {
+        float: left;
+        width: 23.4%;
+        margin: 0;
+    }
+
+    body.two-sidebars #sidebar-second {
+        float: none;
+        width: 100%;
+    }
+
+    /* =========================== footer =========================== */
+
+    #footer-left, #footer-right {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    #footer p.copy {
+        padding-top: 1em;
+    }
+
+    #device-visualizer {
+        background-position: -338px center;
+    }
+
+    /* Sticky footer reset */
+
+    html, body {
+        height: auto;
+    }
+
+    #main-container {
+        min-height: auto;
+        height: auto !important;
+        margin: 0 auto 0;
+    }
+
+    #main-inner {
+        padding-bottom: 0;
+    }
+
+    #footer {
+        position: relative;
+        height: auto;
+    }
+
+    /* end @media*/
+}
+
+@media screen and (max-width:600px) {
+    /* small tablet */
+
+    img, object, embed, video, iframe {
+        max-width: 100%;
+        _width: 100%;
+        height: auto;
+    }
+
+    #main-container {
+        padding: 0;
+    }
+
+    body.two-sidebars #main {
+        width: 100%;
+        clear: both;
+    }
+
+    body.two-sidebars #sidebar-first,
+    body.two-sidebars #sidebar-second {
+        width: 48%;
+    }
+
+    body.two-sidebars #sidebar-first {
+        float: left;
+    }
+
+    body.two-sidebars #sidebar-second {
+        float: right;
+    }
+
+    /* ========================== navigation ======================== */
+
+    #nav {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #device-visualizer {
+        background-position: -434px center;
+    }
+
+    /* end @media*/
+}
+
+@media screen and (max-width:480px) {
+    /* Smart Phone landscape */
+
+    /* =========================== basic ============================ */
+
+    input[type="text"],
+    input[type="password"],
+    input[type="search"],
+    input[type="button"],
+    input[type="submit"],
+    input[type="image"],
+    button,
+    select {
+        width: 100%;
+    }
+
+    textarea {
+        width: 95%;
+    }
+
+    #main p img {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ========================== layout ============================ */
+
+    #main {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        clear: both;
+    }
+
+    /* ========================= sidebars =========================== */
+
+    #sidebar-first,
+    #sidebar-second,
+    body.two-sidebars #sidebar-first,
+    body.two-sidebars #sidebar-second {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #device-visualizer {
+        background-position: -515px center;
+    }
+
+    /* end @media*/
+}
+
+@media screen and (max-width:320px) {
+    /* Smart Phone portraite*/
+    /* by default inherit from Smart Phone landskape */
+
+    #main-container {
+        min-width: 200px;
+    }
+
+    #device-visualizer {
+        background-position: -590px center;
+    }
+
+    /* end @media*/
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* "Retina" display styles */
+
+    /* end @media*/
+}
+
+/*
+  Media Print
+*/
+@media print {
+    /* first some general resets */
+    @page {
+        margin: 1.5cm;
+    }
+
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important
+    }
+
+    h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+        break-inside: avoid;
+        break-after: avoid;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    a, a:visited {
+        color: #444 !important;
+        text-decoration: underline;
+    }
+
+    #main .content a[href]:after {
+        /* add links only for content */
+        content: " (" attr(href) ")" !important;
+        font-family: monospace !important; /* fix external links font */
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: ""; /* Don't print links for images, javascript or internal links */
+    }
+
+    pre, blockquote {
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* Repeat header row at top of each printed page */
+        page-break-inside: avoid;
+    }
+
+    tr, img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /* hide elements that are unnecessary to print */
+    #sidebar-first,
+    #sidebar-second {
+        display: none !important;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    /* some cosmetic changes */
+
+    #header {
+        padding-top: 0;
+    }
+
+    /* end media print */
+}

@@ -1,0 +1,9 @@
+.sass-cache
+.idea
+.project
+.pydevproject
+.externalToolBuilders
+.settings
+
+design
+arch

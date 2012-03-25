@@ -1,0 +1,550 @@
+/* ============================================================================
+    Variables
+============================================================================= */
+
+$base-fsz: 1em;
+$main-bg-color: #fff;
+$main-fg-color: #ccc;
+$base-color: #434343;
+$link-color: #ffff00;
+$emph-c: #eb001b;
+$conatiner-width: 974px;
+$main-width: percentage(724px / $conatiner-width);
+$aside-width: percentage(227px / $conatiner-width);
+$two-sidebars-main-width: percentage(474px / $conatiner-width);
+
+/* fonts */
+$sans: Arial, FreeSans, sans-serif;
+$h-sans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
+$h-sans-cond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
+$serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+$b-serif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
+$a-serif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
+$monosp-serif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+$monosp-sans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+
+/* sass --watch -t expanded sass:css
+ *
+ * http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+ * http://sass-lang.com/tutorial.html
+ * http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+ *
+ * */
+
+/*
+ * 16px-100%
+ * 15px-93.8%
+ * 14px-87.5%
+ * 13px-0.813%
+ * 12px-75%
+ * */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
+mark, audio, video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block; /* anonymous inline element fix for older browsers if js has been off */
+}
+
+audio, canvas, video {
+    display: inline-block;
+
+    .ie-old & {
+      display: inline;
+      zoom: 1;
+    }
+}
+
+blockquote, q {
+    quotes: none;
+    &:before, &:after {
+      content: '';
+      /* remove this because real user don`t format this way */
+    }
+}
+
+/* ============================================================================
+    1. BASIC
+============================================================================= */
+
+/* typography */
+
+h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    break-inside: avoid;
+    break-after: avoid;
+    line-height: 1.2em;
+}
+
+h1, h2, .h1, .h2 {
+}
+
+h1, .h1, .aside h2, .aside .h2 {
+    font-size: 2.14em;
+    margin: 0 0 1em;
+}
+
+h2, .h2 {
+    font-size: 1.5em;
+    margin: .83em 0;
+}
+
+h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+}
+
+h3, .h3 {
+    font-size: 1.17em;
+    line-height: 1.429em;
+    margin: 1em 0;
+}
+
+h4, .h4 {
+    font-size: 1em;
+    margin: 1.3em 0;
+}
+
+h5, .h5, h6, .h6 {
+    font-size: 1em;
+    font-style: italic;
+    margin: 1.67em 0;
+}
+
+h6, .h6 {
+    font-weight: normal;
+}
+
+p, pre, blockquote, table {
+    margin: 0 0 1em 0;
+}
+
+p {
+    font-size: 1em;
+}
+
+blockquote {
+    margin-left: 4.2em;
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i, cite {
+    font-style: italic;
+}
+
+/* NOTE: link pseudoclases order -- link, visited, hover, active */
+
+a:link, a:visited {
+    color: $link-color;
+}
+
+a:hover, a:active {
+    color: lighten($link-color, 20%);
+}
+
+img {
+    font-size: 1em;
+    color: #444; /* alt text style */
+    -ms-interpolation-mode: bicubic; /* improve IE's resizing of images */
+    position: relative;
+    /* Chrome outline around img in a; ie5-6 floating image disappearing fix */
+
+   a &, a:link &, a:visited & {
+     border: 0 none;
+   }
+
+   #main p & {
+     float: left;
+     padding: 0 1em 0 0;
+   }
+
+   &::-moz-selection {background: transparent;}
+
+   &::selection {background: transparent;}
+
+}
+
+::selection {text-shadow: none;}
+::-moz-selection {text-shadow: none;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+/* ============================================================================
+    lists and tables
+============================================================================= */
+
+ul, ol, dl {
+    margin: 0 1.5em 1.5em 0;
+    padding-left: 1.5em;
+}
+
+ul, ol {
+  li {
+    margin: .357em 0 .357em 1.5em;
+  }
+}
+
+ul li {
+    list-style: disc outside;
+}
+
+ol li {
+    list-style: decimal outside;
+}
+
+dl dt, dfn {
+    font-weight: bold;
+    font-style: italic;
+}
+
+dl dd {
+    margin-left: 1.5em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+caption {
+    font-size: 1.429em;
+    padding-bottom: .429em;
+    border-bottom: 1px solid #ccc;
+}
+
+th, tr, td {
+    vertical-align: middle;
+    padding: 0 .429em;
+}
+
+thead {
+  td, th {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+
+  td:last-child,
+  th:last-child {
+    border-right: none;
+  }
+
+}
+
+tbody {
+    border-top: 1px solid #ccc;
+
+  td {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+tfoot {
+    text-align: center;
+    font-style: italic;
+    border-top: 1px solid #ccc;
+}
+
+/* ============================================================================
+    Forms and inputs
+============================================================================= */
+
+form {
+  border:none;
+}
+
+button, input, select, textarea {
+    font: normal normal 1em /1.429em Arial, FreeSans, sans-serif;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+label {
+    display: block;
+    font-weight: normal;
+}
+
+input {
+  &[type="button"], &[type="submit"], &[type="reset"], &[type="image"] {
+    cursor: default;
+    -webkit-appearance: button;
+
+    &:hover, &:focus {
+      background-color: red;
+    }
+  }
+
+  &[type="text"], &[type="password"] {
+    padding: 0 .2em;
+  }
+
+  &[type="checkbox"], &[type="radio"] {
+    box-sizing: border-box;
+  }
+
+  &[type="radio"]{
+    vertical-align: text-top;
+  }
+
+  &[type="checkbox"] {
+    vertical-align: baseline;
+  }
+
+  &[type="search"] {
+     -webkit-appearance: none;
+    /* fix webKit (x)-button and resistance */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+
+}
+
+button {
+
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    /*Remove inner padding and border in FF3/4*/
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+   padding: .2em .429em;
+   overflow: auto;
+   vertical-align: top;
+   resize: vertical;
+}
+
+select {
+}
+
+optgroup {
+    font-weight: normal;
+    background: #ccc;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    margin: 0 0 1.4375em;
+    padding: 1.5em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+.ie-old {
+  button, input, select, textarea {
+    vertical-align: middle;
+  }
+
+  button, input {
+    overflow: visible;
+  }
+
+  legend {
+    margin-left: -7px;
+  }
+
+}
+
+/* placeholder styles */
+
+input::-webkit-input-placeholder {
+}
+
+input:-moz-placeholder {
+}
+
+/* Colors for native form validition */
+
+input:valid, textarea:valid {
+}
+
+input:invalid, textarea:invalid {
+}
+
+/* ============================================================================
+    Specific
+============================================================================= */
+
+sup, sub {
+    position: relative;
+    font-size: .8em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+}
+
+hr {
+    background: #666;
+    border: none;
+    clear: both;
+    float: none;
+    height: 1px;
+    margin: 0 0 1.4375em;
+    width: 100%;
+}
+
+u {
+    text-decoration: none;
+    /* remove textdecoration <u> for save <a> style, if <a> not mark by color */
+}
+
+svg:not(:root) {
+    overflow: hidden; /* Correct overflow not hidden in IE9 */
+}
+
+figure {
+    margin: 0;
+}
+
+/* ============================================================================
+    Page Layout
+============================================================================= */
+
+body {
+    font: normal normal 87.5%/1.3em #{$sans};
+    color: $base-color;
+    background: $main-bg-color;
+    overflow-y: scroll; /* force scroll */
+
+   .ie-old & {
+     overflow-y: auto; /* ie sticky footer fix. If not sticky */
+   }
+}
+
+/* header */
+
+#header {
+    width: 100%;
+}
+
+/* main */
+
+#main-container {
+    background-color: $main-fg-color;
+}
+
+#main-inner {
+    width: $conatiner-width;
+    margin: 0 auto;
+    position: relative;
+    background-color: $main-bg-color;
+}
+
+#main {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+body.two-sidebars #main {
+    float: left;
+    margin-left: $aside-width+2.5%;
+    width: $two-sidebars-main-width;
+}
+
+body.sidebar-first #main {
+    float: right;
+    width: $main-width;
+}
+
+body.sidebar-second #main {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: $main-width;
+}
+
+/* sidebars */
+
+body.two-sidebars #sidebar-first {
+    float: left;
+    margin-left: -$main-width;
+    width: $aside-width;
+}
+
+body.two-sidebars #sidebar-second {
+    float: right;
+    width: $aside-width;
+}
+
+body.sidebar-first .aside, body.sidebar-second .aside {
+    float: left;
+    width: $aside-width;
+}
+
+body.sidebar-second .aside {
+    float: right;
+}
+
+/* footer */
+
+#footer {
+    clear: both;
+    overflow: hidden;
+}
+
+/* Styicky footer */
+
+/* pseudo sticky
+ #main-container {
+ min-height: 55em;
+ } */
+
+@media screen and (max-width: 2400px) {
+
+$footer-height: 50px;
+
+    html, body {
+        height: 100%;
+    }
+
+    #main-container {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto;
+        margin-bottom: -$footer-height * 1.5;
+    }
+
+    #main-inner {
+        padding-bottom: $footer-height * 2;
+    }
+
+    #footer {
+        position: relative;
+        height: $footer-height;
+    }
+}
