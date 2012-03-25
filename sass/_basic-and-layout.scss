@@ -1,6 +1,18 @@
-/* ============================================================================
-    Variables
-============================================================================= */
+//  __  __  __    _   
+//  \ \/  \/ /__ (_) __  __                /\
+//   \  /\  / -_)| |(__ (__            /\ /  \/\
+//    \/  \/\___||_| __) __) css helper  /\/\/\ \
+//         https://github.com/dimanech/weiss   \ \
+//
+// ============================================================================
+//    Variables
+// ============================================================================
+
+// 16px-100%
+// 15px-93.8%
+// 14px-87.5%
+// 13px-0.813%
+// 12px-75%
 
 $base-fsz: 1em;
 $main-bg-color: #fff;
@@ -13,7 +25,7 @@ $main-width: percentage(724px / $conatiner-width);
 $aside-width: percentage(227px / $conatiner-width);
 $two-sidebars-main-width: percentage(474px / $conatiner-width);
 
-/* fonts */
+// fonts
 $sans: Arial, FreeSans, sans-serif;
 $h-sans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
 $h-sans-cond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
@@ -22,22 +34,14 @@ $b-serif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
 $a-serif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
 $monosp-serif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
 $monosp-sans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$grot-cond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
+$slab-serif: "DejaVu Serif", serif;
 
-/* sass --watch -t expanded sass:css
- *
- * http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
- * http://sass-lang.com/tutorial.html
- * http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
- *
- * */
+// sass --watch -t expanded sass:css
 
-/*
- * 16px-100%
- * 15px-93.8%
- * 14px-87.5%
- * 13px-0.813%
- * 12px-75%
- * */
+// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// http://sass-lang.com/tutorial.html
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
 big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
@@ -53,7 +57,7 @@ mark, audio, video {
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-    display: block; /* anonymous inline element fix for older browsers if js has been off */
+    display: block; // anonymous inline element fix for older browsers if js has been off
 }
 
 audio, canvas, video {
@@ -69,7 +73,7 @@ blockquote, q {
     quotes: none;
     &:before, &:after {
       content: '';
-      /* remove this because real user don`t format this way */
+      // remove this because real user don`t format this way
     }
 }
 
@@ -77,11 +81,11 @@ blockquote, q {
     1. BASIC
 ============================================================================= */
 
-/* typography */
+/* ============================================================================
+    1.1. Typography
+============================================================================= */
 
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-    break-inside: avoid;
-    break-after: avoid;
     line-height: 1.2em;
 }
 
@@ -144,24 +148,32 @@ em, i, cite {
     font-style: italic;
 }
 
-/* NOTE: link pseudoclases order -- link, visited, hover, active */
+// NOTE: link pseudoclases order -- link, visited, hover, active
 
-a:link, a:visited {
+a {
+  color: $link-color;
+  
+  &:visited {
     color: $link-color;
-}
-
-a:hover, a:active {
+  }
+  
+  &:hover, &active {
     color: lighten($link-color, 20%);
+  }
+  
+  &[href^="callto"], &[href^="mailto"] {
+    @extend .psln;
+  }
 }
 
 img {
     font-size: 1em;
-    color: #444; /* alt text style */
-    -ms-interpolation-mode: bicubic; /* improve IE's resizing of images */
+    color: #444; // alt text style 
+    -ms-interpolation-mode: bicubic; // improve IE's resizing of images 
     position: relative;
-    /* Chrome outline around img in a; ie5-6 floating image disappearing fix */
+    // Chrome outline around img in a; ie5-6 floating image disappearing fix 
 
-   a &, a:link &, a:visited & {
+   a &, a:visited & {
      border: 0 none;
    }
 
@@ -170,18 +182,30 @@ img {
      padding: 0 1em 0 0;
    }
 
-   &::-moz-selection {background: transparent;}
+   &::-moz-selection {
+     background: transparent;
+   }
 
-   &::selection {background: transparent;}
+   &::selection {
+     background: transparent;
+   }
 
 }
 
-::selection {text-shadow: none;}
-::-moz-selection {text-shadow: none;}
-body {-webkit-tap-highlight-color: rgb(255,255,158);}
+::selection {
+  text-shadow: none;
+}
+
+::-moz-selection {
+  text-shadow: none;
+}
+
+body {
+  -webkit-tap-highlight-color: rgb(255,255,158);
+}
 
 /* ============================================================================
-    lists and tables
+    1.2. Lists and tables
 ============================================================================= */
 
 ul, ol, dl {
@@ -260,7 +284,7 @@ tfoot {
 }
 
 /* ============================================================================
-    Forms and inputs
+    1.3. Forms
 ============================================================================= */
 
 form {
@@ -306,7 +330,7 @@ input {
 
   &[type="search"] {
      -webkit-appearance: none;
-    /* fix webKit (x)-button and resistance */
+    // fix webKit (x)-button and resistance
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -323,7 +347,7 @@ button {
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
-    /*Remove inner padding and border in FF3/4*/
+    // Remove inner padding and border in FF3/4
     border: 0;
     padding: 0;
 }
@@ -386,7 +410,7 @@ input:invalid, textarea:invalid {
 }
 
 /* ============================================================================
-    Specific
+    1.4. Specific
 ============================================================================= */
 
 sup, sub {
@@ -419,11 +443,7 @@ hr {
 
 u {
     text-decoration: none;
-    /* remove textdecoration <u> for save <a> style, if <a> not mark by color */
-}
-
-svg:not(:root) {
-    overflow: hidden; /* Correct overflow not hidden in IE9 */
+    // remove textdecoration <u> for save <a> style, if <a> not mark by color 
 }
 
 figure {
@@ -431,17 +451,17 @@ figure {
 }
 
 /* ============================================================================
-    Page Layout
+    1.5. Page Layout
 ============================================================================= */
 
 body {
     font: normal normal 87.5%/1.3em #{$sans};
     color: $base-color;
     background: $main-bg-color;
-    overflow-y: scroll; /* force scroll */
+    overflow-y: scroll; // force scroll 
 
    .ie-old & {
-     overflow-y: auto; /* ie sticky footer fix. If not sticky */
+     overflow-y: auto; // ie sticky footer fix 
    }
 }
 
@@ -536,7 +556,7 @@ $footer-height: 50px;
         height: auto !important;
         height: 100%;
         margin: 0 auto;
-        margin-bottom: -$footer-height * 1.5;
+        margin-bottom: -$footer-height;
     }
 
     #main-inner {

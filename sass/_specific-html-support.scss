@@ -1,7 +1,7 @@
 /* ============================================================================
     Import from Specific-html-support.scss
     
-    Specific html tags support
+    2. Specific html tags support
 ============================================================================= */
 
 /* science */
@@ -29,9 +29,9 @@ pre, code, tt, samp, kbd {
 }
 
 pre {
-    white-space: pre; /* CSS2 */
-    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word; /* IE */
+    white-space: pre; // CSS2
+    white-space: pre-line; // CSS 3 (and 2.1 as well, actually)
+    word-wrap: break-word; // IE 
     background-color: #3a3739;
     color: #ccc;
     padding: .643em 0 .643em 2em;

@@ -1,17 +1,52 @@
 /* ============================================================================
     Import from masterclasses.scss
 
-    Master-classes
+    4. MASTER-CLASSES
+============================================================================= */
+#header, #footer, #content, .aside, #before-content, #under-content, .block {
+    outline: 1px dashed #ccc;
+}
+
+/* ============================================================================
+    
 ============================================================================= */
 
-ul.unstyled {
-    margin: 0;
-    padding: 0;
-
-    li {
-        margin: 0;
-    }
+@mixin bdradius($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
+
+@mixin bsh($bshval: 0px 0px 0.83em rgba(0,0,0,0.5)) {
+  -moz-box-shadow: $bshval;
+  -webkit-box-shadow: $bshval;
+  -o-box-shadow: $bshval;
+  -box-shadow: $bshval;
+}
+
+@mixin transition($transition: all linear 200ms) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin op-ie {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 93)";
+   filter: alpha(opacity = 93);
+}
+
+@mixin dib-ie {
+  *display: inline;
+  *zoom: 1;
+}
+
+//.test-class {
+//  @include transition(all ease 300ms);
+//}
+
 
 /* clear floats */
 
@@ -28,57 +63,131 @@ ul.unstyled {
   .ie-old & {zoom: 1;}
 }
 
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden {
-    display: none !important;
-    visibility: hidden;
+/* ============================================================================
+    Grid support
+============================================================================= */
+
+$grid-static-width: 940px;
+$grid-width: 60px;
+$gutter-width: 20px;
+
+@function grid-width($n) {
+  @return percentage(($n * $grid-width + ($n - 1) * $gutter-width) / $grid-static-width);
 }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+.grid {
+  background: url(../images/arch/12_col.gif);
 }
 
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+.grid-row {
+  width: 100%;
+    
+  @extend .clearfix;
+  
+  .gr-cell {
+    float: left;
+    margin-left: percentage($gutter-width / $grid-static-width);
+  }
+  
+  .gr-cell.first-child {
+    margin-left: 0;
+  }
+  
+  @each $n in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
+    .span#{$n} {
+      width: grid-width($n);
+    }
+  }
 
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible {
-    visibility: hidden;
 }
 
 /*
-  Develop support
- */
+  
+.gr-cell {
+    float: left;
+    margin-left: 2.564102564%;
+  }
+  
+ .row-fluid > .span12 {
+    width: 100%;
+  }
+  .row-fluid > .span11 {
+    width: 91.45299145300001%;
+  }
+  .row-fluid > .span10 {
+    width: 82.905982906%;
+  }
+  .row-fluid > .span9 {
+    width: 74.358974359%;
+  }
+  .row-fluid > .span8 {
+    width: 65.81196581200001%;
+  }
+  .row-fluid > .span7 {
+    width: 57.264957265%;
+  }
+  .row-fluid > .span6 {
+    width: 48.717948718%;
+  }
+  .row-fluid > .span5 {
+    width: 40.170940171000005%;
+  }
+  .row-fluid > .span4 {
+    width: 31.623931624%;
+  }
+  .row-fluid > .span3 {
+    width: 23.076923077%;
+  }
+  .row-fluid > .span2 {
+    width: 14.529914530000001%;
+  }
+  .row-fluid > .span1 {
+    width: 5.982905983%;
+  }
+ * */
 
-.grid {
-    background: url(../images/12_col.gif);
+ul.flat {
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        list-style: none;
+        background:none;
+    }
 }
 
-#header, #footer, #content, .aside, #before-content, #under-content, .block {
-    outline: 1px dashed #ccc;
+/* ============================================================================
+    blocks
+============================================================================= */
+
+.c-container {
+    width: $conatiner-width;
+    margin: 0 auto;
+    background-color: $main-bg-color;
+}
+
+.block {
+    position: relative;
+}
+
+.left-side {
+    float:left;
+}
+
+.right-side {
+    float:right;
+}
+
+span.flush {
+    display:block;
 }
 
 /* ============================================================================
     buttons universal
 ============================================================================= */
 
-.bt {
+.btn {
     display:inline-block;
     padding: 0 7px;
     vertical-align: text-bottom;
@@ -135,7 +244,7 @@ ul.unstyled {
 
 }
 
-.bt-green-med {
+.btn-prim {
    height: 31px;
    line-height: 31px;
    font-size: 18px;
@@ -146,6 +255,25 @@ ul.unstyled {
     /* background-image: url(../images/button-green-medium.png); */
     height: 31px;
     line-height: 31px;
+  }
+
+  .b-middle {
+    padding: 0 .4em;
+  }
+
+}
+
+.btn-sec {
+   height: 18px;
+   line-height: 18px;
+   font-size: 1em;
+
+  .b-left-side,
+  .b-middle,
+  .b-right-side {
+    /* background-image: url(../images/button-green-medium.png); */
+    height: 18px;
+    line-height: 18px;
   }
 
   .b-middle {
@@ -182,32 +310,6 @@ ul.unstyled {
       background: transparent;
       border: none;
     }
-}
-
-/* ============================================================================
-    blocks
-============================================================================= */
-
-.c-container {
-    width: $conatiner-width;
-    margin: 0 auto;
-    background-color: $main-bg-color;
-}
-
-.block {
-    position: relative;
-}
-
-.left-side {
-    float:left;
-}
-
-.right-side {
-    float:right;
-}
-
-span.flush {
-    display:block;
 }
 
 /* ============================================================================
@@ -266,7 +368,7 @@ span.flush {
   color: $link-color;
   border-bottom: 1px dashed;
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
 
   &:hover, &:focus {
     color: lighten($link-color, 20%);
@@ -284,4 +386,43 @@ span.ico {
 .ie-old span.ico {
     display: inline;
     zoom: 1;
+}
+
+/* ============================================================================
+    Unusible
+============================================================================= */
+
+
+// Hide from both screenreaders and browsers: h5bp.com/u 
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+// Hide visually and from screenreaders, but maintain layout 
+.invisible {
+    visibility: hidden;
 }
