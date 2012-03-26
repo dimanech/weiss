@@ -84,7 +84,7 @@ a {
   color: yellow; }
 a:visited {
   color: yellow; }
-a:hover, a active {
+a:hover, a:active {
   color: #ffff66; }
 
 img {
@@ -102,14 +102,22 @@ img::-moz-selection {
 img::selection {
   background: transparent; }
 
-::selection {
+/* selection fixes */
+::-moz-selection {
   text-shadow: none; }
 
-::-moz-selection {
+::-webkit-selection {
+  text-shadow: none; }
+
+::selection {
   text-shadow: none; }
 
 body {
   -webkit-tap-highlight-color: #ffff9e; }
+
+*:target {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  -webkit-animation: focused 2s; }
 
 /* ============================================================================
     1.2. Lists and tables
@@ -202,6 +210,18 @@ input[type="search"] {
   box-sizing: content-box; }
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
+input input[type="text"], input input[type="password"], input input[type="search"], input select, input textarea {
+  border: 1px solid;
+  border-color: #777 #ccc #ccc;
+  background: #fff; }
+input input[type="text"]:hover, input input[type="text"]:focus, input input[type="password"]:hover, input input[type="password"]:focus, input input[type="search"]:hover, input input[type="search"]:focus, input select:hover, input select:focus, input textarea:hover, input textarea:focus {
+  border-color: yellow; }
+input input[type="button"], input input[type="submit"], input input[type="image"], input button {
+  color: #efefef;
+  background: #2d2d2d;
+  border: 1px solid #2d2d2d; }
+input input[type="button"]:hover, input input[type="button"]:focus, input input[type="submit"]:hover, input input[type="submit"]:focus, input input[type="image"]:hover, input input[type="image"]:focus, input button:hover, input button:focus {
+  border-color: yellow; }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
@@ -476,6 +496,20 @@ ins {
 #footer p.develop img {
   vertical-align: middle; }
 
+/* ============================================================================
+    Other
+============================================================================= */
+/* Opera speed dial minimized */
+@media screen and (view-mode: minimized) {
+  body {
+    background: #c10000;
+    color: #fff; }
+
+  #main-container, #navigation, #header #logo {
+    display: none; }
+
+  #header #site-name a {
+    color: #fff; } }
 /* ============================================================================
     Import from masterclasses.scss
 

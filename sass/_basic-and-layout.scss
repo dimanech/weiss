@@ -1,4 +1,4 @@
-//  __  __  __    _   
+//  __  __  __    _
 //  \ \/  \/ /__ (_) __  __                /\
 //   \  /\  / -_)| |(__ (__            /\ /  \/\
 //    \/  \/\___||_| __) __) css helper  /\/\/\ \
@@ -152,15 +152,15 @@ em, i, cite {
 
 a {
   color: $link-color;
-  
+
   &:visited {
     color: $link-color;
   }
-  
-  &:hover, &active {
+
+  &:hover, &:active {
     color: lighten($link-color, 20%);
   }
-  
+
   &[href^="callto"], &[href^="mailto"] {
     @extend .psln;
   }
@@ -168,10 +168,10 @@ a {
 
 img {
     font-size: 1em;
-    color: #444; // alt text style 
-    -ms-interpolation-mode: bicubic; // improve IE's resizing of images 
+    color: #444; // alt text style
+    -ms-interpolation-mode: bicubic; // improve IE's resizing of images
     position: relative;
-    // Chrome outline around img in a; ie5-6 floating image disappearing fix 
+    // Chrome outline around img in a; ie5-6 floating image disappearing fix
 
    a &, a:visited & {
      border: 0 none;
@@ -192,16 +192,27 @@ img {
 
 }
 
-::selection {
-  text-shadow: none;
-}
+/* selection fixes */
 
 ::-moz-selection {
   text-shadow: none;
 }
 
+::-webkit-selection {
+  text-shadow: none;
+}
+
+::selection {
+  text-shadow: none;
+}
+
 body {
   -webkit-tap-highlight-color: rgb(255,255,158);
+}
+
+*:target {
+    border-bottom: 3px solid rgba(0, 0, 0, .1);
+    -webkit-animation: focused 2s;
 }
 
 /* ============================================================================
@@ -340,6 +351,33 @@ input {
     }
   }
 
+  // themed form
+
+  input[type="text"],
+  input[type="password"],
+  input[type="search"],
+  select, textarea {
+    border: 1px solid;
+    border-color: #777 #ccc #ccc;
+    background: #fff;
+
+    &:hover, &:focus {
+      border-color: $link-color;
+    }
+  }
+
+  input[type="button"],
+  input[type="submit"],
+  input[type="image"], button {
+    color: #efefef;
+    background: #2d2d2d;
+    border: 1px solid #2d2d2d;
+
+    &:hover, &:focus {
+      border-color: $link-color;
+    }
+  }
+
 }
 
 button {
@@ -443,7 +481,7 @@ hr {
 
 u {
     text-decoration: none;
-    // remove textdecoration <u> for save <a> style, if <a> not mark by color 
+    // remove textdecoration <u> for save <a> style, if <a> not mark by color
 }
 
 figure {
@@ -458,10 +496,10 @@ body {
     font: normal normal 87.5%/1.3em #{$sans};
     color: $base-color;
     background: $main-bg-color;
-    overflow-y: scroll; // force scroll 
+    overflow-y: scroll; // force scroll
 
    .ie-old & {
-     overflow-y: auto; // ie sticky footer fix 
+     overflow-y: auto; // ie sticky footer fix
    }
 }
 
