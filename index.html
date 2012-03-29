@@ -25,23 +25,29 @@
         <div id="main-container">
             <div id="main-inner" class="clearfix">
                 <header role="banner" id="header">
-                    <div class="site-name left-side">
-                        <h1>Sitename</h1>
-                        <!-- <a href="#">Sitename</a>-->
+                    <div class="left-side">
+                        <hgroup>
+                            <h1 id="site-name">Sitename</h1>
+                            <h2 id="site-slogan">Site slogan</h2>
+                        </hgroup>
+                        <!-- <a href="#">
+                        <span id="site-name">Sitename</span>
+                        <span id="site-slogan">Site slogan</span>
+                        </a> -->
                     </div>
-                    <div class="contacts right-side">
+                    <div class="right-side">
                         <a href="mailto:weiss@mail.com">weiss@mail.com</a>
                     </div>
                     <nav role="navigation">
                         <ul id="nav">
                             <li>
-                                <a href="javascript:void(0)" id="twocolumn-f">2 columns: sidebar-first</a>
+                                <a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" id="twocolumn-s" class="active">2 columns: sidebar-second</a>
+                                <a href="#" id="twocolumn-s" class="active">2 columns: sidebar-second</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" id="threecolumn">3 columns</a>
+                                <a href="#" id="threecolumn">3 columns</a>
                             </li>
                         </ul>
                     </nav>
@@ -49,9 +55,7 @@
                 <!-- /#header -->
                 <div role="main" id="main" class="clearfix">
                     <div id="content">
-                        <header>
-                            <h1>Заголовок 1</h1>
-                        </header>
+                        <h1>Заголовок 1</h1>
                         <p>
                             <img src="http://farm1.staticflickr.com/73/217023710_8feeb5fe00.jpg" width="333" height="500" alt="Alps" />
                             Альпы (фр. Alpes, нем. Alpen, итал. Alpi, словен. Alpe) — наиболее высокая горная система Западной
@@ -204,35 +208,37 @@ _body.appendChild(_coverElement);</pre>
                         </p>
                         <hr />
                         <form action="search_submit" method="get" accept-charset="utf-8">
-                            Search:
-                            <input name="search" results="5" type="search" />
-                            <br />
-                            <input name="search" type="search" />
+                            <div class="form-row">
+                                <label for="main-search">Search with autocomplete</label>
+                            	<input name="search" results="5" type="search" id="main-search" />
+                            </div>
+                            <div class="form-row">
+                                <label for="default-html5-search">Default Search</label>
+                            	<input name="search" type="search" id="default-html5-search" />
+                            </div>
                         </form>
                         <form action="login_submit" method="get" accept-charset="utf-8">
                             <fieldset>
-                                <legend>
-                                    Login-form
-                                </legend>
-                                <p class="row">
+                                <legend>Login-form</legend>
+                                <div class="form-row">
                                     <label for="name">Введите ваш логин</label>
                                     <input type="text" id="name" name="name" placeholder="placeholder login" />
-                                </p>
-                                <p class="row">
+                                </div>
+                                <div class="form-row">
                                     <input type="password" style="display: none;" tabindex="0" accesskey="" />
                                     <input name="password_" id="password_" type="text" autocomplete="off" />
-                                </p>
-                                <p class="row">
+                                </div>
+                                <div class="form-row">
                                     <input type="button" value="Button" />
-                                </p>
+                                </div>
                             </fieldset>
                         </form>
                         <form action="order_submit" id="order-submit-form" method="get" accept-charset="utf-8">
-                            <div class="row">
+                            <div class="form-row">
                                 <label for="name">Фамилия, Имя, Отчество</label>
                                 <input type="text" id="name" name="name" required />
                             </div>
-                            <div class="row">
+                            <div class="form-row">
                                 <label for="select">Select</label>
                                 <select name="select" id="select">
                                     <optgroup label="Группа 1">
@@ -247,42 +253,48 @@ _body.appendChild(_coverElement);</pre>
                                     </optgroup>
                                 </select>
                             </div>
-                            <div class="row">
+                            <div class="form-row">
                                 <label for="tel">Контактный телефон</label>
                                 <input type="text" id="tel" name="tel" required />
                             </div>
-                            <div class="row">
+                            <div class="form-row">
                                 <label for="mail">E-mail</label>
                                 <input type="text" id="mail" name="mail" required />
                             </div>
-                            <div class="row">
-                                <label for="answer">Radio
+                            <div class="form-row">
+                                <label>
                                     <input type="radio" name="radio1" value="r1" checked="checked" />
+                                    Radio
+                                 </label>
+                                <label>
+                                    <input type="radio" name="radio1" value="r2" disabled="disabled" />
+                                    Radio 2 (disabled)
                                 </label>
-                                Radio 1 (checked)
-                                <br />
-                                <input type="radio" name="radio2" value="r2" disabled="disabled" />
-                                Radio 2 (disabled)
-                                <br />
-                                <input type="radio" name="radio3" value="r3" />
-                                Radio 3
+                                <label>
+                                    <input type="radio" name="radio1" value="r3" />
+                                    Radio 3
+                                </label>
                             </div>
-                            <div class="row">
-                                <label for="answer">Checkbox</label>
-                                <input type="checkbox" name="checkbox1" value="ch1" checked="checked" />
-                                Radio 1 (checked)
-                                <br />
-                                <input type="checkbox" name="checkbox2" value="ch2" disabled="disabled" />
-                                Radio 2 (disabled)
-                                <br />
-                                <input type="checkbox" name="checkbox3" value="ch3" />
-                                Radio 3
+                            <div class="form-row">
+                                Checkbox
+                                <label>
+                                    <input type="checkbox" name="checkbox1" value="ch1" checked="checked" />
+                                    Radio 1 (checked)
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="checkbox2" value="ch2" disabled="disabled" />
+                                	Radio 2 (disabled)
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="checkbox3" value="ch3" />
+                                	Radio 3
+                                </label>
                             </div>
-                            <div class="row">
+                            <div class="form-row">
                                 <label for="textarea">Textarea</label>
                                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                             </div>
-                            <div class="row">
+                            <div class="form-row">
                                 <input id="submit-input" type="submit" value="Submit" />
                                 <input id="reset-input" type="reset" value="Reset" />
                             </div>

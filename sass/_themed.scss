@@ -103,23 +103,16 @@
 }
 
 /* ============================================================================
-    Other
+    3.6 Other
 ============================================================================= */
 
 /* Opera speed dial minimized */
 @media screen and (view-mode: minimized) {
-    body {
-        background: #c10000;
-        color: #fff;
-    }
 
     #main-container,
-    #navigation,
-    #header #logo {
+    #nav,
+    #header {
         display: none;
     }
 
-    #header #site-name a {
-        color: #fff;
-    }
 }

@@ -8,7 +8,7 @@
 }
 
 /* ============================================================================
-    
+    Mixins
 ============================================================================= */
 
 @mixin bdradius($radius: 5px) {
@@ -46,22 +46,6 @@
 //.test-class {
 //  @include transition(all ease 300ms);
 //}
-
-
-/* clear floats */
-
-.clearfix {
-  &:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    font-size: 0;
-    visibility: hidden;
-  }
-
-  .ie-old & {zoom: 1;}
-}
 
 /* ============================================================================
     Grid support
@@ -145,43 +129,6 @@ $gutter-width: 20px;
     width: 5.982905983%;
   }
  * */
-
-ul.flat {
-    margin: 0;
-    padding: 0;
-
-    li {
-        margin: 0;
-        list-style: none;
-        background:none;
-    }
-}
-
-/* ============================================================================
-    blocks
-============================================================================= */
-
-.c-container {
-    width: $conatiner-width;
-    margin: 0 auto;
-    background-color: $main-bg-color;
-}
-
-.block {
-    position: relative;
-}
-
-.left-side {
-    float:left;
-}
-
-.right-side {
-    float:right;
-}
-
-span.flush {
-    display:block;
-}
 
 /* ============================================================================
     buttons universal
@@ -344,11 +291,11 @@ span.flush {
 }
 
 .emph-c {
-    color: $emph-c;
+    
 }
 
 .emph-c-ln {
-    color: $link-color;
+    color: $ln-color;
 }
 
 .emph-c-dark {
@@ -362,17 +309,6 @@ span.flush {
 .tagline,
 .alt-title {
     font-style: italic;
-}
-
-.psln {
-  color: $link-color;
-  border-bottom: 1px dashed;
-  position: relative;
-  cursor: pointer;
-
-  &:hover, &:focus {
-    color: lighten($link-color, 20%);
-  }
 }
 
 /* ============================================================================
@@ -389,7 +325,7 @@ span.ico {
 }
 
 /* ============================================================================
-    Unusible
+    Additional
 ============================================================================= */
 
 
