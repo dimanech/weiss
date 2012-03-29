@@ -59,6 +59,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     display: block; // anonymous inline element fix for older browsers if js has been off
 }
 
+// html,body,div,h1,h2,h3,h4,h5,h6,p,img,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,form,fieldset,embed,object,applet{margin:0;padding:0;border:0;}
+
 audio, canvas, video {
     display: inline-block;
 
@@ -249,9 +251,11 @@ dl dd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  border-width:0;
   width: 100%;
   table-layout: fixed;
   word-wrap: break-word;
+  empty-cells:show
 }
 
 caption {
@@ -359,8 +363,8 @@ input {
 
     &:hover {
       border-color:#777;
-    } 
-    
+    }
+
     &:focus {
       border-color: $ln-color;
       outline: none;
