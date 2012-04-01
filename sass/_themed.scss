@@ -25,9 +25,17 @@
   
 }
 
-#site-name {}
+#site-name {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
+  display:block;
+}
 
-#site-slogan {}
+#site-slogan {
+  @extend #site-name;
+}
 
 #nav {
     padding: 0;

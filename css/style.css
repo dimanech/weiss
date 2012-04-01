@@ -1,21 +1,14 @@
 @charset "UTF-8";
 /* ============================================================================
     
-    Uplab.ru 2012
+    UPLAB 2012
     http://uplab.ru
     
 ============================================================================= */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
-big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
-dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
-mark, audio, video {
+html, body, div, h1, h2, h3, h4, h5, h6, p, img, dl, dt, dd, ol, ul, li, table, caption, tbody, tfoot, thead, tr, th, td, form, fieldset, embed, object, applet {
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  font-weight: normal;
-  vertical-align: baseline;
-  background: transparent;
+  border: 0;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
@@ -24,10 +17,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 audio, canvas, video {
   display: inline-block;
-}
-.ie-old audio, .ie-old canvas, .ie-old video {
-  display: inline;
-  zoom: 1;
 }
 
 blockquote, q {
@@ -45,6 +34,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 ============================================================================= */
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
   line-height: 1.2em;
+  font-weight: normal;
 }
 
 h1, .h1, .aside h2, .aside .h2 {
@@ -346,6 +336,7 @@ legend {
     1.4. Specific
 ============================================================================= */
 sup, sub {
+  vertical-align: baseline;
   position: relative;
   font-size: .8em;
   font-weight: inherit;
@@ -385,10 +376,6 @@ figure {
 /* ============================================================================
     1.5. Page Layout
 ============================================================================= */
-html {
-  line-height: 1.3em;
-}
-
 body {
   font: normal normal 87.5%/1.3em Arial, FreeSans, sans-serif;
   color: #434343;
@@ -652,6 +639,14 @@ ins {
   float: right;
 }
 
+#site-name, #site-slogan {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: block;
+}
+
 #nav {
   padding: 0;
   margin: 0;
@@ -768,55 +763,69 @@ ins {
 /* ============================================================================
     Grid support
 ============================================================================= */
-.grid {
-  background: url(../images/arch/12_col.gif);
+.grid-row {
+  display: block;
+  width: 102.083%;
+  margin: 0 -1.042%;
+}
+.ie-old .grid-row {
+  width: 102.083%;
+  margin: 0 -1.042%;
 }
 
-.grid-row {
-  width: 100%;
-}
-.grid-row .gr-cell {
+.span1 {
+  display: inline;
   float: left;
-  margin-left: 2.128%;
+  width: 6.25%;
+  margin: 0 1.042%;
 }
-.grid-row .gr-cell:first-child {
-  margin-left: 0;
+.ie-old .span1 {
+  width: 6.25%;
+  margin: 0 1.042%;
 }
-.grid-row .span1 {
-  width: 6.383%;
+
+.span4 {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.042%;
 }
-.grid-row .span2 {
-  width: 14.894%;
+.ie-old .span4 {
+  width: 31.25%;
+  margin: 0 1.042%;
 }
-.grid-row .span3 {
-  width: 23.404%;
+
+.span6 {
+  display: inline;
+  float: left;
+  width: 47.917%;
+  margin: 0 1.042%;
 }
-.grid-row .span4 {
-  width: 31.915%;
+.ie-old .span6 {
+  width: 47.917%;
+  margin: 0 1.042%;
 }
-.grid-row .span5 {
-  width: 40.426%;
+
+.span8 {
+  display: inline;
+  float: left;
+  width: 64.583%;
+  margin: 0 1.042%;
 }
-.grid-row .span6 {
-  width: 48.936%;
+.ie-old .span8 {
+  width: 64.583%;
+  margin: 0 1.042%;
 }
-.grid-row .span7 {
-  width: 57.447%;
+
+.span12 {
+  display: inline;
+  float: left;
+  width: 97.917%;
+  margin: 0 1.042%;
 }
-.grid-row .span8 {
-  width: 65.957%;
-}
-.grid-row .span9 {
-  width: 74.468%;
-}
-.grid-row .span10 {
-  width: 82.979%;
-}
-.grid-row .span11 {
-  width: 91.489%;
-}
-.grid-row .span12 {
-  width: 100%;
+.ie-old .span12 {
+  width: 97.917%;
+  margin: 0 1.042%;
 }
 
 /* ============================================================================
