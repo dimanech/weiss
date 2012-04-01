@@ -7,6 +7,73 @@
     outline: 1px dashed #ccc;
 }
 
+// Thanks https://github.com/csswizardry/inuit.css
+//
+//  Red border    ==  something is wrong
+//  Yellow border   ==  something may be wrong, you should double check.
+//  Green border  ==  perfect, nice one!
+//
+
+.debug {
+
+  // STYLES
+  [style],
+  style {
+    // Inline styles aren’t great, can this be avoided?
+    outline:5px solid yellow;
+  }
+  
+  style {
+    display:block;
+  }
+  
+  // IMAGES
+  img{
+    // Images without alt attributes are bad!
+    outline:5px solid red;
+  }
+  
+  img[alt]{
+    // Images with alt attributes are good!
+    outline-color:green;
+  }
+  
+  img[alt=""]{
+    // Images with empty alt attributes are okay in the right circumstances.
+    outline-color:yellow;
+  }
+  
+  // LINKS
+  a{
+    // Links without titles are yellow, does your link need one? 
+    outline:5px solid yellow;
+  }
+  
+  a[title]{
+    // Links with titles are green, title attributes can be very useful!
+    outline-color:green;
+  }
+  
+  a[href="#"]{
+    // Were you meant to leave that hash in there?
+    outline-color:yellow;
+  }
+  a[target]/*,
+  .debug a[onclick],
+  .debug a[href*=javascript]*/{
+    // What were you thinking?!
+    outline-color: red;
+  }
+  
+  // CLASSES/IDS
+   [class=""],
+   [id=""]{
+    /* Is this element meant to have an empty class/ID? */
+    outline:5px solid red;
+  }
+
+}
+
 /* ============================================================================
     Mixins
 ============================================================================= */
@@ -31,16 +98,6 @@
   -moz-transition: $transition;
   -o-transition: $transition;
   transition: $transition;
-}
-
-@mixin op-ie {
-   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 93)";
-   filter: alpha(opacity = 93);
-}
-
-@mixin dib-ie {
-  *display: inline;
-  *zoom: 1;
 }
 
 //.test-class {
@@ -73,7 +130,7 @@ $gutter-width: 20px;
     margin-left: percentage($gutter-width / $grid-static-width);
   }
   
-  .gr-cell.first-child {
+  .gr-cell:first-child {
     margin-left: 0;
   }
   
@@ -84,51 +141,6 @@ $gutter-width: 20px;
   }
 
 }
-
-/*
-  
-.gr-cell {
-    float: left;
-    margin-left: 2.564102564%;
-  }
-  
- .row-fluid > .span12 {
-    width: 100%;
-  }
-  .row-fluid > .span11 {
-    width: 91.45299145300001%;
-  }
-  .row-fluid > .span10 {
-    width: 82.905982906%;
-  }
-  .row-fluid > .span9 {
-    width: 74.358974359%;
-  }
-  .row-fluid > .span8 {
-    width: 65.81196581200001%;
-  }
-  .row-fluid > .span7 {
-    width: 57.264957265%;
-  }
-  .row-fluid > .span6 {
-    width: 48.717948718%;
-  }
-  .row-fluid > .span5 {
-    width: 40.170940171000005%;
-  }
-  .row-fluid > .span4 {
-    width: 31.623931624%;
-  }
-  .row-fluid > .span3 {
-    width: 23.076923077%;
-  }
-  .row-fluid > .span2 {
-    width: 14.529914530000001%;
-  }
-  .row-fluid > .span1 {
-    width: 5.982905983%;
-  }
- * */
 
 /* ============================================================================
     buttons universal

@@ -317,6 +317,18 @@
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
+    
+    a[href^="/"]:after{
+      content:" (http://siteurlhere.com" attr(href) ")";
+      font-size:smaller;
+    }
+
+    object:after{
+      content:"Flash/видео содержимое. Посетите http://siteurlhere.com/ чтобы просмотреть этот материал.";
+      display:block;
+      font-weight:bold;
+      margin-bottom:1.5em;
+    }
 
     /* hide elements that are unnecessary to print */
     #sidebar-first,

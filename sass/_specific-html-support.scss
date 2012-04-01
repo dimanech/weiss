@@ -7,8 +7,9 @@
 /* science */
 
 abbr, acronym {
-    border-bottom: 1px dotted #3a3739;
-    cursor: help;
+  border-bottom: 1px dotted #3a3739;
+  cursor: help;
+  font-weight: inherit;
 }
 
 abbr, dfn {
@@ -19,54 +20,54 @@ abbr, dfn {
 }
 
 a abbr {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 /* computer science */
 
 pre, code, tt, samp, kbd {
-    font: normal normal 1em/1.5em "Courier New", "Courier", FreeMono, monospace;
+  font: normal normal 1em/1.5em #{$monosp-serif};
 }
 
 pre {
-    white-space: pre; // CSS2
-    white-space: pre-line; // CSS 3 (and 2.1 as well, actually)
-    word-wrap: break-word; // IE 
-    background-color: #3a3739;
-    color: #ccc;
-    padding: .643em 0 .643em 2em;
-    width: 94%;
-    overflow-x: auto;
+  white-space: pre; // CSS2
+  white-space: pre-line; // CSS 3 (and 2.1 as well, actually)
+  word-wrap: break-word; // IE 
+  background-color: #3a3739;
+  color: #ccc;
+  padding: .643em 0 .643em 2em;
+  width: 94%;
+  overflow-x: auto;
 }
 
 code {
-    color: green;
+  color: green;
 }
 
 samp {
-    color: maroon;
+  color: maroon;
 }
 
 kbd {
-    font-size: 1em;
-    background: #3A3739;
-    color: #fff;
-    padding: .2em .3em;
-    white-space: nowrap;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+  font-size: 1em;
+  background: #3A3739;
+  color: #fff;
+  padding: .2em .3em;
+  white-space: nowrap;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 /* other */
 
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 ins {
-    text-decoration: none;
-    border-bottom: 1px dashed #3a3739;
+  text-decoration: none;
+  border-bottom: 1px dashed #3a3739;
 }

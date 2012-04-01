@@ -54,6 +54,10 @@
                 </header>
                 <!-- /#header -->
                 <div role="main" id="main" class="clearfix">
+                    <div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a itemprop="url" href="#"><span itemprop="title">Главная</span></a> →
+                        Typography
+                    </div>
                     <div id="content">
                         <h1>Заголовок 1</h1>
                         <p>
@@ -136,44 +140,47 @@
                         <h5>Уровень 05 Заголовок</h5>
                         <h6>Уровень 06 Заголовок</h6>
                         <hr>
-                        <table>
-                            <caption>
+                        <table itemscope itemtype="http://schema.org/Table">
+                            <caption itemprop="about">
                                 Таблица: Jimi Hendrix - альбомы
                             </caption>
                             <thead>
                                 <tr>
-                                    <th>Альбом</th>
-                                    <th>Год</th>
-                                    <th>Цена</th>
+                                    <th>Lorem</th>
+                                    <th>Ipsum</th>
+                                    <th>Dolor</th>
+                                    <th>Sit</th>
+                                    <th>Amet</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <td>Альбом</td>
-                                    <td>Год</td>
-                                    <td>Цена</td>
+                                    <td>Lorem</td>
+                                    <td>Ipsum</td>
+                                    <td>Dolor</td>
+                                    <td>Sit</td>
+                                    <td>Amet</td>
                                 </tr>
                             </tfoot>
                             <tbody>
                                 <tr>
-                                    <td>Are You Experienced</td>
-                                    <td>1967</td>
-                                    <td>30.00 грн.</td>
+                                    <td>Amet</td>
+                                    <td>Sit</td>
+                                    <td>Dolor</td>
+                                    <td>Ipsum</td>
+                                    <td>Lorem</td>
                                 </tr>
                                 <tr>
-                                    <td>Axis: Bold as Love</td>
-                                    <td>1967</td>
-                                    <td>32.00 грн.</td>
+                                    <td rowspan="2">Amet</td>
+                                    <td colspan="2">Sit</td>
+                                    <td>Ipsum</td>
+                                    <td>Lorem</td>
                                 </tr>
                                 <tr>
-                                    <td>Electric Ladyland</td>
-                                    <td>1968</td>
-                                    <td>30.00 грн.</td>
-                                </tr>
-                                <tr>
-                                    <td>Band of Gypsys</td>
-                                    <td>1970</td>
-                                    <td>32.00 грн.</td>
+                                    <td>Sit</td>
+                                    <td>Dolor</td>
+                                    <td>Ipsum</td>
+                                    <td>Lorem</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -195,10 +202,10 @@ _body.appendChild(_coverElement);</pre>
                                 term definition
                             </dd>
                             <dt>
-                                Тяжёлая вода (также <abbr title="оксид дейтерия">OD</abbr>) D<sub>2</sub>O или <sup>2</sup>H<sub>2</sub>O.  - имеет плотность 1104,2 кг/м<sup>3</sup>, жидкость
+                                Тяжёлая вода
                             </dt>
                             <dd>
-                                &mdash; вещество получаемое синтетическим путем а производственных масштабах с 1942 года. <acronym title="В отличие от аббревиатуры, акроним — это устоявшееся сокращение, которое применяется как самостоятельное слово.">АККРОНим</acronym>
+                                &mdash; (также <abbr title="оксид дейтерия">OD</abbr>) D<sub>2</sub>O или <sup>2</sup>H<sub>2</sub>O.  - имеет плотность 1104,2 кг/м<sup>3</sup>, жидкость. <acronym title="В отличие от аббревиатуры, акроним — это устоявшееся сокращение, которое применяется как самостоятельное слово.">АККРОНим больше не употребляется</acronym>
                             </dd>
                         </dl>
                         <p>
@@ -210,7 +217,7 @@ _body.appendChild(_coverElement);</pre>
                         <form action="search_submit" method="get" accept-charset="utf-8">
                             <div class="form-row">
                                 <label for="main-search">Search with autocomplete</label>
-                                <input name="search" results="5" type="search" id="main-search" />
+                                <input name="search" type="search" id="main-search" />
                             </div>
                             <div class="form-row">
                                 <label for="default-html5-search">Default Search</label>
@@ -219,10 +226,12 @@ _body.appendChild(_coverElement);</pre>
                         </form>
                         <form action="login_submit" method="get" accept-charset="utf-8">
                             <fieldset>
-                                <legend>Login-form</legend>
+                                <legend>
+                                    Login-form
+                                </legend>
                                 <div class="form-row">
-                                    <label for="name">Введите ваш логин</label>
-                                    <input type="text" id="name" name="name" placeholder="placeholder login" />
+                                    <label for="log-name">Введите ваш логин</label>
+                                    <input type="text" id="log-name" name="name" placeholder="placeholder login" />
                                 </div>
                                 <div class="form-row">
                                     <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
@@ -263,31 +272,25 @@ _body.appendChild(_coverElement);</pre>
                             <div class="form-row">
                                 <label>
                                     <input type="radio" name="radio1" value="r1" checked="checked" />
-                                    Radio
-                                 </label>
+                                    Radio </label>
                                 <label>
                                     <input type="radio" name="radio1" value="r2" disabled="disabled" />
-                                    Radio 2 (disabled)
-                                </label>
+                                    Radio 2 (disabled) </label>
                                 <label>
                                     <input type="radio" name="radio1" value="r3" />
-                                    Radio 3
-                                </label>
+                                    Radio 3 </label>
                             </div>
                             <div class="form-row">
                                 Checkbox
                                 <label>
                                     <input type="checkbox" name="checkbox1" value="ch1" checked="checked" />
-                                    Radio 1 (checked)
-                                </label>
+                                    Radio 1 (checked) </label>
                                 <label>
                                     <input type="checkbox" name="checkbox2" value="ch2" disabled="disabled" />
-                                    Radio 2 (disabled)
-                                </label>
+                                    Radio 2 (disabled) </label>
                                 <label>
                                     <input type="checkbox" name="checkbox3" value="ch3" />
-                                    Radio 3
-                                </label>
+                                    Radio 3 </label>
                             </div>
                             <div class="form-row">
                                 <label for="textarea">Textarea</label>
@@ -325,6 +328,95 @@ _body.appendChild(_coverElement);</pre>
                     </div>
                 </aside>
                 <!-- /#sidebar-second -->
+                <div id="under-content">
+                    <div>
+                        <style type="text/css">
+                            #under-content {
+                                overflow: hidden;
+                                clear: both;
+                            }
+
+                            #under-content [class*="span"] {
+                                background-color: #EEE;
+                                text-align: center;
+                                border-radius: 3px;
+                                min-height: 30px;
+                                line-height: 30px;
+                                margin-bottom: 1em;
+                            }
+                        </style>
+                        <div class="grid-row">
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                            <div class="gr-cell span1">
+                                1
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="gr-cell span4">
+                                4
+                            </div>
+                            <div class="gr-cell span4">
+                                4
+                            </div>
+                            <div class="gr-cell span4">
+                                4
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="gr-cell span4">
+                                4
+                            </div>
+                            <div class="gr-cell span8">
+                                8
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="gr-cell span6">
+                                6
+                            </div>
+                            <div class="gr-cell span6">
+                                6
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="gr-cell span12">
+                                12
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /#main-inner -->
         </div>
