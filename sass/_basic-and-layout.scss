@@ -14,6 +14,7 @@
 // 13px-0.813%
 // 12px-75%
 
+
 $main-bg-color: #fff;
 $main-fg-color: #ccc;
 $base-color: #434343;
@@ -42,40 +43,38 @@ $slab-serif: "DejaVu Serif", serif;
 // http://sass-lang.com/tutorial.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
-big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
-dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
-mark, audio, video {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    font-weight: normal;
-    vertical-align: baseline;
-    background: transparent;
-}
+// Advanced reset
+//
+//html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+//big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
+//dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+//canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
+//mark, audio, video {
+//    margin: 0;
+//    padding: 0;
+//    font-size: 100%;
+//    font-weight: normal;
+//    vertical-align: baseline;
+//    background: transparent;
+//}
+
+html,body,div,h1,h2,h3,h4,h5,h6,p,img,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,form,fieldset,embed,object,applet{margin:0;padding:0;border:0;}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-    display: block; // anonymous inline element fix for older browsers if js has been off
+  display: block; // anonymous inline element fix for older browsers if js has been off
 }
 
-// html,body,div,h1,h2,h3,h4,h5,h6,p,img,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,form,fieldset,embed,object,applet{margin:0;padding:0;border:0;}
 
 audio, canvas, video {
-    display: inline-block;
-
-    .ie-old & {
-      display: inline;
-      zoom: 1;
-    }
+  display: inline-block;
 }
 
 blockquote, q {
-    quotes: none;
-    &:before, &:after {
-      content: '';
-      // remove this because real user don`t format this way
-    }
+  quotes: none;
+  
+  &:before, &:after {
+    content: ''; // remove this because real user don`t format this way
+  }
 }
 
 /* ============================================================================
@@ -88,6 +87,7 @@ blockquote, q {
 
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
   line-height: 1.2em;
+  font-weight:normal;
 }
 
 h1, h2, .h1, .h2 {
@@ -476,6 +476,7 @@ legend {
 ============================================================================= */
 
 sup, sub {
+  vertical-align:baseline;
   position: relative;
   font-size: .8em;
   font-weight: inherit;
@@ -517,10 +518,6 @@ figure {
     1.5. Page Layout
 ============================================================================= */
 
-html {
-  line-height: 1.3em;
-}
-
 body {
   font: normal normal 87.5%/1.3em #{$sans};
   color: $base-color;
@@ -529,7 +526,7 @@ body {
 
   .ie-old & {
     overflow-y: auto; // ie sticky footer fix
-   }
+  }
 }
 
 /* header

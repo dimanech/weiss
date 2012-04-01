@@ -66,8 +66,8 @@
   }
   
   // CLASSES/IDS
-   [class=""],
-   [id=""]{
+  [class=""],
+  [id=""]{
     /* Is this element meant to have an empty class/ID? */
     outline:5px solid red;
   }
@@ -108,38 +108,60 @@
     Grid support
 ============================================================================= */
 
-$grid-static-width: 940px;
-$grid-width: 60px;
-$gutter-width: 20px;
+// http://semantic.gs/
 
-@function grid-width($n) {
-  @return percentage(($n * $grid-width + ($n - 1) * $gutter-width) / $grid-static-width);
+$column-width: 60px;
+$gutter-width: 20px;
+$columns: 12;
+$total-width: 100%;
+//ie fixes
+$min-width: 999999;
+$correction: 0.5 / $min-width * 100;
+
+@function gridsystem-width($columns:$columns) {
+  @return ($column-width * $columns) + ($gutter-width * $columns);
 }
 
-.grid {
-  background: url(../images/arch/12_col.gif);
+@mixin row($columns:$columns) {
+  display: block;
+  width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
+  margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1);
+  @extend .clearfix;
+  
+  .ie-old & {
+    width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns))-$correction;
+    margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1)-$correction;
+  }
+}
+
+@mixin column($x,$columns:$columns) {
+  display: inline;
+  float: left;
+  width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
+  margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+  
+  .ie-old & {
+    width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
+    margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
+  }
+}
+
+@mixin push($offset:1) {
+  margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+
+@mixin pull($offset:1) {
+  margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }
 
 .grid-row {
-  width: 100%;
-    
-  @extend .clearfix;
-  
-  .gr-cell {
-    float: left;
-    margin-left: percentage($gutter-width / $grid-static-width);
-  }
-  
-  .gr-cell:first-child {
-    margin-left: 0;
-  }
-  
-  @each $n in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
-    .span#{$n} {
-      width: grid-width($n);
-    }
-  }
+  @include row;
+}
 
+@each $n in 1, 4, 6, 8, 12 {
+  .span#{$n} {
+    @include column($n);
+  }
 }
 
 /* ============================================================================
