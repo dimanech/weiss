@@ -168,7 +168,7 @@ $correction: 0.5 / $min-width * 100;
     buttons universal
 ============================================================================= */
 
-.btn {
+/* .btn {
     display:inline-block;
     padding: 0 7px;
     vertical-align: text-bottom;
@@ -233,7 +233,7 @@ $correction: 0.5 / $min-width * 100;
   .b-left-side,
   .b-middle,
   .b-right-side {
-    /* background-image: url(../images/button-green-medium.png); */
+    background-image: url(../images/button-green-medium.png);
     height: 31px;
     line-height: 31px;
   }
@@ -252,7 +252,7 @@ $correction: 0.5 / $min-width * 100;
   .b-left-side,
   .b-middle,
   .b-right-side {
-    /* background-image: url(../images/button-green-medium.png); */
+    background-image: url(../images/button-green-medium.png);
     height: 18px;
     line-height: 18px;
   }
@@ -261,7 +261,10 @@ $correction: 0.5 / $min-width * 100;
     padding: 0 .4em;
   }
 
-}
+} */
+
+
+
 
 /* ============================================================================
     Forms support
