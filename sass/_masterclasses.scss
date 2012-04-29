@@ -135,12 +135,13 @@ $correction: 0.5 / $min-width * 100;
 }
 
 @mixin column($x,$columns:$columns) {
-  display: inline;
+  display: block;
   float: left;
   width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
   margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
   
   .ie-old & {
+    display: inline;
     width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
     margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
   }

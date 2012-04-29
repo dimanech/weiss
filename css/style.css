@@ -576,9 +576,22 @@ ul.unstyled li {
 }
 
 .dib {
+  display: inline-block;
+  vertical-align: top;
+}
+.ie-old .dib {
   display: inline;
-  *display: inline;
-  *zoom: 1;
+  zoom: 1;
+}
+
+.img-replace {
+  overflow: hidden;
+  text-indent: -9999px;
+  direction: ltr;
+}
+.ie-old .img-replace {
+  text-indent: 0;
+  line-height: 0;
 }
 
 /* ============================================================================
@@ -809,56 +822,61 @@ ins {
 }
 
 .span1 {
-  display: inline;
+  display: block;
   float: left;
   width: 6.25%;
   margin: 0 1.042%;
 }
 .ie-old .span1 {
+  display: inline;
   width: 6.25%;
   margin: 0 1.042%;
 }
 
 .span4 {
-  display: inline;
+  display: block;
   float: left;
   width: 31.25%;
   margin: 0 1.042%;
 }
 .ie-old .span4 {
+  display: inline;
   width: 31.25%;
   margin: 0 1.042%;
 }
 
 .span6 {
-  display: inline;
+  display: block;
   float: left;
   width: 47.917%;
   margin: 0 1.042%;
 }
 .ie-old .span6 {
+  display: inline;
   width: 47.917%;
   margin: 0 1.042%;
 }
 
 .span8 {
-  display: inline;
+  display: block;
   float: left;
   width: 64.583%;
   margin: 0 1.042%;
 }
 .ie-old .span8 {
+  display: inline;
   width: 64.583%;
   margin: 0 1.042%;
 }
 
 .span12 {
-  display: inline;
+  display: block;
   float: left;
   width: 97.917%;
   margin: 0 1.042%;
 }
 .ie-old .span12 {
+  display: inline;
   width: 97.917%;
   margin: 0 1.042%;
 }
@@ -1323,7 +1341,7 @@ span.ico {
 
 .jquery-checkbox-checked .jquery-checkbox-disabled img {
   background-position: 0px 0px;
-  opacity: 0.5em;
+  opacity: 0.5;
 }
 
 /*

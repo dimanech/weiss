@@ -741,7 +741,24 @@ ul.unstyled {
 }
 
 .dib {
-  display:inline;
-  *display: inline;
-  *zoom: 1;
+  display:inline-block;
+  vertical-align: top;
+  
+  .ie-old & {
+    display: inline;
+    zoom: 1;
+  }
+  
+}
+
+.img-replace {
+  overflow:hidden;
+  text-indent: -9999px;
+  direction: ltr;
+  
+  .ie-old & {
+    text-indent: 0;
+    line-height: 0;
+  }
+  
 }
