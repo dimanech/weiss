@@ -19,6 +19,23 @@
         <link href="css/ie-old.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" charset="utf-8" src="js/html5.js"></script>
         <![endif]-->
+        <script type="text/javascript" charset="utf-8">
+            $('#nav li a').click(function() {
+                $('#nav li a').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $('#twocolumn-s').click(function() {
+                $('body').removeClass().addClass('sidebar-second');
+            });
+            $('#twocolumn-f').click(function() {
+                $('body').removeClass().addClass('sidebar-first');
+            });
+            $('#threecolumn').click(function() {
+                $('body').removeClass().addClass('two-sidebars');
+            });
+        </script>
     </head>
     <body class="sidebar-second">
         <!--[if lt IE 7]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0016_russian.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
@@ -264,12 +281,12 @@ _body.appendChild(_coverElement);</pre>
                             <div class="form-row">
                                 <label for="select-openend">Список множественного выбора</label>
                                 <select name="select-openend" id="select-openend" multiple="multiple" size="4">
-                                    <option selected="selected" value="c1">Выбор 1</option>
-                                    <option value="c2">Выбор 2</option>
-                                    <option value="c3">Длинный длинный длинный выбор</option>
-                                    <option value="s1">Выбор 4</option>
-                                    <option value="s2">Выбор 5</option>
-                                    <option value="s3">выбор 5</option>
+                                    <option selected="selected" value="sm1">Выбор 1</option>
+                                    <option value="sm2">Выбор 2</option>
+                                    <option value="sm3">Длинный длинный длинный выбор</option>
+                                    <option value="sm4">Выбор 4</option>
+                                    <option value="sm5">Выбор 5</option>
+                                    <option value="sm6">выбор 5</option>
                                 </select>
                             </div>
                             <div class="form-row">
