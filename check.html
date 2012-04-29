@@ -20,6 +20,7 @@
         <script type="text/javascript" charset="utf-8" src="js/html5.js"></script>
         <![endif]-->
         <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
             $('#nav li a').click(function() {
                 $('#nav li a').removeClass('active');
                 $(this).addClass('active');
@@ -35,6 +36,7 @@
             $('#threecolumn').click(function() {
                 $('body').removeClass().addClass('two-sidebars');
             });
+        });
         </script>
     </head>
     <body class="sidebar-second">
