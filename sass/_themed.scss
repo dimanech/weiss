@@ -51,9 +51,13 @@
     display:inline;
     
     a {
-      .active, &:hover, &:focus {
+      &:hover, &:focus {
         color:#333;
       }
+    }
+    
+    &.active a {
+      color:#333;
     }
   }
   

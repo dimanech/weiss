@@ -43,7 +43,7 @@ $slab-serif: "DejaVu Serif", serif;
 // http://sass-lang.com/tutorial.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
-// Advanced reset
+// Full reset
 //
 //html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
 //big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
@@ -58,12 +58,19 @@ $slab-serif: "DejaVu Serif", serif;
 //    background: transparent;
 //}
 
-html,body,div,h1,h2,h3,h4,h5,h6,p,img,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,form,fieldset,embed,object,applet{margin:0;padding:0;border:0;}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-  display: block; // anonymous inline element fix for older browsers if js has been off
+html, body, div, h1, h2, h3, h4, h5, h6, p, img,
+dl, dt, dd, ol, ul, li, caption,
+table, tbody, tfoot, thead, tr, th, td,
+form, fieldset, embed, object, applet {
+  margin:0;
+  padding:0;
+  border:0;
 }
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+  display: block; // anonymous inline element fix for older browsers if js has been off
+}
 
 audio, canvas, video {
   display: inline-block;
@@ -149,6 +156,10 @@ em, i, cite {
   font-style: italic;
 }
 
+address {
+  font-style:normal;
+}
+
 // NOTE: link pseudoclases order -- link, visited, hover, active
 
 a {
@@ -162,7 +173,7 @@ a {
     color: $ln-h-color;
   }
 
-  &[href^="callto"], &[href^="mailto"] {
+  &[href^="tel"], &[href^="mailto"], &[href^="callto"] {
     @extend .psln;
   }
 }
@@ -236,12 +247,12 @@ ul, ol {
   }
 }
 
-ul li {
-  list-style: disc outside;
-}
-
 ol li {
   list-style: decimal outside;
+}
+
+ul li {
+  list-style: disc outside;
 }
 
 dl dt, dfn {
@@ -344,10 +355,6 @@ input {
     -webkit-appearance: button;
   }
 
-  &[type="text"], &[type="password"] {
-    padding: 0 .2em;
-  }
-
   &[type="checkbox"], &[type="radio"] {
     box-sizing: border-box;
   }
@@ -373,7 +380,6 @@ input {
 
 }
 
-
 // themed form
 
 input[type="text"],
@@ -383,6 +389,7 @@ select, textarea {
   border: 1px solid;
   border-color: #777 #ccc #ccc;
   background: #fff;
+  padding: .2em .429em;
 
   &:hover {
     border-color:#777;
@@ -406,29 +413,25 @@ input[type="image"], button {
   }
 }
 
-button {
-
-}
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-  // Remove inner padding and border in FF3/4
-  border: 0;
-  padding: 0;
-}
-
-textarea {
-  padding: .2em .429em;
-  overflow: auto;
-  vertical-align: top;
-  resize: vertical;
-}
-
 select {
+}
+
+select[multiple="multiple"]{
+  height: auto;
 }
 
 optgroup {
   font-weight: normal;
   background: #ccc;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+  height: auto;
+  line-height: 1.2em;
+  padding: .2em .429em;
 }
 
 fieldset {
@@ -438,6 +441,12 @@ fieldset {
 }
 
 legend {
+  border: 0;
+  padding: 0;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  // Remove inner padding and border in FF3/4
   border: 0;
   padding: 0;
 }
@@ -655,24 +664,11 @@ $footer-height: 50px;
   .ie-old & {zoom: 1;}
 }
 
-ul.flat {
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin: 0;
-    list-style: none;
-    background:none;
-  }
-}
+/* position support */
 
 .c-container {
     width: $conatiner-width;
     margin: 0 auto;
-}
-
-.block {
-    position: relative;
 }
 
 .left-side {
@@ -687,6 +683,30 @@ span.flush {
     display:block;
 }
 
+/* style support */
+
+.block {
+    position: relative;
+}
+
+ul.flat {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    list-style: none;
+    background:none;
+  }
+}
+
+ul.unstyled {
+  
+  li {
+    list-style:none;
+  }
+}
+
 .psln {
   color: $ln-color;
   text-decoration:none;
@@ -699,13 +719,29 @@ span.flush {
   }
 }
 
+/* form support */
+
+.form-row {
+  overflow:hidden;
+  clear:both;
+  padding: .4em 0;
+}
+
+.form-item {
+  float:left;
+  padding: 0 .4em 0 0;  
+}
+
+/* hacks and long rules */
+
 .opacity {
   opacity: .85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
   filter: alpha(opacity = 85);
 }
 
-.dib-ie {
+.dib {
+  display:inline;
   *display: inline;
   *zoom: 1;
 }
