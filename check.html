@@ -20,23 +20,23 @@
         <script type="text/javascript" charset="utf-8" src="js/html5.js"></script>
         <![endif]-->
         <script type="text/javascript" charset="utf-8">
-        $(document).ready(function() {
-            $('#nav li a').click(function() {
-                $('#nav li a').removeClass('active');
-                $(this).addClass('active');
-                return false;
-            });
+            $(document).ready(function() {
+                $('#nav li a').click(function() {
+                    $('#nav li a').removeClass('active');
+                    $(this).addClass('active');
+                    return false;
+                });
 
-            $('#twocolumn-s').click(function() {
-                $('body').removeClass().addClass('sidebar-second');
+                $('#twocolumn-s').click(function() {
+                    $('body').removeClass().addClass('sidebar-second');
+                });
+                $('#twocolumn-f').click(function() {
+                    $('body').removeClass().addClass('sidebar-first');
+                });
+                $('#threecolumn').click(function() {
+                    $('body').removeClass().addClass('two-sidebars');
+                });
             });
-            $('#twocolumn-f').click(function() {
-                $('body').removeClass().addClass('sidebar-first');
-            });
-            $('#threecolumn').click(function() {
-                $('body').removeClass().addClass('two-sidebars');
-            });
-        });
         </script>
     </head>
     <body class="sidebar-second">
@@ -105,7 +105,6 @@
                         </p>
                         <p>
                             A common form of lorem ipsum text reads as follows:
-
                         </p>
                         <blockquote>
                             <p>
@@ -149,6 +148,114 @@
                                         </mark>
                                     </li>
                                 </ul>
+                            </li>
+                        </ul>
+                        <ol>
+                            <li>
+                                list item 1
+                            </li>
+                            <li>
+                                list item 1
+                                <ol>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                    <li>
+                                        list item 2
+                                        <ol>
+                                            <li>
+                                                list item 3
+                                            </li>
+                                            <li>
+                                                list item 3
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                list item 1
+                            </li>
+                            <li>
+                                list item 1
+                            </li>
+                        </ol>
+                        <ul>
+                            <li>
+                                list item 1
+                            </li>
+                            <li>
+                                list item 1
+                                <ul>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                    <li>
+                                        list item 2
+                                        <ul>
+                                            <li>
+                                                list item 3
+                                            </li>
+                                            <li>
+                                                list item 3
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                list item 1
+                            </li>
+                            <li>
+                                list item 1
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                list item 1
+                            </li>
+                            <li>
+                                list item 1
+                                <ol>
+                                    <li>
+                                        ordered list item 2
+                                    </li>
+                                    <li>
+                                        list item 2
+                                        <ul>
+                                            <li>
+                                                list item 3
+                                            </li>
+                                            <li>
+                                                list item 3
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                    <li>
+                                        list item 2
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                list item 1
+                            </li>
+                            <li>
+                                list item 1
                             </li>
                         </ul>
                         <hr>
@@ -205,13 +312,13 @@
                         </table>
                         <hr>
                         <pre>And some fixed width text.
-As a matter of fact, this is a bit of Evernote Readable's own code.
+                        As a matter of fact, this is a bit of Evernote Readable's own code.
 
-var _coverElement = document.createElement('div');
-_coverElement.setAttribute('id', 'readable_cover');
-_coverElement.setAttribute('style', 'display: none');
+                        var _coverElement = document.createElement('div');
+                        _coverElement.setAttribute('id', 'readable_cover');
+                        _coverElement.setAttribute('style', 'display: none');
 
-_body.appendChild(_coverElement);</pre>
+                        _body.appendChild(_coverElement);</pre>
                         <hr>
                         <dl>
                             <dt>
@@ -258,6 +365,9 @@ _body.appendChild(_coverElement);</pre>
                                 <div class="form-row">
                                     <input type="button" value="Button" />
                                 </div>
+                                <div class="form-row">
+                                    <input type="file">
+                                </div>
                             </fieldset>
                         </form>
                         <form action="order_submit" id="order-submit-form" method="get" accept-charset="utf-8">
@@ -302,7 +412,7 @@ _body.appendChild(_coverElement);</pre>
                             <div class="form-row">
                                 <label>
                                     <input type="radio" name="radio1" value="r1" checked="checked" />
-                                    Radio </label>
+                                    Radio (checked)</label>
                                 <label>
                                     <input type="radio" name="radio1" value="r2" disabled="disabled" />
                                     Radio 2 (disabled) </label>

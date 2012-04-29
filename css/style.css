@@ -111,6 +111,7 @@ a:hover, a:active {
   color: #4db8ff;
 }
 
+/* emded content */
 img {
   font-size: 1em;
   color: #444;
@@ -152,12 +153,16 @@ ul li, ol li {
   margin: .357em 0 .357em 1.5em;
 }
 
+ul li {
+  list-style: disc outside;
+}
+
 ol li {
   list-style: decimal outside;
 }
 
-ul li {
-  list-style: disc outside;
+ol ul li {
+  list-style: disc;
 }
 
 dl dt, dfn {
@@ -427,6 +432,9 @@ body.two-sidebars #main {
   margin-left: 25.806%;
   width: 48.665%;
 }
+.ie-old body.two-sidebars #main {
+  display: inline;
+}
 
 body.sidebar-first #main {
   float: right;
@@ -545,14 +553,14 @@ ul.unstyled li {
   list-style: none;
 }
 
-.psln, a[href^="tel"], a[href^="mailto"], a[href^="callto"] {
+.psln {
   color: #0099ff;
   text-decoration: none;
   border-bottom: 1px dashed;
   position: relative;
   cursor: pointer;
 }
-.psln:hover, a[href^="tel"]:hover, a[href^="mailto"]:hover, a[href^="callto"]:hover, .psln:focus, a[href^="tel"]:focus, a[href^="mailto"]:focus, a[href^="callto"]:focus {
+.psln:hover, .psln:focus {
   color: #4db8ff;
 }
 
@@ -685,11 +693,11 @@ ins {
 }
 
 #site-name, #site-slogan {
+  display: block;
   font-size: 1em;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  display: block;
 }
 
 #nav {
@@ -1089,10 +1097,10 @@ span.ico {
 }
 
 /* ============================================================================
-    Import from plugin-support.scss
+Import from plugin-support.scss
 ============================================================================= */
 /* ============================================================================
-    Select box plugin support
+Select box plugin support
 ============================================================================= */
 /* applied to original <select> to hide */
 .has_sb {
@@ -1295,7 +1303,7 @@ span.ico {
 }
 
 /* ============================================================================
-    Checkbox plugin support
+Checkbox plugin support
 ============================================================================= */
 .jquery-checkbox {
   display: inline;
@@ -1341,13 +1349,13 @@ span.ico {
 
 .jquery-checkbox-checked .jquery-checkbox-disabled img {
   background-position: 0px 0px;
-  opacity: 0.5;
+  opacity: 0.5em;
 }
 
 /*
- * FancyBox - jQuery Plugin
- * Simple and fancy lightbox alternative
- *
+* FancyBox - jQuery Plugin
+* Simple and fancy lightbox alternative
+*
  * Examples and documentation at: http://fancybox.net
  *
  * Copyright (c) 2008 - 2010 Janis Skarnelis

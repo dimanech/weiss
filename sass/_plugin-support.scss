@@ -1,10 +1,10 @@
 /* ============================================================================
-    Import from plugin-support.scss
+Import from plugin-support.scss
 ============================================================================= */
 
 
 /* ============================================================================
-    Select box plugin support
+Select box plugin support
 ============================================================================= */
 
 /* applied to original <select> to hide */
@@ -24,7 +24,7 @@
     .ie-old & {
       display: inline;
       zoom: 1;
-    }
+  }
 }
 
 .selectbox .display {
@@ -59,7 +59,7 @@
     .ie-old & {
       display: inline;
       zoom: 1;
-    }
+  }
 }
 
 .selectbox .display.active {
@@ -90,7 +90,7 @@
     .ie-old & {
       display: inline;
       zoom: 1;
-    }
+  }
 }
 
 .selectbox .value {
@@ -138,7 +138,7 @@
     .ie-old & {
       display: inline;
       zoom: 1;
-    }
+  }
 }
 
 .selectbox.items li.selected>.item {
@@ -208,7 +208,7 @@
 }
 
 /* ============================================================================
-    Checkbox plugin support
+Checkbox plugin support
 ============================================================================= */
 
 .jquery-checkbox {
@@ -259,9 +259,9 @@
 }
 
 /*
- * FancyBox - jQuery Plugin
- * Simple and fancy lightbox alternative
- *
+* FancyBox - jQuery Plugin
+* Simple and fancy lightbox alternative
+*
  * Examples and documentation at: http://fancybox.net
  *
  * Copyright (c) 2008 - 2010 Janis Skarnelis
@@ -275,7 +275,7 @@
  *   http://www.gnu.org/licenses/gpl.html
  */
 
-#fancybox-loading {
+ #fancybox-loading {
     position: fixed;
     top: 50%;
     left: 50%;

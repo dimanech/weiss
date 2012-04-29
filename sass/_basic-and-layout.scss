@@ -15,15 +15,15 @@
 // 12px-75%
 
 
-$main-bg-color: #fff;
-$main-fg-color: #ccc;
-$base-color: #434343;
-$ln-color: #09f;
-$ln-h-color: lighten($ln-color, 15%);
-$conatiner-width: 974px;
-$main-width: percentage(724px / $conatiner-width);
-$aside-width: percentage(227px / $conatiner-width);
-$two-sidebars-main-width: percentage(474px / $conatiner-width);
+$mainBgColor: #fff;
+$mainFgColor: #ccc;
+$baseColor: #434343;
+$lnColor: #09f;
+$lnHoverColor: lighten($lnColor, 15%);
+$conatinerWidth: 974px;
+$mainWidth: percentage(724px / $conatinerWidth);
+$asideWidth: percentage(227px / $conatinerWidth);
+$twoSdbarsMainWidth: percentage(474px / $conatinerWidth);
 
 // fonts
 $sans: Arial, FreeSans, sans-serif;
@@ -163,20 +163,22 @@ address {
 // NOTE: link pseudoclases order -- link, visited, hover, active
 
 a {
-  color: $ln-color;
+  color: $lnColor;
 
   &:visited {
-    color: $ln-color;
+    color: $lnColor;
   }
 
   &:hover, &:active {
-    color: $ln-h-color;
+    color: $lnHoverColor;
   }
 
-  &[href^="tel"], &[href^="mailto"], &[href^="callto"] {
-    @extend .psln;
-  }
+  //&[href^="tel"], &[href^="mailto"], &[href^="callto"] {
+  //  @extend .psln;
+  //}
 }
+
+/* emded content */
 
 img {
   font-size: 1em;
@@ -247,12 +249,16 @@ ul, ol {
   }
 }
 
+ul li {
+  list-style: disc outside;
+}
+
 ol li {
   list-style: decimal outside;
 }
 
-ul li {
-  list-style: disc outside;
+ol ul li {
+  list-style: disc; // ul inside ul fix
 }
 
 dl dt, dfn {
@@ -350,6 +356,7 @@ label {
 }
 
 input {
+  
   &[type="button"], &[type="submit"], &[type="reset"], &[type="image"] {
     cursor: default;
     -webkit-appearance: button;
@@ -396,7 +403,7 @@ select, textarea {
   }
 
   &:focus {
-    border-color: $ln-color;
+    border-color: $lnColor;
     outline: none;
   }
 }
@@ -409,7 +416,7 @@ input[type="image"], button {
   border: 1px solid #2d2d2d;
 
   &:hover, &:focus {
-    border-color: $ln-color;
+    border-color: $lnColor;
   }
 }
 
@@ -529,8 +536,8 @@ figure {
 
 body {
   font: normal normal 87.5%/1.3em #{$sans};
-  color: $base-color;
-  background: $main-bg-color;
+  color: $baseColor;
+  background: $mainBgColor;
   overflow-y: scroll; // force scroll
 
   .ie-old & {
@@ -549,14 +556,14 @@ body {
    --------------------------------------------------------------------------*/
 
 #main-container {
-  background-color: $main-fg-color;
+  background-color: $mainFgColor;
 }
 
 #main-inner {
-  width: $conatiner-width;
+  width: $conatinerWidth;
   margin: 0 auto;
   position: relative;
-  background-color: $main-bg-color;
+  background-color: $mainBgColor;
 }
 
 #main {
@@ -566,20 +573,24 @@ body {
 
 body.two-sidebars #main {
   float: left;
-  margin-left: $aside-width+2.5%;
-  width: $two-sidebars-main-width;
+  margin-left: $asideWidth+2.5%;
+  width: $twoSdbarsMainWidth;
+  
+  .ie-old & {
+    display:inline; //double margin ie6 fix
+  }
 }
 
 body.sidebar-first #main {
   float: right;
-  width: $main-width;
+  width: $mainWidth;
 }
 
 body.sidebar-second #main {
   float: left;
   margin: 0;
   padding: 0;
-  width: $main-width;
+  width: $mainWidth;
 }
 
 /* sidebars
@@ -587,18 +598,18 @@ body.sidebar-second #main {
 
 body.two-sidebars #sidebar-first {
   float: left;
-  margin-left: -$main-width;
-  width: $aside-width;
+  margin-left: -$mainWidth;
+  width: $asideWidth;
 }
 
 body.two-sidebars #sidebar-second {
   float: right;
-  width: $aside-width;
+  width: $asideWidth;
 }
 
 body.sidebar-first .aside, body.sidebar-second .aside {
   float: left;
-  width: $aside-width;
+  width: $asideWidth;
 }
 
 body.sidebar-second .aside {
@@ -667,7 +678,7 @@ $footer-height: 50px;
 /* position support */
 
 .c-container {
-    width: $conatiner-width;
+    width: $conatinerWidth;
     margin: 0 auto;
 }
 
@@ -678,6 +689,12 @@ $footer-height: 50px;
 .right-side {
     float:right;
 }
+
+//.ie-old {
+//  .right-side, .left-side {
+//    display:inline; 
+//  }
+//}
 
 span.flush {
     display:block;
@@ -708,14 +725,14 @@ ul.unstyled {
 }
 
 .psln {
-  color: $ln-color;
+  color: $lnColor;
   text-decoration:none;
   border-bottom: 1px dashed;
   position: relative;
   cursor: pointer;
 
   &:hover, &:focus {
-    color: $ln-h-color;
+    color: $lnHoverColor;
   }
 }
 

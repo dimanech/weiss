@@ -326,15 +326,15 @@ $correction: 0.5 / $min-width * 100;
 }
 
 .emph-c-ln {
-    color: $ln-color;
+    color: $lnColor;
 }
 
 .emph-c-dark {
-    color: darken($base-color, 20%);
+    color: darken($baseColor, 20%);
 }
 
 .emph-c-ligh {
-    color: lighten($base-color, 20%);
+    color: lighten($baseColor, 20%);
 }
 
 .tagline,
