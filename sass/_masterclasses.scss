@@ -267,24 +267,24 @@ $correction: 0.5 / $min-width * 100;
     Forms support
 ============================================================================= */
 
-.input-container {
-    display: inline-block;
-    padding: .2em .2em .1em;
-    /* background: url(../images/input.png) 0 0 no-repeat; */
-    vertical-align: bottom;
-
-    .ie-old {
-      display:inline;
-      zoom: 1;
-    }
-
-    input {
-      padding: 0 .4em;
-      margin: 0;
-      background: transparent;
-      border: none;
-    }
-}
+// .input-container {
+    // display: inline-block;
+    // padding: .2em .2em .1em;
+    // /* background: url(../images/input.png) 0 0 no-repeat; */
+    // vertical-align: bottom;
+// 
+    // .ie-old {
+      // display:inline;
+      // zoom: 1;
+    // }
+// 
+    // input {
+      // padding: 0 .4em;
+      // margin: 0;
+      // background: transparent;
+      // border: none;
+    // }
+// }
 
 /* ============================================================================
     Stylize text

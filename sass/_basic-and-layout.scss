@@ -11,6 +11,7 @@
 $mainBgColor: #fff;
 $mainFgColor: #ccc;
 $baseColor: #434343;
+$accentColor: #000;
 $lnColor: #09f;
 $lnHoverColor: lighten($lnColor, 15%);
 $containerWidth: 974px;
@@ -695,7 +696,7 @@ $footer-height: 50px;
  // }
 // }
 
-span.flush {
+span.br {
     display:block;
 }
 
