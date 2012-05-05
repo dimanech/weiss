@@ -82,7 +82,6 @@
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
   -o-border-radius: $radius;
-  -ms-border-radius: $radius;
   border-radius: $radius;
 }
 
@@ -169,103 +168,100 @@ $correction: 0.5 / $min-width * 100;
     buttons universal
 ============================================================================= */
 
-/* .btn {
-    display:inline-block;
-    padding: 0 7px;
-    vertical-align: text-bottom;
-
-    .ie-old & {
-      display:inline;
-      zoom: 1;
-    }
-
-  .b-left-side,
-  .b-middle,
-  .b-right-side {
-    display:inline-block;
-    float:left;
-    vertical-align: top;
-    background-repeat: repeat-y;
-    .ie-old {
-     display:inline;
-     zoom: 1;
-    }
-  }
-
-  input {
-    padding: 0;
-    margin: 0;
-    background: transparent;
-    border: none;
-  }
-
-  .b-left-side,
-  .b-right-side {
-    width: 7px;
-  }
-
-  .b-middle {
-    background-position: center top;
-  }
-
-  .b-left-side {
-    background-position: left top;
-  }
-
-  .b-right-side {
-    background-position: right top;
-  }
-
-  &:hover {
-    span {
-      opacity: .92;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
-      filter: alpha(opacity = 92);
-    }
-  }
-
-}
-
-.btn-prim {
-   height: 31px;
-   line-height: 31px;
-   font-size: 18px;
-
-  .b-left-side,
-  .b-middle,
-  .b-right-side {
-    background-image: url(../images/button-green-medium.png);
-    height: 31px;
-    line-height: 31px;
-  }
-
-  .b-middle {
-    padding: 0 .4em;
-  }
-
-}
-
-.btn-sec {
-   height: 18px;
-   line-height: 18px;
-   font-size: 1em;
-
-  .b-left-side,
-  .b-middle,
-  .b-right-side {
-    background-image: url(../images/button-green-medium.png);
-    height: 18px;
-    line-height: 18px;
-  }
-
-  .b-middle {
-    padding: 0 .4em;
-  }
-
-} */
-
-
-
+// .btn {
+    // display:inline-block;
+    // padding: 0 7px;
+    // vertical-align: text-bottom;
+// 
+    // .ie-old & {
+      // display:inline;
+      // zoom: 1;
+    // }
+// 
+  // .b-left-side,
+  // .b-middle,
+  // .b-right-side {
+    // display:inline-block;
+    // float:left;
+    // vertical-align: top;
+    // background-repeat: repeat-y;
+    // .ie-old {
+     // display:inline;
+     // zoom: 1;
+    // }
+  // }
+// 
+  // input {
+    // padding: 0;
+    // margin: 0;
+    // background: transparent;
+    // border: none;
+  // }
+// 
+  // .b-left-side,
+  // .b-right-side {
+    // width: 7px;
+  // }
+// 
+  // .b-middle {
+    // background-position: center top;
+  // }
+// 
+  // .b-left-side {
+    // background-position: left top;
+  // }
+// 
+  // .b-right-side {
+    // background-position: right top;
+  // }
+// 
+  // &:hover {
+    // span {
+      // opacity: .92;
+      // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+      // filter: alpha(opacity = 92);
+    // }
+  // }
+// 
+// }
+// 
+// .btn-prim {
+   // height: 31px;
+   // line-height: 31px;
+   // font-size: 18px;
+// 
+  // .b-left-side,
+  // .b-middle,
+  // .b-right-side {
+    // background-image: url(../images/button-green-medium.png);
+    // height: 31px;
+    // line-height: 31px;
+  // }
+// 
+  // .b-middle {
+    // padding: 0 .4em;
+  // }
+// 
+// }
+// 
+// .btn-sec {
+   // height: 18px;
+   // line-height: 18px;
+   // font-size: 1em;
+// 
+  // .b-left-side,
+  // .b-middle,
+  // .b-right-side {
+    // background-image: url(../images/button-green-medium.png);
+    // height: 18px;
+    // line-height: 18px;
+  // }
+// 
+  // .b-middle {
+    // padding: 0 .4em;
+  // }
+// 
+// }
 
 /* ============================================================================
     Forms support
@@ -291,7 +287,7 @@ $correction: 0.5 / $min-width * 100;
 }
 
 /* ============================================================================
-    stylize text
+    Stylize text
 ============================================================================= */
 
 .emph {
@@ -348,6 +344,7 @@ $correction: 0.5 / $min-width * 100;
 
 span.ico {
     display: inline-block;
+    /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
 }
 
 .ie-old span.ico {

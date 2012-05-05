@@ -8,22 +8,15 @@
 //    Variables
 // ============================================================================
 
-// 16px-100%
-// 15px-93.8%
-// 14px-87.5%
-// 13px-0.813%
-// 12px-75%
-
-
 $mainBgColor: #fff;
 $mainFgColor: #ccc;
 $baseColor: #434343;
 $lnColor: #09f;
 $lnHoverColor: lighten($lnColor, 15%);
-$conatinerWidth: 974px;
-$mainWidth: percentage(724px / $conatinerWidth);
-$asideWidth: percentage(227px / $conatinerWidth);
-$twoSdbarsMainWidth: percentage(474px / $conatinerWidth);
+$containerWidth: 974px;
+$mainWidth: percentage(724px / $containerWidth);
+$asideWidth: percentage(227px / $containerWidth);
+$twoSdbarsMainWidth: percentage(474px / $containerWidth);
 
 // fonts
 $sans: Arial, FreeSans, sans-serif;
@@ -178,14 +171,13 @@ a {
   //}
 }
 
-/* emded content */
+/* embed content */
 
 img {
   font-size: 1em;
   color: #444; // alt text style
   -ms-interpolation-mode: bicubic; // improve IE's resizing of images
-  position: relative;
-  // Chrome outline around img in a; ie5-6 floating image disappearing fix
+  position: relative;  // Chrome outline around img in a; ie5-6 floating image disappearing fix
 
   a &, a:visited & {
     border: 0 none;
@@ -215,21 +207,21 @@ video {
 
 // selection fixes
 
-//::-moz-selection {
-//  text-shadow: none;
-//}
-
-//::selection {
-//  text-shadow: none;
-//}
-
-//body {
-//  -webkit-tap-highlight-color: rgb(255,255,158);
-//}
-
-//*:target {
-//  border-bottom: 3px solid rgba(0, 0, 0, .1);
-//}
+// ::-moz-selection {
+  // text-shadow: none;
+// }
+// 
+// ::selection {
+  // text-shadow: none;
+// }
+// 
+// body {
+  // -webkit-tap-highlight-color: rgb(255,255,158);
+// }
+// 
+// *:target {
+  // border-bottom: 3px solid rgba(0, 0, 0, .1);
+// }
 
 /* ============================================================================
     1.2. Lists and tables
@@ -475,17 +467,17 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 // placeholder styles
 
-//input::-webkit-input-placeholder {
-//}
-
-//input:-moz-placeholder {
-//}
+// input::-webkit-input-placeholder {
+// }
+// 
+// input:-moz-placeholder {
+// }
 
 // Colors for native form validition 
 
-//input:valid, textarea:valid {}
-
-//input:invalid, textarea:invalid {}
+// input:valid, textarea:valid {}
+// 
+// input:invalid, textarea:invalid {}
 
 /* ============================================================================
     1.4. Specific
@@ -534,6 +526,12 @@ figure {
     1.5. Page Layout
 ============================================================================= */
 
+// 16px-100%
+// 15px-93.8%
+// 14px-87.5%
+// 13px-0.813%
+// 12px-75%
+
 body {
   font: normal normal 87.5%/1.3em #{$sans};
   color: $baseColor;
@@ -560,7 +558,7 @@ body {
 }
 
 #main-inner {
-  width: $conatinerWidth;
+  width: $containerWidth;
   margin: 0 auto;
   position: relative;
   background-color: $mainBgColor;
@@ -629,33 +627,33 @@ body.sidebar-second .aside {
 
 // pseudo sticky
 // #main-container {
-// min-height: 55em;
+  // min-height: 55em;
 // }
 
 @media screen and (max-width: 2400px) {
 
 $footer-height: 50px;
 
-    html, body {
-        height: 100%;
-    }
+  html, body {
+    height: 100%;
+  }
 
-    #main-container {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        margin: 0 auto;
-        margin-bottom: -$footer-height;
-    }
+  #main-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: -$footer-height;
+  }
 
-    #main-inner {
-        padding-bottom: $footer-height;
-    }
+  #main-inner {
+    padding-bottom: $footer-height;
+  }
 
-    #footer {
-        position: relative;
-        height: $footer-height;
-    }
+  #footer {
+    position: relative;
+    height: $footer-height;
+  }
 }
 
 /* ============================================================================
@@ -663,6 +661,7 @@ $footer-height: 50px;
 ============================================================================= */
 
 .clearfix {
+  
   &:after {
     clear: both;
     content: ".";
@@ -678,7 +677,7 @@ $footer-height: 50px;
 /* position support */
 
 .c-container {
-    width: $conatinerWidth;
+    width: $containerWidth;
     margin: 0 auto;
 }
 
@@ -690,11 +689,11 @@ $footer-height: 50px;
     float:right;
 }
 
-//.ie-old {
-//  .right-side, .left-side {
-//    display:inline; 
-//  }
-//}
+// .ie-old {
+ // .right-side, .left-side {
+   // display:inline; 
+ // }
+// }
 
 span.flush {
     display:block;
@@ -765,7 +764,6 @@ ul.unstyled {
     display: inline;
     zoom: 1;
   }
-  
 }
 
 .img-replace {
