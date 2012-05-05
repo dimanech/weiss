@@ -530,7 +530,7 @@ body.sidebar-second .aside {
   float: right;
 }
 
-span.flush {
+span.br {
   display: block;
 }
 
@@ -895,23 +895,6 @@ ins {
 /* ============================================================================
     Forms support
 ============================================================================= */
-.input-container {
-  display: inline-block;
-  padding: .2em .2em .1em;
-  /* background: url(../images/input.png) 0 0 no-repeat; */
-  vertical-align: bottom;
-}
-.input-container .ie-old {
-  display: inline;
-  zoom: 1;
-}
-.input-container input {
-  padding: 0 .4em;
-  margin: 0;
-  background: transparent;
-  border: none;
-}
-
 /* ============================================================================
     Stylize text
 ============================================================================= */
