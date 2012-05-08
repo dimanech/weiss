@@ -21,17 +21,15 @@ $twoSdbarsMainWidth: percentage(474px / $containerWidth);
 
 // fonts
 $sans: Arial, FreeSans, sans-serif;
-$h-sans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
-$h-sans-cond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
+$hSans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
+$hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
 $serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
-$b-serif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
-$a-serif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
-$monosp-serif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
-$monosp-sans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-$grot-cond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
-$slab-serif: "DejaVu Serif", serif;
-
-// sass --watch -t expanded sass:css
+$bSerif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
+$aSerif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
+$monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+$monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
+$slabSerif: "DejaVu Serif", serif;
 
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // http://sass-lang.com/tutorial.html

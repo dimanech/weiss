@@ -935,11 +935,6 @@ ins {
   color: #767676;
 }
 
-.tagline,
-.alt-title {
-  font-style: italic;
-}
-
 /* ============================================================================
     sprite support
 ============================================================================= */
@@ -947,7 +942,6 @@ span.ico {
   display: inline-block;
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
 }
-
 .ie-old span.ico {
   display: inline;
   zoom: 1;
@@ -963,13 +957,16 @@ span.ico {
 
 .visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
-  position: absolute;
+  position: absolute !important;
   width: 1px;
+}
+.ie-old .visuallyhidden {
+  clip: rect(1px 1px 1px 1px);
 }
 
 .visuallyhidden.focusable:active,

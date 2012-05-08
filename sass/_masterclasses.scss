@@ -291,30 +291,30 @@ $correction: 0.5 / $min-width * 100;
 ============================================================================= */
 
 .emph {
-    font-style: italic;
+  font-style: italic;
 }
 
 .emph-fz-sm {
-    font-size: .8em;
+  font-size: .8em;
 }
 
 .emph-fz-md {
-    font-size: 1.28em;
+  font-size: 1.28em;
 }
 
 .emph-fz-big {
-    font-size: 1.57em;
-    line-height: 1.1em;
+  font-size: 1.57em;
+  line-height: 1.1em;
 }
 
-.emph-fz-bigest {}
+.emph-fz-huge {}
 
 .emph-serif {
-    font-family: $serif;
+  font-family: $serif;
 }
 
 .emph-sans {
-    font-family: $sans;
+  font-family: $sans;
 }
 
 .emph-c {
@@ -322,20 +322,20 @@ $correction: 0.5 / $min-width * 100;
 }
 
 .emph-c-ln {
-    color: $lnColor;
+  color: $lnColor;
 }
 
 .emph-c-dark {
-    color: darken($baseColor, 20%);
+  color: darken($baseColor, 20%);
 }
 
 .emph-c-ligh {
-    color: lighten($baseColor, 20%);
+  color: lighten($baseColor, 20%);
 }
 
-.tagline,
-.alt-title {
-    font-style: italic;
+.alt-title,
+.lead {
+    
 }
 
 /* ============================================================================
@@ -343,14 +343,15 @@ $correction: 0.5 / $min-width * 100;
 ============================================================================= */
 
 span.ico {
-    display: inline-block;
-    /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
-}
-
-.ie-old span.ico {
+  display: inline-block;
+  /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
+ 
+  .ie-old & {
     display: inline;
     zoom: 1;
+  }
 }
+
 
 /* ============================================================================
     Additional
@@ -366,13 +367,17 @@ span.ico {
 // Hide only visually, but have it available for screenreaders: h5bp.com/v 
 .visuallyhidden {
     border: 0;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
+    position: absolute !important;;
     width: 1px;
+    
+    .ie-old & {
+      clip: rect(1px 1px 1px 1px);
+    } 
 }
 
 // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
