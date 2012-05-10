@@ -120,11 +120,7 @@
 
 /* Opera speed dial minimized */
 @media screen and (view-mode: minimized) {
-
-    #main-container,
-    #nav,
-    #header {
+    #main-container {
         display: none;
     }
-
 }

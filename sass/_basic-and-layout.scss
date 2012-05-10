@@ -32,7 +32,6 @@ $grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
 $slabSerif: "DejaVu Serif", serif;
 
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
-// http://sass-lang.com/tutorial.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
 // Full reset
@@ -348,7 +347,8 @@ label {
 
 input {
   
-  &[type="button"], &[type="submit"], &[type="reset"], &[type="image"] {
+  &[type="button"], &[type="submit"],
+  &[type="reset"], &[type="image"] {
     cursor: default;
     -webkit-appearance: button;
   }
