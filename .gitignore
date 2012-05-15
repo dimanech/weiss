@@ -4,6 +4,7 @@
 .pydevproject
 .externalToolBuilders
 .settings
+*.sublime-*
 
 design
 arch
