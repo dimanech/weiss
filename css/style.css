@@ -1,7 +1,6 @@
-@charset "UTF-8";
 /* ============================================================================
     
-    UPLAB 2012
+    Uplab 2012
     http://uplab.ru
     
 ============================================================================= */
@@ -504,7 +503,7 @@ body.sidebar-second .aside {
 /* ============================================================================
     Basic masterclasses
 ============================================================================= */
-.clearfix:after, .grid-row:after {
+.clearfix:after {
   clear: both;
   content: ".";
   display: block;
@@ -512,7 +511,7 @@ body.sidebar-second .aside {
   font-size: 0;
   visibility: hidden;
 }
-.ie-old .clearfix, .ie-old .grid-row {
+.ie-old .clearfix {
   zoom: 1;
 }
 
@@ -539,17 +538,18 @@ span.br {
   position: relative;
 }
 
-ul.flat {
+/* ul styles */
+.flat {
   margin: 0;
   padding: 0;
 }
-ul.flat li {
+.flat li {
   margin: 0;
   list-style: none;
   background: none;
 }
 
-ul.unstyled li {
+.unstyled li {
   list-style: none;
 }
 
@@ -600,6 +600,14 @@ ul.unstyled li {
 .ie-old .img-replace {
   text-indent: 0;
   line-height: 0;
+}
+
+.img-container {
+  overflow: hidden;
+  display: inline-block;
+}
+.img-container img {
+  display: block;
 }
 
 /* ============================================================================
@@ -732,10 +740,6 @@ ins {
 /* ============================================================================
     3.5 Footer
 ============================================================================= */
-#footer {
-  font-size: .9em;
-  padding: 1em 0;
-}
 #footer .left-side, #footer .right-side {
   width: 45%;
 }
@@ -764,9 +768,7 @@ ins {
 ============================================================================= */
 /* Opera speed dial minimized */
 @media screen and (view-mode: minimized) {
-  #main-container,
-  #nav,
-  #header {
+  #main-container {
     display: none;
   }
 }
@@ -814,82 +816,6 @@ ins {
 }
 
 /* ============================================================================
-    Mixins
-============================================================================= */
-/* ============================================================================
-    Grid support
-============================================================================= */
-.grid-row {
-  display: block;
-  width: 102.083%;
-  margin: 0 -1.042%;
-}
-.ie-old .grid-row {
-  width: 102.083%;
-  margin: 0 -1.042%;
-}
-
-.span1 {
-  display: block;
-  float: left;
-  width: 6.25%;
-  margin: 0 1.042%;
-}
-.ie-old .span1 {
-  display: inline;
-  width: 6.25%;
-  margin: 0 1.042%;
-}
-
-.span4 {
-  display: block;
-  float: left;
-  width: 31.25%;
-  margin: 0 1.042%;
-}
-.ie-old .span4 {
-  display: inline;
-  width: 31.25%;
-  margin: 0 1.042%;
-}
-
-.span6 {
-  display: block;
-  float: left;
-  width: 47.917%;
-  margin: 0 1.042%;
-}
-.ie-old .span6 {
-  display: inline;
-  width: 47.917%;
-  margin: 0 1.042%;
-}
-
-.span8 {
-  display: block;
-  float: left;
-  width: 64.583%;
-  margin: 0 1.042%;
-}
-.ie-old .span8 {
-  display: inline;
-  width: 64.583%;
-  margin: 0 1.042%;
-}
-
-.span12 {
-  display: block;
-  float: left;
-  width: 97.917%;
-  margin: 0 1.042%;
-}
-.ie-old .span12 {
-  display: inline;
-  width: 97.917%;
-  margin: 0 1.042%;
-}
-
-/* ============================================================================
     buttons universal
 ============================================================================= */
 /* ============================================================================
@@ -915,12 +841,20 @@ ins {
   line-height: 1.1em;
 }
 
+.emph-fz-huge {
+  font-size: 3em;
+}
+
 .emph-serif {
   font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
 }
 
 .emph-sans {
   font-family: Arial, FreeSans, sans-serif;
+}
+
+.emph-c {
+  color: black;
 }
 
 .emph-c-ln {
@@ -936,11 +870,61 @@ ins {
 }
 
 /* ============================================================================
-    sprite support
+    Non-semantic grid support
+============================================================================= */
+.grid-row {
+  display: inline;
+  float: left;
+  width: 960px;
+}
+
+.span1 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 60px;
+}
+
+.span4 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.span6 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+}
+
+.span8 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 620px;
+}
+
+.span12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+}
+
+/* ============================================================================
+    Sprite support
 ============================================================================= */
 span.ico {
-  display: inline-block;
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
+  display: inline-block;
+  position: relative;
 }
 .ie-old span.ico {
   display: inline;

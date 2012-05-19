@@ -6,12 +6,14 @@
     
 ============================================================================= */
 
+@import "_mixins.scss";
+
 /* ============================================================================
     3.1 Header
 ============================================================================= */
 
 #header {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
     
   .left-side,
   .right-side {
@@ -38,10 +40,10 @@
 }
 
 #nav {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    clear:both;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  clear:both;
     
   li {
     list-style: none;
@@ -80,8 +82,6 @@
 ============================================================================= */
 
 #footer {
-    font-size: .9em;
-    padding: 1em 0;
     
   .left-side, .right-side {
     width: 45%;
@@ -120,7 +120,7 @@
 
 /* Opera speed dial minimized */
 @media screen and (view-mode: minimized) {
-    #main-container {
-        display: none;
-    }
+  #main-container {
+    display: none;
+  }
 }

@@ -4,6 +4,8 @@
     4.MEDIA QUERIES
 ============================================================================= */
 
+@import "_mixins.scss";
+
 @media screen and (min-width:1281px) {
     #device-visualizer {
         background-position: 9px center;

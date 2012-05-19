@@ -1,3 +1,8 @@
+//
+// Blankwork semantic grid
+// http://www.blankwork.net/
+
+
 // Main Variables:
 // I'm placing an underscore before each variable
 // because I'm using rather generic names
@@ -135,8 +140,6 @@ $_width: $_columns * ($_column-width + $_gutter);
 
 }
 
-
-
 // To be able to use columns inside another element,
 // You need to set that element to be a container (of how many columns)
 // So: @include container(x_number_of_columns)
@@ -161,3 +164,33 @@ $_width: $_columns * ($_column-width + $_gutter);
 @mixin omega {
   margin-right:0;
 }
+
+// ============================================================================
+//    Mixins
+//=============================================================================
+
+@mixin bdradius($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+  -webkit-background-clip: padding-box;
+}
+
+@mixin bsh($bshval: 0px 0px 0.83em rgba(0,0,0,0.5)) {
+  -moz-box-shadow: $bshval;
+  -webkit-box-shadow: $bshval;
+  -o-box-shadow: $bshval;
+  -box-shadow: $bshval;
+}
+
+@mixin transition($transition: all linear 200ms) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+//.test-class {
+//  @include transition(all ease 300ms);
+//}

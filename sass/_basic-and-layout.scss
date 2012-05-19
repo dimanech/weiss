@@ -31,6 +31,8 @@ $monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans 
 $grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
 $slabSerif: "DejaVu Serif", serif;
 
+@import "_mixins.scss";
+
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
@@ -528,7 +530,7 @@ figure {
 // 16px-100%
 // 15px-93.8%
 // 14px-87.5%
-// 13px-0.813%
+// 13px-81.3%
 // 12px-75%
 
 body {
@@ -624,11 +626,6 @@ body.sidebar-second .aside {
 /* Styicky footer
    --------------------------------------------------------------------------*/
 
-// pseudo sticky
-// #main-container {
-  // min-height: 55em;
-// }
-
 @media screen and (max-width: 2400px) {
 
 $footer-height: 50px;
@@ -704,7 +701,8 @@ span.br {
     position: relative;
 }
 
-ul.flat {
+/* ul styles */
+.flat { 
   margin: 0;
   padding: 0;
 
@@ -715,7 +713,7 @@ ul.flat {
   }
 }
 
-ul.unstyled {
+.unstyled {
   
   li {
     list-style:none;
@@ -774,5 +772,13 @@ ul.unstyled {
     text-indent: 0;
     line-height: 0;
   }
-  
+}
+
+.img-container {
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    display: block;
+  }
 }

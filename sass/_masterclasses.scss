@@ -3,6 +3,9 @@
 
     4. MASTER-CLASSES
 ============================================================================= */
+
+@import "_mixins.scss";
+
 #header, #footer, #content, .aside, #before-content, #under-content, .block {
     outline: 1px dashed #ccc;
 }
@@ -72,96 +75,6 @@
     outline:5px solid red;
   }
 
-}
-
-/* ============================================================================
-    Mixins
-============================================================================= */
-
-@mixin bdradius($radius: 5px) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -o-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin bsh($bshval: 0px 0px 0.83em rgba(0,0,0,0.5)) {
-  -moz-box-shadow: $bshval;
-  -webkit-box-shadow: $bshval;
-  -o-box-shadow: $bshval;
-  -box-shadow: $bshval;
-}
-
-@mixin transition($transition: all linear 200ms) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
-
-//.test-class {
-//  @include transition(all ease 300ms);
-//}
-
-/* ============================================================================
-    Grid support
-============================================================================= */
-
-// http://semantic.gs/
-
-$column-width: 60px;
-$gutter-width: 20px;
-$columns: 12;
-$total-width: 100%;
-//ie fixes
-$min-width: 999999;
-$correction: 0.5 / $min-width * 100;
-
-@function gridsystem-width($columns:$columns) {
-  @return ($column-width * $columns) + ($gutter-width * $columns);
-}
-
-@mixin row($columns:$columns) {
-  display: block;
-  width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
-  margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1);
-  @extend .clearfix;
-  
-  .ie-old & {
-    width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns))-$correction;
-    margin: 0 $total-width*((($gutter-width*.5)/gridsystem-width($columns))*-1)-$correction;
-  }
-}
-
-@mixin column($x,$columns:$columns) {
-  display: block;
-  float: left;
-  width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
-  margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-  
-  .ie-old & {
-    display: inline;
-    width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
-    margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
-  }
-}
-
-@mixin push($offset:1) {
-  margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-}
-
-@mixin pull($offset:1) {
-  margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
-}
-
-.grid-row {
-  @include row;
-}
-
-@each $n in 1, 4, 6, 8, 12 {
-  .span#{$n} {
-    @include column($n);
-  }
 }
 
 /* ============================================================================
@@ -307,7 +220,9 @@ $correction: 0.5 / $min-width * 100;
   line-height: 1.1em;
 }
 
-.emph-fz-huge {}
+.emph-fz-huge {
+  font-size: 3em;
+}
 
 .emph-serif {
   font-family: $serif;
@@ -318,7 +233,7 @@ $correction: 0.5 / $min-width * 100;
 }
 
 .emph-c {
-    
+  color: $accentColor;
 }
 
 .emph-c-ln {
@@ -339,19 +254,34 @@ $correction: 0.5 / $min-width * 100;
 }
 
 /* ============================================================================
-    sprite support
+    Non-semantic grid support
+============================================================================= */
+
+.grid-row {
+  @include container;
+}
+
+@each $n in 1, 4, 6, 8, 12 {
+  .span#{$n} {
+    @include column($n);
+  }
+}
+
+
+/* ============================================================================
+    Sprite support
 ============================================================================= */
 
 span.ico {
-  display: inline-block;
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
+  display: inline-block;
+  position: relative;
  
   .ie-old & {
     display: inline;
     zoom: 1;
   }
 }
-
 
 /* ============================================================================
     Additional
@@ -360,38 +290,37 @@ span.ico {
 
 // Hide from both screenreaders and browsers: h5bp.com/u 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v 
 .visuallyhidden {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute !important;;
-    width: 1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;;
+  width: 1px;
     
-    .ie-old & {
-      clip: rect(1px 1px 1px 1px);
-    } 
+  .ie-old & {
+    clip: rect(1px 1px 1px 1px);
+  } 
 }
 
 // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
-
 // Hide visually and from screenreaders, but maintain layout 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }

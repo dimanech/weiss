@@ -1,0 +1,10 @@
+.sass-cache
+.idea
+.project
+.pydevproject
+.externalToolBuilders
+.settings
+*.sublime-*
+
+design
+arch
