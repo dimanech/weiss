@@ -8,6 +8,9 @@ $(document).ready(function() {
 
     accordion();
 
+    //$(".no-native select").sb();
+    //$(".no-native input:check, .no-native input:radio").checkbox();
+
 });
 
 function contentTabs() {

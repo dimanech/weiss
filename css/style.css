@@ -2,8 +2,6 @@
     
     Weiss 2012
 ============================================================================= */
-/* @group grid */
-/* line 57, ../sass/_basic-and-layout.scss */
 html, body, div, h1, h2, h3, h4, h5, h6, p, img,
 dl, dt, dd, ol, ul, li, caption,
 table, tbody, tfoot, thead, tr, th, td,
@@ -13,22 +11,18 @@ form, fieldset, embed, object, applet {
   border: 0;
 }
 
-/* line 64, ../sass/_basic-and-layout.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, nav, section {
   display: block;
 }
 
-/* line 68, ../sass/_basic-and-layout.scss */
 audio, canvas, video {
   display: inline-block;
 }
 
-/* line 72, ../sass/_basic-and-layout.scss */
 blockquote, q {
   quotes: none;
 }
-/* line 75, ../sass/_basic-and-layout.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
 }
@@ -39,120 +33,98 @@ blockquote:before, blockquote:after, q:before, q:after {
 /* ============================================================================
     1.1. Typography
 ============================================================================= */
-/* line 88, ../sass/_basic-and-layout.scss */
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
   line-height: 1.2em;
   font-weight: normal;
 }
 
-/* line 96, ../sass/_basic-and-layout.scss */
 h1, .h1, .aside h2, .aside .h2 {
   font-size: 2.14em;
   margin: 0 0 1em;
 }
 
-/* line 101, ../sass/_basic-and-layout.scss */
 h2, .h2 {
   font-size: 1.5em;
   margin: .83em 0;
 }
 
-/* line 106, ../sass/_basic-and-layout.scss */
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
   font-weight: bold;
 }
 
-/* line 110, ../sass/_basic-and-layout.scss */
 h3, .h3 {
   font-size: 1.17em;
   line-height: 1.429em;
   margin: 1em 0;
 }
 
-/* line 116, ../sass/_basic-and-layout.scss */
 h4, .h4 {
   font-size: 1em;
   margin: 1.3em 0;
 }
 
-/* line 121, ../sass/_basic-and-layout.scss */
 h5, .h5, h6, .h6 {
   font-size: 1em;
   font-style: italic;
   margin: 1.67em 0;
 }
 
-/* line 127, ../sass/_basic-and-layout.scss */
 h6, .h6 {
   font-weight: normal;
 }
 
-/* line 131, ../sass/_basic-and-layout.scss */
 p, pre, blockquote, table {
   margin: 0 0 1em 0;
 }
 
-/* line 135, ../sass/_basic-and-layout.scss */
 p {
   font-size: 1em;
 }
 
-/* line 139, ../sass/_basic-and-layout.scss */
 blockquote {
   margin-left: 4.2em;
   font-style: italic;
 }
 
-/* line 144, ../sass/_basic-and-layout.scss */
 strong, b {
   font-weight: bold;
 }
 
-/* line 148, ../sass/_basic-and-layout.scss */
 em, i, cite {
   font-style: italic;
 }
 
-/* line 154, ../sass/_basic-and-layout.scss */
 a {
   color: #0099ff;
 }
-/* line 157, ../sass/_basic-and-layout.scss */
 a:visited {
   color: #0099ff;
 }
-/* line 161, ../sass/_basic-and-layout.scss */
 a:hover, a:active {
   color: #4db8ff;
 }
 
 /* embed content */
-/* line 172, ../sass/_basic-and-layout.scss */
 img {
   font-size: 1em;
   color: #444;
   -ms-interpolation-mode: bicubic;
   position: relative;
 }
-/* line 178, ../sass/_basic-and-layout.scss */
 a img, a:visited img {
   border: 0 none;
 }
-/* line 182, ../sass/_basic-and-layout.scss */
 #main p img {
   float: left;
   padding: 0 1em 0 0;
 }
-/* line 187, ../sass/_basic-and-layout.scss */
 img::-moz-selection {
   background: transparent;
 }
-/* line 191, ../sass/_basic-and-layout.scss */
 img::selection {
   background: transparent;
 }
 
-/* line 199, ../sass/_basic-and-layout.scss */
 object,
 embed,
 video {
@@ -165,46 +137,38 @@ video {
 ============================================================================= */
 /* Lists
    --------------------------------------------------------------------------*/
-/* line 229, ../sass/_basic-and-layout.scss */
 ul, ol, dl {
   margin: 0 1.5em 1.5em 0;
   padding-left: 1.5em;
 }
 
-/* line 235, ../sass/_basic-and-layout.scss */
 ul li, ol li {
   margin: .357em 0 .357em 1.5em;
 }
 
-/* line 240, ../sass/_basic-and-layout.scss */
 ul li {
   list-style: disc outside;
 }
 
-/* line 244, ../sass/_basic-and-layout.scss */
 ol li {
   list-style: decimal outside;
 }
 
-/* line 248, ../sass/_basic-and-layout.scss */
 ol ul li {
   list-style: disc;
 }
 
-/* line 252, ../sass/_basic-and-layout.scss */
 dl dt, dfn {
   font-weight: bold;
   font-style: italic;
 }
 
-/* line 257, ../sass/_basic-and-layout.scss */
 dl dd {
   margin-left: 1.5em;
 }
 
 /* Tables
    --------------------------------------------------------------------------*/
-/* line 264, ../sass/_basic-and-layout.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -215,49 +179,39 @@ table {
   empty-cells: hide;
 }
 
-/* line 274, ../sass/_basic-and-layout.scss */
 caption {
   font-size: 1.429em;
   padding-bottom: .429em;
 }
 
-/* line 279, ../sass/_basic-and-layout.scss */
 td, th {
   vertical-align: middle;
   padding: 0 .429em;
   border: 1px solid #ccc;
 }
-/* line 284, ../sass/_basic-and-layout.scss */
 thead td, thead th {
   font-weight: bold;
 }
 
-/* line 293, ../sass/_basic-and-layout.scss */
 tbody td[colspan] {
   text-align: center;
 }
-/* line 297, ../sass/_basic-and-layout.scss */
 tbody td[rowspan] {
   vertical-align: middle;
 }
-/* line 301, ../sass/_basic-and-layout.scss */
 tbody td[colspan="1"] {
   text-align: left;
 }
-/* line 305, ../sass/_basic-and-layout.scss */
 tbody td[rowspan="1"] {
   vertical-align: top;
 }
-/* line 309, ../sass/_basic-and-layout.scss */
 tbody td:empty {
   border: none;
 }
-/* line 314, ../sass/_basic-and-layout.scss */
 tbody tr:nth-of-type(odd) td {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 319, ../sass/_basic-and-layout.scss */
 tfoot {
   text-align: center;
   font-style: italic;
@@ -267,54 +221,44 @@ tfoot {
 /* ============================================================================
     1.3. Forms
 ============================================================================= */
-/* line 329, ../sass/_basic-and-layout.scss */
 form {
   border: none;
 }
 
-/* line 333, ../sass/_basic-and-layout.scss */
 button, input, select, textarea {
   font: normal normal 1em/1.429em Arial, FreeSans, sans-serif;
   margin: 0;
   vertical-align: baseline;
 }
 
-/* line 339, ../sass/_basic-and-layout.scss */
 label {
   display: block;
   font-weight: normal;
 }
 
-/* line 347, ../sass/_basic-and-layout.scss */
 input[type="button"], input[type="submit"], input[type="reset"], input[type="image"] {
   cursor: default;
   -webkit-appearance: button;
 }
-/* line 352, ../sass/_basic-and-layout.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
 }
-/* line 356, ../sass/_basic-and-layout.scss */
 input[type="radio"] {
   vertical-align: text-top;
 }
-/* line 360, ../sass/_basic-and-layout.scss */
 input[type="checkbox"] {
   vertical-align: baseline;
 }
-/* line 364, ../sass/_basic-and-layout.scss */
 input[type="search"] {
   -webkit-appearance: none;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 370, ../sass/_basic-and-layout.scss */
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 382, ../sass/_basic-and-layout.scss */
 input[type="text"],
 input[type="password"],
 input[type="search"],
@@ -326,14 +270,12 @@ select, textarea {
   height: 1.4em;
   line-height: 1.4em;
 }
-/* line 390, ../sass/_basic-and-layout.scss */
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="search"]:hover,
 select:hover, textarea:hover {
   border-color: #777;
 }
-/* line 394, ../sass/_basic-and-layout.scss */
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
@@ -342,7 +284,6 @@ select:focus, textarea:focus {
   outline: none;
 }
 
-/* line 402, ../sass/_basic-and-layout.scss */
 input[type="button"],
 input[type="submit"],
 input[type="image"], button {
@@ -350,7 +291,6 @@ input[type="image"], button {
   background: #2d2d2d;
   border: 1px solid #2d2d2d;
 }
-/* line 407, ../sass/_basic-and-layout.scss */
 input[type="button"]:hover, input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus,
@@ -359,7 +299,6 @@ input[type="image"]:focus, button:hover, button:focus {
   border-color: #0099ff;
 }
 
-/* line 412, ../sass/_basic-and-layout.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
@@ -371,45 +310,37 @@ textarea {
   max-height: 14em;
 }
 
-/* line 426, ../sass/_basic-and-layout.scss */
 select[multiple="multiple"] {
   height: auto;
 }
 
-/* line 430, ../sass/_basic-and-layout.scss */
 optgroup {
   font-weight: normal;
   background: #ccc;
 }
 
-/* line 435, ../sass/_basic-and-layout.scss */
 fieldset {
   border: 1px solid #ccc;
   margin: 0 0 1.4375em;
   padding: 1em 1.5em 1.5em;
 }
 
-/* line 441, ../sass/_basic-and-layout.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 446, ../sass/_basic-and-layout.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 453, ../sass/_basic-and-layout.scss */
 .ie-old button, .ie-old input, .ie-old select, .ie-old textarea {
   vertical-align: middle;
 }
-/* line 457, ../sass/_basic-and-layout.scss */
 .ie-old button, .ie-old input {
   overflow: visible;
 }
-/* line 461, ../sass/_basic-and-layout.scss */
 .ie-old legend {
   margin-left: -7px;
 }
@@ -417,7 +348,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /* ============================================================================
     1.4. Specific
 ============================================================================= */
-/* line 485, ../sass/_basic-and-layout.scss */
 sup, sub {
   vertical-align: baseline;
   position: relative;
@@ -425,28 +355,23 @@ sup, sub {
   font-weight: inherit;
 }
 
-/* line 492, ../sass/_basic-and-layout.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 496, ../sass/_basic-and-layout.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 500, ../sass/_basic-and-layout.scss */
 address {
   font-style: normal;
 }
 
-/* line 504, ../sass/_basic-and-layout.scss */
 mark {
   background-color: #ff9;
   color: #000;
 }
 
-/* line 509, ../sass/_basic-and-layout.scss */
 hr {
   background: #666;
   border: none;
@@ -457,12 +382,10 @@ hr {
   width: 100%;
 }
 
-/* line 519, ../sass/_basic-and-layout.scss */
 u {
   text-decoration: none;
 }
 
-/* line 524, ../sass/_basic-and-layout.scss */
 figure {
   margin: 0;
 }
@@ -470,33 +393,28 @@ figure {
 /* ============================================================================
     1.5. Page Layout
 ============================================================================= */
-/* line 538, ../sass/_basic-and-layout.scss */
 body {
   font: normal normal 87.5%/1.3em Arial, FreeSans, sans-serif;
   color: #434343;
   background: white;
   overflow-y: scroll;
 }
-/* line 544, ../sass/_basic-and-layout.scss */
 .ie-old body {
   overflow-y: auto;
 }
 
 /* header
    --------------------------------------------------------------------------*/
-/* line 552, ../sass/_basic-and-layout.scss */
 #header {
   width: 100%;
 }
 
 /* main
    --------------------------------------------------------------------------*/
-/* line 559, ../sass/_basic-and-layout.scss */
 #main-container {
   background-color: #cccccc;
 }
 
-/* line 563, ../sass/_basic-and-layout.scss */
 #main-inner {
   width: 974px;
   margin: 0 auto;
@@ -504,30 +422,25 @@ body {
   background-color: white;
 }
 
-/* line 570, ../sass/_basic-and-layout.scss */
 #main {
   margin-bottom: 2em;
   width: 100%;
 }
 
-/* line 575, ../sass/_basic-and-layout.scss */
 body.two-sidebars #main {
   float: left;
   margin-left: 25.806%;
   width: 48.665%;
 }
-/* line 580, ../sass/_basic-and-layout.scss */
 .ie-old body.two-sidebars #main {
   display: inline;
 }
 
-/* line 585, ../sass/_basic-and-layout.scss */
 body.sidebar-first #main {
   float: right;
   width: 74.333%;
 }
 
-/* line 590, ../sass/_basic-and-layout.scss */
 body.sidebar-second #main {
   float: left;
   margin: 0;
@@ -537,33 +450,28 @@ body.sidebar-second #main {
 
 /* sidebars
    --------------------------------------------------------------------------*/
-/* line 600, ../sass/_basic-and-layout.scss */
 body.two-sidebars #sidebar-first {
   float: left;
   margin-left: -74.333%;
   width: 23.306%;
 }
 
-/* line 606, ../sass/_basic-and-layout.scss */
 body.two-sidebars #sidebar-second {
   float: right;
   width: 23.306%;
 }
 
-/* line 611, ../sass/_basic-and-layout.scss */
 body.sidebar-first .aside, body.sidebar-second .aside {
   float: left;
   width: 23.306%;
 }
 
-/* line 616, ../sass/_basic-and-layout.scss */
 body.sidebar-second .aside {
   float: right;
 }
 
 /* footer
    --------------------------------------------------------------------------*/
-/* line 623, ../sass/_basic-and-layout.scss */
 #footer {
   clear: both;
   overflow: hidden;
@@ -572,12 +480,10 @@ body.sidebar-second .aside {
 /* Styicky footer
    --------------------------------------------------------------------------*/
 @media screen and (max-width: 2400px) {
-  /* line 635, ../sass/_basic-and-layout.scss */
   html, body {
     height: 100%;
   }
 
-  /* line 639, ../sass/_basic-and-layout.scss */
   #main-container {
     min-height: 100%;
     height: auto !important;
@@ -586,12 +492,10 @@ body.sidebar-second .aside {
     margin-bottom: -50px;
   }
 
-  /* line 647, ../sass/_basic-and-layout.scss */
   #main-inner {
     padding-bottom: 50px;
   }
 
-  /* line 651, ../sass/_basic-and-layout.scss */
   #footer {
     position: relative;
     height: 50px;
@@ -600,8 +504,7 @@ body.sidebar-second .aside {
 /* ============================================================================
     Basic masterclasses
 ============================================================================= */
-/* line 663, ../sass/_basic-and-layout.scss */
-.clearfix:after {
+.clearfix:after, .grid-row:after {
   clear: both;
   content: ".";
   display: block;
@@ -609,58 +512,48 @@ body.sidebar-second .aside {
   font-size: 0;
   visibility: hidden;
 }
-/* line 672, ../sass/_basic-and-layout.scss */
-.ie-old .clearfix {
+.ie-old .clearfix, .ie-old .grid-row {
   zoom: 1;
 }
 
 /* position support */
-/* line 677, ../sass/_basic-and-layout.scss */
 .c-container {
   width: 974px;
   margin: 0 auto;
 }
 
-/* line 682, ../sass/_basic-and-layout.scss */
 .left-side {
   float: left;
 }
 
-/* line 686, ../sass/_basic-and-layout.scss */
 .right-side {
   float: right;
 }
 
-/* line 696, ../sass/_basic-and-layout.scss */
 span.br {
   display: block;
 }
 
 /* style support */
-/* line 702, ../sass/_basic-and-layout.scss */
 .block {
   position: relative;
 }
 
 /* ul styles */
-/* line 707, ../sass/_basic-and-layout.scss */
 .flat {
   margin: 0;
   padding: 0;
 }
-/* line 711, ../sass/_basic-and-layout.scss */
 .flat li {
   margin: 0;
   list-style: none;
   background: none;
 }
 
-/* line 720, ../sass/_basic-and-layout.scss */
 .unstyled li {
   list-style: none;
 }
 
-/* line 725, ../sass/_basic-and-layout.scss */
 .psln {
   color: #0099ff;
   text-decoration: none;
@@ -668,62 +561,52 @@ span.br {
   position: relative;
   cursor: pointer;
 }
-/* line 732, ../sass/_basic-and-layout.scss */
 .psln:hover, .psln:focus {
   color: #4db8ff;
 }
 
 /* form support */
-/* line 739, ../sass/_basic-and-layout.scss */
 .form-row {
   overflow: hidden;
   clear: both;
   padding: .4em 0;
 }
 
-/* line 745, ../sass/_basic-and-layout.scss */
 .form-item {
   float: left;
   padding: 0 .4em 0 0;
 }
 
 /* hacks and long rules */
-/* line 752, ../sass/_basic-and-layout.scss */
 .opacity {
   opacity: .85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
   filter: alpha(opacity=85);
 }
 
-/* line 758, ../sass/_basic-and-layout.scss */
 .dib {
   display: inline-block;
   vertical-align: top;
 }
-/* line 762, ../sass/_basic-and-layout.scss */
 .ie-old .dib {
   display: inline;
   zoom: 1;
 }
 
-/* line 768, ../sass/_basic-and-layout.scss */
 .img-replace {
   overflow: hidden;
   text-indent: -9999px;
   direction: ltr;
 }
-/* line 773, ../sass/_basic-and-layout.scss */
 .ie-old .img-replace {
   text-indent: 0;
   line-height: 0;
 }
 
-/* line 779, ../sass/_basic-and-layout.scss */
 .img-container {
   overflow: hidden;
   display: inline-block;
 }
-/* line 783, ../sass/_basic-and-layout.scss */
 .img-container img {
   display: block;
 }
@@ -734,31 +617,26 @@ span.br {
     2. Specific html tags support
 ============================================================================= */
 /* science */
-/* line 9, ../sass/_specific-html-support.scss */
 abbr, acronym {
   border-bottom: 1px dotted #3a3739;
   cursor: help;
   font-weight: inherit;
 }
 
-/* line 16, ../sass/_specific-html-support.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted #888;
   cursor: help;
 }
 
-/* line 22, ../sass/_specific-html-support.scss */
 a abbr {
   cursor: pointer !important;
 }
 
 /* computer science */
-/* line 28, ../sass/_specific-html-support.scss */
 pre, code, tt, samp, kbd {
   font: normal normal 1em/1.5em "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
 }
 
-/* line 32, ../sass/_specific-html-support.scss */
 pre {
   white-space: pre;
   white-space: pre-line;
@@ -770,17 +648,14 @@ pre {
   overflow-x: auto;
 }
 
-/* line 43, ../sass/_specific-html-support.scss */
 code {
   color: green;
 }
 
-/* line 47, ../sass/_specific-html-support.scss */
 samp {
   color: maroon;
 }
 
-/* line 51, ../sass/_specific-html-support.scss */
 kbd {
   font-size: 1em;
   background: #3A3739;
@@ -795,12 +670,10 @@ kbd {
 }
 
 /* other */
-/* line 66, ../sass/_specific-html-support.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 70, ../sass/_specific-html-support.scss */
 ins {
   text-decoration: none;
   border-bottom: 1px dashed #3a3739;
@@ -813,26 +686,21 @@ ins {
     Import from THEMED.scss
     
 ============================================================================= */
-/* @group grid */
 /* ============================================================================
     3.1 Header
 ============================================================================= */
-/* line 15, ../sass/_themed.scss */
 #header {
   margin-bottom: 1.5em;
 }
-/* line 19, ../sass/_themed.scss */
 #header .left-side,
 #header .right-side {
   width: 45%;
   float: left;
 }
-/* line 24, ../sass/_themed.scss */
 #header .right-side {
   float: right;
 }
 
-/* line 30, ../sass/_themed.scss */
 #site-name, #site-slogan {
   display: block;
   font-size: 1em;
@@ -841,14 +709,12 @@ ins {
   text-decoration: none;
 }
 
-/* line 42, ../sass/_themed.scss */
 #nav {
   padding: 0;
   margin: 0;
   width: 100%;
   clear: both;
 }
-/* line 48, ../sass/_themed.scss */
 #nav li {
   list-style: none;
   background: none;
@@ -856,11 +722,9 @@ ins {
   padding: 0;
   display: inline;
 }
-/* line 56, ../sass/_themed.scss */
 #nav li a:hover, #nav li a:focus {
   color: #333;
 }
-/* line 61, ../sass/_themed.scss */
 #nav li.active a {
   color: #333;
 }
@@ -877,31 +741,25 @@ ins {
 /* ============================================================================
     3.5 Footer
 ============================================================================= */
-/* line 86, ../sass/_themed.scss */
 #footer .left-side, #footer .right-side {
   width: 45%;
 }
-/* line 90, ../sass/_themed.scss */
 #footer .left-side {
   float: left;
 }
-/* line 94, ../sass/_themed.scss */
 #footer .right-side {
   float: right;
   text-align: right;
 }
-/* line 99, ../sass/_themed.scss */
 #footer p {
   padding: 0 1em;
 }
-/* line 102, ../sass/_themed.scss */
 #footer p.copy span {
   display: block;
   text-transform: uppercase;
   font-size: 1.6em;
   padding-bottom: .2em;
 }
-/* line 109, ../sass/_themed.scss */
 #footer p.develop img {
   vertical-align: middle;
 }
@@ -911,7 +769,6 @@ ins {
 ============================================================================= */
 /* Opera speed dial minimized */
 @media screen and (view-mode: minimized) {
-  /* line 123, ../sass/_themed.scss */
   #main-container {
     display: none;
   }
@@ -921,49 +778,38 @@ ins {
 
     4. MASTER-CLASSES
 ============================================================================= */
-/* line 7, ../sass/_masterclasses.scss */
 #header, #footer, #content, .aside, #before-content, #under-content, .block {
   outline: 1px dashed #ccc;
 }
 
-/* line 22, ../sass/_masterclasses.scss */
 .debug [style],
 .debug style {
   outline: 5px solid yellow;
 }
-/* line 27, ../sass/_masterclasses.scss */
 .debug style {
   display: block;
 }
-/* line 32, ../sass/_masterclasses.scss */
 .debug img {
   outline: 5px solid red;
 }
-/* line 37, ../sass/_masterclasses.scss */
 .debug img[alt] {
   outline-color: green;
 }
-/* line 42, ../sass/_masterclasses.scss */
 .debug img[alt=""] {
   outline-color: yellow;
 }
-/* line 48, ../sass/_masterclasses.scss */
 .debug a {
   outline: 5px solid yellow;
 }
-/* line 53, ../sass/_masterclasses.scss */
 .debug a[title] {
   outline-color: green;
 }
-/* line 58, ../sass/_masterclasses.scss */
 .debug a[href="#"] {
   outline-color: yellow;
 }
-/* line 64, ../sass/_masterclasses.scss */
 .debug a[target] {
   outline-color: red;
 }
-/* line 71, ../sass/_masterclasses.scss */
 .debug [class=""],
 .debug [id=""] {
   /* Is this element meant to have an empty class/ID? */
@@ -979,58 +825,47 @@ ins {
 /* ============================================================================
     Stylize text
 ============================================================================= */
-/* line 204, ../sass/_masterclasses.scss */
 .emph {
   font-style: italic;
 }
 
-/* line 208, ../sass/_masterclasses.scss */
 .emph-fz-sm {
   font-size: .8em;
 }
 
-/* line 212, ../sass/_masterclasses.scss */
 .emph-fz-md {
   font-size: 1.28em;
 }
 
-/* line 216, ../sass/_masterclasses.scss */
 .emph-fz-big {
   font-size: 1.57em;
   line-height: 1.1em;
 }
 
-/* line 221, ../sass/_masterclasses.scss */
 .emph-fz-huge {
   font-size: 3em;
 }
 
-/* line 225, ../sass/_masterclasses.scss */
 .emph-serif {
   font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
 }
 
-/* line 229, ../sass/_masterclasses.scss */
 .emph-sans {
   font-family: Arial, FreeSans, sans-serif;
 }
 
-/* line 233, ../sass/_masterclasses.scss */
 .emph-c {
   color: black;
 }
 
-/* line 237, ../sass/_masterclasses.scss */
 .emph-c-ln {
   color: #0099ff;
 }
 
-/* line 241, ../sass/_masterclasses.scss */
 .emph-c-dark {
   color: #101010;
 }
 
-/* line 245, ../sass/_masterclasses.scss */
 .emph-c-ligh {
   color: #767676;
 }
@@ -1038,16 +873,58 @@ ins {
 /* ============================================================================
     Non-semantic grid support
 ============================================================================= */
+.grid-row {
+  width: 960px;
+}
+
+.span1 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 60px;
+}
+
+.span4 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.span6 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+}
+
+.span8 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 620px;
+}
+
+.span12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+}
+
 /* ============================================================================
     Sprite support
 ============================================================================= */
-/* line 273, ../sass/_masterclasses.scss */
 span.ico {
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
   display: inline-block;
   position: relative;
 }
-/* line 278, ../sass/_masterclasses.scss */
 .ie-old span.ico {
   display: inline;
   zoom: 1;
@@ -1056,13 +933,11 @@ span.ico {
 /* ============================================================================
     Additional
 ============================================================================= */
-/* line 290, ../sass/_masterclasses.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 296, ../sass/_masterclasses.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1073,12 +948,10 @@ span.ico {
   position: absolute !important;
   width: 1px;
 }
-/* line 306, ../sass/_masterclasses.scss */
 .ie-old .visuallyhidden {
   clip: rect(1px 1px 1px 1px);
 }
 
-/* line 313, ../sass/_masterclasses.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1089,7 +962,6 @@ span.ico {
   width: auto;
 }
 
-/* line 322, ../sass/_masterclasses.scss */
 .invisible {
   visibility: hidden;
 }
@@ -1101,7 +973,6 @@ Import from plugin-support.scss
 Select box plugin support
 ============================================================================= */
 /* applied to original <select> to hide */
-/* line 11, ../sass/_plugin-support.scss */
 .has_sb {
   position: absolute;
   left: -999999em;
@@ -1109,7 +980,6 @@ Select box plugin support
 }
 
 /* always visible styles */
-/* line 18, ../sass/_plugin-support.scss */
 .selectbox {
   display: inline-block;
   position: relative;
@@ -1117,13 +987,11 @@ Select box plugin support
   margin: 1px;
   vertical-align: middle;
 }
-/* line 24, ../sass/_plugin-support.scss */
 .ie-old .selectbox {
   display: inline;
   zoom: 1;
 }
 
-/* line 30, ../sass/_plugin-support.scss */
 .selectbox .display {
   background: #fff;
   border: 1px solid;
@@ -1141,33 +1009,27 @@ Select box plugin support
   border-radius: 4px;
 }
 
-/* line 48, ../sass/_plugin-support.scss */
 .selectbox.disabled .display {
   color: #999;
 }
 
-/* line 52, ../sass/_plugin-support.scss */
 .selectbox.focused {
   outline: 1px solid #f1b84b;
   outline-offset: 0;
 }
 
-/* line 57, ../sass/_plugin-support.scss */
 .selectbox.focused .display .text {
   display: inline-block;
 }
-/* line 59, ../sass/_plugin-support.scss */
 .ie-old .selectbox.focused .display .text {
   display: inline;
   zoom: 1;
 }
 
-/* line 65, ../sass/_plugin-support.scss */
 .selectbox .display.active {
   border-color: #7b7d83;
 }
 
-/* line 69, ../sass/_plugin-support.scss */
 .selectbox .display .arrow_btn {
   display: block;
   height: 1.15em;
@@ -1180,7 +1042,6 @@ Select box plugin support
   right: 0;
 }
 
-/* line 81, ../sass/_plugin-support.scss */
 .selectbox .display .arrow_btn .arrow {
   /*background: transparent url(../images/select-arrow.gif) no-repeat center center;*/
   display: inline-block;
@@ -1190,19 +1051,16 @@ Select box plugin support
   top: .4em;
   width: 13px;
 }
-/* line 90, ../sass/_plugin-support.scss */
 .ie-old .selectbox .display .arrow_btn .arrow {
   display: inline;
   zoom: 1;
 }
 
-/* line 96, ../sass/_plugin-support.scss */
 .selectbox .value {
   display: none;
 }
 
 /* dropdown styles */
-/* line 101, ../sass/_plugin-support.scss */
 .selectbox.items {
   background: #fff;
   border: 1px solid #828790;
@@ -1219,7 +1077,6 @@ Select box plugin support
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* line 118, ../sass/_plugin-support.scss */
 .selectbox.items li {
   display: block;
   margin: 0;
@@ -1227,12 +1084,10 @@ Select box plugin support
   /*white-space:nowrap; maybe necessary if using fixedWidth: false */
 }
 
-/* line 124, ../sass/_plugin-support.scss */
 .selectbox.items li.first {
   margin-top: 0;
 }
 
-/* line 128, ../sass/_plugin-support.scss */
 .selectbox.items li > .item {
   color: #000;
   cursor: default;
@@ -1241,40 +1096,33 @@ Select box plugin support
   text-decoration: none;
 }
 
-/* line 136, ../sass/_plugin-support.scss */
 .selectbox.items li > .item > .text {
   display: inline-block;
 }
-/* line 138, ../sass/_plugin-support.scss */
 .ie-old .selectbox.items li > .item > .text {
   display: inline;
   zoom: 1;
 }
 
-/* line 144, ../sass/_plugin-support.scss */
 .selectbox.items li.selected > .item {
   border-bottom: 1px dotted #999;
   border-top: 1px dotted #999;
 }
 
-/* line 149, ../sass/_plugin-support.scss */
 .selectbox.items li.disabled > .item {
   color: #999;
 }
 
-/* line 153, ../sass/_plugin-support.scss */
 .selectbox.items li.hover > .item {
   background-color: #F0330F;
   color: #fcfcfc;
 }
 
-/* line 158, ../sass/_plugin-support.scss */
 .selectbox.items .value {
   display: none;
 }
 
 /* optgroup styles */
-/* line 163, ../sass/_plugin-support.scss */
 .selectbox.items .optgroup .items {
   border: none;
   margin: 0;
@@ -1283,50 +1131,42 @@ Select box plugin support
   -webkit-box-shadow: none;
 }
 
-/* line 171, ../sass/_plugin-support.scss */
 .selectbox.items .optgroup > .label {
   cursor: default;
   font-weight: bold;
   line-height: 1em;
 }
 
-/* line 177, ../sass/_plugin-support.scss */
 .selectbox.items .optgroup .items li > .item {
   padding-left: 1em;
 }
 
 /* for optgroups */
-/* line 182, ../sass/_plugin-support.scss */
 .selectbox.round_sb.items > li > .label {
   line-height: 2.08em;
   padding: 4px 6px;
 }
 
-/* line 187, ../sass/_plugin-support.scss */
 .selectbox.round_sb.items > li > .items li > .item {
   padding: 4px 6px 4px 12px;
 }
 
 /* fixed width example styles */
-/* line 192, ../sass/_plugin-support.scss */
 .selectbox .display.fixed_width {
   width: 73px;
   padding: 0 24px 0 3px;
 }
 
-/* line 197, ../sass/_plugin-support.scss */
 .selectbox.fixed_width.items {
   width: 100px;
   /* width of display text plus the padding (60 + 27) = 87 */
 }
 
-/* line 201, ../sass/_plugin-support.scss */
 .selectbox .display.fixed_width2 {
   width: 60px;
   padding: 0 24px 0 3px;
 }
 
-/* line 206, ../sass/_plugin-support.scss */
 .selectbox.fixed_width2.items {
   width: 300px;
   /* width of display text plus the padding (60 + 27) = 87 */
@@ -1335,7 +1175,6 @@ Select box plugin support
 /* ============================================================================
 Checkbox plugin support
 ============================================================================= */
-/* line 214, ../sass/_plugin-support.scss */
 .jquery-checkbox {
   display: inline;
   font-size: 20px;
@@ -1343,50 +1182,41 @@ Checkbox plugin support
   cursor: pointer;
 }
 
-/* line 221, ../sass/_plugin-support.scss */
 .jquery-checkbox .mark {
   display: inline;
 }
 
-/* line 225, ../sass/_plugin-support.scss */
 .jquery-checkbox img {
   vertical-align: middle;
   width: 13px;
   height: 13px;
 }
 
-/* line 231, ../sass/_plugin-support.scss */
 .jquery-checkbox img {
   background: transparent url(../images/checkbox.png) no-repeat;
 }
 
-/* line 235, ../sass/_plugin-support.scss */
 .jquery-checkbox img {
   background-position: 0px 0px;
 }
 
-/* line 239, ../sass/_plugin-support.scss */
 .jquery-checkbox-hover img {
   background-position: 0px -15px;
 }
 
-/* line 243, ../sass/_plugin-support.scss */
 .jquery-checkbox-checked img {
   background-position: 0px -31px;
 }
 
-/* line 247, ../sass/_plugin-support.scss */
 .jquery-checkbox-checked .jquery-checkbox-hover img {
   background-position: 0px -47px;
 }
 
-/* line 251, ../sass/_plugin-support.scss */
 .jquery-checkbox-disabled img {
   background-position: 0px 0px;
   opacity: .5;
 }
 
-/* line 256, ../sass/_plugin-support.scss */
 .jquery-checkbox-checked .jquery-checkbox-disabled img {
   background-position: 0px 0px;
   opacity: 0.5em;
@@ -1408,7 +1238,6 @@ Checkbox plugin support
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  */
-/* line 278, ../sass/_plugin-support.scss */
 #fancybox-loading {
   position: fixed;
   top: 50%;
@@ -1423,7 +1252,6 @@ Checkbox plugin support
   display: none;
 }
 
-/* line 292, ../sass/_plugin-support.scss */
 #fancybox-loading div {
   position: absolute;
   top: 0;
@@ -1433,7 +1261,6 @@ Checkbox plugin support
   background-image: url("../images/fancybox/fancybox.png");
 }
 
-/* line 301, ../sass/_plugin-support.scss */
 #fancybox-overlay {
   position: absolute;
   top: 0;
@@ -1443,7 +1270,6 @@ Checkbox plugin support
   display: none;
 }
 
-/* line 310, ../sass/_plugin-support.scss */
 #fancybox-tmp {
   padding: 0;
   margin: 0;
@@ -1452,7 +1278,6 @@ Checkbox plugin support
   display: none;
 }
 
-/* line 318, ../sass/_plugin-support.scss */
 #fancybox-wrap {
   position: absolute;
   top: 0;
@@ -1463,7 +1288,6 @@ Checkbox plugin support
   display: none;
 }
 
-/* line 328, ../sass/_plugin-support.scss */
 #fancybox-outer {
   position: relative;
   width: 100%;
@@ -1471,7 +1295,6 @@ Checkbox plugin support
   background: #fff;
 }
 
-/* line 335, ../sass/_plugin-support.scss */
 #fancybox-content {
   width: 0;
   height: 0;
@@ -1483,7 +1306,6 @@ Checkbox plugin support
   border: 0px solid #000;
 }
 
-/* line 346, ../sass/_plugin-support.scss */
 #fancybox-hide-sel-frame {
   position: absolute;
   top: 0;
@@ -1494,7 +1316,6 @@ Checkbox plugin support
   z-index: 1101;
 }
 
-/* line 356, ../sass/_plugin-support.scss */
 #fancybox-close {
   position: absolute;
   top: -15px;
@@ -1507,7 +1328,6 @@ Checkbox plugin support
   display: none;
 }
 
-/* line 368, ../sass/_plugin-support.scss */
 #fancybox-error {
   color: #444;
   font: normal 12px/20px Arial;
@@ -1515,7 +1335,6 @@ Checkbox plugin support
   margin: 0;
 }
 
-/* line 375, ../sass/_plugin-support.scss */
 #fancybox-img {
   width: 100%;
   height: 100%;
@@ -1527,7 +1346,6 @@ Checkbox plugin support
   vertical-align: top;
 }
 
-/* line 386, ../sass/_plugin-support.scss */
 #fancybox-frame {
   width: 100%;
   height: 100%;
@@ -1535,7 +1353,6 @@ Checkbox plugin support
   display: block;
 }
 
-/* line 393, ../sass/_plugin-support.scss */
 #fancybox-left, #fancybox-right {
   position: absolute;
   bottom: 0px;
@@ -1548,17 +1365,14 @@ Checkbox plugin support
   display: none;
 }
 
-/* line 405, ../sass/_plugin-support.scss */
 #fancybox-left {
   left: 0px;
 }
 
-/* line 409, ../sass/_plugin-support.scss */
 #fancybox-right {
   right: 0px;
 }
 
-/* line 413, ../sass/_plugin-support.scss */
 #fancybox-left-ico, #fancybox-right-ico {
   position: absolute;
   top: 50%;
@@ -1571,36 +1385,30 @@ Checkbox plugin support
   display: block;
 }
 
-/* line 425, ../sass/_plugin-support.scss */
 #fancybox-left-ico {
   background-image: url("../images/fancybox/fancybox.png");
   background-position: -40px -30px;
 }
 
-/* line 430, ../sass/_plugin-support.scss */
 #fancybox-right-ico {
   background-image: url("../images/fancybox/fancybox.png");
   background-position: -40px -60px;
 }
 
-/* line 435, ../sass/_plugin-support.scss */
 #fancybox-left:hover, #fancybox-right:hover {
   visibility: visible;
   /* IE6 */
 }
 
-/* line 439, ../sass/_plugin-support.scss */
 #fancybox-left:hover span {
   left: 20px;
 }
 
-/* line 443, ../sass/_plugin-support.scss */
 #fancybox-right:hover span {
   left: auto;
   right: 20px;
 }
 
-/* line 448, ../sass/_plugin-support.scss */
 .fancybox-bg {
   position: absolute;
   padding: 0;
@@ -1611,7 +1419,6 @@ Checkbox plugin support
   z-index: 1001;
 }
 
-/* line 458, ../sass/_plugin-support.scss */
 #fancybox-bg-n {
   top: -20px;
   left: 0;
@@ -1619,7 +1426,6 @@ Checkbox plugin support
   background-image: url("../images/fancybox/fancybox-x.png");
 }
 
-/* line 465, ../sass/_plugin-support.scss */
 #fancybox-bg-ne {
   top: -20px;
   right: -20px;
@@ -1627,7 +1433,6 @@ Checkbox plugin support
   background-position: -40px -162px;
 }
 
-/* line 472, ../sass/_plugin-support.scss */
 #fancybox-bg-e {
   top: 0;
   right: -20px;
@@ -1636,7 +1441,6 @@ Checkbox plugin support
   background-position: -20px 0px;
 }
 
-/* line 480, ../sass/_plugin-support.scss */
 #fancybox-bg-se {
   bottom: -20px;
   right: -20px;
@@ -1644,7 +1448,6 @@ Checkbox plugin support
   background-position: -40px -182px;
 }
 
-/* line 487, ../sass/_plugin-support.scss */
 #fancybox-bg-s {
   bottom: -20px;
   left: 0;
@@ -1653,7 +1456,6 @@ Checkbox plugin support
   background-position: 0px -20px;
 }
 
-/* line 495, ../sass/_plugin-support.scss */
 #fancybox-bg-sw {
   bottom: -20px;
   left: -20px;
@@ -1661,7 +1463,6 @@ Checkbox plugin support
   background-position: -40px -142px;
 }
 
-/* line 502, ../sass/_plugin-support.scss */
 #fancybox-bg-w {
   top: 0;
   left: -20px;
@@ -1669,7 +1470,6 @@ Checkbox plugin support
   background-image: url("../images/fancybox/fancybox-y.png");
 }
 
-/* line 509, ../sass/_plugin-support.scss */
 #fancybox-bg-nw {
   top: -20px;
   left: -20px;
@@ -1677,14 +1477,12 @@ Checkbox plugin support
   background-position: -40px -122px;
 }
 
-/* line 516, ../sass/_plugin-support.scss */
 #fancybox-title {
   font-family: Helvetica;
   font-size: 12px;
   z-index: 1102;
 }
 
-/* line 522, ../sass/_plugin-support.scss */
 .fancybox-title-inside {
   padding-bottom: 10px;
   text-align: center;
@@ -1693,13 +1491,11 @@ Checkbox plugin support
   position: relative;
 }
 
-/* line 530, ../sass/_plugin-support.scss */
 .fancybox-title-outside {
   padding-top: 10px;
   color: #fff;
 }
 
-/* line 535, ../sass/_plugin-support.scss */
 .fancybox-title-over {
   position: absolute;
   bottom: 0;
@@ -1708,14 +1504,12 @@ Checkbox plugin support
   text-align: left;
 }
 
-/* line 543, ../sass/_plugin-support.scss */
 #fancybox-title-over {
   padding: 10px;
   background-image: url("../images/fancybox/fancy_title_over.png");
   display: block;
 }
 
-/* line 549, ../sass/_plugin-support.scss */
 .fancybox-title-float {
   position: absolute;
   left: 0;
@@ -1723,26 +1517,22 @@ Checkbox plugin support
   height: 32px;
 }
 
-/* line 556, ../sass/_plugin-support.scss */
 #fancybox-title-float-wrap {
   border: none;
   border-collapse: collapse;
   width: auto;
 }
 
-/* line 562, ../sass/_plugin-support.scss */
 #fancybox-title-float-wrap td {
   border: none;
   white-space: nowrap;
 }
 
-/* line 567, ../sass/_plugin-support.scss */
 #fancybox-title-float-left {
   padding: 0 0 0 15px;
   background: url("../images/fancybox/fancybox.png") -40px -90px no-repeat;
 }
 
-/* line 572, ../sass/_plugin-support.scss */
 #fancybox-title-float-main {
   color: #FFF;
   line-height: 29px;
@@ -1751,116 +1541,96 @@ Checkbox plugin support
   background: url("../images/fancybox/fancybox-x.png") 0px -40px;
 }
 
-/* line 580, ../sass/_plugin-support.scss */
 #fancybox-title-float-right {
   padding: 0 0 0 15px;
   background: url("../images/fancybox/fancybox.png") -55px -90px no-repeat;
 }
 
 /* IE6 */
-/* line 587, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-close {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_close.png', sizingMethod='scale');
 }
 
-/* line 589, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-left-ico {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_nav_left.png', sizingMethod='scale');
 }
 
-/* line 590, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-right-ico {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_nav_right.png', sizingMethod='scale');
 }
 
-/* line 592, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-title-over {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_over.png', sizingMethod='scale');
   zoom: 1;
 }
 
-/* line 593, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-title-float-left {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_left.png', sizingMethod='scale');
 }
 
-/* line 594, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-title-float-main {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_main.png', sizingMethod='scale');
 }
 
-/* line 595, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-title-float-right {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_right.png', sizingMethod='scale');
 }
 
-/* line 597, ../sass/_plugin-support.scss */
 .fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
   height: expression(this.parentNode.clientHeight + "px");
 }
 
-/* line 601, ../sass/_plugin-support.scss */
 #fancybox-loading.fancybox-ie6 {
   position: absolute;
   margin-top: 0;
   top: expression((-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
 }
 
-/* line 606, ../sass/_plugin-support.scss */
 #fancybox-loading.fancybox-ie6 div {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_loading.png', sizingMethod='scale');
 }
 
 /* IE6, IE7, IE8 */
-/* line 610, ../sass/_plugin-support.scss */
 .fancybox-ie .fancybox-bg {
   background: transparent !important;
 }
 
-/* line 612, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-n {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_n.png', sizingMethod='scale');
 }
 
-/* line 613, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-ne {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_ne.png', sizingMethod='scale');
 }
 
-/* line 614, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-e {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_e.png', sizingMethod='scale');
 }
 
-/* line 615, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-se {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_se.png', sizingMethod='scale');
 }
 
-/* line 616, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-s {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_s.png', sizingMethod='scale');
 }
 
-/* line 617, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-sw {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_sw.png', sizingMethod='scale');
 }
 
-/* line 618, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-w {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_w.png', sizingMethod='scale');
 }
 
-/* line 619, ../sass/_plugin-support.scss */
 .fancybox-ie #fancybox-bg-nw {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_nw.png', sizingMethod='scale');
 }

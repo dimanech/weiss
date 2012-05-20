@@ -255,16 +255,16 @@
     Non-semantic grid support
 ============================================================================= */
 
-// .grid-row {
-//   @include container;
-//   @extend .clearfix;
-// }
+.grid-row {
+  @include container;
+  @extend .clearfix;
+}
 
-// @each $n in 1, 4, 6, 8, 12 {
-//   .span#{$n} {
-//     @include column($n);
-//   }
-// }
+@each $n in 1, 4, 6, 8, 12 {
+  .span#{$n} {
+    @include column($n);
+  }
+}
 
 /* ============================================================================
     Sprite support

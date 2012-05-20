@@ -40,6 +40,9 @@
                 $('#threecolumn').click(function() {
                     $('body').removeClass().addClass('two-sidebars');
                 });
+                $('#nocolumn').click(function() {
+                    $('body').removeClass();
+                });
             });
         </script>
     </head>
@@ -70,6 +73,9 @@
                             </li>
                             <li>
                                 <a href="#" id="threecolumn">3 columns</a>
+                            </li>
+                            <li>
+                                <a href="#" id="nocolumn">0 columns</a>
                             </li>
                         </ul>
                     </nav>
