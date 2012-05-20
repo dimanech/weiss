@@ -149,10 +149,6 @@ em, i, cite {
   font-style: italic;
 }
 
-address {
-  font-style:normal;
-}
-
 // NOTE: link pseudoclases order -- link, visited, hover, active
 
 a {
@@ -280,14 +276,12 @@ caption {
   padding-bottom: .429em;
 }
 
-th, tr, td {
+td, th {
   vertical-align: middle;
   padding: 0 .429em;
   border: 1px solid #ccc;
-}
 
-thead {
-  td, th {
+  thead & {
     font-weight: bold;
   }
 }
@@ -389,7 +383,9 @@ select, textarea {
   border: 1px solid;
   border-color: #777 #ccc #ccc;
   background: #fff;
-  padding: .2em .429em;
+  padding: 0 .429em;
+  height: 1.4em;
+  line-height: 1.4em;
 
   &:hover {
     border-color:#777;
@@ -413,6 +409,17 @@ input[type="image"], button {
   }
 }
 
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  height: auto;
+  line-height: 1.2em;
+  padding: .2em .429em;
+  resize: vertical;
+  min-height: 4em;
+  max-height: 14em;
+}
+
 select {
 }
 
@@ -423,15 +430,6 @@ select[multiple="multiple"]{
 optgroup {
   font-weight: normal;
   background: #ccc;
-}
-
-textarea {
-  overflow: auto;
-  vertical-align: top;
-  resize: vertical;
-  height: auto;
-  line-height: 1.2em;
-  padding: .2em .429em;
 }
 
 fieldset {
@@ -499,6 +497,10 @@ sub {
   bottom: -0.25em;
 }
 
+address {
+  font-style:normal;
+}
+
 mark {
   background-color: #ff9;
   color: #000;
@@ -516,7 +518,7 @@ hr {
 
 u {
   text-decoration: none;
-  // remove textdecoration <u> for save <a> style, if <a> not mark by color
+  // remove textdecoration for save <a> style
 }
 
 figure {

@@ -4,8 +4,6 @@
     4. MASTER-CLASSES
 ============================================================================= */
 
-@import "_mixins.scss";
-
 #header, #footer, #content, .aside, #before-content, #under-content, .block {
     outline: 1px dashed #ccc;
 }
@@ -257,16 +255,16 @@
     Non-semantic grid support
 ============================================================================= */
 
-.grid-row {
-  @include container;
-}
+// .grid-row {
+//   @include container;
+//   @extend .clearfix;
+// }
 
-@each $n in 1, 4, 6, 8, 12 {
-  .span#{$n} {
-    @include column($n);
-  }
-}
-
+// @each $n in 1, 4, 6, 8, 12 {
+//   .span#{$n} {
+//     @include column($n);
+//   }
+// }
 
 /* ============================================================================
     Sprite support

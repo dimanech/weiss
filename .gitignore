@@ -5,6 +5,7 @@
 .externalToolBuilders
 .settings
 *.sublime-*
+config.rb
 
 design
 arch
