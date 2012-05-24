@@ -2,7 +2,7 @@
 //  \ \/  \/ /__ (_) __  __                /\
 //   \  /\  / -_)| |(__ (__            /\ /  \/\
 //    \/  \/\___||_| __) __) css framework /\/\ \
-//         https://github.com/dimanech/weiss   \ \
+//          http://dimanech.github.com/weiss/  \ \
 //
 // ============================================================================
 //    Variables
@@ -30,8 +30,6 @@ $monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
 $monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 $grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
 $slabSerif: "DejaVu Serif", serif;
-
-@import "_mixins.scss";
 
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
@@ -333,7 +331,7 @@ form {
 
 button, input, select, textarea {
   font: normal normal 1em /1.429em #{$sans};
-  margin: 0;
+  //margin: 0;
   vertical-align: baseline;
 }
 

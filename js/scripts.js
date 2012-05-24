@@ -11,6 +11,8 @@ $(document).ready(function() {
     //$(".no-native select").sb();
     //$(".no-native input:check, .no-native input:radio").checkbox();
 
+    $('input[placeholder], textarea[placeholder]').placeholder();
+
 });
 
 function contentTabs() {

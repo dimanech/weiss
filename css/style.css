@@ -1,6 +1,8 @@
+@charset "UTF-8";
 /* ============================================================================
     
     Weiss 2012
+
 ============================================================================= */
 html, body, div, h1, h2, h3, h4, h5, h6, p, img,
 dl, dt, dd, ol, ul, li, caption,
@@ -227,7 +229,6 @@ form {
 
 button, input, select, textarea {
   font: normal normal 1em/1.429em Arial, FreeSans, sans-serif;
-  margin: 0;
   vertical-align: baseline;
 }
 
@@ -504,7 +505,7 @@ body.sidebar-second .aside {
 /* ============================================================================
     Basic masterclasses
 ============================================================================= */
-.clearfix:after, .grid-row:after {
+.clearfix:after {
   clear: both;
   content: ".";
   display: block;
@@ -512,7 +513,7 @@ body.sidebar-second .aside {
   font-size: 0;
   visibility: hidden;
 }
-.ie-old .clearfix, .ie-old .grid-row {
+.ie-old .clearfix {
   zoom: 1;
 }
 
@@ -609,74 +610,6 @@ span.br {
 }
 .img-container img {
   display: block;
-}
-
-/* ============================================================================
-    Import from Specific-html-support.scss
-    
-    2. Specific html tags support
-============================================================================= */
-/* science */
-abbr, acronym {
-  border-bottom: 1px dotted #3a3739;
-  cursor: help;
-  font-weight: inherit;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted #888;
-  cursor: help;
-}
-
-a abbr {
-  cursor: pointer !important;
-}
-
-/* computer science */
-pre, code, tt, samp, kbd {
-  font: normal normal 1em/1.5em "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
-}
-
-pre {
-  white-space: pre;
-  white-space: pre-line;
-  word-wrap: break-word;
-  background-color: #3a3739;
-  color: #ccc;
-  padding: .643em 0 .643em 2em;
-  width: 94%;
-  overflow-x: auto;
-}
-
-code {
-  color: green;
-}
-
-samp {
-  color: maroon;
-}
-
-kbd {
-  font-size: 1em;
-  background: #3A3739;
-  color: #fff;
-  padding: .2em .3em;
-  white-space: nowrap;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
-
-/* other */
-del {
-  text-decoration: line-through;
-}
-
-ins {
-  text-decoration: none;
-  border-bottom: 1px dashed #3a3739;
 }
 
 /* ============================================================================
@@ -829,6 +762,22 @@ ins {
   font-style: italic;
 }
 
+.emph-c {
+  color: black;
+}
+
+.emph-c-ln {
+  color: #0099ff;
+}
+
+.emph-c-dark {
+  color: #101010;
+}
+
+.emph-c-ligh {
+  color: #767676;
+}
+
 .emph-fz-sm {
   font-size: .8em;
 }
@@ -854,67 +803,316 @@ ins {
   font-family: Arial, FreeSans, sans-serif;
 }
 
-.emph-c {
-  color: black;
-}
-
-.emph-c-ln {
-  color: #0099ff;
-}
-
-.emph-c-dark {
-  color: #101010;
-}
-
-.emph-c-ligh {
-  color: #767676;
-}
-
 /* ============================================================================
     Non-semantic grid support
 ============================================================================= */
-.grid-row {
-  width: 960px;
-}
-
-.span1 {
-  display: inline;
+.grid-row .span1, .grid-row .span2, .grid-row .span3, .grid-row .span4, .grid-row .span5, .grid-row .span6, .grid-row .span7, .grid-row .span8, .grid-row .span9, .grid-row .span10, .grid-row .span11, .grid-row .span12 {
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 60px;
+  margin-left: 2%;
 }
-
-.span4 {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 300px;
+.grid-row .span1 {
+  width: 6.5%;
 }
-
-.span6 {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 460px;
+.grid-row .span2 {
+  width: 15%;
 }
-
-.span8 {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 620px;
+.grid-row .span2 .span1 {
+  margin-left: 13.333%;
+  width: 43.333%;
 }
-
-.span12 {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
+.grid-row .span3 {
+  width: 23.5%;
+}
+.grid-row .span3 .span1 {
+  margin-left: 8.511%;
+  width: 27.66%;
+}
+.grid-row .span3 .span2 {
+  margin-left: 8.511%;
+  width: 63.83%;
+}
+.grid-row .span4 {
+  width: 32%;
+}
+.grid-row .span4 .span1 {
+  margin-left: 6.25%;
+  width: 20.313%;
+}
+.grid-row .span4 .span2 {
+  margin-left: 6.25%;
+  width: 46.875%;
+}
+.grid-row .span4 .span3 {
+  margin-left: 6.25%;
+  width: 73.438%;
+}
+.grid-row .span5 {
+  width: 40.5%;
+}
+.grid-row .span5 .span1 {
+  margin-left: 4.938%;
+  width: 16.049%;
+}
+.grid-row .span5 .span2 {
+  margin-left: 4.938%;
+  width: 37.037%;
+}
+.grid-row .span5 .span3 {
+  margin-left: 4.938%;
+  width: 58.025%;
+}
+.grid-row .span5 .span4 {
+  margin-left: 4.938%;
+  width: 79.012%;
+}
+.grid-row .span6 {
+  width: 49%;
+}
+.grid-row .span6 .span1 {
+  margin-left: 4.082%;
+  width: 13.265%;
+}
+.grid-row .span6 .span2 {
+  margin-left: 4.082%;
+  width: 30.612%;
+}
+.grid-row .span6 .span3 {
+  margin-left: 4.082%;
+  width: 47.959%;
+}
+.grid-row .span6 .span4 {
+  margin-left: 4.082%;
+  width: 65.306%;
+}
+.grid-row .span6 .span5 {
+  margin-left: 4.082%;
+  width: 82.653%;
+}
+.grid-row .span7 {
+  width: 57.5%;
+}
+.grid-row .span7 .span1 {
+  margin-left: 3.478%;
+  width: 11.304%;
+}
+.grid-row .span7 .span2 {
+  margin-left: 3.478%;
+  width: 26.087%;
+}
+.grid-row .span7 .span3 {
+  margin-left: 3.478%;
+  width: 40.87%;
+}
+.grid-row .span7 .span4 {
+  margin-left: 3.478%;
+  width: 55.652%;
+}
+.grid-row .span7 .span5 {
+  margin-left: 3.478%;
+  width: 70.435%;
+}
+.grid-row .span7 .span6 {
+  margin-left: 3.478%;
+  width: 85.217%;
+}
+.grid-row .span8 {
+  width: 66%;
+}
+.grid-row .span8 .span1 {
+  margin-left: 3.03%;
+  width: 9.848%;
+}
+.grid-row .span8 .span2 {
+  margin-left: 3.03%;
+  width: 22.727%;
+}
+.grid-row .span8 .span3 {
+  margin-left: 3.03%;
+  width: 35.606%;
+}
+.grid-row .span8 .span4 {
+  margin-left: 3.03%;
+  width: 48.485%;
+}
+.grid-row .span8 .span5 {
+  margin-left: 3.03%;
+  width: 61.364%;
+}
+.grid-row .span8 .span6 {
+  margin-left: 3.03%;
+  width: 74.242%;
+}
+.grid-row .span8 .span7 {
+  margin-left: 3.03%;
+  width: 87.121%;
+}
+.grid-row .span9 {
+  width: 74.5%;
+}
+.grid-row .span9 .span1 {
+  margin-left: 2.685%;
+  width: 8.725%;
+}
+.grid-row .span9 .span2 {
+  margin-left: 2.685%;
+  width: 20.134%;
+}
+.grid-row .span9 .span3 {
+  margin-left: 2.685%;
+  width: 31.544%;
+}
+.grid-row .span9 .span4 {
+  margin-left: 2.685%;
+  width: 42.953%;
+}
+.grid-row .span9 .span5 {
+  margin-left: 2.685%;
+  width: 54.362%;
+}
+.grid-row .span9 .span6 {
+  margin-left: 2.685%;
+  width: 65.772%;
+}
+.grid-row .span9 .span7 {
+  margin-left: 2.685%;
+  width: 77.181%;
+}
+.grid-row .span9 .span8 {
+  margin-left: 2.685%;
+  width: 88.591%;
+}
+.grid-row .span10 {
+  width: 83%;
+}
+.grid-row .span10 .span1 {
+  margin-left: 2.41%;
+  width: 7.831%;
+}
+.grid-row .span10 .span2 {
+  margin-left: 2.41%;
+  width: 18.072%;
+}
+.grid-row .span10 .span3 {
+  margin-left: 2.41%;
+  width: 28.313%;
+}
+.grid-row .span10 .span4 {
+  margin-left: 2.41%;
+  width: 38.554%;
+}
+.grid-row .span10 .span5 {
+  margin-left: 2.41%;
+  width: 48.795%;
+}
+.grid-row .span10 .span6 {
+  margin-left: 2.41%;
+  width: 59.036%;
+}
+.grid-row .span10 .span7 {
+  margin-left: 2.41%;
+  width: 69.277%;
+}
+.grid-row .span10 .span8 {
+  margin-left: 2.41%;
+  width: 79.518%;
+}
+.grid-row .span10 .span9 {
+  margin-left: 2.41%;
+  width: 89.759%;
+}
+.grid-row .span11 {
+  width: 91.5%;
+}
+.grid-row .span11 .span1 {
+  margin-left: 2.186%;
+  width: 7.104%;
+}
+.grid-row .span11 .span2 {
+  margin-left: 2.186%;
+  width: 16.393%;
+}
+.grid-row .span11 .span3 {
+  margin-left: 2.186%;
+  width: 25.683%;
+}
+.grid-row .span11 .span4 {
+  margin-left: 2.186%;
+  width: 34.973%;
+}
+.grid-row .span11 .span5 {
+  margin-left: 2.186%;
+  width: 44.262%;
+}
+.grid-row .span11 .span6 {
+  margin-left: 2.186%;
+  width: 53.552%;
+}
+.grid-row .span11 .span7 {
+  margin-left: 2.186%;
+  width: 62.842%;
+}
+.grid-row .span11 .span8 {
+  margin-left: 2.186%;
+  width: 72.131%;
+}
+.grid-row .span11 .span9 {
+  margin-left: 2.186%;
+  width: 81.421%;
+}
+.grid-row .span11 .span10 {
+  margin-left: 2.186%;
+  width: 90.71%;
+}
+.grid-row .span12 {
+  width: 100%;
+}
+.grid-row .span12 .span1 {
+  margin-left: 2%;
+  width: 6.5%;
+}
+.grid-row .span12 .span2 {
+  margin-left: 2%;
+  width: 15%;
+}
+.grid-row .span12 .span3 {
+  margin-left: 2%;
+  width: 23.5%;
+}
+.grid-row .span12 .span4 {
+  margin-left: 2%;
+  width: 32%;
+}
+.grid-row .span12 .span5 {
+  margin-left: 2%;
+  width: 40.5%;
+}
+.grid-row .span12 .span6 {
+  margin-left: 2%;
+  width: 49%;
+}
+.grid-row .span12 .span7 {
+  margin-left: 2%;
+  width: 57.5%;
+}
+.grid-row .span12 .span8 {
+  margin-left: 2%;
+  width: 66%;
+}
+.grid-row .span12 .span9 {
+  margin-left: 2%;
+  width: 74.5%;
+}
+.grid-row .span12 .span10 {
+  margin-left: 2%;
+  width: 83%;
+}
+.grid-row .span12 .span11 {
+  margin-left: 2%;
+  width: 91.5%;
+}
+.grid-row > :first-child,
+.grid-row .grid-row > :first-child {
+  margin-left: 0;
 }
 
 /* ============================================================================
@@ -952,8 +1150,7 @@ span.ico {
   clip: rect(1px 1px 1px 1px);
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:ficus, .visuallyhidden.focusable:active {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1633,4 +1830,107 @@ Checkbox plugin support
 
 .fancybox-ie #fancybox-bg-nw {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_nw.png', sizingMethod='scale');
+}
+
+/*
+  Media Print
+*/
+@media print {
+  /* some general resets */
+  @page {
+    margin: 1.5cm;
+}
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    break-inside: avoid;
+    break-after: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  #main .content a[href]:after {
+    /* add links only for content */
+    content: " (" attr(href) ")" !important;
+    font-family: monospace !important;
+    /* fix external links font */
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+    /* Don't print links for images, javascript or internal links */
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* Repeat header row at top of each printed page */
+    page-break-inside: avoid;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="/"]:after {
+    content: " (http://siteurlhere.com" attr(href) ")";
+    font-size: smaller;
+  }
+
+  object:after {
+    content: "Flash/видео содержимое. Посетите http://siteurlhere.com/ чтобы просмотреть этот материал.";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+  }
+
+  /* hide elements that are unnecessary to print */
+  #sidebar-first,
+  #sidebar-second {
+    display: none !important;
+  }
+
+  #main {
+    width: 100%;
+  }
+
+  /* some cosmetic changes */
+  #header {
+    padding-top: 0;
+  }
+
+  /* end media print */
 }

@@ -80,98 +80,98 @@
 ============================================================================= */
 
 // .btn {
-    // display:inline-block;
-    // padding: 0 7px;
-    // vertical-align: text-bottom;
-// 
-    // .ie-old & {
-      // display:inline;
-      // zoom: 1;
-    // }
-// 
-  // .b-left-side,
-  // .b-middle,
-  // .b-right-side {
-    // display:inline-block;
-    // float:left;
-    // vertical-align: top;
-    // background-repeat: repeat-y;
-    // .ie-old {
-     // display:inline;
-     // zoom: 1;
-    // }
-  // }
-// 
-  // input {
-    // padding: 0;
-    // margin: 0;
-    // background: transparent;
-    // border: none;
-  // }
-// 
-  // .b-left-side,
-  // .b-right-side {
-    // width: 7px;
-  // }
-// 
-  // .b-middle {
-    // background-position: center top;
-  // }
-// 
-  // .b-left-side {
-    // background-position: left top;
-  // }
-// 
-  // .b-right-side {
-    // background-position: right top;
-  // }
-// 
-  // &:hover {
-    // span {
-      // opacity: .92;
-      // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
-      // filter: alpha(opacity = 92);
-    // }
-  // }
-// 
+//     display:inline-block;
+//     padding: 0 7px;
+//     vertical-align: text-bottom;
+
+//     .ie-old & {
+//       display:inline;
+//       zoom: 1;
+//     }
+
+//   .b-left-side,
+//   .b-middle,
+//   .b-right-side {
+//     display:inline-block;
+//     float:left;
+//     vertical-align: top;
+//     background-repeat: repeat-y;
+//     .ie-old {
+//      display:inline;
+//      zoom: 1;
+//     }
+//   }
+
+//   input {
+//     padding: 0;
+//     margin: 0;
+//     background: transparent;
+//     border: none;
+//   }
+
+//   .b-left-side,
+//   .b-right-side {
+//     width: 7px;
+//   }
+
+//   .b-middle {
+//     background-position: center top;
+//   }
+
+//   .b-left-side {
+//     background-position: left top;
+//   }
+
+//   .b-right-side {
+//     background-position: right top;
+//   }
+
+//   &:hover {
+//     span {
+//       opacity: .92;
+//       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+//       filter: alpha(opacity = 92);
+//     }
+//   }
+
 // }
-// 
+
 // .btn-prim {
-   // height: 31px;
-   // line-height: 31px;
-   // font-size: 18px;
-// 
-  // .b-left-side,
-  // .b-middle,
-  // .b-right-side {
-    // background-image: url(../images/button-green-medium.png);
-    // height: 31px;
-    // line-height: 31px;
-  // }
-// 
-  // .b-middle {
-    // padding: 0 .4em;
-  // }
-// 
+//    height: 31px;
+//    line-height: 31px;
+//    font-size: 18px;
+
+//   .b-left-side,
+//   .b-middle,
+//   .b-right-side {
+//     background-image: url(../images/button-green-medium.png);
+//     height: 31px;
+//     line-height: 31px;
+//   }
+
+//   .b-middle {
+//     padding: 0 .4em;
+//   }
+
 // }
-// 
+
 // .btn-sec {
-   // height: 18px;
-   // line-height: 18px;
-   // font-size: 1em;
-// 
-  // .b-left-side,
-  // .b-middle,
-  // .b-right-side {
-    // background-image: url(../images/button-green-medium.png);
-    // height: 18px;
-    // line-height: 18px;
-  // }
-// 
-  // .b-middle {
-    // padding: 0 .4em;
-  // }
-// 
+//    height: 18px;
+//    line-height: 18px;
+//    font-size: 1em;
+
+//   .b-left-side,
+//   .b-middle,
+//   .b-right-side {
+//     background-image: url(../images/button-green-medium.png);
+//     height: 18px;
+//     line-height: 18px;
+//   }
+
+//   .b-middle {
+//     padding: 0 .4em;
+//   }
+
 // }
 
 /* ============================================================================
@@ -179,22 +179,22 @@
 ============================================================================= */
 
 // .input-container {
-    // display: inline-block;
-    // padding: .2em .2em .1em;
-    // /* background: url(../images/input.png) 0 0 no-repeat; */
-    // vertical-align: bottom;
-// 
-    // .ie-old {
-      // display:inline;
-      // zoom: 1;
-    // }
-// 
-    // input {
-      // padding: 0 .4em;
-      // margin: 0;
-      // background: transparent;
-      // border: none;
-    // }
+//    display: inline-block;
+//    padding: .2em .2em .1em;
+//    /* background: url(../images/input.png) 0 0 no-repeat; */
+//    vertical-align: bottom;
+
+//    .ie-old {
+//      display:inline;
+//      zoom: 1;
+//    }
+
+//    input {
+//      padding: 0 .4em;
+//      margin: 0;
+//      background: transparent;
+//      border: none;
+//    }
 // }
 
 /* ============================================================================
@@ -203,6 +203,22 @@
 
 .emph {
   font-style: italic;
+}
+
+.emph-c {
+  color: $accentColor;
+}
+
+.emph-c-ln {
+  color: $lnColor;
+}
+
+.emph-c-dark {
+  color: darken($baseColor, 20%);
+}
+
+.emph-c-ligh {
+  color: lighten($baseColor, 20%);
 }
 
 .emph-fz-sm {
@@ -230,22 +246,6 @@
   font-family: $sans;
 }
 
-.emph-c {
-  color: $accentColor;
-}
-
-.emph-c-ln {
-  color: $lnColor;
-}
-
-.emph-c-dark {
-  color: darken($baseColor, 20%);
-}
-
-.emph-c-ligh {
-  color: lighten($baseColor, 20%);
-}
-
 .alt-title,
 .lead {
     
@@ -255,15 +255,31 @@
     Non-semantic grid support
 ============================================================================= */
 
-.grid-row {
-  @include container;
-  @extend .clearfix;
-}
+@import "_mixins.scss";
 
-@each $n in 1, 4, 6, 8, 12 {
-  .span#{$n} {
-    @include column($n);
+.grid-row {
+  .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+    float: left;
+    margin-left: $gutter;
   }
+
+  @for $i from 1 through $cols {
+    .span#{$i} {
+        @include cols($i);
+
+      @for $j from 1 through ($i - 1) {
+        .span#{$j} {
+            @include sub_cols($j, $i);
+        }
+      }
+    }
+  }
+
+  > :first-child,
+  .grid-row > :first-child {
+    margin-left: 0;
+  }
+
 }
 
 /* ============================================================================
@@ -309,14 +325,16 @@ span.ico {
 }
 
 // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
+.visuallyhidden.focusable {
+  &:ficus, &:active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+
 }
 // Hide visually and from screenreaders, but maintain layout 
 .invisible {
