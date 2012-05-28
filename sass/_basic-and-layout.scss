@@ -768,18 +768,22 @@ span.br {
   overflow:hidden;
   text-indent: -9999px;
   direction: ltr;
+  display:inline-block;
   
   .ie-old & {
     text-indent: 0;
     line-height: 0;
+    display: inline;
+    zoom: 1;
   }
 }
 
 .img-container {
   overflow: hidden;
-  display: inline-block;
+  @extend .dib;
 
   img {
     display: block;
+    position: static;
   }
 }
