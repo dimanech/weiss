@@ -18,11 +18,9 @@
   .left-side,
   .right-side {
     width: 45%;
-    float:left;
   }
   
   .right-side {
-    float:right;
   }
   
 }
@@ -42,7 +40,6 @@
 #nav {
   padding: 0;
   margin: 0;
-  width: 100%;
   clear:both;
     
   li {
@@ -88,11 +85,9 @@
   }
 
   .left-side {
-    float: left;
   }
 
   .right-side {
-    float: right;
     text-align: right;
   }
     
