@@ -228,7 +228,7 @@ form {
 }
 
 button, input, select, textarea {
-  font: normal normal 1em/1.429em Arial, FreeSans, sans-serif;
+  font: 1em/1.429em Arial, FreeSans, sans-serif;
   vertical-align: baseline;
 }
 
@@ -395,10 +395,11 @@ figure {
     1.5. Page Layout
 ============================================================================= */
 body {
-  font: normal normal 87.5%/1.3em Arial, FreeSans, sans-serif;
+  font: 87.5%/1.3em Arial, FreeSans, sans-serif;
   color: #434343;
   background: white;
   overflow-y: scroll;
+  cursor: default;
 }
 .ie-old body {
   overflow-y: auto;
@@ -505,6 +506,10 @@ body.sidebar-second .aside {
 /* ============================================================================
     Basic masterclasses
 ============================================================================= */
+.clearfix:before {
+  content: "";
+  display: table;
+}
 .clearfix:after {
   clear: both;
   content: ".";
@@ -536,25 +541,7 @@ span.br {
 }
 
 /* style support */
-.block {
-  position: relative;
-}
-
 /* ul styles */
-.flat {
-  margin: 0;
-  padding: 0;
-}
-.flat li {
-  margin: 0;
-  list-style: none;
-  background: none;
-}
-
-.unstyled li {
-  list-style: none;
-}
-
 .psln {
   color: #0099ff;
   text-decoration: none;
@@ -585,31 +572,93 @@ span.br {
   filter: alpha(opacity=85);
 }
 
-.dib {
+.dib, .ir, .img-container {
   display: inline-block;
   vertical-align: top;
 }
-.ie-old .dib {
+.ie-old .dib, .ie-old .ir, .ie-old .img-container {
   display: inline;
   zoom: 1;
 }
 
-.img-replace {
-  overflow: hidden;
-  text-indent: -9999px;
-  direction: ltr;
-}
-.ie-old .img-replace {
-  text-indent: 0;
-  line-height: 0;
+.ir {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  vertical-align: middle;
 }
 
 .img-container {
   overflow: hidden;
-  display: inline-block;
 }
 .img-container img {
   display: block;
+  position: static;
+}
+
+/* ============================================================================
+    Import from Specific-html-support.scss
+    
+    2. Specific html tags support
+============================================================================= */
+/* science */
+abbr, acronym {
+  border-bottom: 1px dotted #3a3739;
+  cursor: help;
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #888;
+  cursor: help;
+}
+
+a abbr {
+  cursor: pointer !important;
+}
+
+/* computer science */
+pre, code, tt, samp, kbd {
+  font: normal normal 1em/1.5em "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-line;
+  word-wrap: break-word;
+  background-color: #3a3739;
+  color: #ccc;
+  padding: .643em 0 .643em 2em;
+  width: 94%;
+  overflow-x: auto;
+}
+
+code {
+  color: green;
+}
+
+samp {
+  color: maroon;
+}
+
+kbd {
+  font-size: 1em;
+  background: #3A3739;
+  color: #fff;
+  padding: .2em .3em;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+/* other */
+del {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: none;
+  border-bottom: 1px dashed #3a3739;
 }
 
 /* ============================================================================
@@ -628,10 +677,6 @@ span.br {
 #header .left-side,
 #header .right-side {
   width: 45%;
-  float: left;
-}
-#header .right-side {
-  float: right;
 }
 
 #site-name, #site-slogan {
@@ -645,7 +690,6 @@ span.br {
 #nav {
   padding: 0;
   margin: 0;
-  width: 100%;
   clear: both;
 }
 #nav li {
@@ -677,11 +721,7 @@ span.br {
 #footer .left-side, #footer .right-side {
   width: 45%;
 }
-#footer .left-side {
-  float: left;
-}
 #footer .right-side {
-  float: right;
   text-align: right;
 }
 #footer p {
@@ -713,40 +753,6 @@ span.br {
 ============================================================================= */
 #header, #footer, #content, .aside, #before-content, #under-content, .block {
   outline: 1px dashed #ccc;
-}
-
-.debug [style],
-.debug style {
-  outline: 5px solid yellow;
-}
-.debug style {
-  display: block;
-}
-.debug img {
-  outline: 5px solid red;
-}
-.debug img[alt] {
-  outline-color: green;
-}
-.debug img[alt=""] {
-  outline-color: yellow;
-}
-.debug a {
-  outline: 5px solid yellow;
-}
-.debug a[title] {
-  outline-color: green;
-}
-.debug a[href="#"] {
-  outline-color: yellow;
-}
-.debug a[target] {
-  outline-color: red;
-}
-.debug [class=""],
-.debug [id=""] {
-  /* Is this element meant to have an empty class/ID? */
-  outline: 5px solid red;
 }
 
 /* ============================================================================
@@ -1746,38 +1752,38 @@ Checkbox plugin support
 /* IE6 */
 .fancybox-ie6 #fancybox-close {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_close.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_close.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie6 #fancybox-left-ico {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_nav_left.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_nav_left.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie6 #fancybox-right-ico {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_nav_right.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_nav_right.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie6 #fancybox-title-over {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_over.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_title_over.png', sizingMethod = 'scale');
   zoom: 1;
 }
 
 .fancybox-ie6 #fancybox-title-float-left {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_left.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_title_left.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie6 #fancybox-title-float-main {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_main.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_title_main.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie6 #fancybox-title-float-right {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_title_right.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_title_right.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
@@ -1792,7 +1798,7 @@ Checkbox plugin support
 
 #fancybox-loading.fancybox-ie6 div {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_loading.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_loading.png', sizingMethod = 'scale');
 }
 
 /* IE6, IE7, IE8 */
@@ -1801,35 +1807,35 @@ Checkbox plugin support
 }
 
 .fancybox-ie #fancybox-bg-n {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_n.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_n.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-ne {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_ne.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_ne.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-e {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_e.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_e.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-se {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_se.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_se.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-s {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_s.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_s.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-sw {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_sw.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_sw.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-w {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_w.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_w.png', sizingMethod = 'scale');
 }
 
 .fancybox-ie #fancybox-bg-nw {
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fancybox/fancy_shadow_nw.png', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_nw.png', sizingMethod = 'scale');
 }
 
 /*
