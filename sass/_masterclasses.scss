@@ -8,73 +8,6 @@
     outline: 1px dashed #ccc;
 }
 
-// Thanks https://github.com/csswizardry/inuit.css
-//
-//  Red border    ==  something is wrong
-//  Yellow border   ==  something may be wrong, you should double check.
-//  Green border  ==  perfect, nice one!
-//
-
-.debug {
-
-  // STYLES
-  [style],
-  style {
-    // Inline styles aren’t great, can this be avoided?
-    outline:5px solid yellow;
-  }
-  
-  style {
-    display:block;
-  }
-  
-  // IMAGES
-  img{
-    // Images without alt attributes are bad!
-    outline:5px solid red;
-  }
-  
-  img[alt]{
-    // Images with alt attributes are good!
-    outline-color:green;
-  }
-  
-  img[alt=""]{
-    // Images with empty alt attributes are okay in the right circumstances.
-    outline-color:yellow;
-  }
-  
-  // LINKS
-  a{
-    // Links without titles are yellow, does your link need one? 
-    outline:5px solid yellow;
-  }
-  
-  a[title]{
-    // Links with titles are green, title attributes can be very useful!
-    outline-color:green;
-  }
-  
-  a[href="#"]{
-    // Were you meant to leave that hash in there?
-    outline-color:yellow;
-  }
-  a[target]/*,
-  .debug a[onclick],
-  .debug a[href*=javascript]*/{
-    // What were you thinking?!
-    outline-color: red;
-  }
-  
-  // CLASSES/IDS
-  [class=""],
-  [id=""]{
-    /* Is this element meant to have an empty class/ID? */
-    outline:5px solid red;
-  }
-
-}
-
 /* ============================================================================
     buttons universal
 ============================================================================= */
@@ -255,7 +188,7 @@
     Non-semantic grid support
 ============================================================================= */
 
-@import "_mixins.scss";
+@import "_mixins";
 
 .grid-row {
   .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {

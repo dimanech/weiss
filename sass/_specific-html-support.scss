@@ -10,6 +10,7 @@ abbr, acronym {
   border-bottom: 1px dotted #3a3739;
   cursor: help;
   font-weight: inherit;
+  text-transform: uppercase;
 }
 
 abbr, dfn {
@@ -55,10 +56,6 @@ kbd {
   padding: .2em .3em;
   white-space: nowrap;
   border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
 }
 
 /* other */

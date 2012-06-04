@@ -11,8 +11,9 @@ $(document).ready(function() {
     //$(".no-native select").sb();
     //$(".no-native input:check, .no-native input:radio").checkbox();
 
-    $('input[placeholder], textarea[placeholder]').placeholder();
+    //$('input[placeholder], textarea[placeholder]').placeholder();
 
+   console.log('hello');
 });
 
 function contentTabs() {
@@ -76,20 +77,20 @@ function accordion() {
     });
 }
 
-function scrollEvent() {
+// function scrollEvent() {
 
-    var $win = $(window)
-      , $nav = $('.subnav')
-      , navTop = $('.subnav').length && $('.subnav').offset().top - 40
-      , isFixed = 0
-      var i, scrollTop = $win.scrollTop()
+//     var $win = $(window)
+//       , $nav = $('.subnav')
+//       , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+//       , isFixed = 0
+//       var i, scrollTop = $win.scrollTop()
 
-      if (scrollTop >= navTop && !isFixed) {
-        isFixed = 1
-        $nav.addClass('subnav-fixed')
-      } else if (scrollTop <= navTop && isFixed) {
-        isFixed = 0
-        $nav.removeClass('subnav-fixed')
-      }
+//       if (scrollTop >= navTop && !isFixed) {
+//         isFixed = 1
+//         $nav.addClass('subnav-fixed')
+//       } else if (scrollTop <= navTop && isFixed) {
+//         isFixed = 0
+//         $nav.removeClass('subnav-fixed')
+//       }
 
-};
+// };

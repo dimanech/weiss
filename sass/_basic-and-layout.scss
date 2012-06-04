@@ -330,7 +330,7 @@ form {
 }
 
 button, input, select, textarea {
-  font: normal normal 1em /1.429em #{$sans};
+  font: 1em/1.429em #{$sans};
   //margin: 0;
   vertical-align: baseline;
 }
@@ -535,10 +535,11 @@ figure {
 // 12px-75%
 
 body {
-  font: normal normal 87.5%/1.3em #{$sans};
+  font: 87.5%/1.3em #{$sans};
   color: $baseColor;
   background: $mainBgColor;
   overflow-y: scroll; // force scroll
+  cursor: default;
 
   .ie-old & {
     overflow-y: auto; // ie sticky footer fix
@@ -659,6 +660,11 @@ $footer-height: 50px;
 
 .clearfix {
   
+  &:before {
+      content:"";
+      display:table;
+  }
+
   &:after {
     clear: both;
     content: ".";
@@ -698,28 +704,28 @@ span.br {
 
 /* style support */
 
-.block {
-  position: relative;
-}
+// .block {
+//   position: relative;
+// }
 
 /* ul styles */
-.flat { 
-  margin: 0;
-  padding: 0;
+// .flat { 
+//   margin: 0;
+//   padding: 0;
 
-  li {
-    margin: 0;
-    list-style: none;
-    background:none;
-  }
-}
+//   li {
+//     margin: 0;
+//     list-style: none;
+//     background:none;
+//   }
+// }
 
-.unstyled {
+// .unstyled {
   
-  li {
-    list-style:none;
-  }
-}
+//   li {
+//     list-style:none;
+//   }
+// }
 
 .psln {
   color: $lnColor;
@@ -764,18 +770,12 @@ span.br {
   }
 }
 
-.img-replace {
-  overflow:hidden;
-  text-indent: -9999px;
-  direction: ltr;
-  display:inline-block;
-  
-  .ie-old & {
-    text-indent: 0;
-    line-height: 0;
-    display: inline;
-    zoom: 1;
-  }
+.ir { // FIXME test
+  color:transparent;
+  font:0/0 a;
+  text-shadow:none;
+  vertical-align:middle;
+  @extend .dib;
 }
 
 .img-container {

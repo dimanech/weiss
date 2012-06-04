@@ -7,245 +7,245 @@
 @import "_mixins.scss";
 
 @media screen and (min-width:1281px) {
-    #device-visualizer {
-        background-position: 9px center;
-    }
+  #device-visualizer {
+    background-position: 9px center;
+  }
 }
 
 @media screen and (max-width:1280px) {
-    /* Desktop */
-    /* =========================== main ============================= */
+/* Desktop */
+/* =========================== main ============================= */
 
-    #device-visualizer {
-        background-position: -113px center;
-    }
+  #device-visualizer {
+    background-position: -113px center;
+  }
 
-    /* end @media*/
+/* end @media*/
 }
 
 @media screen and (max-width:1024px) {
-    /* tablet landscape */
-    /* ========================== layout ============================ */
+/* tablet landscape */
+/* ========================== layout ============================ */
 
-    /* by default inherit from PC */
+/* by default inherit from PC */
 
-    #main-container {
-        padding: 0 1em;
-    }
+  #main-container {
+    padding: 0 1em;
+  }
 
-    #main-inner {
-        width: 100%;
-    }
+  #main-inner {
+    width: 100%;
+  }
 
-    body.two-sidebars #main-container {
-        padding: 0;
-    }
+  body.two-sidebars #main-container {
+    padding: 0;
+  }
 
-    /* =========================== footer =========================== */
+/* =========================== footer =========================== */
 
-    #footer #footer-inner {
-        width: 100%;
-    }
+  #footer #footer-inner {
+    width: 100%;
+  }
 
-    /* =========================== other ============================ */
+/* =========================== other ============================ */
 
-    #device-visualizer {
-        background-position: -230px center;
-    }
+  #device-visualizer {
+    background-position: -230px center;
+  }
 
-    /* end @media*/
+/* end @media*/
 }
 
 @media screen and (max-width:768px) {
-    /* tablet portraite */
+/* tablet portraite */
 
-    /* ========================== layout ============================== */
+/* ========================== layout ============================== */
 
-    #main,
-    body.sidebar-second #main,
-    body.sidebar-first #main {
-        width: 100%;
-        margin-bottom: 1.5em;
-    }
+  #main,
+  body.sidebar-second #main,
+  body.sidebar-first #main {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
 
-    body.sidebar-second .aside,
-    body.sidebar-first .aside {
-        width: 100%;
-        float: none;
-    }
+  body.sidebar-second .aside,
+  body.sidebar-first .aside {
+    width: 100%;
+    float: none;
+  }
 
-    body.two-sidebars #main {
-        float: right;
-        width: 74.4%;
-        margin: 0 0 1.5em;
-    }
+  body.two-sidebars #main {
+    float: right;
+    width: 74.4%;
+    margin: 0 0 1.5em;
+  }
 
-    body.two-sidebars #sidebar-first {
-        float: left;
-        width: 23.4%;
-        margin: 0;
-    }
+  body.two-sidebars #sidebar-first {
+    float: left;
+    width: 23.4%;
+    margin: 0;
+  }
 
-    body.two-sidebars #sidebar-second {
-        float: none;
-        width: 100%;
-    }
+  body.two-sidebars #sidebar-second {
+    float: none;
+    width: 100%;
+  }
 
-    /* =========================== footer =========================== */
+/* =========================== footer =========================== */
 
-    #footer-left, #footer-right {
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
+  #footer-left, #footer-right {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
 
-    #footer p.copy {
-        padding-top: 1em;
-    }
+  #footer p.copy {
+    padding-top: 1em;
+  }
 
-    #device-visualizer {
-        background-position: -338px center;
-    }
+  #device-visualizer {
+    background-position: -338px center;
+  }
 
-    /* Sticky footer reset */
+/* Sticky footer reset */
 
-    html, body {
-        height: auto;
-    }
+  html, body {
+    height: auto;
+  }
 
-    #main-container {
-        min-height: auto;
-        height: auto !important;
-        margin: 0 auto 0;
-    }
+  #main-container {
+    min-height: auto;
+    height: auto !important;
+    margin: 0 auto 0;
+  }
 
-    #main-inner {
-        padding-bottom: 0;
-    }
+  #main-inner {
+    padding-bottom: 0;
+  }
 
-    #footer {
-        position: relative;
-        height: auto;
-    }
+  #footer {
+    position: relative;
+    height: auto;
+  }
 
-    /* end @media*/
+/* end @media*/
 }
 
 @media screen and (max-width:600px) {
-    /* small tablet */
+/* small tablet */
 
-    img, object, embed, video, iframe {
-        max-width: 100%;
-        _width: 100%;
-        height: auto;
-    }
+  img, object, embed, video, iframe {
+    max-width: 100%;
+    _width: 100%;
+    height: auto;
+  }
 
-    #main-container {
-        padding: 0;
-    }
+  #main-container {
+    padding: 0;
+  }
 
-    body.two-sidebars #main {
-        width: 100%;
-        clear: both;
-    }
+  body.two-sidebars #main {
+    width: 100%;
+    clear: both;
+  }
 
-    body.two-sidebars #sidebar-first,
-    body.two-sidebars #sidebar-second {
-        width: 48%;
-    }
+  body.two-sidebars #sidebar-first,
+  body.two-sidebars #sidebar-second {
+    width: 48%;
+  }
 
-    body.two-sidebars #sidebar-first {
-        float: left;
-    }
+  body.two-sidebars #sidebar-first {
+    float: left;
+  }
 
-    body.two-sidebars #sidebar-second {
-        float: right;
-    }
+  body.two-sidebars #sidebar-second {
+    float: right;
+  }
 
-    /* ========================== navigation ======================== */
+/* ========================== navigation ======================== */
 
-    #nav {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
+  #nav {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    #device-visualizer {
-        background-position: -434px center;
-    }
+  #device-visualizer {
+    background-position: -434px center;
+  }
 
-    /* end @media*/
+/* end @media*/
 }
 
 @media screen and (max-width:480px) {
-    /* Smart Phone landscape */
+/* Smart Phone landscape */
 
-    /* =========================== basic ============================ */
+/* =========================== basic ============================ */
 
-    input[type="text"],
-    input[type="password"],
-    input[type="search"],
-    input[type="button"],
-    input[type="submit"],
-    input[type="image"],
-    button,
-    select {
-        width: 100%;
-    }
+  input[type="text"],
+  input[type="password"],
+  input[type="search"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="image"],
+  button,
+  select {
+    width: 100%;
+  }
 
-    textarea {
-        width: 95%;
-    }
+  textarea {
+    width: 95%;
+  }
 
-    #main p img {
-        padding: 0;
-        margin: 0;
-    }
+  #main p img {
+    padding: 0;
+    margin: 0;
+  }
 
-    /* ========================== layout ============================ */
+/* ========================== layout ============================ */
 
-    #main {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        clear: both;
-    }
+  #main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    clear: both;
+  }
 
-    /* ========================= sidebars =========================== */
+/* ========================= sidebars =========================== */
 
-    #sidebar-first,
-    #sidebar-second,
-    body.two-sidebars #sidebar-first,
-    body.two-sidebars #sidebar-second {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
+  #sidebar-first,
+  #sidebar-second,
+  body.two-sidebars #sidebar-first,
+  body.two-sidebars #sidebar-second {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
 
-    #device-visualizer {
-        background-position: -515px center;
-    }
+  #device-visualizer {
+    background-position: -515px center;
+  }
 
-    /* end @media*/
+/* end @media*/
 }
 
 @media screen and (max-width:320px) {
-    /* Smart Phone portraite*/
-    /* by default inherit from Smart Phone landskape */
+/* Smart Phone portraite*/
+/* by default inherit from Smart Phone landskape */
 
-    #main-container {
-        min-width: 200px;
-    }
+  #main-container {
+    min-width: 200px;
+  }
 
-    #device-visualizer {
-        background-position: -590px center;
-    }
+  #device-visualizer {
+    background-position: -590px center;
+  }
 
-    /* end @media*/
+/* end @media*/
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-    /* "Retina" display styles */
+/* "Retina" display styles */
 
-    /* end @media*/
+/* end @media*/
 }
