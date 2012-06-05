@@ -4,7 +4,6 @@
 .pydevproject
 .externalToolBuilders
 .settings
-*.sublime-*
 config.rb
 
 design

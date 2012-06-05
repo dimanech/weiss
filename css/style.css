@@ -395,7 +395,7 @@ figure {
     1.5. Page Layout
 ============================================================================= */
 body {
-  font: 87.5%/1.3em Arial, FreeSans, sans-serif;
+  font: 14px/1.3 Arial, FreeSans, sans-serif;
   color: #434343;
   background: white;
   overflow-y: scroll;
@@ -572,20 +572,21 @@ span.br {
   filter: alpha(opacity=85);
 }
 
-.dib, .ir, .img-container {
+.dib, .img-container {
   display: inline-block;
   vertical-align: top;
 }
-.ie-old .dib, .ie-old .ir, .ie-old .img-container {
+.ie-old .dib, .ie-old .img-container {
   display: inline;
   zoom: 1;
 }
 
 .ir {
-  color: transparent;
+  border: 0;
   font: 0/0 a;
   text-shadow: none;
-  vertical-align: middle;
+  color: transparent;
+  background-color: transparent;
 }
 
 .img-container {

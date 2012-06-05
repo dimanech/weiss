@@ -535,7 +535,7 @@ figure {
 // 12px-75%
 
 body {
-  font: 87.5%/1.3em #{$sans};
+  font: 14px/1.3 #{$sans};
   color: $baseColor;
   background: $mainBgColor;
   overflow-y: scroll; // force scroll
@@ -770,12 +770,12 @@ span.br {
   }
 }
 
-.ir { // FIXME test
-  color:transparent;
-  font:0/0 a;
-  text-shadow:none;
-  vertical-align:middle;
-  @extend .dib;
+.ir {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
 }
 
 .img-container {

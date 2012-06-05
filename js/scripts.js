@@ -12,8 +12,6 @@ $(document).ready(function() {
     //$(".no-native input:check, .no-native input:radio").checkbox();
 
     //$('input[placeholder], textarea[placeholder]').placeholder();
-
-   console.log('hello');
 });
 
 function contentTabs() {
