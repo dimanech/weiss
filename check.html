@@ -7,363 +7,425 @@
 <html class="ie8 ie" lang="ru" dir="ltr"> <![endif]-->
 <!--[if gt IE 8]> <!-->
 <html lang="ru" dir="ltr" itemscope itemtype="http://schema.org/Thing">
-<!--<![endif]-->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta itemprop="name" content="Заголовок страницы">
-    <meta itemprop="description" content="Описание содержимого">
-    <meta itemprop="image" content="images/logo.png">
-    <title>Weiss - swicc staic theme</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
-    <!--[if lt IE 9]>
-    <link href="css/ie-old.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" charset="utf-8" src="js/html5shiv.js"></script>
-    <![endif]-->
-    <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-            $('#nav li a').click(function () {
-                $('#nav li a').removeClass('active');
-                $(this).addClass('active');
-                return false;
-            });
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta itemprop="name" content="Заголовок страницы">
+		<meta itemprop="description" content="Описание содержимого">
+		<meta itemprop="image" content="images/logo.png">
+		<title>Weiss - swicc staic theme</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]>
+		<link href="css/ie-old.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" charset="utf-8" src="js/html5shiv.js"></script>
+		<![endif]-->
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#nav li a').click(function() {
+					$('#nav li a').removeClass('active');
+					$(this).addClass('active');
+					return false;
+				});
 
-            $('#twocolumn-s').click(function () {
-                $('body').removeClass().addClass('sidebar-second');
-            });
-            $('#twocolumn-f').click(function () {
-                $('body').removeClass().addClass('sidebar-first');
-            });
-            $('#threecolumn').click(function () {
-                $('body').removeClass().addClass('two-sidebars');
-            });
-            $('#nocolumn').click(function () {
-                $('body').removeClass();
-            });
-        });
-    </script>
-</head>
-<body class="sidebar-second">
-<div id="main-container">
-<div id="main-inner" class="clearfix">
-<header role="banner" id="header">
-    <div class="left-side">
-        <hgroup>
-            <h1 id="site-name">Sitename</h1>
+				$('#twocolumn-s').click(function() {
+					$('body').removeClass().addClass('sidebar-second');
+				});
+				$('#twocolumn-f').click(function() {
+					$('body').removeClass().addClass('sidebar-first');
+				});
+				$('#threecolumn').click(function() {
+					$('body').removeClass().addClass('two-sidebars');
+				});
+				$('#nocolumn').click(function() {
+					$('body').removeClass();
+				});
+			});
+		</script>
+	</head>
+	<body class="sidebar-second">
+		<div id="main-container">
+			<div id="main-inner" class="clearfix">
+				<header role="banner" id="header">
+					<div class="left-side">
+						<hgroup>
+							<h1 id="site-name">Sitename</h1>
+							<h2 id="site-slogan">Site slogan</h2>
+						</hgroup>
+						<!-- <a href="#">
+						<span id="site-name">Sitename</span>
+						<span id="site-slogan">Site slogan</span>
+						</a> -->
+					</div>
+					<div class="right-side">
+						<a href="mailto:weiss@mail.com">weiss@mail.com</a>
+					</div>
+					<nav>
+						<ul id="nav" role="navigation">
+							<li>
+								<a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
+							</li>
+							<li>
+								<a href="#" id="twocolumn-s" class="active">2 columns: sidebar-second</a>
+							</li>
+							<li>
+								<a href="#" id="threecolumn">3 columns</a>
+							</li>
+							<li>
+								<a href="#" id="nocolumn">0 columns</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<!-- /#header -->
+				<div role="main" id="main" class="clearfix">
+					<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a itemprop="url" href="#"><span itemprop="title">Главная</span></a> →
+						Typography
+					</div>
+					<div id="content">
+						<h1>Заголовок 1</h1>
 
-            <h2 id="site-slogan">Site slogan</h2>
-        </hgroup>
-        <!-- <a href="#">
-       <span id="site-name">Sitename</span>
-       <span id="site-slogan">Site slogan</span>
-       </a> -->
-    </div>
-    <div class="right-side">
-        <a href="mailto:weiss@mail.com">weiss@mail.com</a>
-    </div>
-    <nav>
-        <ul id="nav" role="navigation">
-            <li>
-                <a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
-            </li>
-            <li>
-                <a href="#" id="twocolumn-s" class="active">2 columns: sidebar-second</a>
-            </li>
-            <li>
-                <a href="#" id="threecolumn">3 columns</a>
-            </li>
-            <li>
-                <a href="#" id="nocolumn">0 columns</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<!-- /#header -->
-<div role="main" id="main" class="clearfix">
-<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    <a itemprop="url" href="#"><span itemprop="title">Главная</span></a> →
-    Typography
-</div>
-<div id="content">
-<h1>Заголовок 1</h1>
+						<p>
+							<img src="http://farm1.staticflickr.com/73/217023710_8feeb5fe00.jpg" width="333" height="500" alt="Alps"/>
+							Альпы (фр. Alpes, нем. Alpen, итал. Alpi, словен. Alpe) — наиболее высокая горная система Западной
+							Европы. В пределах географических границ Альп полностью или частично находятся территории 8 стран;
+							по доле общей площади государства, приходящейся на Альпы, эти страны располагаются следующим
+							образом: Лихтенштейн (100%), Монако (100%), Австрия (65%), Швейцария (60%), Словения (40%), Италия
+							(17%), Франция (7%), Германия (3%).
+						</p>
 
-<p>
-    <img src="http://farm1.staticflickr.com/73/217023710_8feeb5fe00.jpg" width="333" height="500" alt="Alps"/>
-    Альпы (фр. Alpes, нем. Alpen, итал. Alpi, словен. Alpe) — наиболее высокая горная система Западной
-    Европы. В пределах географических границ Альп полностью или частично находятся территории 8 стран;
-    по доле общей площади государства, приходящейся на Альпы, эти страны располагаются следующим
-    образом: Лихтенштейн (100%), Монако (100%), Австрия (65%), Швейцария (60%), Словения (40%), Италия
-    (17%), Франция (7%), Германия (3%).
-</p>
+						<p>
+							Сложная система хребтов и массивов, протягивающаяся выпуклой к северо-западу дугой от Лигурийского
+							моря до Среднедунайской равнины. Длина около 1 200 км (по внутреннему краю дуги около 750 км).
+							Ширина до 260 км. Поперечной долиной между Боденским озером и озером Комо разделяются на более
+							высокие Западные Альпы (высота до 4 808 м, гора Монблан) и более низкие и широкие Восточные Альпы
+							(высота до 4 049 м, гора Бернина).
+						</p>
 
-<p>
-    Сложная система хребтов и массивов, протягивающаяся выпуклой к северо-западу дугой от Лигурийского
-    моря до Среднедунайской равнины. Длина около 1 200 км (по внутреннему краю дуги около 750 км).
-    Ширина до 260 км. Поперечной долиной между Боденским озером и озером Комо разделяются на более
-    высокие Западные Альпы (высота до 4 808 м, гора Монблан) и более низкие и широкие Восточные Альпы
-    (высота до 4 049 м, гора Бернина).
-</p>
+						<p>
+							Складчатая структура Альп создана в основном движениями альпийского возраста. Наиболее высокая —
+							осевая зона Альп сложена древними кристаллическими (гнейсы, слюдяные сланцы) и метаморфическими
+							(кварцево-филлитовые сланцы) породами, отличается широким распространением горно-ледникового рельефа
+							и современного оледенения. Общая площадь ледников свыше 4 000 км², всего около 1 200 ледников,
+							крупнейшие — Алеч и Горнер. Ледники и вечные снега снижаются до 2 500—3 200 метров. К северу, западу
+							и югу от осевой зоны простираются зоны известняков и доломитов мезозоя и более молодые флишевые и
+							молассовые формации Предальп со среднегорным и низкогорным рельефом.
+						</p>
 
-<p>
-    Складчатая структура Альп создана в основном движениями альпийского возраста. Наиболее высокая —
-    осевая зона Альп сложена древними кристаллическими (гнейсы, слюдяные сланцы) и метаморфическими
-    (кварцево-филлитовые сланцы) породами, отличается широким распространением горно-ледникового рельефа
-    и современного оледенения. Общая площадь ледников свыше 4 000 км², всего около 1 200 ледников,
-    крупнейшие — Алеч и Горнер. Ледники и вечные снега снижаются до 2 500—3 200 метров. К северу, западу
-    и югу от осевой зоны простираются зоны известняков и доломитов мезозоя и более молодые флишевые и
-    молассовые формации Предальп со среднегорным и низкогорным рельефом.
-</p>
+						<p>
+							A common form of lorem ipsum text reads as follows:
+						</p>
+						<blockquote>
+							<p>
+								Lorem ipsum dolor sit amet, <q>текст заключенный в ковычки</q> consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+								voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+								non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
 
-<p>
-    A common form of lorem ipsum text reads as follows:
-</p>
-<blockquote>
-    <p>
-        Lorem ipsum dolor sit amet, <q>текст заключенный в ковычки</q> consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+							<p>
+								Цитируется по:<cite>http://www.wikipedia.org</cite>
+							</p>
+						</blockquote>
+						<p>
+							Many variations on the standard lorem ipsum text exist; some with little resemblance to the
+							original. There are versions that have additional letters — such as k, w, and z — that were uncommon
+							or missing in the Latin language; these were added to achieve a distribution of letters that more
+							closely approximates English.
+						</p>
+						<hr>
+						<ol>
+							<li>
+								<a href="example.com" title="Link">A Link</a> | <a href="http://google.com" title="Link visited">Link
+								visited</a>
+							</li>
+							<li>
+								<del>Deleted</del>
+								|
+								<ins>Inserted</ins>
+							</li>
+						</ol>
+						<ul>
+							<li>
+								an <a href="#">anchor</a> tag (<code>
+									&lt;a&gt;</code>
+								) example
+							</li>
+							<li>
+								an <i>italics</i> and <em>emphasize</em> tag (<code>
+									&lt;i&gt;</code>
+								,
+								<code>
+									&lt;em&gt;
+								</code>
+								) example
+							</li>
+							<li>
+								a <big>big</big> and <small>small</small>
+								tag (<code>
+									&lt;big&gt;</code>
+								,
+								<code>
+									&lt;small&gt;
+								</code>
+								) example
+							</li>
+							<li>
+								a <b>bold</b> and <strong>strong</strong> tag (<code>
+									&lt;b&gt;</code>
+								, <code>
+									&lt;strong&gt;</code>
+								) example
+							</li>
+							<li>
+								an <abbr>abbreviation</abbr> tag (<code>
+									&lt;abbr&gt;</code>)
+								example
+							</li>
+							<li>
+								a <cite>cite</cite> and <q>quote</q> tag (<code>
+									&lt;cite&gt;</code>
+								, <code>
+									&lt;q&gt;</code>
+								) example
+							</li>
+							<li>
+								a <code>
+									code</code>
+								and <dfn>definition</dfn> tag (<code>
+									&lt;code&gt;</code>
+								, <code>
+									&lt;dfn&gt;</code>
+								) example
+							</li>
+							<li>
+								a <tt>teletype</tt> and <kbd>keyboard</kbd> tag (<code>
+									&lt;tt&gt;</code>
+								, <code>
+									&lt;kbd&gt;</code>
+								) example
+							</li>
+							<li>
+								a <var>variable</var> and <samp>sample</samp> tag (<code>
+									&lt;var&gt;</code>
+								, <code>
+									&lt;samp&gt;</code>
+								) example
+							</li>
+							<li>
+								an <ins>inserted</ins>
+								and
+								<del>deleted</del>
+								tag (<code>
+									&lt;ins&gt;</code>
+								, <code>
+									&lt;del&gt;</code>
+								) example
+							</li>
+							<li>
+								a <sub>subscript</sub> and <sup>superscript</sup> tag (<code>
+									&lt;sub&gt;</code>
+								, <code>
+									&lt;sup&gt;</code>)
+								example
+							</li>
+							<li>
+								a
+								<mark>
+									mark
+								</mark>
+								tag (HTML5) (<code>
+									&lt;mark&gt;</code>
+								) example
+							</li>
+						</ul>
+						<ul>
+							<li>
 
-    <p>
-        Цитируется по:<cite>http://www.wikipedia.org</cite>
-    </p>
-</blockquote>
-<p>
-    Many variations on the standard lorem ipsum text exist; some with little resemblance to the
-    original. There are versions that have additional letters — such as k, w, and z — that were uncommon
-    or missing in the Latin language; these were added to achieve a distribution of letters that more
-    closely approximates English.
-</p>
-<hr>
-<ol>
-    <li>
-        <a href="example.com" title="Link">A Link</a> | <a href="http://google.com" title="Link visited">Link
-        visited</a>
-    </li>
-    <li>
-        <del>Deleted</del>
-        |
-        <ins>Inserted</ins>
-    </li>
-</ol>
-<ul>
-    <li>an <a href="#">anchor</a> tag (<code>&lt;a&gt;</code>) example</li>
-    <li>an <i>italics</i> and <em>emphasize</em> tag (<code>&lt;i&gt;</code>,<code> &lt;em&gt;</code>) example</li>
-    <li>a <big>big</big> and
-        <small>small</small>
-        tag (<code>&lt;big&gt;</code>,<code> &lt;small&gt;</code>) example
-    </li>
-    <li>a <b>bold</b> and <strong>strong</strong> tag (<code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>) example</li>
-    <li>an <abbr>abbreviation</abbr> tag (<code>&lt;abbr&gt;</code>)
-        example
-    </li>
-    <li>a <cite>cite</cite> and <q>quote</q> tag (<code>&lt;cite&gt;</code>, <code>&lt;q&gt;</code> ) example</li>
-    <li>a <code>code</code> and <dfn>definition</dfn> tag (<code>&lt;code&gt;</code>, <code>&lt;dfn&gt;</code>) example
-    </li>
-    <li>a <tt>teletype</tt> and <kbd>keyboard</kbd> tag (<code>&lt;tt&gt;</code>, <code>&lt;kbd&gt;</code>) example</li>
-    <li>a <var>variable</var> and <samp>sample</samp> tag (<code>&lt;var&gt;</code>, <code>&lt;samp&gt;</code>) example
-    </li>
-    <li>an
-        <ins>inserted</ins>
-        and
-        <del>deleted</del>
-        tag (<code>&lt;ins&gt;</code>, <code>&lt;del&gt;</code>) example
-    </li>
-    <li>a <sub>subscript</sub> and <sup>superscript</sup> tag (<code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>)
-        example
-    </li>
-    <li>a
-        <mark>mark</mark>
-        tag (HTML5) (<code>&lt;mark&gt;</code>) example
-    </li>
-</ul>
-<ul>
-    <li>
+								<strong>Strong</strong> | <b>Bold</b>
+							</li>
+							<li>
+								<em>Emphasis</em> | <i>Italic</i>
+								<ul>
+									<li>
+										Вложенность списка
+										<mark>
+											Mark text
+										</mark>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ol>
+							<li>
+								list item 1
+							</li>
+							<li>
+								list item 1
+								<ol>
+									<li>
+										list item 2
+									</li>
+									<li>
+										list item 2
+										<ol>
+											<li>
+												list item 3
+											</li>
+											<li>
+												list item 3
+											</li>
+										</ol>
+									</li>
+									<li>
+										list item 2
+									</li>
+									<li>
+										list item 2
+									</li>
+								</ol>
+							</li>
+							<li>
+								list item 1
+							</li>
+							<li>
+								list item 1
+							</li>
+						</ol>
+						<ul>
+							<li>
+								list item 1
+							</li>
+							<li>
+								list item 1
+								<ul>
+									<li>
+										list item 2
+									</li>
+									<li>
+										list item 2
+										<ul>
+											<li>
+												list item 3
+											</li>
+											<li>
+												list item 3
+											</li>
+										</ul>
+									</li>
+									<li>
+										list item 2
+									</li>
+									<li>
+										list item 2
+									</li>
+								</ul>
+							</li>
+							<li>
+								list item 1
+							</li>
+							<li>
+								list item 1
+							</li>
+						</ul>
+						<ul>
+							<li>
+								list item 1
+							</li>
+							<li>
+								list item 1
+								<ol>
+									<li>
+										ordered list item 2
+									</li>
+									<li>
+										list item 2
+										<ul>
+											<li>
+												list item 3
+											</li>
+											<li>
+												list item 3
+											</li>
+										</ul>
+									</li>
+									<li>
+										list item 2
+									</li>
+									<li>
+										list item 2
+									</li>
+								</ol>
+							</li>
+							<li>
+								list item 1
+							</li>
+							<li>
+								list item 1
+							</li>
+						</ul>
+						<hr>
+						<h1>Уровень 01 Заголовок</h1>
 
-        <strong>Strong</strong> | <b>Bold</b>
-    </li>
-    <li>
-        <em>Emphasis</em> | <i>Italic</i>
-        <ul>
-            <li>
-                Вложенность списка
-                <mark>
-                    Mark text
-                </mark>
-            </li>
-        </ul>
-    </li>
-</ul>
-<ol>
-    <li>
-        list item 1
-    </li>
-    <li>
-        list item 1
-        <ol>
-            <li>
-                list item 2
-            </li>
-            <li>
-                list item 2
-                <ol>
-                    <li>
-                        list item 3
-                    </li>
-                    <li>
-                        list item 3
-                    </li>
-                </ol>
-            </li>
-            <li>
-                list item 2
-            </li>
-            <li>
-                list item 2
-            </li>
-        </ol>
-    </li>
-    <li>
-        list item 1
-    </li>
-    <li>
-        list item 1
-    </li>
-</ol>
-<ul>
-    <li>
-        list item 1
-    </li>
-    <li>
-        list item 1
-        <ul>
-            <li>
-                list item 2
-            </li>
-            <li>
-                list item 2
-                <ul>
-                    <li>
-                        list item 3
-                    </li>
-                    <li>
-                        list item 3
-                    </li>
-                </ul>
-            </li>
-            <li>
-                list item 2
-            </li>
-            <li>
-                list item 2
-            </li>
-        </ul>
-    </li>
-    <li>
-        list item 1
-    </li>
-    <li>
-        list item 1
-    </li>
-</ul>
-<ul>
-    <li>
-        list item 1
-    </li>
-    <li>
-        list item 1
-        <ol>
-            <li>
-                ordered list item 2
-            </li>
-            <li>
-                list item 2
-                <ul>
-                    <li>
-                        list item 3
-                    </li>
-                    <li>
-                        list item 3
-                    </li>
-                </ul>
-            </li>
-            <li>
-                list item 2
-            </li>
-            <li>
-                list item 2
-            </li>
-        </ol>
-    </li>
-    <li>
-        list item 1
-    </li>
-    <li>
-        list item 1
-    </li>
-</ul>
-<hr>
-<h1>Уровень 01 Заголовок</h1>
+						<h2>Уровень 02 Заголовок</h2>
 
-<h2>Уровень 02 Заголовок</h2>
-
-<h3>Уровень 03 Заголовок</h3>
-<h4>Уровень 04 Заголовок</h4>
-<h5>Уровень 05 Заголовок</h5>
-<h6>Уровень 06 Заголовок</h6>
-<hr>
-<table itemscope itemtype="http://schema.org/Table">
-    <caption itemprop="about">
-        Таблица: Jimi Hendrix - альбомы
-    </caption>
-    <thead>
-    <tr>
-        <th>Lorem</th>
-        <th>Ipsum</th>
-        <th>Dolor</th>
-        <th>Sit</th>
-        <th>Amet</th>
-    </tr>
-    </thead>
-    <tfoot>
-    <tr>
-        <td>Lorem</td>
-        <td>Ipsum</td>
-        <td>Dolor</td>
-        <td>Sit</td>
-        <td>Amet</td>
-    </tr>
-    </tfoot>
-    <tbody>
-    <tr>
-        <td>Amet</td>
-        <td>Sit</td>
-        <td>Dolor</td>
-        <td>Ipsum</td>
-        <td>Lorem</td>
-    </tr>
-    <tr>
-        <td rowspan="2">Amet</td>
-        <td colspan="2">Sit</td>
-        <td>Ipsum</td>
-        <td>Lorem</td>
-    </tr>
-    <tr>
-        <td>Sit</td>
-        <td>Dolor</td>
-        <td>Ipsum</td>
-        <td>Lorem</td>
-    </tr>
-    </tbody>
-</table>
-<hr>
-                        <pre>And some fixed width text.
+						<h3>Уровень 03 Заголовок</h3>
+						<h4>Уровень 04 Заголовок</h4>
+						<h5>Уровень 05 Заголовок</h5>
+						<h6>Уровень 06 Заголовок</h6>
+						<hr>
+						<table itemscope itemtype="http://schema.org/Table">
+							<caption itemprop="about">
+								Таблица: Jimi Hendrix - альбомы
+							</caption>
+							<thead>
+								<tr>
+									<th>Lorem</th>
+									<th>Ipsum</th>
+									<th>Dolor</th>
+									<th>Sit</th>
+									<th>Amet</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td>Lorem</td>
+									<td>Ipsum</td>
+									<td>Dolor</td>
+									<td>Sit</td>
+									<td>Amet</td>
+								</tr>
+							</tfoot>
+							<tbody>
+								<tr>
+									<td>Amet</td>
+									<td>Sit</td>
+									<td>Dolor</td>
+									<td>Ipsum</td>
+									<td>Lorem</td>
+								</tr>
+								<tr>
+									<td rowspan="2">Amet</td>
+									<td colspan="2">Sit</td>
+									<td>Ipsum</td>
+									<td>Lorem</td>
+								</tr>
+								<tr>
+									<td>Sit</td>
+									<td>Dolor</td>
+									<td>Ipsum</td>
+									<td>Lorem</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr>
+						<pre>And some fixed width text.
                         As a matter of fact, this is a bit of Evernote Readable's own code.
 
                         var _coverElement = document.createElement('div');
@@ -371,275 +433,275 @@
                         _coverElement.setAttribute('style', 'display: none');
 
                         _body.appendChild(_coverElement);</pre>
-<hr>
-<dl>
-    <dt>
-        Term
-    </dt>
-    <dd>
-        term definition
-    </dd>
-    <dt>
-        Тяжёлая вода
-    </dt>
-    <dd>
-        &mdash; (также <abbr title="оксид дейтерия">OD</abbr>) D<sub>2</sub>O или <sup>2</sup>H<sub>2</sub>O. - имеет
-        плотность 1104,2 кг/м<sup>3</sup>, жидкость. <acronym
-            title="В отличие от аббревиатуры, акроним — это устоявшееся сокращение, которое применяется как самостоятельное слово.">АККРОНим
-        больше не употребляется</acronym>
-    </dd>
-</dl>
-<p>
-    <dfn>Определение в тексте</dfn> Для быстрого закрашивания выделенной области цветом переднего плана используйте
-    комбинацию клавиш <kbd>&lt;Alt&gt;+&lt;Backspace&gt;
-    (Kdb)</kbd> или <kbd>&lt;Alt&gt;+&lt;Delete&gt;</kbd>. Для закрашивания выделенной области фоновым цветом
-    воспользуйтесь комбинацией <kbd>&lt;Ctrl&gt;+&lt;Backspace&gt;</kbd> или <kbd>&lt;Ctrl&gt;+&lt;Delete&gt;</kbd>.
-</p>
-<hr/>
-<form action="" method="get" accept-charset="utf-8">
-    <div class="form-row">
-        <label for="main-search">Search with autocomplete</label>
-        <input name="search" type="search" id="main-search"/>
-    </div>
-    <div class="form-row">
-        <label for="default-html5-search">Default Search</label>
-        <input name="search" type="search" id="default-html5-search"/>
-    </div>
-</form>
-<form action="" method="get" accept-charset="utf-8">
-    <fieldset>
-        <legend>
-            Login-form
-        </legend>
-        <div class="form-row">
-            <label for="log-name">Введите ваш логин</label>
-            <input type="text" id="log-name" name="name" placeholder="placeholder login"/>
-        </div>
-        <div class="form-row">
-            <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
-        </div>
-        <div class="form-row">
-            <input type="button" value="Button"/>
-        </div>
-        <div class="form-row">
-            <input type="file">
-        </div>
-    </fieldset>
-</form>
-<form action="" id="order-submit-form" method="get" accept-charset="utf-8">
-    <div class="form-row">
-        <label for="name">Фамилия, Имя, Отчество</label>
-        <input type="text" id="name" name="name" required/>
-    </div>
-    <div class="form-row">
-        <label for="select">Раскрывающийся список</label>
-        <select name="select" id="select">
-            <optgroup label="Группа 1">
-                <option value="c1">Выбор 1</option>
-                <option value="c2">Выбор 2</option>
-                <option value="c3">Длинный длинный длинный выбор</option>
-            </optgroup>
-            <optgroup label="Группа 2">
-                <option value="s1">Выбор 4</option>
-                <option value="s2">Выбор 5</option>
-                <option value="s3">выбор 5</option>
-            </optgroup>
-        </select>
-    </div>
-    <div class="form-row">
-        <label for="select-openend">Список множественного выбора</label>
-        <select name="select-openend" id="select-openend" multiple="multiple" size="4">
-            <option selected="selected" value="sm1">Выбор 1</option>
-            <option value="sm2">Выбор 2</option>
-            <option value="sm3">Длинный длинный длинный выбор</option>
-            <option value="sm4">Выбор 4</option>
-            <option value="sm5">Выбор 5</option>
-            <option value="sm6">выбор 5</option>
-        </select>
-    </div>
-    <div class="form-row">
-        <label for="tel">Контактный телефон</label>
-        <input type="text" id="tel" name="tel" required/>
-    </div>
-    <div class="form-row">
-        <label for="mail">E-mail</label>
-        <input type="text" id="mail" name="mail" required/>
-    </div>
-    <div class="form-row">
-        <label>
-            <input type="radio" name="radio1" value="r1" checked="checked"/>
-            Radio (checked)</label>
-        <label>
-            <input type="radio" name="radio1" value="r2" disabled="disabled"/>
-            Radio 2 (disabled) </label>
-        <label>
-            <input type="radio" name="radio1" value="r3"/>
-            Radio 3 </label>
-    </div>
-    <div class="form-row">
-        Checkbox
-        <label>
-            <input type="checkbox" name="checkbox1" value="ch1" checked="checked"/>
-            Check 1 (checked) </label>
-        <label>
-            <input type="checkbox" name="checkbox2" value="ch2" disabled="disabled"/>
-            Check 2 (disabled) </label>
-        <label>
-            <input type="checkbox" name="checkbox3" value="ch3"/>
-            Check 3 </label>
-    </div>
-    <div class="form-row">
-        <label for="textarea">Textarea</label>
-        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
-    </div>
-    <div class="form-row">
-        <input id="submit-input" type="submit" value="Submit"/>
-        <input id="reset-input" type="reset" value="Reset"/>
-    </div>
-    <input type="hidden" name="post_back" value="1"/>
-</form>
-</div>
-<!-- /#content -->
-</div>
-<!-- /#main-->
-<!-- #sidebar-first -->
-<aside role="complementary">
-    <div id="sidebar-first" class="aside clearfix">
-        <div class="block">
-            <p>
-                SidebarFirst Block
-            </p>
-        </div>
-    </div>
-</aside>
-<!-- /#sidebar-first -->
-<!-- #sidebar-second -->
-<aside role="complementary">
-    <div id="sidebar-second" class="aside clearfix">
-        <div class="block">
-            <p>
-                SidebarSecond Block
-            </p>
-        </div>
-    </div>
-</aside>
-<!-- /#sidebar-second -->
-<div id="under-content">
-    <div>
-        <style type="text/css">
-            #under-content {
-                overflow: hidden;
-                clear: both;
-            }
+						<hr>
+						<dl>
+							<dt>
+								Term
+							</dt>
+							<dd>
+								term definition
+							</dd>
+							<dt>
+								Тяжёлая вода
+							</dt>
+							<dd>
+								&mdash; (также <abbr title="оксид дейтерия">OD</abbr>) D<sub>2</sub>O или <sup>2</sup>H<sub>2</sub>O. - имеет
+								плотность 1104,2 кг/м<sup>3</sup>, жидкость. <acronym
+								title="В отличие от аббревиатуры, акроним — это устоявшееся сокращение, которое применяется как самостоятельное слово.">АККРОНим
+									больше не употребляется</acronym>
+							</dd>
+						</dl>
+						<p>
+							<dfn>Определение в тексте</dfn> Для быстрого закрашивания выделенной области цветом переднего плана используйте
+							комбинацию клавиш <kbd>&lt;Alt&gt;+&lt;Backspace&gt;
+								(Kdb)</kbd> или <kbd>&lt;Alt&gt;+&lt;Delete&gt;</kbd>. Для закрашивания выделенной области фоновым цветом
+							воспользуйтесь комбинацией <kbd>&lt;Ctrl&gt;+&lt;Backspace&gt;</kbd> или <kbd>&lt;Ctrl&gt;+&lt;Delete&gt;</kbd>.
+						</p>
+						<hr/>
+						<form action="" method="get" accept-charset="utf-8">
+							<div class="form-row">
+								<label for="main-search">Search with autocomplete</label>
+								<input name="search" type="search" id="main-search"/>
+							</div>
+							<div class="form-row">
+								<label for="default-html5-search">Default Search</label>
+								<input name="search" type="search" id="default-html5-search"/>
+							</div>
+						</form>
+						<form action="" method="get" accept-charset="utf-8">
+							<fieldset>
+								<legend>
+									Login-form
+								</legend>
+								<div class="form-row">
+									<label for="log-name">Введите ваш логин</label>
+									<input type="text" id="log-name" name="name" placeholder="placeholder login"/>
+								</div>
+								<div class="form-row">
+									<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
+								</div>
+								<div class="form-row">
+									<input type="button" value="Button"/>
+								</div>
+								<div class="form-row">
+									<input type="file">
+								</div>
+							</fieldset>
+						</form>
+						<form action="" id="order-submit-form" method="get" accept-charset="utf-8">
+							<div class="form-row">
+								<label for="name">Фамилия, Имя, Отчество</label>
+								<input type="text" id="name" name="name" required/>
+							</div>
+							<div class="form-row">
+								<label for="select">Раскрывающийся список</label>
+								<select name="select" id="select">
+									<optgroup label="Группа 1">
+										<option value="c1">Выбор 1</option>
+										<option value="c2">Выбор 2</option>
+										<option value="c3">Длинный длинный длинный выбор</option>
+									</optgroup>
+									<optgroup label="Группа 2">
+										<option value="s1">Выбор 4</option>
+										<option value="s2">Выбор 5</option>
+										<option value="s3">выбор 5</option>
+									</optgroup>
+								</select>
+							</div>
+							<div class="form-row">
+								<label for="select-openend">Список множественного выбора</label>
+								<select name="select-openend" id="select-openend" multiple="multiple" size="4">
+									<option selected="selected" value="sm1">Выбор 1</option>
+									<option value="sm2">Выбор 2</option>
+									<option value="sm3">Длинный длинный длинный выбор</option>
+									<option value="sm4">Выбор 4</option>
+									<option value="sm5">Выбор 5</option>
+									<option value="sm6">выбор 5</option>
+								</select>
+							</div>
+							<div class="form-row">
+								<label for="tel">Контактный телефон</label>
+								<input type="text" id="tel" name="tel" required/>
+							</div>
+							<div class="form-row">
+								<label for="mail">E-mail</label>
+								<input type="text" id="mail" name="mail" required/>
+							</div>
+							<div class="form-row">
+								<label>
+									<input type="radio" name="radio1" value="r1" checked="checked"/>
+									Radio (checked)</label>
+								<label>
+									<input type="radio" name="radio1" value="r2" disabled="disabled"/>
+									Radio 2 (disabled) </label>
+								<label>
+									<input type="radio" name="radio1" value="r3"/>
+									Radio 3 </label>
+							</div>
+							<div class="form-row">
+								Checkbox
+								<label>
+									<input type="checkbox" name="checkbox1" value="ch1" checked="checked"/>
+									Check 1 (checked) </label>
+								<label>
+									<input type="checkbox" name="checkbox2" value="ch2" disabled="disabled"/>
+									Check 2 (disabled) </label>
+								<label>
+									<input type="checkbox" name="checkbox3" value="ch3"/>
+									Check 3 </label>
+							</div>
+							<div class="form-row">
+								<label for="textarea">Textarea</label>
+								<textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+							</div>
+							<div class="form-row">
+								<input id="submit-input" type="submit" value="Submit"/>
+								<input id="reset-input" type="reset" value="Reset"/>
+							</div>
+							<input type="hidden" name="post_back" value="1"/>
+						</form>
+					</div>
+					<!-- /#content -->
+				</div>
+				<!-- /#main-->
+				<!-- #sidebar-first -->
+				<aside role="complementary">
+					<div id="sidebar-first" class="aside clearfix">
+						<div class="block">
+							<p>
+								SidebarFirst Block
+							</p>
+						</div>
+					</div>
+				</aside>
+				<!-- /#sidebar-first -->
+				<!-- #sidebar-second -->
+				<aside role="complementary">
+					<div id="sidebar-second" class="aside clearfix">
+						<div class="block">
+							<p>
+								SidebarSecond Block
+							</p>
+						</div>
+					</div>
+				</aside>
+				<!-- /#sidebar-second -->
+				<div id="under-content">
+					<div>
+						<style type="text/css">
+							#under-content {
+								overflow: hidden;
+								clear: both;
+							}
 
-            #under-content [class*="span"] {
-                background-color: #EEE;
-                text-align: center;
-                border-radius: 3px;
-                min-height: 30px;
-                line-height: 30px;
-                margin-bottom: 1em;
-            }
-        </style>
-        <div class="grid-row">
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-            <div class="gr-cell span1">
-                1
-            </div>
-        </div>
-        <div class="grid-row">
-            <div class="gr-cell span4">
-                4
-            </div>
-            <div class="gr-cell span4">
-                4
-            </div>
-            <div class="gr-cell span4">
-                4
-            </div>
-        </div>
-        <div class="grid-row">
-            <div class="gr-cell span4">
-                4
-            </div>
-            <div class="gr-cell span8">
-                8
-            </div>
-        </div>
-        <div class="grid-row">
-            <div class="gr-cell span6">
-                6
-            </div>
-            <div class="gr-cell span6">
-                6
-            </div>
-        </div>
-        <div class="grid-row">
-            <div class="gr-cell span12">
-                12
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- /#main-inner -->
-</div>
-<!-- /#main-container -->
-<!-- #footer -->
-<footer role="contentinfo" id="footer">
-    <div class="c-container">
-        <div class="left-side">
-            <p class="copy">
-                <span>Weiss</span>
-                &copy; 2012 blank canvas theme
-            </p>
-        </div>
-        <div class="right-side">
-            <p class="develop">
-                Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab"/></a>
-            </p>
-        </div>
-    </div>
-</footer>
-<!-- /#footer -->
-<!--[if lt IE 7]>
-<div style='height: 59px; padding:0 0 0 15px; position: absolute; top: 0; z-index: 9999;'><a
-        href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img
-        src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0016_russian.jpg" border="0"
-        height="42" width="820"
-        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/></a>
-</div> <![endif]-->
-</body>
+							#under-content [class*="span"] {
+								background-color: #EEE;
+								text-align: center;
+								border-radius: 3px;
+								min-height: 30px;
+								line-height: 30px;
+								margin-bottom: 1em;
+							}
+						</style>
+						<div class="grid-row">
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+							<div class="gr-cell span1">
+								1
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="gr-cell span4">
+								4
+							</div>
+							<div class="gr-cell span4">
+								4
+							</div>
+							<div class="gr-cell span4">
+								4
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="gr-cell span4">
+								4
+							</div>
+							<div class="gr-cell span8">
+								8
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="gr-cell span6">
+								6
+							</div>
+							<div class="gr-cell span6">
+								6
+							</div>
+						</div>
+						<div class="grid-row">
+							<div class="gr-cell span12">
+								12
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /#main-inner -->
+		</div>
+		<!-- /#main-container -->
+		<!-- #footer -->
+		<footer role="contentinfo" id="footer">
+			<div class="c-container">
+				<div class="left-side">
+					<p class="copy">
+						<span>Weiss</span>
+						&copy; 2012 blank canvas theme
+					</p>
+				</div>
+				<div class="right-side">
+					<p class="develop">
+						Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab"/></a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- /#footer -->
+		<!--[if lt IE 7]>
+		<div style='height: 59px; padding:0 0 0 15px; position: absolute; top: 0; z-index: 9999;'><a
+		href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img
+		src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0016_russian.jpg" border="0"
+		height="42" width="820"
+		alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/></a>
+		</div> <![endif]-->
+	</body>
 </html>
