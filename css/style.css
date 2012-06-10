@@ -4,14 +4,6 @@
     Weiss 2012
 
 ============================================================================= */
-/* 
- * TODO
- *
- * сетка и layout на сетке
- * 
- * 
- * em удалить
- *  */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, nav, section {
   display: block;
@@ -190,13 +182,11 @@ table {
   table-layout: fixed;
   word-wrap: break-word;
   empty-cells: hide;
-  margin-bottom: 1.286em;
 }
 
 caption {
   font-size: 1.5em;
   line-height: 1.714em;
-  margin-top: 0.857em;
   margin-bottom: 0.857em;
 }
 

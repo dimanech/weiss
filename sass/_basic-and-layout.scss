@@ -11,17 +11,6 @@
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
-/* 
- * TODO
- *
- * сетка и layout на сетке
- * 
- * 
- * em удалить
- *  */
-
-
-
 $mainBgColor: #fff;
 $mainFgColor: #ccc;
 $baseColor: #434343;
@@ -297,12 +286,10 @@ table {
   table-layout: fixed;
   word-wrap: break-word;
   empty-cells: hide;
-  @include trailer(1);
 }
 
 caption {
   @include adjust-font-size-to($h2-font-size);
-  @include leader(1, $h2-font-size);
   @include trailer(1, $h2-font-size);
 }
 
