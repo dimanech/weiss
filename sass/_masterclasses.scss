@@ -1,7 +1,7 @@
 /* ============================================================================
     Import from masterclasses.scss
 
-    4. MASTER-CLASSES
+    5. MASTER-CLASSES
 ============================================================================= */
 
 // Add wireframes to the basic layout elements.
@@ -195,28 +195,28 @@
     Non-semantic grid support
 ============================================================================= */
 
-@import "_mixins";
+@import "mixins";
 
 .grid-row {
-  .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+  #{enumerate('.span', 1, $cols, '')} {
     float: left;
     margin-left: $gutter;
   }
 
   @for $i from 1 through $cols {
     .span#{$i} {
-        @include cols($i);
+      @include cols($i);
 
       @for $j from 1 through ($i - 1) {
         .span#{$j} {
-            @include sub_cols($j, $i);
+          @include sub_cols($j, $i);
         }
       }
     }
   }
 
   > :first-child,
-  .grid-row > :first-child {
+  .row > :first-child {
     margin-left: 0;
   }
 }

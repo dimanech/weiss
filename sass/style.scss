@@ -6,9 +6,10 @@
 
 ============================================================================= */
 
-@import "basic-and-layout";
+@import "basic";
 @import "specific-html-support";
-@import "themed";
+@import "layout";
+@import "common";
 @import "masterclasses";
 //@import "plugin-support";
 //@import "screen";

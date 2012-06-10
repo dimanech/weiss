@@ -21,6 +21,8 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 /* ============================================================================
+    Import from basic.scss
+
     1. BASIC
 ============================================================================= */
 @font-face {
@@ -399,117 +401,7 @@ figure {
 }
 
 /* ============================================================================
-    1.5. Page Layout
-============================================================================= */
-body {
-  font-size: 14px;
-  line-height: 1.286em;
-  font-family: Arial, FreeSans, sans-serif;
-  color: #434343;
-  background: white;
-  overflow-y: scroll;
-  margin: 0;
-}
-.ie6-7 body {
-  overflow-y: auto;
-}
-
-/* header
-   --------------------------------------------------------------------------*/
-/* main
-   --------------------------------------------------------------------------*/
-#main-container {
-  background-color: #cccccc;
-}
-
-#main-inner {
-  width: 974px;
-  margin: 0 auto;
-  position: relative;
-  background-color: white;
-}
-
-#main {
-  margin-bottom: 2em;
-}
-
-.two-sidebars-main {
-  float: left;
-  margin-left: 25.806%;
-  width: 48.665%;
-}
-.ie6-7 .two-sidebars-main {
-  display: inline;
-}
-
-.sidebar-first-main {
-  float: right;
-  width: 74.333%;
-}
-
-.sidebar-second-main {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 74.333%;
-}
-
-/* sidebars
-   --------------------------------------------------------------------------*/
-.two-sidebars-sidebar-first {
-  float: left;
-  margin-left: -74.333%;
-  width: 23.306%;
-}
-
-.two-sidebars-sidebar-second {
-  float: right;
-  width: 23.306%;
-}
-
-.sidebar-first-aside,
-.sidebar-second-aside {
-  float: left;
-  width: 23.306%;
-}
-
-.sidebar-second-aside {
-  float: right;
-}
-
-/* footer
-   --------------------------------------------------------------------------*/
-#footer {
-  clear: both;
-  overflow: hidden;
-}
-
-/* Styicky footer
-   --------------------------------------------------------------------------*/
-@media screen and (max-width: 2400px) {
-  html, body {
-    height: 100%;
-  }
-
-  #main-container {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto;
-    margin-bottom: -80px;
-  }
-
-  #main-inner {
-    padding-bottom: 80px;
-  }
-
-  #footer {
-    position: relative;
-    height: 80px;
-  }
-}
-/* ============================================================================
-    Basic masterclasses
+    1.5 Basic masterclasses
 ============================================================================= */
 .clearfix:before {
   content: "";
@@ -616,7 +508,7 @@ span.ico {
 }
 
 /* ============================================================================
-   Embed service reset
+    1.6 Embed content reset
 ============================================================================= */
 #plusone table, #plusone td, #plusone th, #plusone tr,
 .YMaps-b-balloon-frame table,
@@ -644,7 +536,7 @@ span.ico {
 }
 
 /* ============================================================================
-    Import from Specific-html-support.scss
+    Import from specific-html-support.scss
     
     2. Specific html tags support
 ============================================================================= */
@@ -711,14 +603,120 @@ ins {
 }
 
 /* ============================================================================
+    Import from layout.scss
+
+    3. PAGE LAYOUT
+============================================================================= */
+body {
+  font-size: 14px;
+  line-height: 1.286em;
+  font-family: Arial, FreeSans, sans-serif;
+  color: #434343;
+  background: white;
+  overflow-y: scroll;
+  margin: 0;
+}
+.ie6-7 body {
+  overflow-y: auto;
+}
+
+/* header
+   --------------------------------------------------------------------------*/
+/* main
+   --------------------------------------------------------------------------*/
+#main-container {
+  background-color: #cccccc;
+}
+
+#main-inner {
+  width: 974px;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+}
+
+.two-sidebars-main {
+  float: left;
+  margin-left: 25.806%;
+  width: 48.665%;
+}
+.ie6-7 .two-sidebars-main {
+  display: inline;
+}
+
+.sidebar-first-main {
+  float: right;
+  width: 74.333%;
+}
+
+.sidebar-second-main {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 74.333%;
+}
+
+/* sidebars
+   --------------------------------------------------------------------------*/
+.two-sidebars-sidebar-first {
+  float: left;
+  margin-left: -74.333%;
+  width: 23.306%;
+}
+
+.two-sidebars-sidebar-second {
+  float: right;
+  width: 23.306%;
+}
+
+.sidebar-first-aside,
+.sidebar-second-aside {
+  float: left;
+  width: 23.306%;
+}
+
+.sidebar-second-aside {
+  float: right;
+}
+
+/* footer
+   --------------------------------------------------------------------------*/
+#footer {
+  clear: both;
+  overflow: hidden;
+}
+
+/* Styicky footer
+   --------------------------------------------------------------------------*/
+@media screen and (max-width: 2400px) {
+  html, body {
+    height: 100%;
+  }
+
+  #main-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: -80px;
+  }
+
+  #main-inner {
+    padding-bottom: 80px;
+  }
+
+  #footer {
+    position: relative;
+    height: 80px;
+  }
+}
+/* ============================================================================
+    Import from common.scss
     
-    3. THEMED (Design specific rules)
-    
-    Import from THEMED.scss
-    
+    4. COMMON (Design specific rules)
 ============================================================================= */
 /* ============================================================================
-    3.1 Header
+    4.1 Header
 ============================================================================= */
 #header {
   margin-bottom: 1.5em;
@@ -756,16 +754,16 @@ ins {
 }
 
 /* ============================================================================
-    3.2 Main
+    4.2 Main
 ============================================================================= */
 /* ============================================================================
-    3.3 Aside
+    4.3 Aside
 ============================================================================= */
 /* ============================================================================
-    3.4 Pages
+    4.4 Pages
 ============================================================================= */
 /* ============================================================================
-    3.5 Footer
+    4.5 Footer
 ============================================================================= */
 #footer .left-side, #footer .right-side {
   width: 45%;
@@ -787,7 +785,7 @@ ins {
 }
 
 /* ============================================================================
-    3.6 Other
+    4.6 Other
 ============================================================================= */
 /* Opera speed dial minimized */
 @media screen and (view-mode: minimized) {
@@ -798,7 +796,7 @@ ins {
 /* ============================================================================
     Import from masterclasses.scss
 
-    4. MASTER-CLASSES
+    5. MASTER-CLASSES
 ============================================================================= */
 #header, #footer, #content, .aside, #before-content, #under-content, .block {
   outline: 1px dashed #ccc;
@@ -1160,13 +1158,15 @@ ins {
   width: 91.5%;
 }
 .grid-row > :first-child,
-.grid-row .grid-row > :first-child {
+.grid-row .row > :first-child {
   margin-left: 0;
 }
 
-/*
-  Media Print
-*/
+/* ============================================================================
+    Import from print.scss 
+    
+    4. MEDIA PRINT
+============================================================================= */
 @media print {
   /* some general resets */
   @page {

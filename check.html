@@ -32,36 +32,26 @@
 					$(this).addClass('active');
 					return false;
 				});
-
-
-					// 'sidebar-second-main', 
-					// 'sidebar-first-main',
-					// 'two-sidebars-main',
-					// 'sidebar-second-aside',
-					// 'sidebar-first-aside',
-					// 'two-sidebars-sidebar-first',
-					// 'two-sidebars-sidebar-second'
 					
-
 				$('#twocolumn-s').click(function() {
-					$('#main').removeClass().addClass('sidebar-second-main');
-					$('#sidebar-first').removeClass().addClass('sidebar-second-aside');
-					$('#sidebar-second').removeClass().addClass('sidebar-second-aside');
+					$('#main').removeClass().addClass('sidebar-second-main').addClass('clearfix');
+					$('#sidebar-first').removeClass().addClass('sidebar-second-aside').addClass('clearfix');
+					$('#sidebar-second').removeClass().addClass('sidebar-second-aside').addClass('clearfix');
 				});
 				$('#twocolumn-f').click(function() {
-					$('#main').removeClass().addClass('sidebar-first-main');
-					$('#sidebar-first').removeClass().addClass('sidebar-first-aside');
-					$('#sidebar-second').removeClass().addClass('sidebar-first-aside');
+					$('#main').removeClass().addClass('sidebar-first-main').addClass('clearfix');
+					$('#sidebar-first').removeClass().addClass('sidebar-first-aside').addClass('clearfix');
+					$('#sidebar-second').removeClass().addClass('sidebar-first-aside').addClass('clearfix');
 				});
 				$('#threecolumn').click(function() {
-					$('#main').removeClass().addClass('two-sidebars-main');
-					$('#sidebar-first').removeClass().addClass('two-sidebars-sidebar-first');
-					$('#sidebar-second').removeClass().addClass('two-sidebars-sidebar-second');
+					$('#main').removeClass().addClass('two-sidebars-main').addClass('clearfix');
+					$('#sidebar-first').removeClass().addClass('two-sidebars-sidebar-first').addClass('clearfix');
+					$('#sidebar-second').removeClass().addClass('two-sidebars-sidebar-second').addClass('clearfix');
 				});
 				$('#nocolumn').click(function() {
-					$('#main').removeClass();
-					$('#sidebar-first').removeClass();
-					$('#sidebar-second').removeClass();
+					$('#main').removeClass().addClass('clearfix');
+					$('#sidebar-first').removeClass().addClass('clearfix');
+					$('#sidebar-second').removeClass().addClass('clearfix');
 				});
 			});
 		</script>
@@ -69,37 +59,39 @@
 	<body>
 		<div id="main-container">
 			<div id="main-inner" class="clearfix">
-				<header role="banner" id="header">
-					<div class="left-side">
-						<hgroup>
-							<h1 id="site-name">Sitename</h1>
-							<h2 id="site-slogan">Site slogan</h2>
-						</hgroup>
-						<!-- <a href="#">
-						<span id="site-name">Sitename</span>
-						<span id="site-slogan">Site slogan</span>
-						</a> -->
-					</div>
-					<div class="right-side">
-						<a href="mailto:weiss@mail.com">weiss@mail.com</a>
-					</div>
-					<nav>
-						<ul id="nav" role="navigation">
-							<li>
-								<a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
-							</li>
-							<li>
-								<a href="#" id="twocolumn-s" class="active">2 columns: sidebar-second</a>
-							</li>
-							<li>
-								<a href="#" id="threecolumn">3 columns</a>
-							</li>
-							<li>
-								<a href="#" id="nocolumn">0 columns</a>
-							</li>
-						</ul>
-					</nav>
-				</header>
+				<div id="header">
+					<header role="banner">
+						<div class="left-side">
+							<hgroup>
+								<h1 id="site-name">Sitename</h1>
+								<h2 id="site-slogan">Site slogan</h2>
+							</hgroup>
+							<!-- <a href="#">
+							<span id="site-name">Sitename</span>
+							<span id="site-slogan">Site slogan</span>
+							</a> -->
+						</div>
+						<div class="right-side">
+							<a href="mailto:weiss@mail.com">weiss@mail.com</a>
+						</div>
+						<nav>
+							<ul id="nav" role="navigation">
+								<li>
+									<a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
+								</li>
+								<li>
+									<a href="#" id="twocolumn-s" class="active">2 columns: sidebar-second</a>
+								</li>
+								<li>
+									<a href="#" id="threecolumn">3 columns</a>
+								</li>
+								<li>
+									<a href="#" id="nocolumn">0 columns</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+			</div>
 				<!-- /#header -->
 					<div role="main" id="main" class="clearfix">
 						<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -618,26 +610,26 @@
 					</div>
 					<!-- /#main-->
 					<!-- #sidebar-first -->
-					<aside role="complementary">
-						<div id="sidebar-first" class="aside clearfix">
-							<div class="block">
-								<p>
-									SidebarFirst Block
-								</p>
-							</div>
-						</div>
-					</aside>
+					<div id="sidebar-first" class="aside clearfix">
+						<aside role="complementary">
+								<div class="block">
+									<p>
+										SidebarFirst Block
+									</p>
+								</div>
+						</aside>
+					</div>
 					<!-- /#sidebar-first -->
 					<!-- #sidebar-second -->
-					<aside role="complementary">
-						<div id="sidebar-second" class="aside clearfix">
-							<div class="block">
-								<p>
-									SidebarSecond Block
-								</p>
-							</div>
-						</div>
-					</aside>
+					<div id="sidebar-second" class="aside clearfix">
+						<aside role="complementary">
+								<div class="block">
+									<p>
+										SidebarSecond Block
+									</p>
+								</div>
+						</aside>
+					</div>
 					<!-- /#sidebar-second -->
 				<div id="under-content">
 					<div>
@@ -733,21 +725,23 @@
 		</div>
 		<!-- /#main-container -->
 		<!-- #footer -->
-		<footer role="contentinfo" id="footer">
-			<div class="c-container">
-				<div class="left-side">
-					<p class="copy">
-						<span>Weiss</span>
-						&copy; 2012 blank canvas theme
-					</p>
+		<div id="footer">
+			<footer role="contentinfo">
+				<div class="c-container">
+					<div class="left-side">
+						<p class="copy">
+							<span>Weiss</span>
+							&copy; 2012 blank canvas theme
+						</p>
+					</div>
+					<div class="right-side">
+						<p class="develop">
+							Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab"/></a>
+						</p>
+					</div>
 				</div>
-				<div class="right-side">
-					<p class="develop">
-						Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab"/></a>
-					</p>
-				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
 		<!-- /#footer -->
 		<!--[if lt IE 7]>
 		<div style='height: 59px; padding:0 0 0 15px; position: absolute; top: 0; z-index: 9999;'><a
