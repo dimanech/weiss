@@ -107,7 +107,7 @@ p, pre, blockquote, table {
 }
 
 blockquote {
-  margin: 1.286em 4.2em;
+  margin: 1.286em 4.2em 0;
   font-style: italic;
 }
 
@@ -338,20 +338,12 @@ optgroup {
 }
 
 fieldset {
-  border-color: #ccc;
+  border: 1px solid #ccc;
   margin: 0 2px;
-  border-top-style: solid;
-  border-top-width: 0.071em;
-  padding-top: 0.379em;
-  border-bottom-style: solid;
-  border-bottom-width: 0.071em;
-  padding-bottom: 0.764em;
-  border-left-style: solid;
-  border-left-width: 0.071em;
-  padding-left: 0.764em;
-  border-right-style: solid;
-  border-right-width: 0.071em;
-  padding-right: 0.764em;
+  margin-top: 1.286em;
+  padding-top: 0.514em;
+  padding-bottom: 1.286em;
+  margin-bottom: 0em;
 }
 
 legend {

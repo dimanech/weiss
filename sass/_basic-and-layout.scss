@@ -166,7 +166,7 @@ p, pre, blockquote, table {
 }
 
 blockquote {
-  margin: rhythm(1) 4.2em;
+  margin: rhythm(1) 4.2em 0;
 
   @if $onBodyCustomFont {
     font-weight: normal;
@@ -476,12 +476,9 @@ optgroup {
 }
 
 fieldset {
-  border-color: #ccc;
+  border: 1px solid #ccc;
   margin: 0 2px;
-  @include apply-side-rhythm-border(top, $width: 1px, $lines: 0.35); // FIXME
-  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
-  @include apply-side-rhythm-border(left, $width: 1px, $lines: 0.65);
-  @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.65);
+  @include rhythm(1, 0.4, 1, 0, $base-font-size);
 }
 
 legend {
