@@ -27,7 +27,8 @@ a abbr {
 /* computer science */
 
 pre, code, tt, samp, kbd {
-  font: normal normal 1em/1.5em #{$baseFontFamilyMono};
+  font-family: #{$baseFontFamilyMono};
+  @include adjust-font-size-to( 1 * $base-font-size );
 }
 
 pre {

@@ -13,8 +13,7 @@
 
 /* 
  * TODO
- * compass вертикальный ритм
- * 
+ *
  * сетка и layout на сетке
  * 
  * 
@@ -55,18 +54,16 @@ blockquote, q {
     1. BASIC
 ============================================================================= */
 
-/*
 @font-face {
-  font-family: 'Example';
-  src: url('../fonts/example.eot');
-  src: url('../fonts/example.eot?iefix') format('eot'),
-    url('../fonts/example.woff') format('woff'),
-    url('../fonts/example.ttf') format('truetype'),
-    url('../fonts/example.svg#webfontOkOndcij') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'ALSRublRegular';
+    src: url('../fonts/ASLRubl/rouble-webfont.eot');
+    src: url('../fonts/ASLRubl/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ASLRubl/rouble-webfont.woff') format('woff'),
+         url('../fonts/ASLRubl/rouble-webfont.ttf') format('truetype'),
+         url('../fonts/ASLRubl/rouble-webfont.svg#ALSRublRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-*/
 
 /* ============================================================================
     1.1. Typography
@@ -87,18 +84,18 @@ $grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
 
 $onBodyCustomFont: false;
 
-$customFontReg: 'Example', sans;
-$customFontIt: 'Example-italic', sans;
-$customFontBold: 'Example-bold', sans;
-$customFontBlIt: 'Example-bold-italic', sans;
+$customFontReg: 'MyrProRegular', Arial, FreeSans, sans-serif;
+$customFontIt: 'myriadproItalic', Arial, FreeSans, sans-serif;
+$customFontBold: 'myriadproBold', Arial, FreeSans, sans-serif;
+$customFontBlIt: 'myriadproBoldItalic', Arial, FreeSans, sans-serif;
 
 $baseFontFamily: $sans;
 $baseFontFamilyMono: $monospSerif;
 
-$base-font-size: 16px; // The font size set on the root html element.
-$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+$base-font-size: 14px; // The font size set on the root html element.
+$base-line-height: 18px; // This line-height determines the basic unit of vertical rhythm.
 
-$h1-font-size: 2 * $base-font-size;
+$h1-font-size: 2.1 * $base-font-size;
 $h2-font-size: 1.5 * $base-font-size;
 $h3-font-size: 1.17 * $base-font-size;
 $h4-font-size: 1 * $base-font-size;
@@ -106,21 +103,19 @@ $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.75 * $base-font-size;
 
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  line-height: 1.2em;
   font-weight: normal;
 }
 
-h1, h2, .h1, .h2 {
-}
-
 h1, .h1 {
-  font-size: 2.14em;
-  margin: 0 0 1em;
+  @include adjust-font-size-to( $h1-font-size );
+  @include leader(1, $h1-font-size);
+  @include trailer(1, $h1-font-size);
 }
 
 h2, .h2 {
-  font-size: 1.5em;
-  margin: .83em 0;
+  @include adjust-font-size-to( $h2-font-size );
+  @include leader(1, $h2-font-size);
+  @include trailer(1, $h2-font-size);
 }
 
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
@@ -133,36 +128,46 @@ h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 }
 
 h3, .h3 {
-  font-size: 1.17em;
-  line-height: 1.429em;
-  margin: 1em 0;
+  @include adjust-font-size-to( $h3-font-size );
+  @include leader(1, $h3-font-size);
+  @include trailer(1, $h3-font-size);
 }
 
 h4, .h4 {
-  font-size: 1em;
-  margin: 1.3em 0;
+  @include adjust-font-size-to( $h4-font-size );
+  @include leader(1, $h4-font-size);
+  @include trailer(1, $h4-font-size);
 }
 
-h5, .h5, h6, .h6 {
-  font-size: 1em;
-  font-style: italic;
-  margin: 1.67em 0;
+h5, .h5 {
+  @include adjust-font-size-to( $h5-font-size );
+  @include leader(1, $h5-font-size);
+  @include trailer(1, $h5-font-size);
 }
 
 h6, .h6 {
-  font-weight: normal;
+  @include adjust-font-size-to( $h6-font-size );
+  @include leader(1, $h6-font-size);
+  @include trailer(1, $h6-font-size);
+}
+
+hr, .hr {
+  height: 1px;
+  border: none;
+  background: #666;
+  width: 100%;
+  clear: both;
+  margin: rhythm(1) 0;
 }
 
 p, pre, blockquote, table {
-  margin: 0 0 1em 0;
-}
-
-p {
-  font-size: 1em;
+  @include leader(1);
+  @include trailer(1);
 }
 
 blockquote {
-  margin-left: 4.2em;
+  margin: rhythm(1) 4.2em;
+
   @if $onBodyCustomFont {
     font-weight: normal;
     font-family: $customFontIt;
@@ -211,10 +216,10 @@ a {
 
 img {
   font-size: 1em;
-  color: #444; // alt text style
+  color: $baseColor; // alt text style
   position: relative;  // Chrome outline around img in a; ie5-6 floating image disappearing fix
   border: none; // remove border if in <a> elem
-  -ms-interpolation-mode: bicubic; // improve IE7's resizing of images
+  -ms-interpolation-mode: bicubic; // improve IE7's resizing of images http://code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
 }
 
 object,
@@ -250,13 +255,13 @@ video {
    --------------------------------------------------------------------------*/
 
 ul, ol, dl {
-  margin: 0 1.5em 1.5em 0;
+  margin: rhythm(1) 0;
   padding-left: 1.5em;
 }
 
 ul, ol {
   li {
-    margin: .357em 0 .357em 1.5em;
+    margin: rhythm(0.2) 0;
   }
 }
 
@@ -287,21 +292,23 @@ dl dd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  border-width:0;
+  border-width: 0;
   width: 100%;
   table-layout: fixed;
   word-wrap: break-word;
   empty-cells: hide;
+  @include trailer(1);
 }
 
 caption {
-  font-size: 1.429em;
-  padding-bottom: .429em;
+  @include adjust-font-size-to($h2-font-size);
+  @include leader(1, $h2-font-size);
+  @include trailer(1, $h2-font-size);
 }
 
 td, th {
   vertical-align: middle;
-  padding: 0 .429em;
+  padding: 0 rhythm(0.4);
   border: 1px solid #ccc;
 
   thead & {
@@ -379,6 +386,7 @@ input {
 
   &[type="checkbox"], &[type="radio"] {
     box-sizing: border-box;
+    padding: 0;
   }
 
   &[type="radio"]{
@@ -431,15 +439,22 @@ input[type="image"], button {
   color: #efefef;
   background: #2d2d2d;
   border: 1px solid #2d2d2d;
+  *overflow: visible; //Removes inner spacing in IE7 without affecting normal text inputs
+  -webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
 
   &:hover, &:focus {
     border-color: $lnColor;
   }
 }
 
+// button[disabled],
+// input[disabled] {
+//   cursor: default;
+// }
+
 textarea {
-  overflow: auto;
-  vertical-align: top;
+  overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
+  vertical-align: top; //Improves readability and alignment in all browsers
   height: auto; // overwrite theming on form element
   line-height: 1.2em;
   padding: .2em .429em;
@@ -461,9 +476,12 @@ optgroup {
 }
 
 fieldset {
-  border: 1px solid #ccc;
-  margin: 0 0 1.4375em;
-  padding: 1em 1.5em 1.5em;
+  border-color: #ccc;
+  margin: 0 2px;
+  @include apply-side-rhythm-border(top, $width: 1px, $lines: 0.35); // FIXME
+  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
+  @include apply-side-rhythm-border(left, $width: 1px, $lines: 0.65);
+  @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.65);
 }
 
 legend {
@@ -471,8 +489,9 @@ legend {
   padding: 0;
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
-  // Remove inner padding and border in FF3/4
+// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -484,6 +503,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
   button, input {
     overflow: visible;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    height: 13px;
+    width: 13px;
   }
 }
 
@@ -501,10 +526,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 // 
 // input:invalid, textarea:invalid {}
 
+// input[type="search"]::-webkit-search-decoration,
+// input[type="search"]::-webkit-search-cancel-button {
+//   -webkit-appearance: none;
+// }
+
 /* ============================================================================
     1.4. Specific
 ============================================================================= */
 
+// Prevents sub and sup affecting line-height in all browsers gist.github.com/413930
 sup, sub {
   vertical-align:baseline;
   position: relative;
@@ -520,6 +551,10 @@ sub {
   bottom: -0.25em;
 }
 
+small {
+  font-size: .75em;
+}
+
 address {
   font-style:normal;
 }
@@ -527,16 +562,6 @@ address {
 mark {
   background-color: #ff9;
   color: #000;
-}
-
-hr {
-  background: #666;
-  border: none;
-  clear: both;
-  float: none;
-  height: 1px;
-  margin: 0 0 1.4375em;
-  width: 100%;
 }
 
 u {
@@ -552,11 +577,13 @@ figure {
 ============================================================================= */
 
 body {
-  font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+  font-size: $base-font-size;
+  @include adjust-leading-to(1);
+  font-family: $baseFontFamily;
   color: $baseColor;
   background: $mainBgColor;
   overflow-y: scroll; // force scroll
-  margin: 0; // normalization
+  margin: 0; // overwrite default browser style
 
   .ie6-7 & {
     overflow-y: auto; // ie sticky footer fix
@@ -584,7 +611,7 @@ body {
 
 #main {
   margin-bottom: 2em;
-  width: 100%;
+  //width: 100%;
 }
 
 .two-sidebars-main {
@@ -646,7 +673,7 @@ body {
 
 @media screen and (max-width: 2400px) {
 
-$footer-height: 50px;
+$footer-height: 80px;
 
   html, body {
     height: 100%;
@@ -710,7 +737,7 @@ $footer-height: 50px;
   float:right;
 }
 
-// .ie6-7 {
+// .ie6 {
  // .right-side, .left-side {
    // display:inline; 
  // }
@@ -816,8 +843,9 @@ span.ico {
   }
 }
 
-
-// embed service mormalize
+/* ============================================================================
+   Embed service reset
+============================================================================= */
 
 #plusone,
 .YMaps-b-balloon-frame,

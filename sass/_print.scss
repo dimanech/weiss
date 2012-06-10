@@ -1,6 +1,7 @@
 /*
   Media Print
 */
+
 @media print {
 /* some general resets */
   @page {
@@ -27,24 +28,29 @@
     widows: 3;
   }
 
-  a, a:visited {
+  a ,a:link, a:visited {
     color: #444 !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
 
-  #main .content a[href]:after {
-  /* add links only for content */
-    content: " (" attr(href) ")" !important;
-    font-family: monospace !important; /* fix external links font */
+  #main #content {
+    /* add links only for content */
+    a[href]:after {
+      content: " (" attr(href) ")" !important;
+      font-family: monospace !important; /* fix external links font */
+    }
+
+    /* Don't print links for images, javascript or internal links */
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+      content: "";
+    }
+
   }
 
   abbr[title]:after {
     content: " (" attr(title) ")";
-  }
-
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; /* Don't print links for images, javascript or internal links */
+    font-weight: normal;
   }
 
   pre, blockquote {
@@ -74,7 +80,7 @@
   }
 
   object:after {
-    content: "Flash/видео содержимое. Посетите http://siteurlhere.com/ чтобы просмотреть этот материал.";
+    content: "Flash/видео содержимое. Посетите сайт чтобы просмотреть этот материал.";
     display: block;
     font-weight: bold;
     margin-bottom: 1.5em;

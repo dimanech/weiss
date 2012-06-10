@@ -33,17 +33,35 @@
 					return false;
 				});
 
+
+					// 'sidebar-second-main', 
+					// 'sidebar-first-main',
+					// 'two-sidebars-main',
+					// 'sidebar-second-aside',
+					// 'sidebar-first-aside',
+					// 'two-sidebars-sidebar-first',
+					// 'two-sidebars-sidebar-second'
+					
+
 				$('#twocolumn-s').click(function() {
-					$('#layout-ruller').removeClass().addClass('sidebar-second');
+					$('#main').removeClass().addClass('sidebar-second-main');
+					$('#sidebar-first').removeClass().addClass('sidebar-second-aside');
+					$('#sidebar-second').removeClass().addClass('sidebar-second-aside');
 				});
 				$('#twocolumn-f').click(function() {
-					$('#layout-ruller').removeClass().addClass('sidebar-first');
+					$('#main').removeClass().addClass('sidebar-first-main');
+					$('#sidebar-first').removeClass().addClass('sidebar-first-aside');
+					$('#sidebar-second').removeClass().addClass('sidebar-first-aside');
 				});
 				$('#threecolumn').click(function() {
-					$('#layout-ruller').removeClass().addClass('two-sidebars');
+					$('#main').removeClass().addClass('two-sidebars-main');
+					$('#sidebar-first').removeClass().addClass('two-sidebars-sidebar-first');
+					$('#sidebar-second').removeClass().addClass('two-sidebars-sidebar-second');
 				});
 				$('#nocolumn').click(function() {
-					$('#layout-ruller').removeClass();
+					$('#main').removeClass();
+					$('#sidebar-first').removeClass();
+					$('#sidebar-second').removeClass();
 				});
 			});
 		</script>
@@ -83,7 +101,6 @@
 					</nav>
 				</header>
 				<!-- /#header -->
-				<div id="layout-ruller">
 					<div role="main" id="main" class="clearfix">
 						<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 							<a itemprop="url" href="#"><span itemprop="title">Главная</span></a> →
@@ -92,7 +109,7 @@
 						<div id="content">
 							<h1>Заголовок 1</h1>
 							<p>
-								<img src="http://farm1.staticflickr.com/73/217023710_8feeb5fe00.jpg" width="333" height="500" alt="Alps"/>
+								<img src="images/exmpl/content-example-img.jpg" width="333" height="500" alt="Alps" style="float: left; margin-right: 1em"/>
 								Альпы (фр. Alpes, нем. Alpen, итал. Alpi, словен. Alpe) — наиболее высокая горная система Западной
 								Европы. В пределах географических границ Альп полностью или частично находятся территории 8 стран;
 								по доле общей площади государства, приходящейся на Альпы, эти страны располагаются следующим
@@ -462,13 +479,13 @@
 							</table>
 							<hr>
 							<pre>And some fixed width text.
-					                        As a matter of fact, this is a bit of Evernote Readable's own code.
-					
-					                        var _coverElement = document.createElement('div');
-					                        _coverElement.setAttribute('id', 'readable_cover');
-					                        _coverElement.setAttribute('style', 'display: none');
-					
-					                        _body.appendChild(_coverElement);</pre>
+                As a matter of fact, this is a bit of Evernote Readable's own code.
+
+                var _coverElement = document.createElement('div');
+                _coverElement.setAttribute('id', 'readable_cover');
+                _coverElement.setAttribute('style', 'display: none');
+
+                _body.appendChild(_coverElement);</pre>
 							<hr>
 							<dl>
 								<dt>
@@ -588,7 +605,7 @@
 								</div>
 								<div class="form-row">
 									<label for="textarea">Textarea</label>
-									<textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+									<textarea name="textarea" id="textarea" cols="30" rows="4"></textarea>
 								</div>
 								<div class="form-row">
 									<input id="submit-input" type="submit" value="Submit"/>
@@ -622,7 +639,6 @@
 						</div>
 					</aside>
 					<!-- /#sidebar-second -->
-				</div>
 				<div id="under-content">
 					<div>
 						<style type="text/css">

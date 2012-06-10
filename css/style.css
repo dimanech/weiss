@@ -6,8 +6,7 @@
 ============================================================================= */
 /* 
  * TODO
- * compass вертикальный ритм
- * 
+ *
  * сетка и layout на сетке
  * 
  * 
@@ -32,34 +31,33 @@ blockquote:before, blockquote:after, q:before, q:after {
 /* ============================================================================
     1. BASIC
 ============================================================================= */
-/*
 @font-face {
-  font-family: 'Example';
-  src: url('../fonts/example.eot');
-  src: url('../fonts/example.eot?iefix') format('eot'),
-    url('../fonts/example.woff') format('woff'),
-    url('../fonts/example.ttf') format('truetype'),
-    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-family: 'ALSRublRegular';
+  src: url("../fonts/ASLRubl/rouble-webfont.eot");
+  src: url("../fonts/ASLRubl/rouble-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ASLRubl/rouble-webfont.woff") format("woff"), url("../fonts/ASLRubl/rouble-webfont.ttf") format("truetype"), url("../fonts/ASLRubl/rouble-webfont.svg#ALSRublRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-*/
+
 /* ============================================================================
     1.1. Typography
 ============================================================================= */
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  line-height: 1.2em;
   font-weight: normal;
 }
 
 h1, .h1 {
-  font-size: 2.14em;
-  margin: 0 0 1em;
+  font-size: 2.1em;
+  line-height: 1.224em;
+  margin-top: 0.612em;
+  margin-bottom: 0.612em;
 }
 
 h2, .h2 {
   font-size: 1.5em;
-  margin: .83em 0;
+  line-height: 1.714em;
+  margin-top: 0.857em;
+  margin-bottom: 0.857em;
 }
 
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
@@ -68,35 +66,48 @@ h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 
 h3, .h3 {
   font-size: 1.17em;
-  line-height: 1.429em;
-  margin: 1em 0;
+  line-height: 2.198em;
+  margin-top: 1.099em;
+  margin-bottom: 1.099em;
 }
 
 h4, .h4 {
   font-size: 1em;
-  margin: 1.3em 0;
+  line-height: 1.286em;
+  margin-top: 1.286em;
+  margin-bottom: 1.286em;
 }
 
-h5, .h5, h6, .h6 {
-  font-size: 1em;
-  font-style: italic;
-  margin: 1.67em 0;
+h5, .h5 {
+  font-size: 0.83em;
+  line-height: 1.549em;
+  margin-top: 1.549em;
+  margin-bottom: 1.549em;
 }
 
 h6, .h6 {
-  font-weight: normal;
+  font-size: 0.75em;
+  line-height: 1.714em;
+  margin-top: 1.714em;
+  margin-bottom: 1.714em;
+}
+
+hr, .hr {
+  height: 1px;
+  border: none;
+  background: #666;
+  width: 100%;
+  clear: both;
+  margin: 1.286em 0;
 }
 
 p, pre, blockquote, table {
-  margin: 0 0 1em 0;
-}
-
-p {
-  font-size: 1em;
+  margin-top: 1.286em;
+  margin-bottom: 1.286em;
 }
 
 blockquote {
-  margin-left: 4.2em;
+  margin: 1.286em 4.2em;
   font-style: italic;
 }
 
@@ -121,7 +132,7 @@ a:hover, a:active {
 /* embed content */
 img {
   font-size: 1em;
-  color: #444;
+  color: #434343;
   position: relative;
   border: none;
   -ms-interpolation-mode: bicubic;
@@ -140,12 +151,12 @@ video {
 /* Lists
    --------------------------------------------------------------------------*/
 ul, ol, dl {
-  margin: 0 1.5em 1.5em 0;
+  margin: 1.286em 0;
   padding-left: 1.5em;
 }
 
 ul li, ol li {
-  margin: .357em 0 .357em 1.5em;
+  margin: 0.257em 0;
 }
 
 ul li {
@@ -179,16 +190,19 @@ table {
   table-layout: fixed;
   word-wrap: break-word;
   empty-cells: hide;
+  margin-bottom: 1.286em;
 }
 
 caption {
-  font-size: 1.429em;
-  padding-bottom: .429em;
+  font-size: 1.5em;
+  line-height: 1.714em;
+  margin-top: 0.857em;
+  margin-bottom: 0.857em;
 }
 
 td, th {
   vertical-align: middle;
-  padding: 0 .429em;
+  padding: 0 0.514em;
   border: 1px solid #ccc;
 }
 thead td, thead th {
@@ -243,6 +257,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="ima
 }
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
+  padding: 0;
 }
 input[type="radio"] {
   vertical-align: text-top;
@@ -291,6 +306,8 @@ input[type="image"], button {
   color: #efefef;
   background: #2d2d2d;
   border: 1px solid #2d2d2d;
+  *overflow: visible;
+  -webkit-appearance: button;
 }
 input[type="button"]:hover, input[type="button"]:focus,
 input[type="submit"]:hover,
@@ -321,9 +338,20 @@ optgroup {
 }
 
 fieldset {
-  border: 1px solid #ccc;
-  margin: 0 0 1.4375em;
-  padding: 1em 1.5em 1.5em;
+  border-color: #ccc;
+  margin: 0 2px;
+  border-top-style: solid;
+  border-top-width: 0.071em;
+  padding-top: 0.379em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.071em;
+  padding-bottom: 0.764em;
+  border-left-style: solid;
+  border-left-width: 0.071em;
+  padding-left: 0.764em;
+  border-right-style: solid;
+  border-right-width: 0.071em;
+  padding-right: 0.764em;
 }
 
 legend {
@@ -331,7 +359,8 @@ legend {
   padding: 0;
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -341,6 +370,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .ie6-7 button, .ie6-7 input {
   overflow: visible;
+}
+.ie6-7 input[type="checkbox"],
+.ie6-7 input[type="radio"] {
+  height: 13px;
+  width: 13px;
 }
 
 /* ============================================================================
@@ -361,6 +395,10 @@ sub {
   bottom: -0.25em;
 }
 
+small {
+  font-size: .75em;
+}
+
 address {
   font-style: normal;
 }
@@ -368,16 +406,6 @@ address {
 mark {
   background-color: #ff9;
   color: #000;
-}
-
-hr {
-  background: #666;
-  border: none;
-  clear: both;
-  float: none;
-  height: 1px;
-  margin: 0 0 1.4375em;
-  width: 100%;
 }
 
 u {
@@ -392,7 +420,9 @@ figure {
     1.5. Page Layout
 ============================================================================= */
 body {
-  font: 16px/24px Arial, FreeSans, sans-serif;
+  font-size: 14px;
+  line-height: 1.286em;
+  font-family: Arial, FreeSans, sans-serif;
   color: #434343;
   background: white;
   overflow-y: scroll;
@@ -419,7 +449,6 @@ body {
 
 #main {
   margin-bottom: 2em;
-  width: 100%;
 }
 
 .two-sidebars-main {
@@ -485,16 +514,16 @@ body {
     height: auto !important;
     height: 100%;
     margin: 0 auto;
-    margin-bottom: -50px;
+    margin-bottom: -80px;
   }
 
   #main-inner {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 
   #footer {
     position: relative;
-    height: 50px;
+    height: 80px;
   }
 }
 /* ============================================================================
@@ -604,6 +633,9 @@ span.ico {
   zoom: 1;
 }
 
+/* ============================================================================
+   Embed service reset
+============================================================================= */
 #plusone table, #plusone td, #plusone th, #plusone tr,
 .YMaps-b-balloon-frame table,
 .YMaps-b-balloon-frame td,
@@ -653,7 +685,9 @@ a abbr {
 
 /* computer science */
 pre, code, tt, samp, kbd {
-  font: normal normal 1em/1.5em "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+  font-family: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+  font-size: 1em;
+  line-height: 1.286em;
 }
 
 pre {
@@ -1177,26 +1211,28 @@ ins {
     widows: 3;
   }
 
-  a, a:visited {
+  a, a:link, a:visited {
     color: #444 !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
   }
 
-  #main .content a[href]:after {
+  #main #content {
     /* add links only for content */
+    /* Don't print links for images, javascript or internal links */
+  }
+  #main #content a[href]:after {
     content: " (" attr(href) ")" !important;
     font-family: monospace !important;
     /* fix external links font */
   }
+  #main #content a[href^="javascript:"]:after,
+  #main #content a[href^="#"]:after {
+    content: "";
+  }
 
   abbr[title]:after {
     content: " (" attr(title) ")";
-  }
-
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-    /* Don't print links for images, javascript or internal links */
+    font-weight: normal;
   }
 
   pre, blockquote {
@@ -1227,7 +1263,7 @@ ins {
   }
 
   object:after {
-    content: "Flash/видео содержимое. Посетите http://siteurlhere.com/ чтобы просмотреть этот материал.";
+    content: "Flash/видео содержимое. Посетите сайт чтобы просмотреть этот материал.";
     display: block;
     font-weight: bold;
     margin-bottom: 1.5em;
