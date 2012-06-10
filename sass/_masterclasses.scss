@@ -4,12 +4,14 @@
     4. MASTER-CLASSES
 ============================================================================= */
 
+// Add wireframes to the basic layout elements.
+
 #header, #footer, #content, .aside, #before-content, #under-content, .block {
     outline: 1px dashed #ccc;
 }
 
 // /* ============================================================================
-//    buttons universal
+//    buttons styles
 // ============================================================================= */
 
 // .btn {
@@ -17,7 +19,7 @@
 //     padding: 0 7px;
 //     vertical-align: text-bottom;
 
-//     .ie-old & {
+//     .ie6-7 & {
 //       display:inline;
 //       zoom: 1;
 //     }
@@ -29,7 +31,7 @@
 //     float:left;
 //     vertical-align: top;
 //     background-repeat: repeat-y;
-//     .ie-old {
+//     .ie6-7 {
 //      display:inline;
 //      zoom: 1;
 //     }
@@ -108,7 +110,7 @@
 // }
 
 // /* ============================================================================
-//    Forms support
+//    input styles
 // ============================================================================= */
 
 // .input-container {
@@ -117,7 +119,7 @@
 //    /* background: url(../images/input.png) 0 0 no-repeat; */
 //    vertical-align: bottom;
 
-//    .ie-old {
+//    .ie6-7 {
 //      display:inline;
 //      zoom: 1;
 //    }
@@ -135,7 +137,12 @@
 ============================================================================= */
 
 .emph {
-  font-style: italic;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontIt;
+  } @else {
+    font-style: italic;
+  }
 }
 
 .emph-c {
@@ -212,64 +219,4 @@
   .grid-row > :first-child {
     margin-left: 0;
   }
-
-}
-
-/* ============================================================================
-    Sprite support
-============================================================================= */
-
-span.ico {
-  /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
-  display: inline-block;
-  position: relative;
- 
-  .ie-old & {
-    display: inline;
-    zoom: 1;
-  }
-}
-
-/* ============================================================================
-    Additional
-============================================================================= */
-
-
-// Hide from both screenreaders and browsers: h5bp.com/u 
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-// Hide only visually, but have it available for screenreaders: h5bp.com/v 
-.visuallyhidden {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;;
-  width: 1px;
-    
-  .ie-old & {
-    clip: rect(1px 1px 1px 1px);
-  } 
-}
-
-// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
-.visuallyhidden.focusable {
-  &:ficus, &:active {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
-
-}
-// Hide visually and from screenreaders, but maintain layout 
-.invisible {
-  visibility: hidden;
 }

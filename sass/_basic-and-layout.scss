@@ -8,6 +8,21 @@
 //    Variables
 // ============================================================================
 
+// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+
+/* 
+ * TODO
+ * compass вертикальный ритм
+ * 
+ * сетка и layout на сетке
+ * 
+ * 
+ * em удалить
+ *  */
+
+
+
 $mainBgColor: #fff;
 $mainFgColor: #ccc;
 $baseColor: #434343;
@@ -18,46 +33,6 @@ $containerWidth: 974px;
 $mainWidth: percentage(724px / $containerWidth);
 $asideWidth: percentage(227px / $containerWidth);
 $twoSdbarsMainWidth: percentage(474px / $containerWidth);
-
-// fonts
-$sans: Arial, FreeSans, sans-serif;
-$hSans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
-$hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
-$serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
-$bSerif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
-$aSerif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
-$monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
-$monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-$grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
-$slabSerif: "DejaVu Serif", serif;
-
-// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
-// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
-
-// Full reset
-//
-//html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
-//big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
-//dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
-//canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
-//mark, audio, video {
-//    margin: 0;
-//    padding: 0;
-//    font-size: 100%;
-//    font-weight: normal;
-//    vertical-align: baseline;
-//    background: transparent;
-//}
-
-
-html, body, div, h1, h2, h3, h4, h5, h6, p, img,
-dl, dt, dd, ol, ul, li, caption,
-table, tbody, tfoot, thead, tr, th, td,
-form, fieldset, embed, object, applet {
-  margin:0;
-  padding:0;
-  border:0;
-}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, nav, section {
@@ -80,9 +55,55 @@ blockquote, q {
     1. BASIC
 ============================================================================= */
 
+/*
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.eot');
+  src: url('../fonts/example.eot?iefix') format('eot'),
+    url('../fonts/example.woff') format('woff'),
+    url('../fonts/example.ttf') format('truetype'),
+    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
 /* ============================================================================
     1.1. Typography
 ============================================================================= */
+
+@import "compass/typography/vertical_rhythm";
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$sans: Arial, FreeSans, sans-serif;
+$hSans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
+$hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
+$serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+$bSerif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
+$aSerif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
+$monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+$monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
+
+$onBodyCustomFont: false;
+
+$customFontReg: 'Example', sans;
+$customFontIt: 'Example-italic', sans;
+$customFontBold: 'Example-bold', sans;
+$customFontBlIt: 'Example-bold-italic', sans;
+
+$baseFontFamily: $sans;
+$baseFontFamilyMono: $monospSerif;
+
+$base-font-size: 16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2 * $base-font-size;
+$h2-font-size: 1.5 * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1 * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.75 * $base-font-size;
 
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
   line-height: 1.2em;
@@ -92,7 +113,7 @@ h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 h1, h2, .h1, .h2 {
 }
 
-h1, .h1, .aside h2, .aside .h2 {
+h1, .h1 {
   font-size: 2.14em;
   margin: 0 0 1em;
 }
@@ -103,7 +124,12 @@ h2, .h2 {
 }
 
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  font-weight: bold;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontBold;
+  } @else {
+    font-weight: bold;
+  }
 }
 
 h3, .h3 {
@@ -137,15 +163,30 @@ p {
 
 blockquote {
   margin-left: 4.2em;
-  font-style: italic;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontIt;
+  } @else {
+    font-style: italic;
+  }
 }
 
 strong, b {
-  font-weight: bold;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontBold;
+  } @else {
+    font-weight: bold;
+  }
 }
 
 em, i, cite {
-  font-style: italic;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontIt;
+  } @else {
+    font-style: italic;
+  }
 }
 
 // NOTE: link pseudoclases order -- link, visited, hover, active
@@ -171,26 +212,9 @@ a {
 img {
   font-size: 1em;
   color: #444; // alt text style
-  -ms-interpolation-mode: bicubic; // improve IE's resizing of images
   position: relative;  // Chrome outline around img in a; ie5-6 floating image disappearing fix
-
-  a &, a:visited & {
-    border: 0 none;
-  }
-
-  #main p & {
-    float: left;
-    padding: 0 1em 0 0;
-  }
-
-  &::-moz-selection {
-    background: transparent;
-  }
-
-  &::selection {
-    background: transparent;
-  }
-
+  border: none; // remove border if in <a> elem
+  -ms-interpolation-mode: bicubic; // improve IE7's resizing of images
 }
 
 object,
@@ -317,8 +341,13 @@ tbody {
 
 tfoot {
   text-align: center;
-  font-style: italic;
   font-size: .9em;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontIt;
+  } @else {
+    font-style: italic;
+  }
 }
 
 /* ============================================================================
@@ -330,7 +359,7 @@ form {
 }
 
 button, input, select, textarea {
-  font: 1em/1.429em #{$sans};
+  font: 1em/1.429em #{$baseFontFamily};
   //margin: 0;
   vertical-align: baseline;
 }
@@ -411,7 +440,7 @@ input[type="image"], button {
 textarea {
   overflow: auto;
   vertical-align: top;
-  height: auto;
+  height: auto; // overwrite theming on form element
   line-height: 1.2em;
   padding: .2em .429em;
   resize: vertical;
@@ -423,7 +452,7 @@ select {
 }
 
 select[multiple="multiple"]{
-  height: auto;
+  height: auto; // overwrite theming on form element
 }
 
 optgroup {
@@ -448,7 +477,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 0;
 }
 
-.ie-old {
+.ie6-7 {
   button, input, select, textarea {
     vertical-align: middle;
   }
@@ -456,11 +485,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   button, input {
     overflow: visible;
   }
-
-  legend {
-    margin-left: -7px;
-  }
-
 }
 
 // placeholder styles
@@ -516,8 +540,7 @@ hr {
 }
 
 u {
-  text-decoration: none;
-  // remove textdecoration for save <a> style
+  text-decoration: none; // remove textdecoration for save <a> style
 }
 
 figure {
@@ -528,20 +551,14 @@ figure {
     1.5. Page Layout
 ============================================================================= */
 
-// 16px-100%
-// 15px-93.8%
-// 14px-87.5%
-// 13px-81.3%
-// 12px-75%
-
 body {
-  font: 14px/1.3 #{$sans};
+  font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
   color: $baseColor;
   background: $mainBgColor;
   overflow-y: scroll; // force scroll
-  cursor: default;
+  margin: 0; // normalization
 
-  .ie-old & {
+  .ie6-7 & {
     overflow-y: auto; // ie sticky footer fix
   }
 }
@@ -549,9 +566,7 @@ body {
 /* header
    --------------------------------------------------------------------------*/
 
-#header {
-  width: 100%;
-}
+#header {}
 
 /* main
    --------------------------------------------------------------------------*/
@@ -572,22 +587,22 @@ body {
   width: 100%;
 }
 
-body.two-sidebars #main {
+.two-sidebars-main {
   float: left;
   margin-left: $asideWidth+2.5%;
   width: $twoSdbarsMainWidth;
   
-  .ie-old & {
+  .ie6-7 & {
     display:inline; //double margin ie6 fix
   }
 }
 
-body.sidebar-first #main {
+.sidebar-first-main {
   float: right;
   width: $mainWidth;
 }
 
-body.sidebar-second #main {
+.sidebar-second-main {
   float: left;
   margin: 0;
   padding: 0;
@@ -597,23 +612,24 @@ body.sidebar-second #main {
 /* sidebars
    --------------------------------------------------------------------------*/
 
-body.two-sidebars #sidebar-first {
+.two-sidebars-sidebar-first {
   float: left;
   margin-left: -$mainWidth;
   width: $asideWidth;
 }
 
-body.two-sidebars #sidebar-second {
+.two-sidebars-sidebar-second {
   float: right;
   width: $asideWidth;
 }
 
-body.sidebar-first .aside, body.sidebar-second .aside {
+.sidebar-first-aside,
+.sidebar-second-aside {
   float: left;
   width: $asideWidth;
 }
 
-body.sidebar-second .aside {
+.sidebar-second-aside {
   float: right;
 }
 
@@ -661,8 +677,8 @@ $footer-height: 50px;
 .clearfix {
   
   &:before {
-      content:"";
-      display:table;
+    content:"";
+    display:table;
   }
 
   &:after {
@@ -674,7 +690,9 @@ $footer-height: 50px;
     visibility: hidden;
   }
 
-  .ie-old & {zoom: 1;}
+  .ie6-7 & {
+    zoom: 1;
+  }
 }
 
 /* position support */
@@ -692,7 +710,7 @@ $footer-height: 50px;
   float:right;
 }
 
-// .ie-old {
+// .ie6-7 {
  // .right-side, .left-side {
    // display:inline; 
  // }
@@ -703,10 +721,6 @@ span.br {
 }
 
 /* style support */
-
-// .block {
-//   position: relative;
-// }
 
 /* ul styles */
 // .flat { 
@@ -721,7 +735,6 @@ span.br {
 // }
 
 // .unstyled {
-  
 //   li {
 //     list-style:none;
 //   }
@@ -764,21 +777,21 @@ span.br {
   display:inline-block;
   vertical-align: top;
   
-  .ie-old & {
+  .ie6-7 & {
     display: inline;
     zoom: 1;
   }
 }
 
 .ir {
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
-    background-color: transparent;
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
 }
 
-.img-container {
+.img-container { // image wrapper
   overflow: hidden;
   @extend .dib;
 
@@ -788,3 +801,40 @@ span.br {
   }
 }
 
+/* ============================================================================
+    Sprite support
+============================================================================= */
+
+span.ico {
+  /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
+  display: inline-block;
+  position: relative;
+ 
+  .ie6-7 & {
+    display: inline;
+    zoom: 1;
+  }
+}
+
+
+// embed service mormalize
+
+#plusone,
+.YMaps-b-balloon-frame,
+#vkshare0,
+.bitrix {
+  table, td, th, tr {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.bitrix {
+  input, select, textarea {
+    border: initial;
+    margin: initial;
+    padding: initial;
+    background: initial;
+  }
+}

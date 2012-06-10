@@ -1,3 +1,7 @@
+
+@import "compass/utilities/sprites";
+
+
 $cols: 12;
 $gutter: 2%;
 
@@ -16,31 +20,44 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 }
 
 // ============================================================================
-//    Mixins
+//    WAI and W3C support
 //=============================================================================
 
-@mixin bdradius($radius: 5px) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -o-border-radius: $radius;
-  border-radius: $radius;
-  -webkit-background-clip: padding-box;
+// Hide from both screenreaders and browsers: h5bp.com/u 
+@mixin hidden {
+  display: none !important;
+  visibility: hidden;
 }
 
-@mixin bsh($bshval: 0 0 4px rgba(0,0,0,0.5)) {
-  -moz-box-shadow: $bshval;
-  -webkit-box-shadow: $bshval;
-  -o-box-shadow: $bshval;
-  -box-shadow: $bshval;
+// Hide only visually, but have it available for screenreaders: h5bp.com/v 
+@mixin vishidden {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;;
+  width: 1px;
+    
+  .ie6-7 & {
+    clip: rect(1px 1px 1px 1px);
+  } 
 }
 
-@mixin transition($transition: all linear 200ms) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
+// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
+@mixin vishiddenFocus {
+  &:focus, &:active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
 
-//.test-class {
-//  @include transition(all ease 300ms);
-//}
+}
+// Hide visually and from screenreaders, but maintain layout 
+@mixin invisible {
+  visibility: hidden;
+}

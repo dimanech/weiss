@@ -20,7 +20,7 @@ Select box plugin support
   font-size: 1em;
   margin: 1px;
   vertical-align: middle;
-  .ie-old & {
+  .ie6-7 & {
     display: inline;
     zoom: 1;
   }
@@ -55,7 +55,7 @@ Select box plugin support
 
 .selectbox.focused .display .text {
   display: inline-block;
-  .ie-old & {
+  .ie6-7 & {
     display: inline;
     zoom: 1;
   }
@@ -86,7 +86,7 @@ Select box plugin support
   top: .4em;
   width: 13px;
 
-  .ie-old & {
+  .ie6-7 & {
     display: inline;
     zoom: 1;
   }
@@ -134,7 +134,7 @@ Select box plugin support
 
 .selectbox.items li>.item>.text {
   display: inline-block;
-  .ie-old & {
+  .ie6-7 & {
     display: inline;
     zoom: 1;
   }
