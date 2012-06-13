@@ -35,25 +35,14 @@ function contentTabs() {
 }
 
 function accordion() {
-    var links = $('.accordion > section > header > h3 > a'), descriptions = $('.accordion .accordion-content');
+    var links = $('.accordion > section > header > h3 > a'), 
+    descriptions = $('.accordion .accordion-content');
 
     // init
     links.removeClass('active');
     descriptions.hide();
     $(links[0]).addClass('active');
     $(descriptions[0]).show();
-
-    $('.accordion .expand-all').live('click', function() {
-        links.addClass('active');
-        descriptions.slideDown();
-        return false;
-    });
-
-    $('.accordion .collapse-all').live('click', function() {
-        links.removeClass('active');
-        descriptions.slideUp();
-        return false;
-    });
 
     $('.accordion .collapse').live('click', function() {
         $(this).closest('section').find('header > h3 > a').removeClass('active');
@@ -74,21 +63,3 @@ function accordion() {
         return false;
     });
 }
-
-// function scrollEvent() {
-
-//     var $win = $(window)
-//       , $nav = $('.subnav')
-//       , navTop = $('.subnav').length && $('.subnav').offset().top - 40
-//       , isFixed = 0
-//       var i, scrollTop = $win.scrollTop()
-
-//       if (scrollTop >= navTop && !isFixed) {
-//         isFixed = 1
-//         $nav.addClass('subnav-fixed')
-//       } else if (scrollTop <= navTop && isFixed) {
-//         isFixed = 0
-//         $nav.removeClass('subnav-fixed')
-//       }
-
-// };
