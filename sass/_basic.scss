@@ -99,13 +99,11 @@ h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 
 h1, .h1 {
   @include adjust-font-size-to( $h1-font-size );
-  @include leader(1, $h1-font-size);
   @include trailer(1, $h1-font-size);
 }
 
 h2, .h2 {
   @include adjust-font-size-to( $h2-font-size );
-  @include leader(1, $h2-font-size);
   @include trailer(1, $h2-font-size);
 }
 
@@ -120,25 +118,21 @@ h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 
 h3, .h3 {
   @include adjust-font-size-to( $h3-font-size );
-  @include leader(1, $h3-font-size);
   @include trailer(1, $h3-font-size);
 }
 
 h4, .h4 {
   @include adjust-font-size-to( $h4-font-size );
-  @include leader(1, $h4-font-size);
   @include trailer(1, $h4-font-size);
 }
 
 h5, .h5 {
   @include adjust-font-size-to( $h5-font-size );
-  @include leader(1, $h5-font-size);
   @include trailer(1, $h5-font-size);
 }
 
 h6, .h6 {
   @include adjust-font-size-to( $h6-font-size );
-  @include leader(1, $h6-font-size);
   @include trailer(1, $h6-font-size);
 }
 
@@ -152,7 +146,6 @@ hr, .hr {
 }
 
 p, pre, blockquote, table {
-  @include leader(1);
   @include trailer(1);
 }
 
@@ -604,7 +597,7 @@ figure {
  // }
 // }
 
-span.br {
+.br {
   display:block;
 }
 
@@ -661,14 +654,11 @@ span.br {
   filter: alpha(opacity = 85);
 }
 
-.dib {
+.dib { // additional classes for overwrite IE make trouble in @extend funct
   display:inline-block;
   vertical-align: top;
-  
-  .ie6-7 & {
-    display: inline;
-    zoom: 1;
-  }
+  *display: inline;
+  *zoom: 1;
 }
 
 .ir {
@@ -693,7 +683,7 @@ span.br {
     Sprite support
 ============================================================================= */
 
-span.ico {
+.ico {
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
   display: inline-block;
   position: relative;

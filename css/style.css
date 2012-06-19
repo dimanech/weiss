@@ -43,14 +43,12 @@ h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 h1, .h1 {
   font-size: 2.1em;
   line-height: 1.224em;
-  margin-top: 0.612em;
   margin-bottom: 0.612em;
 }
 
 h2, .h2 {
   font-size: 1.5em;
   line-height: 1.714em;
-  margin-top: 0.857em;
   margin-bottom: 0.857em;
 }
 
@@ -61,28 +59,24 @@ h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
 h3, .h3 {
   font-size: 1.17em;
   line-height: 2.198em;
-  margin-top: 1.099em;
   margin-bottom: 1.099em;
 }
 
 h4, .h4 {
   font-size: 1em;
   line-height: 1.286em;
-  margin-top: 1.286em;
   margin-bottom: 1.286em;
 }
 
 h5, .h5 {
   font-size: 0.83em;
   line-height: 1.549em;
-  margin-top: 1.549em;
   margin-bottom: 1.549em;
 }
 
 h6, .h6 {
   font-size: 0.75em;
   line-height: 1.714em;
-  margin-top: 1.714em;
   margin-bottom: 1.714em;
 }
 
@@ -96,7 +90,6 @@ hr, .hr {
 }
 
 p, pre, blockquote, table {
-  margin-top: 1.286em;
   margin-bottom: 1.286em;
 }
 
@@ -433,7 +426,7 @@ figure {
   float: right;
 }
 
-span.br {
+.br {
   display: block;
 }
 
@@ -472,10 +465,8 @@ span.br {
 .dib, .img-container {
   display: inline-block;
   vertical-align: top;
-}
-.ie6-7 .dib, .ie6-7 .img-container {
-  display: inline;
-  zoom: 1;
+  *display: inline;
+  *zoom: 1;
 }
 
 .ir {
@@ -497,12 +488,12 @@ span.br {
 /* ============================================================================
     Sprite support
 ============================================================================= */
-span.ico {
+.ico {
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
   display: inline-block;
   position: relative;
 }
-.ie6-7 span.ico {
+.ie6-7 .ico {
   display: inline;
   zoom: 1;
 }
