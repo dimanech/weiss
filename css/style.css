@@ -37,7 +37,7 @@ blockquote:before, blockquote:after, q:before, q:after {
     1.1. Typography
 ============================================================================= */
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h1, .h1 {
@@ -50,10 +50,6 @@ h2, .h2 {
   font-size: 1.5em;
   line-height: 1.714em;
   margin-bottom: 0.857em;
-}
-
-h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  font-weight: bold;
 }
 
 h3, .h3 {
@@ -146,15 +142,15 @@ ul li, ol li {
   margin: 0.257em 0;
 }
 
-ul li {
+ul {
   list-style: disc outside;
 }
 
-ol li {
+ol {
   list-style: decimal outside;
 }
 
-ol ul li {
+ol ul {
   list-style: disc;
 }
 
@@ -310,7 +306,6 @@ textarea {
   padding: .2em .429em;
   resize: vertical;
   min-height: 4em;
-  max-height: 14em;
 }
 
 select[multiple="multiple"] {
@@ -431,7 +426,6 @@ figure {
 }
 
 /* style support */
-/* ul styles */
 .psln {
   color: #0099ff;
   text-decoration: none;
@@ -510,19 +504,18 @@ figure {
 #vkshare0 td,
 #vkshare0 th,
 #vkshare0 tr,
-.bitrix table,
-.bitrix td,
-.bitrix th,
-.bitrix tr {
+div.bx-core-dialog-content table,
+div.bx-core-dialog-content td,
+div.bx-core-dialog-content th,
+div.bx-core-dialog-content tr,
+div.bx-core-admin-dialog-content table,
+div.bx-core-admin-dialog-content td,
+div.bx-core-admin-dialog-content th,
+div.bx-core-admin-dialog-content tr {
   margin: 0;
   padding: 0;
   border: none;
-}
-
-.bitrix input, .bitrix select, .bitrix textarea {
-  border: initial;
-  margin: initial;
-  padding: initial;
+  border-radius: none;
   background: initial;
 }
 

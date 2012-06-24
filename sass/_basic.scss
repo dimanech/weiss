@@ -94,7 +94,12 @@ $h5-font-size: 0.83 * $base-font-size;
 $h6-font-size: 0.75 * $base-font-size;
 
 h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  font-weight: normal;
+  @if $onBodyCustomFont {
+    font-weight: normal;
+    font-family: $customFontBold;
+  } @else {
+    font-weight: bold;
+  }
 }
 
 h1, .h1 {
@@ -105,15 +110,6 @@ h1, .h1 {
 h2, .h2 {
   @include adjust-font-size-to( $h2-font-size );
   @include trailer(1, $h2-font-size);
-}
-
-h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
-  @if $onBodyCustomFont {
-    font-weight: normal;
-    font-family: $customFontBold;
-  } @else {
-    font-weight: bold;
-  }
 }
 
 h3, .h3 {
@@ -249,15 +245,15 @@ ul, ol {
   }
 }
 
-ul li {
+ul {
   list-style: disc outside;
 }
 
-ol li {
+ol {
   list-style: decimal outside;
 }
 
-ol ul li {
+ol ul {
   list-style: disc; // ul inside ul fix
 }
 
@@ -442,7 +438,6 @@ textarea {
   padding: .2em .429em;
   resize: vertical;
   min-height: 4em;
-  max-height: 14em;
 }
 
 select {
@@ -481,7 +476,7 @@ input::-moz-focus-inner {
   }
 
   button, input {
-    overflow: visible;
+    overflow: visible; // IE6-7 width apperience fix 
   }
 
   input[type="checkbox"],
@@ -603,24 +598,6 @@ figure {
 
 /* style support */
 
-/* ul styles */
-// .flat { 
-//   margin: 0;
-//   padding: 0;
-
-//   li {
-//     margin: 0;
-//     list-style: none;
-//     background:none;
-//   }
-// }
-
-// .unstyled {
-//   li {
-//     list-style:none;
-//   }
-// }
-
 .psln {
   color: $lnColor;
   text-decoration:none;
@@ -701,19 +678,13 @@ figure {
 #plusone,
 .YMaps-b-balloon-frame,
 #vkshare0,
-.bitrix {
+div.bx-core-dialog-content,
+div.bx-core-admin-dialog-content {
   table, td, th, tr {
     margin: 0;
     padding: 0;
     border: none;
-  }
-}
-
-.bitrix {
-  input, select, textarea {
-    border: initial;
-    margin: initial;
-    padding: initial;
+    border-radius: none;
     background: initial;
   }
 }

@@ -8,8 +8,8 @@ $(document).ready(function() {
 
     accordion();
 
-    //$(".no-native select").sb();
-    //$(".no-native input:check, .no-native input:radio").checkbox();
+    //$(".js-no-native select").sb();
+    //$(".js-no-native input:check, .no-native input:radio").checkbox();
 
     //$('input[placeholder], textarea[placeholder]').placeholder();
 });
