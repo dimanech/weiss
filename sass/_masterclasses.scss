@@ -4,9 +4,16 @@
     5. MASTER-CLASSES
 ============================================================================= */
 
+@import "mixins";
+
 // Add wireframes to the basic layout elements.
 
-#header, #footer, #content, .aside, #before-content, #under-content, .block {
+.l-global-header,
+.l-global-footer,
+.region-main__content,
+.region-aside,
+.region-beforecontent,
+.region-undercontent {
     outline: 1px dashed #ccc;
 }
 
@@ -136,7 +143,7 @@
     Stylize text
 ============================================================================= */
 
-.emph {
+.weiss-emph {
   @if $onBodyCustomFont {
     font-weight: normal;
     font-family: $customFontIt;
@@ -145,44 +152,44 @@
   }
 }
 
-.emph-c {
+.weiss-emph_c {
   color: $accentColor;
 }
 
-.emph-c-ln {
+.weiss-emph_c_ln {
   color: $lnColor;
 }
 
-.emph-c-dark {
+.weiss-emph_c_dark {
   color: darken($baseColor, 20%);
 }
 
-.emph-c-ligh {
+.weiss-emph_c_ligh {
   color: lighten($baseColor, 20%);
 }
 
-.emph-fz-sm {
+.weiss-emph_fz_sm {
   font-size: .8em;
 }
 
-.emph-fz-md {
+.weiss-emph_fz_md {
   font-size: 1.28em;
 }
 
-.emph-fz-big {
+.weiss-emph_fz_big {
   font-size: 1.57em;
   line-height: 1.1em;
 }
 
-.emph-fz-huge {
+.weiss-emph_fz_huge {
   font-size: 3em;
 }
 
-.emph-serif {
+.weiss-emph_serif {
   font-family: $serif;
 }
 
-.emph-sans {
+.weiss-emph_sans {
   font-family: $sans;
 }
 
@@ -191,32 +198,14 @@
     
 }
 
-/* ============================================================================
-    Non-semantic grid support
-============================================================================= */
+// ============================================================================
+//    Non-semantic grid support
+//=============================================================================
 
-@import "mixins";
+//@import "susy-grid";
 
-.grid-row {
-  #{enumerate('.span', 1, $cols, '')} {
-    float: left;
-    margin-left: $gutter;
-  }
+//$total-columns  : 12;             // a 12-column grid
+//$column-width   : 4em;            // each column is 4em wide
+//$gutter-width   : 1em;            // 1em gutters between columns
+//$grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
-  @for $i from 1 through $cols {
-    .span#{$i} {
-      @include cols($i);
-
-      @for $j from 1 through ($i - 1) {
-        .span#{$j} {
-          @include sub_cols($j, $i);
-        }
-      }
-    }
-  }
-
-  > :first-child,
-  .row > :first-child {
-    margin-left: 0;
-  }
-}

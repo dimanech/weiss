@@ -29,21 +29,21 @@
 
 /* by default inherit from PC */
 
-  #main-container {
+  .l-page {
     padding: 0 1em;
   }
 
-  #main-inner {
+  .l-page__inner {
     width: 100%;
   }
 
-  body.two-sidebars #main-container {
+  .l-2sidebars_main {
     padding: 0;
   }
 
 /* =========================== footer =========================== */
 
-  #footer #footer-inner {
+  .region-footer .weiss-aux {
     width: 100%;
   }
 
@@ -61,46 +61,43 @@
 
 /* ========================== layout ============================== */
 
-  #main,
-  body.sidebar-second #main,
-  body.sidebar-first #main {
+  .region-main,
+  .l-sidebar-first_main,
+  .l-sidebar-second_main {
     width: 100%;
     margin-bottom: 1.5em;
   }
 
-  body.sidebar-second .aside,
-  body.sidebar-first .aside {
+  .l-sidebar-first_aside,
+  .l-sidebar-second_aside {
     width: 100%;
     float: none;
   }
 
-  body.two-sidebars #main {
+  .l-2sidebars_main {
     float: right;
     width: 74.4%;
     margin: 0 0 1.5em;
   }
 
-  body.two-sidebars #sidebar-first {
+  .l-2sidebars_sidebar-first {
     float: left;
     width: 23.4%;
     margin: 0;
   }
 
-  body.two-sidebars #sidebar-second {
+  .l-2sidebars_sidebar-second {
     float: none;
     width: 100%;
   }
 
 /* =========================== footer =========================== */
 
-  #footer-left, #footer-right {
+  .l-global-footer__left,
+  .l-global-footer__right {
     width: 100%;
     float: none;
     text-align: center;
-  }
-
-  #footer p.copy {
-    padding-top: 1em;
   }
 
   #device-visualizer {
@@ -113,17 +110,17 @@
     height: auto;
   }
 
-  #main-container {
+  .l-page {
     min-height: auto;
     height: auto !important;
     margin: 0 auto 0;
   }
 
-  #main-inner {
+  .l-page__inner {
     padding-bottom: 0;
   }
 
-  #footer {
+  .l-global-footer {
     position: relative;
     height: auto;
   }
@@ -136,35 +133,34 @@
 
   img, object, embed, video, iframe {
     max-width: 100%;
-    _width: 100%;
     height: auto;
   }
 
-  #main-container {
+  .l-page {
     padding: 0;
   }
 
-  body.two-sidebars #main {
+  .l-2sidebars_main {
     width: 100%;
     clear: both;
   }
 
-  body.two-sidebars #sidebar-first,
-  body.two-sidebars #sidebar-second {
+  .l-2sidebars_sidebar-first,
+  .l-2sidebars_sidebar-second {
     width: 48%;
   }
 
-  body.two-sidebars #sidebar-first {
+  .l-2sidebars_sidebar-first {
     float: left;
   }
 
-  body.two-sidebars #sidebar-second {
+  .l-2sidebars_sidebar-second {
     float: right;
   }
 
 /* ========================== navigation ======================== */
 
-  #nav {
+  .global-nav__inner {
     margin: 0;
     width: 100%;
     text-align: center;
@@ -197,14 +193,9 @@
     width: 95%;
   }
 
-  #main p img {
-    padding: 0;
-    margin: 0;
-  }
-
 /* ========================== layout ============================ */
 
-  #main {
+  .l-page {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -213,10 +204,9 @@
 
 /* ========================= sidebars =========================== */
 
-  #sidebar-first,
-  #sidebar-second,
-  body.two-sidebars #sidebar-first,
-  body.two-sidebars #sidebar-second {
+  .region-aside,
+  .l-2sidebars_sidebar-first,
+  .l-2sidebars_sidebar-second {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -233,7 +223,7 @@
 /* Smart Phone portraite*/
 /* by default inherit from Smart Phone landskape */
 
-  #main-container {
+  .l-page {
     min-width: 200px;
   }
 

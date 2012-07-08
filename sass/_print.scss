@@ -4,6 +4,8 @@
     4. MEDIA PRINT
 ============================================================================= */
 
+@import "mixins";
+
 @media print {
 /* some general resets */
   @page {
@@ -18,7 +20,10 @@
     -ms-filter: none !important
   }
 
-  h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+  h1, h2,
+  .h1, .h2,
+  h3, h4, h5, h6,
+  .h3, .h4, .h5, .h6 {
     break-inside: avoid;
     break-after: avoid;
     page-break-after: avoid;
@@ -30,16 +35,23 @@
     widows: 3;
   }
 
-  a ,a:link, a:visited {
+  a ,
+  a:link,
+  a:visited {
     color: #444 !important;
     text-decoration: underline !important;
   }
 
-  #main #content {
+  .region-main__content {
     /* add links only for content */
     a[href]:after {
       content: " (" attr(href) ")" !important;
-      font-family: monospace !important; /* fix external links font */
+      font-family: monospace !important;
+    }
+
+    a[href^="/"]:after {
+      content: " (http://siteurlhere.com" attr(href) ")";
+      font-family: monospace !important;
     }
 
     /* Don't print links for images, javascript or internal links */
@@ -72,15 +84,6 @@
     max-width: 100% !important;
   }
 
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="/"]:after {
-    content: " (http://siteurlhere.com" attr(href) ")";
-    font-size: smaller;
-  }
-
   object:after {
     content: "Flash/видео содержимое. Посетите сайт чтобы просмотреть этот материал.";
     display: block;
@@ -89,18 +92,17 @@
   }
 
 /* hide elements that are unnecessary to print */
-  #sidebar-first,
-  #sidebar-second {
+  .region-aside {
     display: none !important;
   }
 
-  #main {
+  .region-main {
     width: 100%;
   }
 
 /* some cosmetic changes */
 
-  #header {
+  .region-header {
     padding-top: 0;
   }
 

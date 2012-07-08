@@ -4,6 +4,9 @@
     Weiss 2012
 
 ============================================================================= */
+/* ============================================================================
+   Create CSS Triangles
+============================================================================ */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, nav, section {
   display: block;
@@ -36,26 +39,29 @@ blockquote:before, blockquote:after, q:before, q:after {
 /* ============================================================================
     1.1. Typography
 ============================================================================= */
-h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+h1, h2,
+.h1, .h2,
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
   font-weight: bold;
 }
 
 h1, .h1 {
-  font-size: 2.1em;
-  line-height: 1.224em;
-  margin-bottom: 0.612em;
+  font-size: 1.942em;
+  line-height: 1.324em;
+  margin-bottom: 0.662em;
 }
 
 h2, .h2 {
-  font-size: 1.5em;
-  line-height: 1.714em;
-  margin-bottom: 0.857em;
+  font-size: 1.618em;
+  line-height: 1.589em;
+  margin-bottom: 0.795em;
 }
 
 h3, .h3 {
-  font-size: 1.17em;
-  line-height: 2.198em;
-  margin-bottom: 1.099em;
+  font-size: 1.201em;
+  line-height: 2.141em;
+  margin-bottom: 1.071em;
 }
 
 h4, .h4 {
@@ -65,15 +71,15 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 0.83em;
-  line-height: 1.549em;
-  margin-bottom: 1.549em;
+  font-size: 0.742em;
+  line-height: 1.733em;
+  margin-bottom: 1.733em;
 }
 
 h6, .h6 {
-  font-size: 0.75em;
-  line-height: 1.714em;
-  margin-bottom: 1.714em;
+  font-size: 0.618em;
+  line-height: 2.08em;
+  margin-bottom: 2.08em;
 }
 
 hr, .hr {
@@ -107,6 +113,7 @@ a {
 }
 a:visited {
   color: #0099ff;
+  outline: 1px dotted;
 }
 a:hover, a:active {
   color: #4db8ff;
@@ -131,8 +138,8 @@ video {
 /* ============================================================================
     1.2. Lists and tables
 ============================================================================= */
-/* Lists
-   --------------------------------------------------------------------------*/
+/* @group Lists
+--------------------------------------------------------------------------- */
 ul, ol, dl {
   margin: 1.286em 0;
   padding-left: 1.5em;
@@ -154,7 +161,8 @@ ol ul {
   list-style: disc;
 }
 
-dl dt, dfn {
+dl dt,
+dfn {
   font-weight: bold;
   font-style: italic;
 }
@@ -163,8 +171,9 @@ dl dd {
   margin-left: 1.5em;
 }
 
-/* Tables
-   --------------------------------------------------------------------------*/
+/* @end */
+/* @group Tables
+--------------------------------------------------------------------------- */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -176,9 +185,9 @@ table {
 }
 
 caption {
-  font-size: 1.5em;
-  line-height: 1.714em;
-  margin-bottom: 0.857em;
+  font-size: 1.618em;
+  line-height: 1.589em;
+  margin-bottom: 0.795em;
 }
 
 td, th {
@@ -215,6 +224,7 @@ tfoot {
   font-style: italic;
 }
 
+/* @end */
 /* ============================================================================
     1.3. Forms
 ============================================================================= */
@@ -349,6 +359,17 @@ input::-moz-focus-inner {
   width: 13px;
 }
 
+/* form support */
+.form__row {
+  overflow: hidden;
+  padding: .4em 0;
+}
+
+.form__item {
+  float: left;
+  padding: 0 .4em 0 0;
+}
+
 /* ============================================================================
     1.4. Specific
 ============================================================================= */
@@ -391,79 +412,62 @@ figure {
 /* ============================================================================
     1.5 Basic masterclasses
 ============================================================================= */
-.clearfix:before {
+.weiss-cf:before, .weiss-cf:after {
   content: "";
   display: table;
 }
-.clearfix:after {
+.weiss-cf:after {
   clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  font-size: 0;
-  visibility: hidden;
 }
-.ie6-7 .clearfix {
+.ie6-7 .weiss-cf {
   zoom: 1;
 }
 
 /* position support */
-.c-container {
+.weiss-aux {
   width: 974px;
   margin: 0 auto;
 }
 
-.left-side {
+.weiss-l {
   float: left;
 }
 
-.right-side {
+.weiss-r {
   float: right;
 }
 
-.br {
+.weiss-br {
   display: block;
 }
 
 /* style support */
-.psln {
+.weiss-psln {
   color: #0099ff;
   text-decoration: none;
   border-bottom: 1px dashed;
   position: relative;
   cursor: pointer;
 }
-.psln:hover, .psln:focus {
+.weiss-psln:hover, .weiss-psln:focus {
   color: #4db8ff;
 }
 
-/* form support */
-.form-row {
-  overflow: hidden;
-  clear: both;
-  padding: .4em 0;
-}
-
-.form-item {
-  float: left;
-  padding: 0 .4em 0 0;
-}
-
 /* hacks and long rules */
-.opacity {
+.weiss-op {
   opacity: .85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
   filter: alpha(opacity=85);
 }
 
-.dib, .img-container {
+.weiss-dib, .weiss-img-container {
   display: inline-block;
   vertical-align: top;
   *display: inline;
   *zoom: 1;
 }
 
-.ir {
+.weiss-ir {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
@@ -471,10 +475,10 @@ figure {
   background-color: transparent;
 }
 
-.img-container {
+.weiss-img-container {
   overflow: hidden;
 }
-.img-container img {
+.weiss-img-container img {
   display: block;
   position: static;
 }
@@ -482,12 +486,12 @@ figure {
 /* ============================================================================
     Sprite support
 ============================================================================= */
-.ico {
+.weiss-ico {
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
   display: inline-block;
   position: relative;
 }
-.ie6-7 .ico {
+.ie6-7 .weiss-ico {
   display: inline;
   zoom: 1;
 }
@@ -524,6 +528,9 @@ div.bx-core-admin-dialog-content tr {
     
     2. Specific html tags support
 ============================================================================= */
+/* ============================================================================
+   Create CSS Triangles
+============================================================================ */
 /* science */
 abbr, acronym {
   border-bottom: 1px dotted #3a3739;
@@ -591,6 +598,9 @@ ins {
 
     3. PAGE LAYOUT
 ============================================================================= */
+/* ============================================================================
+   Create CSS Triangles
+============================================================================ */
 body {
   font-size: 14px;
   line-height: 1.286em;
@@ -604,80 +614,114 @@ body {
   overflow-y: auto;
 }
 
-/* header
-   --------------------------------------------------------------------------*/
-/* main
-   --------------------------------------------------------------------------*/
-#main-container {
+.l-page {
   background-color: #cccccc;
 }
 
-#main-inner {
+.l-page__inner {
   width: 974px;
   margin: 0 auto;
   position: relative;
   background-color: white;
 }
 
-.two-sidebars-main {
+/* @group header
+--------------------------------------------------------------------------- */
+.l-global-header {
+  margin-bottom: 1.5em;
+}
+
+.l-global-header__left,
+.l-global-header__right {
+  width: 45%;
+}
+
+.l-global-header__left {
+  float: left;
+}
+
+.l-global-header__right {
+  float: right;
+}
+
+/* @end */
+/* @group layout
+--------------------------------------------------------------------------- */
+/* main */
+.l-2sidebars_main {
   float: left;
   margin-left: 25.806%;
   width: 48.665%;
 }
-.ie6-7 .two-sidebars-main {
+.ie6-7 .l-2sidebars_main {
   display: inline;
 }
 
-.sidebar-first-main {
+.l-sidebar-first_main {
   float: right;
   width: 74.333%;
 }
 
-.sidebar-second-main {
+.l-sidebar-second_main {
   float: left;
   margin: 0;
   padding: 0;
   width: 74.333%;
 }
 
-/* sidebars
-   --------------------------------------------------------------------------*/
-.two-sidebars-sidebar-first {
+/* sidebars */
+.l-2sidebars_sidebar-first {
   float: left;
   margin-left: -74.333%;
   width: 23.306%;
 }
 
-.two-sidebars-sidebar-second {
+.l-2sidebars_sidebar-second {
   float: right;
   width: 23.306%;
 }
 
-.sidebar-first-aside,
-.sidebar-second-aside {
+.l-sidebar-first_aside,
+.l-sidebar-second_aside {
   float: left;
   width: 23.306%;
 }
 
-.sidebar-second-aside {
+.l-sidebar-second_aside {
   float: right;
 }
 
-/* footer
-   --------------------------------------------------------------------------*/
-#footer {
+/* @end */
+/* @group footer
+--------------------------------------------------------------------------- */
+.l-global-footer {
   clear: both;
   overflow: hidden;
 }
 
-/* Styicky footer
-   --------------------------------------------------------------------------*/
+.l-global-footer__left,
+.l-global-footer__right {
+  width: 45%;
+}
+
+.l-global-footer__left {
+  float: left;
+}
+
+.l-global-footer__right {
+  float: right;
+  text-align: right;
+}
+
+/* @end */
+/* @group Styicky footer
+--------------------------------------------------------------------------- */
 @media screen and (max-width: 2400px) {
   html, body {
     height: 100%;
   }
 
-  #main-container {
+  .l-page {
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -685,32 +729,30 @@ body {
     margin-bottom: -80px;
   }
 
-  #main-inner {
+  .l-page__inner {
     padding-bottom: 80px;
   }
 
-  #footer {
+  .l-global-footer {
     position: relative;
     height: 80px;
   }
 }
+/* @end */
 /* ============================================================================
     Import from common.scss
     
     4. COMMON (Design specific rules)
 ============================================================================= */
 /* ============================================================================
+   Create CSS Triangles
+============================================================================ */
+/* ============================================================================
     4.1 Header
 ============================================================================= */
-#header {
-  margin-bottom: 1.5em;
-}
-#header .left-side,
-#header .right-side {
-  width: 45%;
-}
-
-#site-name, #site-slogan {
+/* @group Site branding
+--------------------------------------------------------------------------- */
+.site-name, .site-slogan {
   display: block;
   font-size: 1em;
   margin: 0;
@@ -718,25 +760,30 @@ body {
   text-decoration: none;
 }
 
-#nav {
-  padding: 0;
-  margin: 0;
-  clear: both;
-}
-#nav li {
+/* @end */
+/* @group Navigation block global
+--------------------------------------------------------------------------- */
+.global-nav li {
   list-style: none;
   background: none;
   margin: 0;
   padding: 0;
   display: inline;
 }
-#nav li a:hover, #nav li a:focus {
+.global-nav li a:hover, .global-nav li a:focus {
   color: #333;
 }
-#nav li.active a {
+.global-nav li.active a {
   color: #333;
 }
 
+.global-nav__inner {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+/* @end */
 /* ============================================================================
     4.2 Main
 ============================================================================= */
@@ -749,22 +796,11 @@ body {
 /* ============================================================================
     4.5 Footer
 ============================================================================= */
-#footer .left-side, #footer .right-side {
-  width: 45%;
-}
-#footer .right-side {
-  text-align: right;
-}
-#footer p {
+.region-footer p {
   padding: 0 1em;
 }
-#footer p.copy span {
-  display: block;
-  text-transform: uppercase;
-  font-size: 1.6em;
-  padding-bottom: .2em;
-}
-#footer p.develop img {
+
+.develop img {
   vertical-align: middle;
 }
 
@@ -772,378 +808,69 @@ body {
     4.6 Other
 ============================================================================= */
 /* Opera speed dial minimized */
-@media screen and (view-mode: minimized) {
-  #main-container {
-    display: none;
-  }
-}
 /* ============================================================================
     Import from masterclasses.scss
 
     5. MASTER-CLASSES
 ============================================================================= */
-#header, #footer, #content, .aside, #before-content, #under-content, .block {
+/* ============================================================================
+   Create CSS Triangles
+============================================================================ */
+.l-global-header,
+.l-global-footer,
+.region-main__content,
+.region-aside,
+.region-beforecontent,
+.region-undercontent {
   outline: 1px dashed #ccc;
 }
 
 /* ============================================================================
     Stylize text
 ============================================================================= */
-.emph {
+.weiss-emph {
   font-style: italic;
 }
 
-.emph-c {
+.weiss-emph_c {
   color: black;
 }
 
-.emph-c-ln {
+.weiss-emph_c_ln {
   color: #0099ff;
 }
 
-.emph-c-dark {
+.weiss-emph_c_dark {
   color: #101010;
 }
 
-.emph-c-ligh {
+.weiss-emph_c_ligh {
   color: #767676;
 }
 
-.emph-fz-sm {
+.weiss-emph_fz_sm {
   font-size: .8em;
 }
 
-.emph-fz-md {
+.weiss-emph_fz_md {
   font-size: 1.28em;
 }
 
-.emph-fz-big {
+.weiss-emph_fz_big {
   font-size: 1.57em;
   line-height: 1.1em;
 }
 
-.emph-fz-huge {
+.weiss-emph_fz_huge {
   font-size: 3em;
 }
 
-.emph-serif {
+.weiss-emph_serif {
   font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
 }
 
-.emph-sans {
+.weiss-emph_sans {
   font-family: Arial, FreeSans, sans-serif;
-}
-
-/* ============================================================================
-    Non-semantic grid support
-============================================================================= */
-.grid-row .span1, .grid-row .span2, .grid-row .span3, .grid-row .span4, .grid-row .span5, .grid-row .span6, .grid-row .span7, .grid-row .span8, .grid-row .span9, .grid-row .span10, .grid-row .span11, .grid-row .span12 {
-  float: left;
-  margin-left: 2%;
-}
-.grid-row .span1 {
-  width: 6.5%;
-}
-.grid-row .span2 {
-  width: 15%;
-}
-.grid-row .span2 .span1 {
-  margin-left: 13.333%;
-  width: 43.333%;
-}
-.grid-row .span3 {
-  width: 23.5%;
-}
-.grid-row .span3 .span1 {
-  margin-left: 8.511%;
-  width: 27.66%;
-}
-.grid-row .span3 .span2 {
-  margin-left: 8.511%;
-  width: 63.83%;
-}
-.grid-row .span4 {
-  width: 32%;
-}
-.grid-row .span4 .span1 {
-  margin-left: 6.25%;
-  width: 20.313%;
-}
-.grid-row .span4 .span2 {
-  margin-left: 6.25%;
-  width: 46.875%;
-}
-.grid-row .span4 .span3 {
-  margin-left: 6.25%;
-  width: 73.438%;
-}
-.grid-row .span5 {
-  width: 40.5%;
-}
-.grid-row .span5 .span1 {
-  margin-left: 4.938%;
-  width: 16.049%;
-}
-.grid-row .span5 .span2 {
-  margin-left: 4.938%;
-  width: 37.037%;
-}
-.grid-row .span5 .span3 {
-  margin-left: 4.938%;
-  width: 58.025%;
-}
-.grid-row .span5 .span4 {
-  margin-left: 4.938%;
-  width: 79.012%;
-}
-.grid-row .span6 {
-  width: 49%;
-}
-.grid-row .span6 .span1 {
-  margin-left: 4.082%;
-  width: 13.265%;
-}
-.grid-row .span6 .span2 {
-  margin-left: 4.082%;
-  width: 30.612%;
-}
-.grid-row .span6 .span3 {
-  margin-left: 4.082%;
-  width: 47.959%;
-}
-.grid-row .span6 .span4 {
-  margin-left: 4.082%;
-  width: 65.306%;
-}
-.grid-row .span6 .span5 {
-  margin-left: 4.082%;
-  width: 82.653%;
-}
-.grid-row .span7 {
-  width: 57.5%;
-}
-.grid-row .span7 .span1 {
-  margin-left: 3.478%;
-  width: 11.304%;
-}
-.grid-row .span7 .span2 {
-  margin-left: 3.478%;
-  width: 26.087%;
-}
-.grid-row .span7 .span3 {
-  margin-left: 3.478%;
-  width: 40.87%;
-}
-.grid-row .span7 .span4 {
-  margin-left: 3.478%;
-  width: 55.652%;
-}
-.grid-row .span7 .span5 {
-  margin-left: 3.478%;
-  width: 70.435%;
-}
-.grid-row .span7 .span6 {
-  margin-left: 3.478%;
-  width: 85.217%;
-}
-.grid-row .span8 {
-  width: 66%;
-}
-.grid-row .span8 .span1 {
-  margin-left: 3.03%;
-  width: 9.848%;
-}
-.grid-row .span8 .span2 {
-  margin-left: 3.03%;
-  width: 22.727%;
-}
-.grid-row .span8 .span3 {
-  margin-left: 3.03%;
-  width: 35.606%;
-}
-.grid-row .span8 .span4 {
-  margin-left: 3.03%;
-  width: 48.485%;
-}
-.grid-row .span8 .span5 {
-  margin-left: 3.03%;
-  width: 61.364%;
-}
-.grid-row .span8 .span6 {
-  margin-left: 3.03%;
-  width: 74.242%;
-}
-.grid-row .span8 .span7 {
-  margin-left: 3.03%;
-  width: 87.121%;
-}
-.grid-row .span9 {
-  width: 74.5%;
-}
-.grid-row .span9 .span1 {
-  margin-left: 2.685%;
-  width: 8.725%;
-}
-.grid-row .span9 .span2 {
-  margin-left: 2.685%;
-  width: 20.134%;
-}
-.grid-row .span9 .span3 {
-  margin-left: 2.685%;
-  width: 31.544%;
-}
-.grid-row .span9 .span4 {
-  margin-left: 2.685%;
-  width: 42.953%;
-}
-.grid-row .span9 .span5 {
-  margin-left: 2.685%;
-  width: 54.362%;
-}
-.grid-row .span9 .span6 {
-  margin-left: 2.685%;
-  width: 65.772%;
-}
-.grid-row .span9 .span7 {
-  margin-left: 2.685%;
-  width: 77.181%;
-}
-.grid-row .span9 .span8 {
-  margin-left: 2.685%;
-  width: 88.591%;
-}
-.grid-row .span10 {
-  width: 83%;
-}
-.grid-row .span10 .span1 {
-  margin-left: 2.41%;
-  width: 7.831%;
-}
-.grid-row .span10 .span2 {
-  margin-left: 2.41%;
-  width: 18.072%;
-}
-.grid-row .span10 .span3 {
-  margin-left: 2.41%;
-  width: 28.313%;
-}
-.grid-row .span10 .span4 {
-  margin-left: 2.41%;
-  width: 38.554%;
-}
-.grid-row .span10 .span5 {
-  margin-left: 2.41%;
-  width: 48.795%;
-}
-.grid-row .span10 .span6 {
-  margin-left: 2.41%;
-  width: 59.036%;
-}
-.grid-row .span10 .span7 {
-  margin-left: 2.41%;
-  width: 69.277%;
-}
-.grid-row .span10 .span8 {
-  margin-left: 2.41%;
-  width: 79.518%;
-}
-.grid-row .span10 .span9 {
-  margin-left: 2.41%;
-  width: 89.759%;
-}
-.grid-row .span11 {
-  width: 91.5%;
-}
-.grid-row .span11 .span1 {
-  margin-left: 2.186%;
-  width: 7.104%;
-}
-.grid-row .span11 .span2 {
-  margin-left: 2.186%;
-  width: 16.393%;
-}
-.grid-row .span11 .span3 {
-  margin-left: 2.186%;
-  width: 25.683%;
-}
-.grid-row .span11 .span4 {
-  margin-left: 2.186%;
-  width: 34.973%;
-}
-.grid-row .span11 .span5 {
-  margin-left: 2.186%;
-  width: 44.262%;
-}
-.grid-row .span11 .span6 {
-  margin-left: 2.186%;
-  width: 53.552%;
-}
-.grid-row .span11 .span7 {
-  margin-left: 2.186%;
-  width: 62.842%;
-}
-.grid-row .span11 .span8 {
-  margin-left: 2.186%;
-  width: 72.131%;
-}
-.grid-row .span11 .span9 {
-  margin-left: 2.186%;
-  width: 81.421%;
-}
-.grid-row .span11 .span10 {
-  margin-left: 2.186%;
-  width: 90.71%;
-}
-.grid-row .span12 {
-  width: 100%;
-}
-.grid-row .span12 .span1 {
-  margin-left: 2%;
-  width: 6.5%;
-}
-.grid-row .span12 .span2 {
-  margin-left: 2%;
-  width: 15%;
-}
-.grid-row .span12 .span3 {
-  margin-left: 2%;
-  width: 23.5%;
-}
-.grid-row .span12 .span4 {
-  margin-left: 2%;
-  width: 32%;
-}
-.grid-row .span12 .span5 {
-  margin-left: 2%;
-  width: 40.5%;
-}
-.grid-row .span12 .span6 {
-  margin-left: 2%;
-  width: 49%;
-}
-.grid-row .span12 .span7 {
-  margin-left: 2%;
-  width: 57.5%;
-}
-.grid-row .span12 .span8 {
-  margin-left: 2%;
-  width: 66%;
-}
-.grid-row .span12 .span9 {
-  margin-left: 2%;
-  width: 74.5%;
-}
-.grid-row .span12 .span10 {
-  margin-left: 2%;
-  width: 83%;
-}
-.grid-row .span12 .span11 {
-  margin-left: 2%;
-  width: 91.5%;
-}
-.grid-row > :first-child,
-.grid-row .row > :first-child {
-  margin-left: 0;
 }
 
 /* ============================================================================
@@ -1151,6 +878,9 @@ body {
     
     4. MEDIA PRINT
 ============================================================================= */
+/* ============================================================================
+   Create CSS Triangles
+============================================================================ */
 @media print {
   /* some general resets */
   @page {
@@ -1165,7 +895,10 @@ body {
     -ms-filter: none !important;
   }
 
-  h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+  h1, h2,
+  .h1, .h2,
+  h3, h4, h5, h6,
+  .h3, .h4, .h5, .h6 {
     break-inside: avoid;
     break-after: avoid;
     page-break-after: avoid;
@@ -1177,22 +910,27 @@ body {
     widows: 3;
   }
 
-  a, a:link, a:visited {
+  a,
+  a:link,
+  a:visited {
     color: #444 !important;
     text-decoration: underline !important;
   }
 
-  #main #content {
+  .region-main__content {
     /* add links only for content */
     /* Don't print links for images, javascript or internal links */
   }
-  #main #content a[href]:after {
+  .region-main__content a[href]:after {
     content: " (" attr(href) ")" !important;
     font-family: monospace !important;
-    /* fix external links font */
   }
-  #main #content a[href^="javascript:"]:after,
-  #main #content a[href^="#"]:after {
+  .region-main__content a[href^="/"]:after {
+    content: " (http://siteurlhere.com" attr(href) ")";
+    font-family: monospace !important;
+  }
+  .region-main__content a[href^="javascript:"]:after,
+  .region-main__content a[href^="#"]:after {
     content: "";
   }
 
@@ -1219,15 +957,6 @@ body {
     max-width: 100% !important;
   }
 
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="/"]:after {
-    content: " (http://siteurlhere.com" attr(href) ")";
-    font-size: smaller;
-  }
-
   object:after {
     content: "Flash/видео содержимое. Посетите сайт чтобы просмотреть этот материал.";
     display: block;
@@ -1236,17 +965,16 @@ body {
   }
 
   /* hide elements that are unnecessary to print */
-  #sidebar-first,
-  #sidebar-second {
+  .region-aside {
     display: none !important;
   }
 
-  #main {
+  .region-main {
     width: 100%;
   }
 
   /* some cosmetic changes */
-  #header {
+  .region-header {
     padding-top: 0;
   }
 

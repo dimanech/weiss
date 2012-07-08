@@ -1,29 +1,16 @@
 
 //@import "compass/utilities/sprites";
-// @import "icons/*.png";
-// $icons-layout:smart;
-// $icons-spacing: 10px;
+// $myicons-layout:smart;
+// $myicons-spacing: 10px;
+// @import "myicons/*.png";
 
-// ============================================================================
-//  Grid functions
-// ============================================================================
+@import "compass/typography/vertical_rhythm";
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$cols: 12;
-$gutter: 2%;
+//@import "../arch/modular-scale";
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
 
-
-$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
-
-@mixin cols($num) {
-  width: ($one_col * $num) + ($gutter * ($num - 1));
-}
-
-@mixin sub_cols($num_child, $num_parent) {
-  $parent_size: ($one_col * $num_parent) + ($gutter * ($num_parent - 1));
-  $child_size: ($one_col * $num_child) + ($gutter * ($num_child - 1));
-  margin-left: ($gutter / $parent_size) * 100%;
-  width: ($child_size / $parent_size) * 100%;
-}
 
 // ============================================================================
 //  WAI and W3C support
@@ -66,4 +53,31 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 // Hide visually and from screenreaders, but maintain layout 
 @mixin invisible {
   visibility: hidden;
+}
+
+/* ============================================================================
+   Create CSS Triangles
+============================================================================ */
+
+// Create CSS Triangles in a Breeze
+
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid   $triangleSize;
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // .example { @include css-triangle(5px, #fff, bottom); }
 }

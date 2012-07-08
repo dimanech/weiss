@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7]>
-<html class="iem7" lang="ru" dir="ltr"><![endif]-->
+<html class="iem7" lang="ru" dir="ltr" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (lte IE 6)&(!IEMobile)]>
-<html class="ie6 ie6-7 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie6 ie6-7 ie6-8" lang="ru" dir="ltr" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (IE 7)&(!IEMobile)]>
-<html class="ie7 ie6-7 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie7 ie6-7 ie6-8" lang="ru" dir="ltr" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (IE 8)&(!IEMobile)]>
-<html class="ie8 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie8 ie6-8" lang="ru" dir="ltr" xmlns:og="http://ogp.me/ns#"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
 <html lang="ru" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
     <!--<![endif]-->
@@ -30,81 +30,83 @@
         <![endif]-->
         <script type="text/javascript" charset="utf-8">
             $(document).ready(function() {
-                $('#nav li a').click(function() {
-                    $('#nav li a').removeClass('active');
+                $('.global-nav li a').click(function() {
+                    $('.global-nav li a').removeClass('active');
                     $(this).addClass('active');
                     return false;
                 });
 
                 $('#twocolumn-s').click(function() {
-                    $('#main').removeClass().addClass('sidebar-second-main').addClass('clearfix');
-                    $('#sidebar-first').removeClass().addClass('sidebar-second-aside').addClass('clearfix');
-                    $('#sidebar-second').removeClass().addClass('sidebar-second-aside').addClass('clearfix');
+                    $('.region-main').removeClass().addClass('region-main l-sidebar-second_main weiss-cf');
+                    $('.region-aside_first').removeClass().addClass('region-aside_first l-sidebar-second_aside weiss-cf');
+                    $('.region-aside_second').removeClass().addClass('region-aside_second l-sidebar-second_aside weiss-cf');
                 });
                 $('#twocolumn-f').click(function() {
-                    $('#main').removeClass().addClass('sidebar-first-main').addClass('clearfix');
-                    $('#sidebar-first').removeClass().addClass('sidebar-first-aside').addClass('clearfix');
-                    $('#sidebar-second').removeClass().addClass('sidebar-first-aside').addClass('clearfix');
+                    $('.region-main').removeClass().addClass('region-main l-sidebar-first_main weiss-cf');
+                    $('.region-aside_first').removeClass().addClass('region-aside_first l-sidebar-first_aside weiss-cf');
+                    $('.region-aside_second').removeClass().addClass('region-aside_second l-sidebar-first_aside weiss-cf');
                 });
                 $('#threecolumn').click(function() {
-                    $('#main').removeClass().addClass('two-sidebars-main').addClass('clearfix');
-                    $('#sidebar-first').removeClass().addClass('two-sidebars-sidebar-first').addClass('clearfix');
-                    $('#sidebar-second').removeClass().addClass('two-sidebars-sidebar-second').addClass('clearfix');
+                    $('.region-main').removeClass().addClass('region-main l-2sidebars_main weiss-cf');
+                    $('.region-aside_first').removeClass().addClass('region-aside_first l-2sidebars_sidebar-first weiss-cf');
+                    $('.region-aside_second').removeClass().addClass('region-aside_second l-2sidebars_sidebar-second weiss-cf');
                 });
                 $('#nocolumn').click(function() {
-                    $('#main').removeClass().addClass('clearfix');
-                    $('#sidebar-first').removeClass().addClass('clearfix');
-                    $('#sidebar-second').removeClass().addClass('clearfix');
+                    $('.region-main').removeClass().addClass('region-main weiss-cf');
+                    $('.region-aside_first').removeClass().addClass('region-aside_first weiss-cf');
+                    $('.region-aside_second').removeClass().addClass('region-aside_second weiss-cf');
                 });
             });
         </script>
     </head>
     <body>
-        <div id="main-container">
-            <div id="main-inner" class="clearfix">
-                <div id="header">
+        <div class="l-page">
+            <div class="l-page__inner weiss-cf">
+                <div class="region-header l-global-header">
                     <header role="banner">
-                        <div class="left-side">
+                        <div class="l-global-header__left">
                             <hgroup>
-                                <h1 id="site-name">Sitename</h1>
-                                <h2 id="site-slogan">Site slogan</h2>
+                                <h1 class="site-name">Sitename</h1>
+                                <h2 class="site-slogan">Site slogan</h2>
                             </hgroup>
                             <!-- <a href="#">
-                            <span id="site-name">Sitename</span>
-                            <span id="site-slogan">Site slogan</span>
+                            <span class="site-name">Sitename</span>
+                            <span class="site-slogan">Site slogan</span>
                             </a> -->
                         </div>
-                        <div class="right-side">
+                        <div class="l-global-header__left">
                             <a href="mailto:weiss@mail.com">weiss@mail.com</a>
                         </div>
-                        <nav>
-                            <ul id="nav" role="navigation">
-                                <li>
-                                    <a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
-                                </li>
-                                <li>
-                                    <a href="#" id="twocolumn-s">2 columns: sidebar-second</a>
-                                </li>
-                                <li>
-                                    <a href="#" id="threecolumn">3 columns</a>
-                                </li>
-                                <li>
-                                    <a href="#" id="nocolumn">0 columns</a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <div class="global-nav">
+                            <nav>
+                                <ul class="global-nav__inner" role="navigation">
+                                    <li>
+                                        <a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="twocolumn-s">2 columns: sidebar-second</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="threecolumn">3 columns</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="nocolumn">0 columns</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </header>
                 </div>
-                <!-- /#header -->
-                <div role="main" id="main" class="clearfix">
+                <!-- /.region-header -->
+                <div class="region-main weiss-cf" role="main">
                     <div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                        <a itemprop="url" href="#"><span itemprop="title">Главная</span></a> →
+                        <a href="#" itemprop="url"><span itemprop="title">Главная</span></a> →
                         Typography
                     </div>
-                    <div id="content">
+                    <div class="region-main__content">
                         <h1>Заголовок 1</h1>
                         <p>
-                            <img src="images/exmpl/content-example-img.jpg" width="333" height="500" alt="Alps" style="float: left; margin-right: 1em"/>
+                            <img src="images/exmpl/content-example-img.jpg" width="333" height="500" alt="Alps" style="float: left; margin-right: 1em" />
                             Альпы (фр. Alpes, нем. Alpen, итал. Alpi, словен. Alpe) — наиболее высокая горная система Западной
                             Европы. В пределах географических границ Альп полностью или частично находятся территории 8 стран;
                             по доле общей площади государства, приходящейся на Альпы, эти страны располагаются следующим
@@ -473,14 +475,16 @@
                             </tbody>
                         </table>
                         <hr>
-                        <pre>And some fixed width text.
-                As a matter of fact, this is a bit of Evernote Readable's own code.
+                        <pre>
+And some fixed width text.
+As a matter of fact, this is a bit of Evernote Readable's own code.
 
-                var _coverElement = document.createElement('div');
-                _coverElement.setAttribute('id', 'readable_cover');
-                _coverElement.setAttribute('style', 'display: none');
+var _coverElement = document.createElement('div');
+_coverElement.setAttribute('id', 'readable_cover');
+_coverElement.setAttribute('style', 'display: none');
 
-                _body.appendChild(_coverElement);</pre>
+_body.appendChild(_coverElement);
+                        </pre>
                         <hr>
                         <dl>
                             <dt>
@@ -506,42 +510,42 @@
                             воспользуйтесь комбинацией <kbd>&lt;Ctrl&gt;+&lt;Backspace&gt;</kbd> или <kbd>&lt;Ctrl&gt;+&lt;Delete&gt;</kbd>.
                         </p>
                         <hr/>
-                        <form action="" method="get" accept-charset="utf-8">
-                            <div class="form-row">
+                        <form class="form" action="post" method="get" accept-charset="utf-8" >
+                            <div class="form__row">
                                 <label for="main-search">Search with autocomplete</label>
                                 <input name="search" type="search" id="main-search"/>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label for="default-html5-search">Default Search</label>
                                 <input name="search" type="search" id="default-html5-search"/>
                             </div>
                         </form>
-                        <form action="" method="get" accept-charset="utf-8">
+                        <form class="form" action="post" method="get" accept-charset="utf-8" >
                             <fieldset>
                                 <legend>
                                     Login-form
                                 </legend>
-                                <div class="form-row">
+                                <div class="form__row">
                                     <label for="log-name">Введите ваш логин</label>
                                     <input type="text" id="log-name" name="name" placeholder="placeholder login"/>
                                 </div>
-                                <div class="form-row">
+                                <div class="form__row">
                                     <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
                                 </div>
-                                <div class="form-row">
+                                <div class="form__row">
                                     <input type="button" value="Button"/>
                                 </div>
-                                <div class="form-row">
+                                <div class="form__row">
                                     <input type="file">
                                 </div>
                             </fieldset>
                         </form>
-                        <form action="" id="order-submit-form" method="get" accept-charset="utf-8">
-                            <div class="form-row">
+                        <form class="form form_order-submit" action="post" method="get" accept-charset="utf-8">
+                            <div class="form__row">
                                 <label for="name">Фамилия, Имя, Отчество</label>
                                 <input type="text" id="name" name="name" required/>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label for="select">Раскрывающийся список</label>
                                 <select name="select" id="select">
                                     <optgroup label="Группа 1">
@@ -556,7 +560,7 @@
                                     </optgroup>
                                 </select>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label for="select-openend">Список множественного выбора</label>
                                 <select name="select-openend" id="select-openend" multiple="multiple" size="4">
                                     <option selected="selected" value="sm1">Выбор 1</option>
@@ -567,15 +571,15 @@
                                     <option value="sm6">выбор 5</option>
                                 </select>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label for="tel">Контактный телефон</label>
                                 <input type="text" id="tel" name="tel" required/>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label for="mail">E-mail</label>
                                 <input type="text" id="mail" name="mail" required/>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label>
                                     <input type="radio" name="radio1" value="r1" checked="checked"/>
                                     Radio (checked)</label>
@@ -586,7 +590,7 @@
                                     <input type="radio" name="radio1" value="r3"/>
                                     Radio 3 </label>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 Checkbox
                                 <label>
                                     <input type="checkbox" name="checkbox1" value="ch1" checked="checked"/>
@@ -598,11 +602,11 @@
                                     <input type="checkbox" name="checkbox3" value="ch3"/>
                                     Check 3 </label>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <label for="textarea">Textarea</label>
                                 <textarea name="textarea" id="textarea" cols="30" rows="4"></textarea>
                             </div>
-                            <div class="form-row">
+                            <div class="form__row">
                                 <input id="submit-input" type="submit" value="Submit"/>
                                 <input id="reset-input" type="reset" value="Reset"/>
                             </div>
@@ -612,37 +616,33 @@
                     <!-- /#content -->
                 </div>
                 <!-- /#main-->
-                <!-- #sidebar-first -->
-                <div id="sidebar-first" class="aside clearfix">
+                <!-- .region-aside_first -->
+                <div class="region-aside region-aside_first weiss-cf">
                     <aside role="complementary">
-                        <div class="block">
-                            <p>
-                                SidebarFirst Block
-                            </p>
-                        </div>
+                        <p>
+                            SidebarFirst Block
+                        </p>
                     </aside>
                 </div>
-                <!-- /#sidebar-first -->
-                <!-- #sidebar-second -->
-                <div id="sidebar-second" class="aside clearfix">
+                <!-- /.region-aside_first -->
+                <!-- .region-aside_second -->
+                <div class="region-aside region-aside_second weiss-cf">
                     <aside role="complementary">
-                        <div class="block">
-                            <p>
-                                SidebarSecond Block
-                            </p>
-                        </div>
+                        <p>
+                            SidebarSecond Block
+                        </p>
                     </aside>
                 </div>
-                <!-- /#sidebar-second -->
-                <div id="under-content">
+                <!-- /.region-aside_second -->
+                <div class="region-undercontent">
                     <div>
                         <style type="text/css">
-                            #under-content {
+                            .region-undercontent {
                                 overflow: hidden;
                                 clear: both;
                             }
 
-                            #under-content [class*="span"] {
+                            .region-undercontent [class*="gr-cell_sp"] {
                                 background-color: #EEE;
                                 text-align: center;
                                 border-radius: 3px;
@@ -651,73 +651,73 @@
                                 margin-bottom: 1em;
                             }
                         </style>
-                        <div class="grid-row">
-                            <div class="gr-cell span1">
+                        <div class="gr-row">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
-                            <div class="gr-cell span1">
+                            <div class="gr-cell gr-cell_sp1">
                                 1
                             </div>
                         </div>
-                        <div class="grid-row">
-                            <div class="gr-cell span4">
+                        <div class="gr-row">
+                            <div class="gr-cell gr-cell_sp4">
                                 4
                             </div>
-                            <div class="gr-cell span4">
+                            <div class="gr-cell gr-cell_sp4">
                                 4
                             </div>
-                            <div class="gr-cell span4">
+                            <div class="gr-cell gr-cell_sp4">
                                 4
                             </div>
                         </div>
-                        <div class="grid-row">
-                            <div class="gr-cell span4">
+                        <div class="gr-row">
+                            <div class="gr-cell gr-cell_sp4">
                                 4
                             </div>
-                            <div class="gr-cell span8">
+                            <div class="gr-cell gr-cell_sp8">
                                 8
                             </div>
                         </div>
-                        <div class="grid-row">
-                            <div class="gr-cell span6">
+                        <div class="gr-row">
+                            <div class="gr-cell gr-cell_sp6">
                                 6
                             </div>
-                            <div class="gr-cell span6">
+                            <div class="gr-cell gr-cell_sp6">
                                 6
                             </div>
                         </div>
-                        <div class="grid-row">
-                            <div class="gr-cell span12">
+                        <div class="gr-row">
+                            <div class="gr-cell gr-cell_sp12">
                                 12
                             </div>
                         </div>
@@ -728,16 +728,16 @@
         </div>
         <!-- /#main-container -->
         <!-- #footer -->
-        <div id="footer">
+        <div class="region-footer l-global-footer">
             <footer role="contentinfo">
-                <div class="c-container">
-                    <div class="left-side">
+                <div class="weiss-aux">
+                    <div class="l-global-footer__left">
                         <p class="copy">
-                            <span>Weiss</span>
+                            Weiss <br />
                             &copy; 2012 blank canvas theme
                         </p>
                     </div>
-                    <div class="right-side">
+                    <div class="l-global-footer__right">
                         <p class="develop">
                             Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab"/></a>
                         </p>

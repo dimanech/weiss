@@ -4,6 +4,8 @@
     2. Specific html tags support
 ============================================================================= */
 
+@import "mixins";
+
 /* science */
 
 abbr, acronym {
@@ -27,7 +29,7 @@ a abbr {
 /* computer science */
 
 pre, code, tt, samp, kbd {
-  font-family: #{$baseFontFamilyMono};
+  font-family: $baseFontFamilyMono;
   @include adjust-font-size-to( 1 * $base-font-size );
 }
 

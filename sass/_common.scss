@@ -10,17 +10,13 @@
     4.1 Header
 ============================================================================= */
 
-#header {
-  margin-bottom: 1.5em;
-    
-  .left-side,
-  .right-side {
-    width: 45%;
-  }
-  
-}
+.region-header {}
 
-#site-name {
+
+/* @group Site branding
+--------------------------------------------------------------------------- */
+
+.site-name {
   display:block;
   font-size: 1em;
   margin: 0;
@@ -28,14 +24,17 @@
   text-decoration:none;
 }
 
-#site-slogan {
-  @extend #site-name;
+.site-slogan {
+  @extend .site-name;
 }
 
-#nav {
-  padding: 0;
-  margin: 0;
-  clear:both;
+/* @end */
+
+
+/* @group Navigation block global
+--------------------------------------------------------------------------- */
+
+.global-nav {
     
   li {
     list-style: none;
@@ -54,8 +53,15 @@
       color:#333;
     }
   }
-  
 }
+
+.global-nav__inner {
+  padding: 0;
+  margin: 0;
+  clear:both;
+}
+
+/* @end */
 
 /* ============================================================================
     4.2 Main
@@ -73,35 +79,15 @@
     4.5 Footer
 ============================================================================= */
 
-#footer {
-    
-  .left-side, .right-side {
-    width: 45%;
-  }
-
-  .left-side {
-  }
-
-  .right-side {
-    text-align: right;
-  }
+.region-footer {  
     
   p {
     padding: 0 1em;
-    
-    &.copy span {
-      display: block;
-      text-transform: uppercase;
-      font-size: 1.6em;
-      padding-bottom: .2em;
-    }
-    
-    &.develop img {
-      vertical-align: middle;
-    }
-    
   }
-  
+}
+
+.develop img {
+  vertical-align: middle;
 }
 
 /* ============================================================================
@@ -109,8 +95,4 @@
 ============================================================================= */
 
 /* Opera speed dial minimized */
-@media screen and (view-mode: minimized) {
-  #main-container {
-    display: none;
-  }
-}
+@media screen and (view-mode: minimized) {}

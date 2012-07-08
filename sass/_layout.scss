@@ -20,26 +20,45 @@ body {
   }
 }
 
-/* header
-   --------------------------------------------------------------------------*/
-
-#header {}
-
-/* main
-   --------------------------------------------------------------------------*/
-
-#main-container {
+.l-page {
   background-color: $mainFgColor;
 }
 
-#main-inner {
+.l-page__inner {
   width: $containerWidth;
   margin: 0 auto;
   position: relative;
   background-color: $mainBgColor;
 }
 
-.two-sidebars-main {
+/* @group header
+--------------------------------------------------------------------------- */
+
+.l-global-header {
+  margin-bottom: 1.5em;
+}
+
+.l-global-header__left,
+.l-global-header__right {
+  width: 45%;
+}
+
+.l-global-header__left {
+  float: left;
+}
+
+.l-global-header__right {
+  float: right;
+}
+
+/* @end */
+
+/* @group layout
+--------------------------------------------------------------------------- */
+
+/* main */
+
+.l-2sidebars_main {
   float: left;
   margin-left: $asideWidth+2.5%;
   width: $twoSdbarsMainWidth;
@@ -49,52 +68,69 @@ body {
   }
 }
 
-.sidebar-first-main {
+.l-sidebar-first_main {
   float: right;
   width: $mainWidth;
 }
 
-.sidebar-second-main {
+.l-sidebar-second_main {
   float: left;
   margin: 0;
   padding: 0;
   width: $mainWidth;
 }
 
-/* sidebars
-   --------------------------------------------------------------------------*/
+/* sidebars */
 
-.two-sidebars-sidebar-first {
+.l-2sidebars_sidebar-first {
   float: left;
   margin-left: -$mainWidth;
   width: $asideWidth;
 }
 
-.two-sidebars-sidebar-second {
+.l-2sidebars_sidebar-second {
   float: right;
   width: $asideWidth;
 }
 
-.sidebar-first-aside,
-.sidebar-second-aside {
+.l-sidebar-first_aside,
+.l-sidebar-second_aside {
   float: left;
   width: $asideWidth;
 }
 
-.sidebar-second-aside {
+.l-sidebar-second_aside {
   float: right;
 }
 
-/* footer
-   --------------------------------------------------------------------------*/
+/* @end */
 
-#footer {
+/* @group footer
+--------------------------------------------------------------------------- */
+
+.l-global-footer {
   clear: both;
   overflow: hidden;
 }
 
-/* Styicky footer
-   --------------------------------------------------------------------------*/
+.l-global-footer__left,
+.l-global-footer__right {
+  width: 45%;
+}
+
+.l-global-footer__left {
+  float: left;
+}
+
+.l-global-footer__right {
+  float: right;
+  text-align: right;
+}
+
+/* @end */
+
+/* @group Styicky footer
+--------------------------------------------------------------------------- */
 
 @media screen and (max-width: 2400px) {
 
@@ -104,7 +140,7 @@ $footer-height: 80px;
     height: 100%;
   }
 
-  #main-container {
+  .l-page {
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -112,12 +148,14 @@ $footer-height: 80px;
     margin-bottom: -$footer-height;
   }
 
-  #main-inner {
+  .l-page__inner {
     padding-bottom: $footer-height;
   }
 
-  #footer {
+  .l-global-footer {
     position: relative;
     height: $footer-height;
   }
 }
+
+/* @end */
