@@ -81,3 +81,33 @@
   }
   // .example { @include css-triangle(5px, #fff, bottom); }
 }
+
+// ============================================================================
+//    Mixins
+//=============================================================================
+
+@mixin border-radius($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+  -webkit-background-clip: padding-box;
+}
+
+@mixin box-shadow($bshval: 0 0 4px rgba(0,0,0,0.5)) {
+  -moz-box-shadow: $bshval;
+  -webkit-box-shadow: $bshval;
+  -o-box-shadow: $bshval;
+  -box-shadow: $bshval;
+}
+
+@mixin transition($transition: all linear 200ms) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+//.test-class {
+//  @include transition(all ease 300ms);
+//}

@@ -103,6 +103,7 @@ h1, h2,
 .h1, .h2,
 h3, h4, h5, h6,
 .h3, .h4, .h5, .h6 {
+  margin: 0;
   @if $onBodyCustomFont {
     font-weight: normal;
     font-family: $customFontBold;
@@ -151,6 +152,7 @@ hr, .hr {
 }
 
 p, pre, blockquote, table {
+  margin: 0;
   @include trailer(1);
 }
 
@@ -187,11 +189,6 @@ em, i, cite {
 
 a {
   color: $lnColor;
-
-  &:visited {
-    color: $lnColor;
-    outline: 1px dotted;
-  }
 
   &:hover,
   &:active {
@@ -524,7 +521,7 @@ input::-moz-focus-inner {
 /* form support */
 
 .form__row {
-  overflow: hidden;
+  @extend .weiss-cf;
   padding: .4em 0;
 }
 

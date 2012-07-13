@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $.foundation.customForms.appendCustomMarkup();
+
     // tabs
 
     contentTabs();
