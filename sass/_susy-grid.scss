@@ -7,16 +7,16 @@
 // Variables -----------------------------------------------------------------
 
 // Your basic settings for the grid.
-$total-cols         : 12            !default;
-$col-width          : 4em           !default;
-$gutter-width       : 1em           !default;
-$side-gutter-width  : $gutter-width !default;
+$total-cols: 12 ! default;
+$col-width: 4em ! default;
+$gutter-width: 1em ! default;
+$side-gutter-width: $gutter-width ! default;
 
 // Controls for right-to-left or bi-directional sites.
-$from-direction     : left          !default;
+$from-direction: left ! default;
 
 // The direction that +omega elements are floated by deafult.
-$omega-float        : opposite-position($from-direction)    !default;
+$omega-float: opposite-position($from-direction) ! default;
 
 // Functions -----------------------------------------------------------------
 
@@ -79,7 +79,7 @@ $omega-float        : opposite-position($from-direction)    !default;
 // Base Mixin ----------------------------------------------------------------
 
 // Set the outer grid-containing element(s).
-@mixin container() {
+@mixin container(){
   @include pie-clearfix;
   margin: auto;
   width: columns-width();
@@ -95,41 +95,32 @@ $omega-float        : opposite-position($from-direction)    !default;
 //  - Context MUST NOT be declared on a top-level element.
 // By default a grid-column is floated left with a right gutter.
 //  - Override those with +float("right"), +alpha or +omega
-@mixin columns(
-  $n,
-  $context  : false,
-  $from     : $from-direction
-) {
-  $to   : opposite-position($from);
-  // the column is floated left
+@mixin columns($n,
+$context: false, $from: $from-direction){
+  $to: opposite-position($from);
+// the column is floated left
   @include float($from);
-  // the width of the column is set as a percentage of the context
+// the width of the column is set as a percentage of the context
   width: columns($n, $context);
-  // the right gutter is added as a percentage of the context
-  margin-#{$to}: gutter($context);
+// the right gutter is added as a percentage of the context
+  margin- #{$to}: gutter($context);
 }
 
 // @include `reset-column` to reset a column element to default block behavior
-@mixin reset-column(
-  $from : $from-direction
-) {
-  $to   : opposite-position($from);
+@mixin reset-column($from: $from-direction){
+  $to: opposite-position($from);
   @include reset-float;
   width: auto;
-  margin-#{$to}: auto;
+  margin- #{$to}: auto;
 }
 
-@mixin un-column(
-  $from : $from-direction
-) {
+@mixin un-column($from: $from-direction){
   @include reset-column($from);
 }
 
 // @include `full` on an element that will span it's entire context.
 // There is no need for +columns, +alpha or +omega on a +full element.
-@mixin full(
-  $nested: false
-) {
+@mixin full($nested: false){
   clear: both;
   @if not $nested {
     margin: {
@@ -142,31 +133,20 @@ $omega-float        : opposite-position($from-direction)    !default;
 // Padding Mixins ------------------------------------------------------------
 
 // add empty colums as padding before an element.
-@mixin prefix(
-  $n,
-  $context  : false,
-  $from     : $from-direction
-) {
-  padding-#{$from}: columns($n, $context) + gutter($context);
+@mixin prefix($n,
+$context: false, $from: $from-direction){
+  padding- #{$from}: columns($n, $context) + gutter($context);
 }
 
 // add empty colums as padding after an element.
-@mixin suffix(
-  $n,
-  $context  : false,
-  $from     : $from-direction
-) {
-  $to       : opposite-position($from);
-  padding-#{$to}: columns($n, $context) + gutter($context);
+@mixin suffix($n,
+$context: false, $from: $from-direction){
+  $to: opposite-position($from);
+  padding- #{$to}: columns($n, $context) + gutter($context);
 }
 
 // add empty colums as padding before and after an element.
-@mixin pad(
-  $p    : false,
-  $s    : false,
-  $c    : false,
-  $from : $from-direction
-) {
+@mixin pad($p: false, $s: false, $c: false, $from: $from-direction){
   @if $p {
     @include prefix($p, $c, $from);
   }
@@ -182,10 +162,7 @@ $omega-float        : opposite-position($from-direction)    !default;
 
 // @include on any element spanning the first column in non-nested context to
 // take side-gutters into account.
-@mixin alpha(
-  $nested : false,
-  $from   : $from-direction
-) {
+@mixin alpha($nested: false, $from: $from-direction){
   @if not $nested {
     margin-#{$from}: side-gutter();
   } @else {
@@ -195,18 +172,15 @@ $omega-float        : opposite-position($from-direction)    !default;
 
 // @include on the last element of a row, in order to take side-gutters and
 // the page edge into account. Set the $nested argument for nested columns.
-@mixin omega(
-  $nested : false,
-  $from   : $from-direction
-) {
-  $to     : opposite-position($from);
-  $hack   : opposite-position($omega-float);
-  $sg     : 0;
+@mixin omega($nested: false, $from: $from-direction){
+  $to: opposite-position($from);
+  $hack: opposite-position($omega-float);
+  $sg: 0;
   @if not $nested {
     $sg: side-gutter();
   }
   @include float($omega-float);
-  margin-#{$to}: $sg;
+  margin- #{$to}: $sg;
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     #margin-#{$hack}: - $gutter-width;
   }
@@ -218,7 +192,7 @@ $omega-float        : opposite-position($from-direction)    !default;
   @include column-grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width, $force-fluid: true);
 }
 
-@mixin show-grid($img:false) {
+@mixin show-grid($img: false){
   @warn "show-grid is deprecated in favor of susy-grid-background.";
   @if $img {
     @warn "show-grid and susy-grid-background no longer use any images or take any arguments.";
