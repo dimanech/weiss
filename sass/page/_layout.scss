@@ -1,0 +1,159 @@
+/* ============================================================================
+		PAGE LAYOUT
+============================================================================= */
+
+@import "helpers/mixins";
+
+body {
+	font-size: $base-font-size;
+	@include adjust-leading-to(1);
+	font-family: $baseFontFamily;
+	color: $baseColor;
+	background: $mainBgColor;
+	overflow-y: scroll; // force scroll
+	margin: 0; // overwrite default browser style
+
+	.ie6-7 & {
+		overflow-y: auto; // ie sticky footer fix
+	}
+}
+
+.l-page {
+	background-color: $mainFgColor;
+}
+
+.l-page__inner {
+	width: $containerWidth;
+	margin: 0 auto;
+	position: relative;
+	background-color: $mainBgColor;
+}
+
+/* @group header
+--------------------------------------------------------------------------- */
+
+.l-global-header {
+	margin-bottom: 1.5em;
+}
+
+.l-global-header__left,
+.l-global-header__right {
+	width: 45%;
+}
+
+.l-global-header__left {
+	float: left;
+}
+
+.l-global-header__right {
+	float: right;
+}
+
+/* @end */
+
+/* @group layout
+--------------------------------------------------------------------------- */
+
+/* main */
+
+.l-2sidebars_main {
+	float: left;
+	margin-left: $asideWidth+2.5%;
+	width: $twoSdbarsMainWidth;
+	
+	.ie6-7 & {
+		display:inline; //double margin ie6 fix
+	}
+}
+
+.l-sidebar-first_main {
+	float: right;
+	width: $mainWidth;
+}
+
+.l-sidebar-second_main {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: $mainWidth;
+}
+
+/* sidebars */
+
+.l-2sidebars_sidebar-first {
+	float: left;
+	margin-left: -$mainWidth;
+	width: $asideWidth;
+}
+
+.l-2sidebars_sidebar-second {
+	float: right;
+	width: $asideWidth;
+}
+
+.l-sidebar-first_aside,
+.l-sidebar-second_aside {
+	float: left;
+	width: $asideWidth;
+}
+
+.l-sidebar-second_aside {
+	float: right;
+}
+
+/* @end */
+
+/* @group footer
+--------------------------------------------------------------------------- */
+
+.l-global-footer {
+	clear: both;
+	overflow: hidden;
+}
+
+.l-global-footer__left,
+.l-global-footer__right {
+	width: 45%;
+}
+
+.l-global-footer__left {
+	float: left;
+}
+
+.l-global-footer__right {
+	float: right;
+	text-align: right;
+}
+
+/* @end */
+
+/* @group Styicky footer
+--------------------------------------------------------------------------- */
+
+@media screen and (max-width: 2400px) {
+
+$footer-height: 80px;
+
+	html, body {
+		height: 100%;
+	}
+
+	.l-page {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto;
+		margin-bottom: -$footer-height;
+	}
+
+	.l-page__inner {
+		padding-bottom: $footer-height;
+	}
+
+	.l-global-footer {
+		position: relative;
+		height: $footer-height;
+	}
+}
+
+/* @end */

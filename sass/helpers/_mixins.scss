@@ -18,41 +18,41 @@
 
 // Hide from both screenreaders and browsers: h5bp.com/u 
 @mixin hidden {
-  display: none !important;
-  visibility: hidden;
+	display: none !important;
+	visibility: hidden;
 }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v 
 @mixin vishidden {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;;
-  width: 1px;
-    
-  .ie6-7 & {
-    clip: rect(1px 1px 1px 1px);
-  } 
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;;
+	width: 1px;
+		
+	.ie6-7 & {
+		clip: rect(1px 1px 1px 1px);
+	} 
 }
 
 // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p 
 @mixin vishiddenFocus {
-  &:focus, &:active {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
+	&:focus, &:active {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
 
 }
 // Hide visually and from screenreaders, but maintain layout 
 @mixin invisible {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 //============================================================================
@@ -62,24 +62,24 @@
 // Create CSS Triangles in a Breeze
 
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid   $triangleSize;
-  @if ($triangleDirection == top) {
-    border-color: $triangleColor transparent transparent transparent;
-  }
-  @if ($triangleDirection == bottom) {
-    border-color: transparent transparent $triangleColor transparent;
-  }
-  @if ($triangleDirection == left) {
-    border-color: transparent transparent transparent $triangleColor;
-  }
-  @if ($triangleDirection == right) {
-    border-color: transparent $triangleColor transparent transparent;
-  }
-  // .example { @include css-triangle(5px, #fff, bottom); }
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid   $triangleSize;
+	@if ($triangleDirection == top) {
+		border-color: $triangleColor transparent transparent transparent;
+	}
+	@if ($triangleDirection == bottom) {
+		border-color: transparent transparent $triangleColor transparent;
+	}
+	@if ($triangleDirection == left) {
+		border-color: transparent transparent transparent $triangleColor;
+	}
+	@if ($triangleDirection == right) {
+		border-color: transparent $triangleColor transparent transparent;
+	}
+	// .example { @include css-triangle(5px, #fff, bottom); }
 }
 
 // ============================================================================
@@ -87,25 +87,25 @@
 //=============================================================================
 
 @mixin border-radius($radius: 5px) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -o-border-radius: $radius;
-  border-radius: $radius;
-  -webkit-background-clip: padding-box;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+	-webkit-background-clip: padding-box;
 }
 
 @mixin box-shadow($bshval: 0 0 4px rgba(0,0,0,0.5)) {
-  -moz-box-shadow: $bshval;
-  -webkit-box-shadow: $bshval;
-  -o-box-shadow: $bshval;
-  -box-shadow: $bshval;
+	-moz-box-shadow: $bshval;
+	-webkit-box-shadow: $bshval;
+	-o-box-shadow: $bshval;
+	-box-shadow: $bshval;
 }
 
 @mixin transition($transition: all linear 200ms) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
 }
 
 //.test-class {

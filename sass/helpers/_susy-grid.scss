@@ -23,67 +23,67 @@ $omega-float: opposite-position($from-direction) ! default;
 // Return the width of 'n' columns plus 'n - 1' gutters
 // plus page padding in non-nested contexts
 @function columns-width(
-  $n: false
+	$n: false
 ) {
-  $sg: 0;
-  @if not $n {
-    $n: $total-cols;
-    $sg: $side-gutter-width;
-  }
-  $columns-width: ($n*$col-width) + (ceil($n - 1)*$gutter-width) + ($sg*2);
-  @return $columns-width;
+	$sg: 0;
+	@if not $n {
+		$n: $total-cols;
+		$sg: $side-gutter-width;
+	}
+	$columns-width: ($n*$col-width) + (ceil($n - 1)*$gutter-width) + ($sg*2);
+	@return $columns-width;
 }
 
 // Return the percentage for the target in a given context
 @function percent-width(
-  $t,
-  $c
+	$t,
+	$c
 ) {
-  $perc: ($t / $c) * 100%;
-  @return $perc;
+	$perc: ($t / $c) * 100%;
+	@return $perc;
 }
 
 // Return the percentage width of 'n' columns in a context of 'c'
 @function columns(
-  $n,
-  $c: false
+	$n,
+	$c: false
 ) {
-  $columns: percent-width(columns-width($n), columns-width($c));
-  @return $columns;
+	$columns: percent-width(columns-width($n), columns-width($c));
+	@return $columns;
 }
 
 // Return the percentage width of a single gutter in a context of 'c'
 @function gutter(
-  $c: false
+	$c: false
 ) {
-  $gutter: percent-width($gutter-width, columns-width($c));
-  @return $gutter;
+	$gutter: percent-width($gutter-width, columns-width($c));
+	@return $gutter;
 }
 
 // Return the percentage width of a single side gutter in a context of 'c'
 @function side-gutter(
-  $c: false
+	$c: false
 ) {
-  $side-gutter: percent-width($side-gutter-width, columns-width($c));
-  @return $side-gutter;
+	$side-gutter: percent-width($side-gutter-width, columns-width($c));
+	@return $side-gutter;
 }
 
 // Return the percentage width of a single column in a context of 'c'
 @function column(
-  $c: false
+	$c: false
 ) {
-  $column: percent-width($col-width, columns-width($c));
-  @return $column;
+	$column: percent-width($col-width, columns-width($c));
+	@return $column;
 }
 
 // Base Mixin ----------------------------------------------------------------
 
 // Set the outer grid-containing element(s).
 @mixin container(){
-  @include pie-clearfix;
-  margin: auto;
-  width: columns-width();
-  max-width: 100%;
+	@include pie-clearfix;
+	margin: auto;
+	width: columns-width();
+	max-width: 100%;
 }
 
 // Column Mixins -------------------------------------------------------------
@@ -97,37 +97,37 @@ $omega-float: opposite-position($from-direction) ! default;
 //  - Override those with +float("right"), +alpha or +omega
 @mixin columns($n,
 $context: false, $from: $from-direction){
-  $to: opposite-position($from);
+	$to: opposite-position($from);
 // the column is floated left
-  @include float($from);
+	@include float($from);
 // the width of the column is set as a percentage of the context
-  width: columns($n, $context);
+	width: columns($n, $context);
 // the right gutter is added as a percentage of the context
-  margin- #{$to}: gutter($context);
+	margin- #{$to}: gutter($context);
 }
 
 // @include `reset-column` to reset a column element to default block behavior
 @mixin reset-column($from: $from-direction){
-  $to: opposite-position($from);
-  @include reset-float;
-  width: auto;
-  margin- #{$to}: auto;
+	$to: opposite-position($from);
+	@include reset-float;
+	width: auto;
+	margin- #{$to}: auto;
 }
 
 @mixin un-column($from: $from-direction){
-  @include reset-column($from);
+	@include reset-column($from);
 }
 
 // @include `full` on an element that will span it's entire context.
 // There is no need for +columns, +alpha or +omega on a +full element.
 @mixin full($nested: false){
-  clear: both;
-  @if not $nested {
-    margin: {
-      left: side-gutter();
-      right: side-gutter();
-    }
-  }
+	clear: both;
+	@if not $nested {
+		margin: {
+			left: side-gutter();
+			right: side-gutter();
+		}
+	}
 }
 
 // Padding Mixins ------------------------------------------------------------
@@ -135,24 +135,24 @@ $context: false, $from: $from-direction){
 // add empty colums as padding before an element.
 @mixin prefix($n,
 $context: false, $from: $from-direction){
-  padding- #{$from}: columns($n, $context) + gutter($context);
+	padding- #{$from}: columns($n, $context) + gutter($context);
 }
 
 // add empty colums as padding after an element.
 @mixin suffix($n,
 $context: false, $from: $from-direction){
-  $to: opposite-position($from);
-  padding- #{$to}: columns($n, $context) + gutter($context);
+	$to: opposite-position($from);
+	padding- #{$to}: columns($n, $context) + gutter($context);
 }
 
 // add empty colums as padding before and after an element.
 @mixin pad($p: false, $s: false, $c: false, $from: $from-direction){
-  @if $p {
-    @include prefix($p, $c, $from);
-  }
-  @if $s {
-    @include suffix($s, $c, $from);
-  }
+	@if $p {
+		@include prefix($p, $c, $from);
+	}
+	@if $s {
+		@include suffix($s, $c, $from);
+	}
 }
 
 // Alpha & Omega Mixins ------------------------------------------------------
@@ -163,39 +163,39 @@ $context: false, $from: $from-direction){
 // @include on any element spanning the first column in non-nested context to
 // take side-gutters into account.
 @mixin alpha($nested: false, $from: $from-direction){
-  @if not $nested {
-    margin-#{$from}: side-gutter();
-  } @else {
-    @warn "The alpha mixin is not needed in a nested context";
-  }
+	@if not $nested {
+		margin-#{$from}: side-gutter();
+	} @else {
+		@warn "The alpha mixin is not needed in a nested context";
+	}
 }
 
 // @include on the last element of a row, in order to take side-gutters and
 // the page edge into account. Set the $nested argument for nested columns.
 @mixin omega($nested: false, $from: $from-direction){
-  $to: opposite-position($from);
-  $hack: opposite-position($omega-float);
-  $sg: 0;
-  @if not $nested {
-    $sg: side-gutter();
-  }
-  @include float($omega-float);
-  margin- #{$to}: $sg;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    #margin-#{$hack}: - $gutter-width;
-  }
+	$to: opposite-position($from);
+	$hack: opposite-position($omega-float);
+	$sg: 0;
+	@if not $nested {
+		$sg: side-gutter();
+	}
+	@include float($omega-float);
+	margin- #{$to}: $sg;
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+		#margin-#{$hack}: - $gutter-width;
+	}
 }
 
 // Susy Grid Backgrounds -----------------------------------------------------
 
 @mixin susy-grid-background {
-  @include column-grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width, $force-fluid: true);
+	@include column-grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width, $force-fluid: true);
 }
 
 @mixin show-grid($img: false){
-  @warn "show-grid is deprecated in favor of susy-grid-background.";
-  @if $img {
-    @warn "show-grid and susy-grid-background no longer use any images or take any arguments.";
-  }
-  @include susy-grid-background;
+	@warn "show-grid is deprecated in favor of susy-grid-background.";
+	@if $img {
+		@warn "show-grid and susy-grid-background no longer use any images or take any arguments.";
+	}
+	@include susy-grid-background;
 }

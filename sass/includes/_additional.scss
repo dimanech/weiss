@@ -1,0 +1,209 @@
+/* ============================================================================
+		5. MASTER-CLASSES B
+============================================================================= */
+
+@import "helpers/mixins";
+
+// Add wireframes to the basic layout elements.
+
+.l-global-header,
+.l-global-footer,
+.region-main__content,
+.region-aside,
+.region-beforecontent,
+.region-undercontent {
+		outline: 1px dashed #ccc;
+}
+
+// /* ============================================================================
+// 	 buttons styles
+// ============================================================================= */
+
+// .btn {
+// 		display:inline-block;
+// 		padding: 0 7px;
+// 		vertical-align: text-bottom;
+
+// 		.ie6-7 & {
+// 			display:inline;
+// 			zoom: 1;
+// 		}
+
+// 	.b-left-side,
+// 	.b-middle,
+// 	.b-right-side {
+// 		display:inline-block;
+// 		float:left;
+// 		vertical-align: top;
+// 		background-repeat: repeat-y;
+// 		.ie6-7 {
+// 		 display:inline;
+// 		 zoom: 1;
+// 		}
+// 	}
+
+// 	input {
+// 		padding: 0;
+// 		margin: 0;
+// 		background: transparent;
+// 		border: none;
+// 	}
+
+// 	.b-left-side,
+// 	.b-right-side {
+// 		width: 7px;
+// 	}
+
+// 	.b-middle {
+// 		background-position: center top;
+// 	}
+
+// 	.b-left-side {
+// 		background-position: left top;
+// 	}
+
+// 	.b-right-side {
+// 		background-position: right top;
+// 	}
+
+// 	&:hover {
+// 		span {
+// 			opacity: .92;
+// 			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+// 			filter: alpha(opacity = 92);
+// 		}
+// 	}
+
+// }
+
+// .btn-prim {
+// 	 height: 31px;
+// 	 line-height: 31px;
+// 	 font-size: 18px;
+
+// 	.b-left-side,
+// 	.b-middle,
+// 	.b-right-side {
+// 		background-image: url(../images/button-green-medium.png);
+// 		height: 31px;
+// 		line-height: 31px;
+// 	}
+
+// 	.b-middle {
+// 		padding: 0 .4em;
+// 	}
+
+// }
+
+// .btn-sec {
+// 	 height: 18px;
+// 	 line-height: 18px;
+// 	 font-size: 1em;
+
+// 	.b-left-side,
+// 	.b-middle,
+// 	.b-right-side {
+// 		background-image: url(../images/button-green-medium.png);
+// 		height: 18px;
+// 		line-height: 18px;
+// 	}
+
+// 	.b-middle {
+// 		padding: 0 .4em;
+// 	}
+
+// }
+
+// /* ============================================================================
+// 	 input styles
+// ============================================================================= */
+
+// .input-container {
+// 	 display: inline-block;
+// 	 padding: .2em .2em .1em;
+// 	 /* background: url(../images/input.png) 0 0 no-repeat; */
+// 	 vertical-align: bottom;
+
+// 	 .ie6-7 {
+// 		 display:inline;
+// 		 zoom: 1;
+// 	 }
+
+// 	 input {
+// 		 padding: 0 .4em;
+// 		 margin: 0;
+// 		 background: transparent;
+// 		 border: none;
+// 	 }
+// }
+
+/* ============================================================================
+		Stylize text
+============================================================================= */
+
+.weiss-emph {
+	@if $onBodyCustomFont {
+		font-weight: normal;
+		font-family: $customFontIt;
+	} @else {
+		font-style: italic;
+	}
+}
+
+.weiss-emph_c {
+	color: $accentColor;
+}
+
+.weiss-emph_c_ln {
+	color: $lnColor;
+}
+
+.weiss-emph_c_dark {
+	color: darken($baseColor, 20%);
+}
+
+.weiss-emph_c_ligh {
+	color: lighten($baseColor, 20%);
+}
+
+.weiss-emph_fz_sm {
+	font-size: .8em;
+}
+
+.weiss-emph_fz_md {
+	font-size: 1.28em;
+}
+
+.weiss-emph_fz_big {
+	font-size: 1.57em;
+	line-height: 1.1em;
+}
+
+.weiss-emph_fz_huge {
+	font-size: 3em;
+}
+
+.weiss-emph_serif {
+	font-family: $serif;
+}
+
+.weiss-emph_sans {
+	font-family: $sans;
+}
+
+.alt-title,
+.lead {
+		
+}
+
+// ============================================================================
+//    Non-semantic grid support
+//=============================================================================
+
+//@import "susy-grid";
+
+//$total-columns  : 12;             // a 12-column grid
+//$column-width   : 4em;            // each column is 4em wide
+//$gutter-width   : 1em;            // 1em gutters between columns
+//$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+

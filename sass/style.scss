@@ -1,16 +1,28 @@
 @charset "UTF-8";
 
 /* ============================================================================
-    
-    Weiss 2012
+	
+	Weiss 2012
 
 ============================================================================= */
 
-@import "basic";
-@import "specific-html-support";
-@import "layout";
+@import "page/global";
+@import "page/specific-html-support";
+@import "page/layout";
+@import "page/global-blocks";
+
+@import "includes/basic";
+@import "includes/additional";
+
 @import "common";
-@import "masterclasses";
-@import "plugin-support";
-//@import "screen";
-@import "print";
+
+@import "plugins/foundation-custom-form";
+//@import "plugins/custom-selectbox";
+//@import "plugins/jquery-checkbox";
+@import "plugins/fancybox";
+
+//@import "media/screen";
+
+@media print {
+	@import "media/print";
+}

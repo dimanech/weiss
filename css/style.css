@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ============================================================================
-    
-    Weiss 2012
+	
+	Weiss 2012
 
 ============================================================================= */
 article, aside, details, figcaption, figure,
@@ -21,9 +21,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 /* ============================================================================
-    Import from basic.scss
-
-    1. BASIC
+		1. GLOBAL
 ============================================================================= */
 @font-face {
   font-family: 'ALSRublRegular';
@@ -34,7 +32,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 /* ============================================================================
-    1.1. Typography
+		1.1. Typography
 ============================================================================= */
 h1, h2,
 .h1, .h2,
@@ -131,7 +129,7 @@ video {
 }
 
 /* ============================================================================
-    1.2. Lists and tables
+		1.2. Lists and tables
 ============================================================================= */
 /* @group Lists
 --------------------------------------------------------------------------- */
@@ -221,7 +219,7 @@ tfoot {
 
 /* @end */
 /* ============================================================================
-    1.3. Forms
+		1.3. Forms
 ============================================================================= */
 form {
   border: none;
@@ -354,18 +352,8 @@ input::-moz-focus-inner {
   width: 13px;
 }
 
-/* form support */
-.form__row {
-  padding: .4em 0;
-}
-
-.form__item {
-  float: left;
-  padding: 0 .4em 0 0;
-}
-
 /* ============================================================================
-    1.4. Specific
+		1.4. Specific
 ============================================================================= */
 sup, sub {
   vertical-align: baseline;
@@ -404,94 +392,7 @@ figure {
 }
 
 /* ============================================================================
-    1.5 Basic masterclasses
-============================================================================= */
-.weiss-cf:before, .form__row:before, .weiss-cf:after, .form__row:after {
-  content: "";
-  display: table;
-}
-.weiss-cf:after, .form__row:after {
-  clear: both;
-}
-.ie6-7 .weiss-cf, .ie6-7 .form__row {
-  zoom: 1;
-}
-
-/* position support */
-.weiss-aux {
-  width: 974px;
-  margin: 0 auto;
-}
-
-.weiss-l {
-  float: left;
-}
-
-.weiss-r {
-  float: right;
-}
-
-.weiss-br {
-  display: block;
-}
-
-/* style support */
-.weiss-psln {
-  color: #0099ff;
-  text-decoration: none;
-  border-bottom: 1px dashed;
-  position: relative;
-  cursor: pointer;
-}
-.weiss-psln:hover, .weiss-psln:focus {
-  color: #4db8ff;
-}
-
-/* hacks and long rules */
-.weiss-op {
-  opacity: .85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
-  filter: alpha(opacity=85);
-}
-
-.weiss-dib, .weiss-img-container {
-  display: inline-block;
-  vertical-align: top;
-  *display: inline;
-  *zoom: 1;
-}
-
-.weiss-ir {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-}
-
-.weiss-img-container {
-  overflow: hidden;
-}
-.weiss-img-container img {
-  display: block;
-  position: static;
-}
-
-/* ============================================================================
-    Sprite support
-============================================================================= */
-.weiss-ico {
-  /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
-  display: inline-block;
-  position: relative;
-}
-.ie6-7 .weiss-ico {
-  display: inline;
-  zoom: 1;
-}
-
-/* ============================================================================
-    1.6 Embed content reset
+		1.6 Embed content reset
 ============================================================================= */
 #plusone table, #plusone td, #plusone th, #plusone tr,
 .YMaps-b-balloon-frame table,
@@ -518,9 +419,7 @@ div.bx-core-admin-dialog-content tr {
 }
 
 /* ============================================================================
-    Import from specific-html-support.scss
-    
-    2. Specific html tags support
+		SPECIFIC HTML TAGS SUPPORT
 ============================================================================= */
 /* science */
 abbr, acronym {
@@ -585,9 +484,7 @@ ins {
 }
 
 /* ============================================================================
-    Import from layout.scss
-
-    3. PAGE LAYOUT
+		PAGE LAYOUT
 ============================================================================= */
 body {
   font-size: 14px;
@@ -728,75 +625,109 @@ body {
 }
 /* @end */
 /* ============================================================================
-    Import from common.scss
-    
-    4. COMMON (Design specific rules)
-============================================================================= */
-/* ============================================================================
-    4.1 Header
-============================================================================= */
-/* @group Site branding
+   GLOBAL BLOCKS
+============================================================================ */
+/* @group Form Support
 --------------------------------------------------------------------------- */
-.site-name, .site-slogan {
-  display: block;
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+.form__row {
+  padding: .4em 0;
+}
+
+.form__item {
+  float: left;
+  padding: 0 .4em 0 0;
 }
 
 /* @end */
-/* @group Navigation block global
---------------------------------------------------------------------------- */
-.global-nav li {
-  list-style: none;
-  background: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
+/* ============================================================================
+		5. MASTER-CLASSES A
+============================================================================= */
+.weiss-cf:before, .form__row:before, .weiss-cf:after, .form__row:after {
+  content: "";
+  display: table;
 }
-.global-nav li a:hover, .global-nav li a:focus {
-  color: #333;
-}
-.global-nav li.active a {
-  color: #333;
-}
-
-.global-nav__inner {
-  padding: 0;
-  margin: 0;
+.weiss-cf:after, .form__row:after {
   clear: both;
 }
-
-/* @end */
-/* ============================================================================
-    4.2 Main
-============================================================================= */
-/* ============================================================================
-    4.3 Aside
-============================================================================= */
-/* ============================================================================
-    4.4 Pages
-============================================================================= */
-/* ============================================================================
-    4.5 Footer
-============================================================================= */
-.region-footer p {
-  padding: 0 1em;
+.ie6-7 .weiss-cf, .ie6-7 .form__row {
+  zoom: 1;
 }
 
-.develop img {
-  vertical-align: middle;
+/* position support */
+.weiss-aux {
+  width: 974px;
+  margin: 0 auto;
+}
+
+.weiss-l {
+  float: left;
+}
+
+.weiss-r {
+  float: right;
+}
+
+.weiss-br {
+  display: block;
+}
+
+/* style support */
+.weiss-psln {
+  color: #0099ff;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  position: relative;
+  cursor: pointer;
+}
+.weiss-psln:hover, .weiss-psln:focus {
+  color: #4db8ff;
+}
+
+/* hacks and long rules */
+.weiss-op {
+  opacity: .85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
+  filter: alpha(opacity=85);
+}
+
+.weiss-dib, .weiss-img-container {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  *zoom: 1;
+}
+
+.weiss-ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+.weiss-img-container {
+  overflow: hidden;
+}
+.weiss-img-container img {
+  display: block;
+  position: static;
 }
 
 /* ============================================================================
-    4.6 Other
+		Sprite support
 ============================================================================= */
-/* Opera speed dial minimized */
-/* ============================================================================
-    Import from masterclasses.scss
+.weiss-ico {
+  /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
+  display: inline-block;
+  position: relative;
+}
+.ie6-7 .weiss-ico {
+  display: inline;
+  zoom: 1;
+}
 
-    5. MASTER-CLASSES
+/* ============================================================================
+		5. MASTER-CLASSES B
 ============================================================================= */
 .l-global-header,
 .l-global-footer,
@@ -808,7 +739,7 @@ body {
 }
 
 /* ============================================================================
-    Stylize text
+		Stylize text
 ============================================================================= */
 .weiss-emph {
   font-style: italic;
@@ -856,10 +787,69 @@ body {
 }
 
 /* ============================================================================
-    Import from plugin-support.scss
-
-    6. PLUGINS SUPPORT  
+		COMMON (Design specific rules)
 ============================================================================= */
+/* ============================================================================
+		4.1 Header
+============================================================================= */
+/* @group Site branding
+--------------------------------------------------------------------------- */
+.site-name, .site-slogan {
+  display: block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* @end */
+/* @group Navigation block global
+--------------------------------------------------------------------------- */
+.global-nav li {
+  list-style: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.global-nav li a:hover, .global-nav li a:focus {
+  color: #333;
+}
+.global-nav li.active a {
+  color: #333;
+}
+
+.global-nav__inner {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+/* @end */
+/* ============================================================================
+		4.2 Main
+============================================================================= */
+/* ============================================================================
+		4.3 Aside
+============================================================================= */
+/* ============================================================================
+		4.4 Pages
+============================================================================= */
+/* ============================================================================
+		4.5 Footer
+============================================================================= */
+.region-footer p {
+  padding: 0 1em;
+}
+
+.develop img {
+  vertical-align: middle;
+}
+
+/* ============================================================================
+		4.6 Other
+============================================================================= */
+/* Opera speed dial minimized */
 /* Custom Forms ----------------------*/
 form.custom {
   /* Custom input, disabled */
@@ -1050,18 +1040,18 @@ form.custom .custom.disabled {
 * FancyBox - jQuery Plugin
 * Simple and fancy lightbox alternative
 *
- * Examples and documentation at: http://fancybox.net
- *
- * Copyright (c) 2008 - 2010 Janis Skarnelis
- * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
- *
- * Version: 1.3.4 (11/11/2010)
- * Requires: jQuery v1.3+
- *
- * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
- */
+* Examples and documentation at: http://fancybox.net
+*
+* Copyright (c) 2008 - 2010 Janis Skarnelis
+* That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+*
+* Version: 1.3.4 (11/11/2010)
+* Requires: jQuery v1.3+
+*
+* Dual licensed under the MIT and GPL licenses:
+*   http://www.opensource.org/licenses/mit-license.php
+*   http://www.gnu.org/licenses/gpl.html
+*/
 #fancybox-loading {
   position: fixed;
   top: 50%;
@@ -1459,12 +1449,10 @@ form.custom .custom.disabled {
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'images/fancybox/fancy_shadow_nw.png', sizingMethod = 'scale');
 }
 
-/* ============================================================================
-    Import from print.scss 
-    
-    4. MEDIA PRINT
-============================================================================= */
 @media print {
+  /* ============================================================================
+  		MEDIA PRINT
+  ============================================================================= */
   /* some general resets */
   @page {
     margin: 1.5cm;
