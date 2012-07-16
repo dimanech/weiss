@@ -1,4 +1,4 @@
-Copyright (c) 2011 ZURB, http://www.zurb.com/
+Copyright (c) 2012 Dima Nechepurenko and others, github.com/dimanech/weiss
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
