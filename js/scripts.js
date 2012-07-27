@@ -37,30 +37,25 @@ function contentTabs() {
 }
 
 function accordion() {
-    var links = $('.accordion > section > header > h3 > a'), 
-    descriptions = $('.accordion .accordion-content');
+    var links = $('.js-accrd-ln'),
+    descriptions = $('.js-accrd-content'),
+    activeClass = 'js-accrd-ln_active';
 
     // init
-    links.removeClass('active');
+    links.removeClass(activeClass);
     descriptions.hide();
-    $(links[0]).addClass('active');
+    $(links[0]).addClass(activeClass);
     $(descriptions[0]).show();
-
-    $('.accordion .collapse').live('click', function() {
-        $(this).closest('section').find('header > h3 > a').removeClass('active');
-        $(this).closest('.accordion-content').slideUp();
-        return false;
-    });
 
     links.click(function() {
         var self = $(this);
-        if(self.hasClass('active')) {
-            self.removeClass('active').parent().parent().next('.accordion-content').slideUp();
+        if(self.hasClass(activeClass)) {
+            self.removeClass(activeClass).next(descriptions).hide();
         } else {
-            links.removeClass('active');
-            self.addClass('active');
-            descriptions.slideUp();
-            self.parent().parent().next().slideDown();
+            links.removeClass(activeClass);
+            self.addClass(activeClass);
+            descriptions.hide();
+            self.next(descriptions).show();
         }
         return false;
     });

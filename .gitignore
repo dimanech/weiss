@@ -24,3 +24,4 @@ Thumbs.db
 .pydevproject
 .externalToolBuilders
 .settings
+/nbproject/private/
