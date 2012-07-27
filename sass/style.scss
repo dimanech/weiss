@@ -1,27 +1,50 @@
 @charset "UTF-8";
 
 /* ============================================================================
-	
+
 	Weiss 2012
 
 ============================================================================= */
+
+// Global
+// --------------------------------------------------------------------------
 
 @import "page/global";
 @import "page/specific-html-support";
 @import "page/layout";
 @import "page/global-blocks";
 
+// Includes
+// --------------------------------------------------------------------------
+
 @import "includes/basic";
 @import "includes/additional";
 
+// Common styles
+// --------------------------------------------------------------------------
+
 @import "common";
+
+// Blocks
+// --------------------------------------------------------------------------
+
+@import "blocks/collapse";
+
+// Plugins
+// --------------------------------------------------------------------------
 
 @import "plugins/foundation-custom-form";
 //@import "plugins/custom-selectbox";
 //@import "plugins/jquery-checkbox";
 @import "plugins/fancybox";
 
+// Mobile device support
+// --------------------------------------------------------------------------
+
 //@import "media/screen";
+
+// Print styles
+// --------------------------------------------------------------------------
 
 @media print {
 	@import "media/print";

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* ============================================================================
+   @group Collapse content block
+============================================================================ */
+
+@import "helpers/mixins";
+
+/* Collapse content block Behavior
+---------------------------------------------------------------------------- */
+
+.js-collap-ln {
+	cursor: pointer;
+	color: $lnColor;
+}
+
+.js-collap-ln_active {
+	color: $baseColor;
+}
+
+.js-collap-content {
+	margin: 0 !important; // prevent jquery slideUp-Down bounce
+}
+
+
+/* Collapse content block Styles
+---------------------------------------------------------------------------- */
+
+.collapse-content {}
+
+.collapse-content__item {}
+
+.collapse-content__title {}
+
+.collapse-content__details {
+	// NB! don`t use margin on this elem. Paddings only.
+	padding: 20px;
+}
+
+/* @end */
