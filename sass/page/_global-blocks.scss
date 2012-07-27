@@ -7,6 +7,8 @@
 /* @group Form Support
 --------------------------------------------------------------------------- */
 
+.form {}
+
 .form__row {
 	@extend .weiss-cf;
 	padding: .4em 0;
@@ -14,7 +16,7 @@
 
 .form__item {
 	float:left;
-	padding: 0 .4em 0 0;  
+	padding: 0 .4em 0 0;
 }
 
 /* @end */
