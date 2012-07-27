@@ -1,11 +1,11 @@
 /* ============================================================================
-		5. MASTER-CLASSES A
+		MASTER-CLASSES A
 ============================================================================= */
 
 @import "helpers/mixins";
 
 .weiss-cf {
-	
+
 	&:before,
 	&:after {
 		content:"";
@@ -38,7 +38,7 @@
 
 // .ie6 {
  // .weiss-r, .weiss-l {
-	 // display:inline; 
+	 // display:inline;
  // }
 // }
 
@@ -101,7 +101,7 @@
 	/* background: url("../images/main-sprite.png") 0 0 no-repeat; */
 	display: inline-block;
 	position: relative;
- 
+
 	.ie6-7 & {
 		display: inline;
 		zoom: 1;
