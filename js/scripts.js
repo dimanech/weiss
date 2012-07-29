@@ -13,20 +13,24 @@ $(document).ready(function() {
 });
 
 function contentTabs() {
-    $('.tabcontent').hide();
-    $('.tabcontent:first').show();
-    $('.tab-nav a:first').addClass('selected');
+    var links = $('.js-tab-ln'),
+        content = $('.js-tab-content'),
+        activeClass = 'js-tab-ln_selected';
 
-    $('.tab-nav a').click(function() {
-        if($(this).hasClass('selected')) {
+    content.hide();
+    $(content[0]).show();
+    $(links[0]).addClass(activeClass);
+
+    links.click(function() {
+        if($(this).hasClass(activeClass)) {
             return false;
         } else {
-            $('.tab-nav a').removeClass('selected');
-            $(this).addClass('selected');
+            var self = $(this);
+            links.removeClass(activeClass);
+            self.addClass(activeClass);
 
-            $('.tabcontent').filter(":visible").fadeOut(200);
-            $($(this).attr('href')).fadeIn(200);
-
+            content.filter(":visible").fadeOut(200);
+            $(self.attr('href')).fadeIn(200);
             return false;
         }
     });
