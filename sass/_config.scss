@@ -1,0 +1,67 @@
+// Help
+// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+
+//@import "compass/utilities/sprites";
+// $myicons-layout: vertical;
+// $myicons-spacing: 10px;
+// @import "myicons/*.png";
+
+//@import "helpers/modular-scale";
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
+
+$sans: Arial, FreeSans, sans-serif;
+$hSans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
+$hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
+$serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+$bSerif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
+$aSerif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
+$monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+$monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
+$futura: "FuturaMediumRegular", Futura, "URW Gothic L", Arial, FreeSans, sans-serif;
+
+// ============================================================================
+//  Basic configuration
+//=============================================================================
+
+$mainBgColor: #fff;
+$mainFgColor: #ccc;
+$baseColor: #434343;
+$accentColor: #000;
+$lnColor: #09f;
+$lnHoverColor: lighten($lnColor, 15%);
+$containerWidth: 974px;
+$mainWidth: percentage(724px / $containerWidth);
+$asideWidth: percentage(227px / $containerWidth);
+$twoSdbarsMainWidth: percentage(474px / $containerWidth);
+
+// Crossbrowser custom font support
+
+$onBodyCustomFont: false;
+
+$customFontReg: 'MyrProRegular', Arial, FreeSans, sans-serif;
+$customFontIt: 'myriadproItalic', Arial, FreeSans, sans-serif;
+$customFontBold: 'myriadproBold', Arial, FreeSans, sans-serif;
+$customFontBlIt: 'myriadproBoldItalic', Arial, FreeSans, sans-serif;
+
+// Font configuration
+
+$baseFontFamily: $sans;
+$baseFontFamilyMono: $monospSerif;
+
+@import "compass/typography/vertical_rhythm";
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size: 14px; // The font size set on the root html element.
+$base-line-height: 18px; // This line-height determines the basic unit of vertical rhythm.
+
+// http://modularscale.com/
+
+$h1-font-size: 1.942 * $base-font-size;
+$h2-font-size: 1.618 * $base-font-size;
+$h3-font-size: 1.201 * $base-font-size;
+$h4-font-size: 1 * $base-font-size;
+$h5-font-size: 0.742 * $base-font-size;
+$h6-font-size: 0.618 * $base-font-size;

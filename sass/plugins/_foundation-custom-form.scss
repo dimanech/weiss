@@ -1,3 +1,4 @@
+@import "config";
 @import "helpers/mixins";
 
 /* Custom Forms ----------------------*/
@@ -14,7 +15,7 @@ form.custom {
     background: #fff;
     cursor: pointer;
 
-    &.radio { 
+    &.radio {
       @include border-radius(100%);
     }
 
@@ -196,7 +197,7 @@ form.custom {
     }
 
     &.show {
-      display: block; 
+      display: block;
     }
   }
 

@@ -2,6 +2,7 @@
 		PAGE LAYOUT
 ============================================================================= */
 
+@import "config";
 @import "helpers/mixins";
 
 body {
@@ -60,7 +61,7 @@ body {
 	float: left;
 	margin-left: $asideWidth+2.5%;
 	width: $twoSdbarsMainWidth;
-	
+
 	.ie6-7 & {
 		display:inline; //double margin ie6 fix
 	}
