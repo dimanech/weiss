@@ -17,105 +17,6 @@
 }
 
 // /* ============================================================================
-// 	 buttons styles
-// ============================================================================= */
-
-// .btn {
-// 		display:inline-block;
-// 		padding: 0 7px;
-// 		vertical-align: text-bottom;
-
-// 		.ie6-7 & {
-// 			display:inline;
-// 			zoom: 1;
-// 		}
-
-// 	.b-left-side,
-// 	.b-middle,
-// 	.b-right-side {
-// 		display:inline-block;
-// 		float:left;
-// 		vertical-align: top;
-// 		background-repeat: repeat-y;
-// 		.ie6-7 {
-// 		 display:inline;
-// 		 zoom: 1;
-// 		}
-// 	}
-
-// 	input {
-// 		padding: 0;
-// 		margin: 0;
-// 		background: transparent;
-// 		border: none;
-// 	}
-
-// 	.b-left-side,
-// 	.b-right-side {
-// 		width: 7px;
-// 	}
-
-// 	.b-middle {
-// 		background-position: center top;
-// 	}
-
-// 	.b-left-side {
-// 		background-position: left top;
-// 	}
-
-// 	.b-right-side {
-// 		background-position: right top;
-// 	}
-
-// 	&:hover {
-// 		span {
-// 			opacity: .92;
-// 			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
-// 			filter: alpha(opacity = 92);
-// 		}
-// 	}
-
-// }
-
-// .btn-prim {
-// 	 height: 31px;
-// 	 line-height: 31px;
-// 	 font-size: 18px;
-
-// 	.b-left-side,
-// 	.b-middle,
-// 	.b-right-side {
-// 		background-image: url(../images/button-green-medium.png);
-// 		height: 31px;
-// 		line-height: 31px;
-// 	}
-
-// 	.b-middle {
-// 		padding: 0 .4em;
-// 	}
-
-// }
-
-// .btn-sec {
-// 	 height: 18px;
-// 	 line-height: 18px;
-// 	 font-size: 1em;
-
-// 	.b-left-side,
-// 	.b-middle,
-// 	.b-right-side {
-// 		background-image: url(../images/button-green-medium.png);
-// 		height: 18px;
-// 		line-height: 18px;
-// 	}
-
-// 	.b-middle {
-// 		padding: 0 .4em;
-// 	}
-
-// }
-
-// /* ============================================================================
 // 	 input styles
 // ============================================================================= */
 
@@ -142,7 +43,7 @@
 		Stylize text
 ============================================================================= */
 
-.weiss-emph {
+.i-emph {
 	@if $onBodyCustomFont {
 		font-weight: normal;
 		font-family: $customFontIt;
@@ -151,44 +52,44 @@
 	}
 }
 
-.weiss-emph_c {
+.i-emph_c {
 	color: $accentColor;
 }
 
-.weiss-emph_c_ln {
+.i-emph_c_ln {
 	color: $lnColor;
 }
 
-.weiss-emph_c_dark {
+.i-emph_c_dark {
 	color: darken($baseColor, 20%);
 }
 
-.weiss-emph_c_ligh {
+.i-emph_c_ligh {
 	color: lighten($baseColor, 20%);
 }
 
-.weiss-emph_fz_sm {
+.i-emph_fz_sm {
 	font-size: .8em;
 }
 
-.weiss-emph_fz_md {
+.i-emph_fz_md {
 	font-size: 1.28em;
 }
 
-.weiss-emph_fz_big {
+.i-emph_fz_big {
 	font-size: 1.57em;
 	line-height: 1.1em;
 }
 
-.weiss-emph_fz_huge {
+.i-emph_fz_huge {
 	font-size: 3em;
 }
 
-.weiss-emph_serif {
+.i-emph_serif {
 	font-family: $serif;
 }
 
-.weiss-emph_sans {
+.i-emph_sans {
 	font-family: $sans;
 }
 

@@ -5,7 +5,7 @@
 @import "config";
 @import "helpers/mixins";
 
-.weiss-cf {
+.i-clfx {
 
 	&:before,
 	&:after {
@@ -24,59 +24,61 @@
 
 /* position support */
 
-.weiss-aux {
+.i-aux {
 	width: $containerWidth;
 	margin: 0 auto;
 }
 
-.weiss-l {
+.i-left {
 	float:left;
 }
 
-.weiss-r {
+.i-right {
 	float:right;
 }
 
 // .ie6 {
- // .weiss-r, .weiss-l {
+ // .i-left,
+ //.i-right {
 	 // display:inline;
  // }
 // }
 
-.weiss-br {
+.i-br {
 	display:block;
 }
 
 /* style support */
 
-.weiss-psln {
+.i-psln {
 	color: $lnColor;
 	text-decoration:none;
 	border-bottom: 1px dashed;
 	position: relative;
 	cursor: pointer;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: $lnHoverColor;
 	}
 }
 
 /* hacks and long rules */
 
-.weiss-op {
+.i-op {
 	opacity: .85;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
 	filter: alpha(opacity = 85);
 }
 
-.weiss-dib { // additional classes for overwrite IE make trouble in @extend funct
+.i-dib { // additional classes for overwrite IE make trouble in @extend funct
 	display:inline-block;
 	vertical-align: top;
 	*display: inline;
 	*zoom: 1;
 }
 
-.weiss-ir {
+.i-ir {
 	border: 0;
 	font: 0/0 a;
 	text-shadow: none;
@@ -84,9 +86,9 @@
 	background-color: transparent;
 }
 
-.weiss-img-container { // image wrapper
+.i-img-container { // image wrapper
 	overflow: hidden;
-	@extend .weiss-dib;
+	@extend .i-dib;
 
 	img {
 		display: block;
@@ -98,7 +100,7 @@
 		Sprite support
 ============================================================================= */
 
-.weiss-ico {
+.i-ico {
 	/* background: url("../images/main-sprite.png") 0 0 no-repeat; */
 	display: inline-block;
 	position: relative;

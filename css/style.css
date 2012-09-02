@@ -223,137 +223,6 @@ tfoot {
 /* ============================================================================
 		1.3. Forms
 ============================================================================= */
-form {
-  border: none;
-}
-
-button, input, select, textarea {
-  font: 1em/1.429em Arial, FreeSans, sans-serif;
-  vertical-align: baseline;
-}
-
-label {
-  display: block;
-  font-weight: normal;
-}
-
-input[type="button"], input[type="submit"], input[type="reset"], input[type="image"] {
-  cursor: default;
-  -webkit-appearance: button;
-}
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type="radio"] {
-  vertical-align: text-top;
-}
-input[type="checkbox"] {
-  vertical-align: baseline;
-}
-input[type="search"] {
-  -webkit-appearance: none;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="search"],
-select, textarea {
-  border: 1px solid;
-  border-color: #777 #ccc #ccc;
-  background: #fff;
-  padding: 0 .429em;
-  height: 1.4em;
-  line-height: 1.4em;
-}
-input[type="text"]:hover,
-input[type="password"]:hover,
-input[type="search"]:hover,
-select:hover, textarea:hover {
-  border-color: #777;
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-select:focus, textarea:focus {
-  border-color: #0099ff;
-  outline: none;
-}
-
-input[type="button"],
-input[type="submit"],
-input[type="image"], button {
-  color: #efefef;
-  background: #2d2d2d;
-  border: 1px solid #2d2d2d;
-  *overflow: visible;
-  -webkit-appearance: button;
-}
-input[type="button"]:hover, input[type="button"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="image"]:hover,
-input[type="image"]:focus, button:hover, button:focus {
-  border-color: #0099ff;
-}
-
-textarea {
-  overflow: auto;
-  vertical-align: top;
-  height: auto;
-  line-height: 1.2em;
-  padding: .2em .429em;
-  resize: vertical;
-  min-height: 4em;
-}
-
-select[multiple="multiple"] {
-  height: auto;
-}
-
-optgroup {
-  font-weight: normal;
-  background: #ccc;
-}
-
-fieldset {
-  border: 1px solid #ccc;
-  margin: 0 2px;
-  margin-top: 1.286em;
-  padding-top: 0.514em;
-  padding-bottom: 1.286em;
-  margin-bottom: 0em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.ie6-7 button, .ie6-7 input, .ie6-7 select, .ie6-7 textarea {
-  vertical-align: middle;
-}
-.ie6-7 button, .ie6-7 input {
-  overflow: visible;
-}
-.ie6-7 input[type="checkbox"],
-.ie6-7 input[type="radio"] {
-  height: 13px;
-  width: 13px;
-}
-
 /* ============================================================================
 		1.4. Specific
 ============================================================================= */
@@ -644,62 +513,62 @@ body {
 /* ============================================================================
 		MASTER-CLASSES A
 ============================================================================= */
-.weiss-cf:before, .form__row:before, .weiss-cf:after, .form__row:after {
+.i-clfx:before, .i-clfx:after {
   content: "";
   display: table;
 }
-.weiss-cf:after, .form__row:after {
+.i-clfx:after {
   clear: both;
 }
-.ie6-7 .weiss-cf, .ie6-7 .form__row {
+.ie6-7 .i-clfx {
   zoom: 1;
 }
 
 /* position support */
-.weiss-aux {
+.i-aux {
   width: 974px;
   margin: 0 auto;
 }
 
-.weiss-l {
+.i-left {
   float: left;
 }
 
-.weiss-r {
+.i-right {
   float: right;
 }
 
-.weiss-br {
+.i-br {
   display: block;
 }
 
 /* style support */
-.weiss-psln {
+.i-psln {
   color: #0099ff;
   text-decoration: none;
   border-bottom: 1px dashed;
   position: relative;
   cursor: pointer;
 }
-.weiss-psln:hover, .weiss-psln:focus {
+.i-psln:hover, .i-psln:focus {
   color: #4db8ff;
 }
 
 /* hacks and long rules */
-.weiss-op {
+.i-op {
   opacity: .85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
   filter: alpha(opacity=85);
 }
 
-.weiss-dib, .weiss-img-container {
+.i-dib, .i-img-container {
   display: inline-block;
   vertical-align: top;
   *display: inline;
   *zoom: 1;
 }
 
-.weiss-ir {
+.i-ir {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
@@ -707,10 +576,10 @@ body {
   background-color: transparent;
 }
 
-.weiss-img-container {
+.i-img-container {
   overflow: hidden;
 }
-.weiss-img-container img {
+.i-img-container img {
   display: block;
   position: static;
 }
@@ -718,12 +587,12 @@ body {
 /* ============================================================================
 		Sprite support
 ============================================================================= */
-.weiss-ico {
+.i-ico {
   /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
   display: inline-block;
   position: relative;
 }
-.ie6-7 .weiss-ico {
+.ie6-7 .i-ico {
   display: inline;
   zoom: 1;
 }
@@ -743,48 +612,48 @@ body {
 /* ============================================================================
 		Stylize text
 ============================================================================= */
-.weiss-emph {
+.i-emph {
   font-style: italic;
 }
 
-.weiss-emph_c {
+.i-emph_c {
   color: black;
 }
 
-.weiss-emph_c_ln {
+.i-emph_c_ln {
   color: #0099ff;
 }
 
-.weiss-emph_c_dark {
+.i-emph_c_dark {
   color: #101010;
 }
 
-.weiss-emph_c_ligh {
+.i-emph_c_ligh {
   color: #767676;
 }
 
-.weiss-emph_fz_sm {
+.i-emph_fz_sm {
   font-size: .8em;
 }
 
-.weiss-emph_fz_md {
+.i-emph_fz_md {
   font-size: 1.28em;
 }
 
-.weiss-emph_fz_big {
+.i-emph_fz_big {
   font-size: 1.57em;
   line-height: 1.1em;
 }
 
-.weiss-emph_fz_huge {
+.i-emph_fz_huge {
   font-size: 3em;
 }
 
-.weiss-emph_serif {
+.i-emph_serif {
   font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
 }
 
-.weiss-emph_sans {
+.i-emph_sans {
   font-family: Arial, FreeSans, sans-serif;
 }
 
@@ -891,6 +760,217 @@ body {
 .content-tabs__nav__inner {
   margin: 0;
   padding: 0;
+}
+
+/* @end */
+/* ============================================================================
+   @group Modal block
+============================================================================ */
+/* Modal behavior
+---------------------------------------------------------------------------- */
+.modal__bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.modal__box {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  z-index: 4;
+}
+
+.modal__box__inner {
+  position: relative;
+}
+
+.modal__close-btn {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* @end */
+/* Modal styles
+---------------------------------------------------------------------------- */
+.modal__bg {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal__box {
+  width: 450px;
+  padding: 1em;
+  background-color: #FFF;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.ie7-8 .modal__box {
+  border: 1px solid #ddd;
+}
+
+.modal__close-btn {
+  top: 0;
+  right: 0;
+  font-size: 3em;
+  color: #434343;
+}
+.modal__close-btn:hover, .modal__close-btn:focus {
+  color: #0099ff;
+}
+
+/* @end */
+/* ============================================================================
+   @group Btn
+============================================================================ */
+/* Btn behavior
+---------------------------------------------------------------------------- */
+/* Btn styles
+---------------------------------------------------------------------------- */
+/* @end */
+/* ============================================================================
+   @group Form support
+============================================================================ */
+form {
+  border: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: 1em/1.429em Arial, FreeSans, sans-serif;
+  vertical-align: baseline;
+}
+
+label {
+  display: block;
+  font-weight: normal;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="image"] {
+  cursor: default;
+  -webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="radio"] {
+  vertical-align: text-top;
+}
+input[type="checkbox"] {
+  vertical-align: baseline;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+  border: 1px solid;
+  border-color: #777 #ccc #ccc;
+  background: #fff;
+  padding: 0 .429em;
+  height: 1.4em;
+  line-height: 1.4em;
+}
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+select:hover,
+textarea:hover {
+  border-color: #777;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #0099ff;
+  outline: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="image"],
+button {
+  color: #efefef;
+  background: #2d2d2d;
+  border: 1px solid #2d2d2d;
+  *overflow: visible;
+  -webkit-appearance: button;
+}
+input[type="button"]:hover, input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="image"]:hover,
+input[type="image"]:focus,
+button:hover,
+button:focus {
+  border-color: #0099ff;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  height: auto;
+  line-height: 1.2em;
+  padding: .2em .429em;
+  resize: vertical;
+  min-height: 4em;
+}
+
+select[multiple="multiple"] {
+  height: auto;
+}
+
+optgroup {
+  font-weight: normal;
+  background: #ccc;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  margin: 0 2px;
+  margin-top: 1.286em;
+  padding-top: 0.514em;
+  padding-bottom: 1.286em;
+  margin-bottom: 0em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.ie6-7 button, .ie6-7 input, .ie6-7 select, .ie6-7 textarea {
+  vertical-align: middle;
+}
+.ie6-7 button, .ie6-7 input {
+  overflow: visible;
+}
+.ie6-7 input[type="checkbox"],
+.ie6-7 input[type="radio"] {
+  height: 13px;
+  width: 13px;
 }
 
 /* @end */
