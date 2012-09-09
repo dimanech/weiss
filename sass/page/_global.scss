@@ -40,6 +40,20 @@ blockquote, q {
 		font-style: normal;
 }
 
+body {
+	font-size: $base-font-size;
+	@include adjust-leading-to(1);
+	font-family: $baseFontFamily;
+	color: $baseColor;
+	background: $mainBgColor;
+	overflow-y: scroll; // force scroll
+	margin: 0; // overwrite default browser style
+
+	.ie6-7 & {
+		overflow-y: auto; // ie sticky footer fix
+	}
+}
+
 /* ============================================================================
 		1.1. Typography
 ============================================================================= */
@@ -107,7 +121,7 @@ blockquote {
 	margin: rhythm(1) 4.2em 0;
 
 	@if $onBodyCustomFont {
-		font-weight: normal;
+		font-style: normal;
 		font-family: $customFontIt;
 	} @else {
 		font-style: italic;

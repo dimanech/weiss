@@ -5,20 +5,6 @@
 @import "config";
 @import "helpers/mixins";
 
-body {
-	font-size: $base-font-size;
-	@include adjust-leading-to(1);
-	font-family: $baseFontFamily;
-	color: $baseColor;
-	background: $mainBgColor;
-	overflow-y: scroll; // force scroll
-	margin: 0; // overwrite default browser style
-
-	.ie6-7 & {
-		overflow-y: auto; // ie sticky footer fix
-	}
-}
-
 .l-main-aux {
 	background-color: $mainFgColor;
 }

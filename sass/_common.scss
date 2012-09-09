@@ -29,39 +29,6 @@
 
 /* @end */
 
-
-/* @group Navigation block global
---------------------------------------------------------------------------- */
-
-.global-nav {
-
-	li {
-		list-style: none;
-		background:none;
-		margin: 0;
-		padding: 0;
-		display:inline;
-
-		a {
-			&:hover, &:focus {
-				color:#333;
-			}
-		}
-
-		&.active a {
-			color:#333;
-		}
-	}
-}
-
-.global-nav__inner {
-	padding: 0;
-	margin: 0;
-	clear:both;
-}
-
-/* @end */
-
 /* ============================================================================
 		Main
 ============================================================================= */
