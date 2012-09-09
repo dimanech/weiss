@@ -12,13 +12,12 @@
 @import "page/global";
 @import "page/specific-html-support";
 @import "page/layout";
-@import "page/global-blocks";
 
 // Includes
 // --------------------------------------------------------------------------
 
-@import "includes/basic";
-@import "includes/additional";
+@import "includes/a";
+@import "includes/b";
 
 // Common styles
 // --------------------------------------------------------------------------
@@ -32,6 +31,7 @@
 @import "blocks/tabs";
 @import "blocks/modal";
 @import "blocks/btn";
+@import "blocks/menu-horiz";
 @import "blocks/form";
 
 // Plugins

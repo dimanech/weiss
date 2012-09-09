@@ -19,11 +19,11 @@ body {
 	}
 }
 
-.l-page {
+.l-main-aux {
 	background-color: $mainFgColor;
 }
 
-.l-page__inner {
+.l-main-aux__inner {
 	width: $containerWidth;
 	margin: 0 auto;
 	position: relative;
@@ -139,7 +139,7 @@ $footer-height: 80px;
 		height: 100%;
 	}
 
-	.l-page {
+	.l-main-aux {
 		min-height: 100%;
 		height: auto !important;
 		height: 100%;
@@ -147,7 +147,7 @@ $footer-height: 80px;
 		margin-bottom: -$footer-height;
 	}
 
-	.l-page__inner {
+	.l-main-aux__inner {
 		padding-bottom: $footer-height;
 	}
 

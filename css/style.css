@@ -370,11 +370,11 @@ body {
   overflow-y: auto;
 }
 
-.l-page {
+.l-main-aux {
   background-color: #cccccc;
 }
 
-.l-page__inner {
+.l-main-aux__inner {
   width: 974px;
   margin: 0 auto;
   position: relative;
@@ -477,7 +477,7 @@ body {
     height: 100%;
   }
 
-  .l-page {
+  .l-main-aux {
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -485,7 +485,7 @@ body {
     margin-bottom: -80px;
   }
 
-  .l-page__inner {
+  .l-main-aux__inner {
     padding-bottom: 80px;
   }
 
@@ -496,31 +496,16 @@ body {
 }
 /* @end */
 /* ============================================================================
-   GLOBAL BLOCKS
-============================================================================ */
-/* @group Form Support
-	-------------------------------------------------------------------------- */
-.form__row {
-  padding: .4em 0;
-}
-
-.form__item {
-  float: left;
-  padding: 0 .4em 0 0;
-}
-
-/* @end */
-/* ============================================================================
 		MASTER-CLASSES A
 ============================================================================= */
-.i-clfx:before, .i-clfx:after {
+.i-clfx:before, .form__row:before, .i-clfx:after, .form__row:after {
   content: "";
   display: table;
 }
-.i-clfx:after {
+.i-clfx:after, .form__row:after {
   clear: both;
 }
-.ie6-7 .i-clfx {
+.ie6-7 .i-clfx, .ie6-7 .form__row {
   zoom: 1;
 }
 
@@ -655,6 +640,30 @@ body {
 
 .i-emph_sans {
   font-family: Arial, FreeSans, sans-serif;
+}
+
+.i-emph_fz_20 {
+  font-size: 20px;
+}
+
+.i-emph_fz_30 {
+  font-size: 30px;
+}
+
+.i-spacer {
+  display: block;
+}
+
+.i-spacer-10 {
+  padding-bottom: 10px;
+}
+
+.i-spacer-20 {
+  padding-bottom: 20px;
+}
+
+.i-spacer-30 {
+  padding-bottom: 30px;
 }
 
 /* ============================================================================
@@ -796,6 +805,10 @@ body {
 /* @end */
 /* Modal styles
 ---------------------------------------------------------------------------- */
+.modal {
+  display: none;
+}
+
 .modal__bg {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -823,12 +836,208 @@ body {
 
 /* @end */
 /* ============================================================================
-   @group Btn
+   Compose 3 element button
 ============================================================================ */
-/* Btn behavior
+/* 3 elements button generic classes
 ---------------------------------------------------------------------------- */
-/* Btn styles
----------------------------------------------------------------------------- */
+.btn-3el {
+  display: inline-block;
+  padding: 0 7px;
+  vertical-align: text-bottom;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ie6-7 .btn-3el {
+  display: inline;
+  zoom: 1;
+}
+.btn-3el input {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none !important;
+}
+.btn-3el:hover .btn-3el__l-s,
+.btn-3el:hover .btn-3el__mid,
+.btn-3el:hover .btn-3el__r-s, .btn-3el:focus .btn-3el__l-s, .btn-3el:focus .btn-3el__mid, .btn-3el:focus .btn-3el__r-s {
+  opacity: .92;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+  filter: alpha(opacity=92);
+  cursor: pointer;
+}
+
+.btn-3el__l-s,
+.btn-3el__mid,
+.btn-3el__r-s {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  background-repeat: repeat-x;
+}
+.ie6-7 .btn-3el__l-s, .ie6-7
+.btn-3el__mid, .ie6-7
+.btn-3el__r-s {
+  display: inline;
+  zoom: 1;
+}
+
+.btn-3el__l-s,
+.btn-3el__r-s {
+  width: 7px;
+}
+
+.btn-3el__mid {
+  background-position: left bottom !important;
+}
+
+.btn-3el__l-s {
+  background-position: left top;
+  margin-left: -4px;
+}
+
+.btn-3el__r-s {
+  background-position: right top;
+  margin-right: -4px;
+}
+
+/* @end */
+/* @group 3 element button Primary button
+--------------------------------------------------------------------------- */
+.btn-3el_prim {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.btn-3el_prim .btn-3el__l-s,
+.btn-3el_prim .btn-3el__mid,
+.btn-3el_prim .btn-3el__r-s {
+  height: 40px;
+  line-height: 40px;
+}
+.btn-3el_prim .btn-3el__mid {
+  padding: 0 .4em;
+}
+
+.btn-3el_prim_green {
+  color: white;
+}
+.btn-3el_prim_green:hover, .btn-3el_prim_green:focus {
+  color: white;
+}
+.btn-3el_prim_green input {
+  color: white;
+}
+.btn-3el_prim_green .btn-3el__l-s,
+.btn-3el_prim_green .btn-3el__mid,
+.btn-3el_prim_green .btn-3el__r-s {
+  background-image: url(../images/compose-btn-3el/button-primary-green.gif);
+}
+
+/* @end */
+/* @group 3 element button Secondary button
+--------------------------------------------------------------------------- */
+.btn-3el_sec {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+}
+.btn-3el_sec .btn-3el__l-s,
+.btn-3el_sec .btn-3el__mid,
+.btn-3el_sec .btn-3el__r-s {
+  height: 30px;
+  line-height: 30px;
+}
+.btn-3el_sec .btn-3el__mid {
+  padding: 0 .4em;
+}
+
+.btn-3el_sec_green {
+  color: white;
+}
+.btn-3el_sec_green:hover, .btn-3el_sec_green:focus {
+  color: white;
+}
+.btn-3el_sec_green input {
+  color: white;
+}
+.btn-3el_sec_green .btn-3el__l-s,
+.btn-3el_sec_green .btn-3el__mid,
+.btn-3el_sec_green .btn-3el__r-s {
+  background-image: url(../images/compose-btn-3el/button-secondary-green.gif);
+}
+
+/* @end */
+/* ============================================================================
+   @group Horizontal menu
+============================================================================ */
+/* navigation generic class */
+.g-nav__inner {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.g-nav__item,
+.g-nav__ln {
+  display: inline-block;
+  vertical-align: top;
+}
+.ie6-7 .g-nav__item, .ie6-7
+.g-nav__ln {
+  display: inline;
+  zoom: 1;
+}
+
+.g-nav__item {
+  list-style: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.g-nav__ln {
+  padding: 0 15px;
+}
+.g-nav__ln:hover, .g-nav__ln:focus {
+  color: #434343;
+}
+.g-nav__item_active .g-nav__ln {
+  cursor: default;
+  color: #434343;
+}
+
+/* g-nav__item submenu */
+.g-nav__item {
+  position: relative;
+}
+.g-nav__item:hover .g-nav__ln {
+  color: #434343;
+}
+.g-nav__item:hover .g-nav__submenu {
+  display: block;
+}
+
+/* Global nav submenu generic*/
+.g-nav__submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+.g-nav__submenu__ln {
+  display: block;
+  text-decoration: underline;
+}
+.g-nav__submenu__ln:hover {
+  text-decoration: none;
+}
+
 /* @end */
 /* ============================================================================
    @group Form support
@@ -971,6 +1180,18 @@ input::-moz-focus-inner {
 .ie6-7 input[type="radio"] {
   height: 13px;
   width: 13px;
+}
+
+/* @end */
+/* @group Form Support
+	-------------------------------------------------------------------------- */
+.form__row {
+  padding: .4em 0;
+}
+
+.form__item {
+  float: left;
+  padding: 0 .4em 0 0;
 }
 
 /* @end */

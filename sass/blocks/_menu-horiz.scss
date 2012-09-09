@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* ============================================================================
+   @group Horizontal menu
+============================================================================ */
+
+@import "config";
+@import "helpers/mixins";
+
+/* navigation generic class */
+
+.g-nav {}
+
+.g-nav__inner {
+  padding: 0;
+  margin: 0;
+  position:relative;
+  z-index: 2; // ie-fix z-index subnav
+}
+
+.g-nav__item,
+.g-nav__ln {
+  display: inline-block;
+  vertical-align: top;
+
+  .ie6-7 & {
+    display: inline;
+    zoom: 1;
+  }
+}
+
+.g-nav__item {
+	list-style: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+
+.g-nav__ln {
+  padding: 0 15px;
+
+  &:hover,
+  &:focus {
+    color: $baseColor;
+  }
+
+  .g-nav__item_active & {
+    cursor:default;
+    color: $baseColor;
+  }
+}
+
+/* g-nav__item submenu */
+
+.g-nav__item {
+  position:relative;
+
+  &:hover {
+
+  	.g-nav__ln {
+  		color: $baseColor;
+  	}
+
+    .g-nav__submenu {
+      display:block;
+    }
+  }
+}
+
+/* Global nav submenu generic*/
+
+.g-nav__submenu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  position:absolute;
+  top: 1em;
+  left: 0;
+  z-index: 2;
+  display:none;
+}
+
+.g-nav__submenu__ln {
+  display:block;
+  text-decoration:underline;
+
+  &:hover {
+    text-decoration:none;
+  }
+}
+
+/* @end */
