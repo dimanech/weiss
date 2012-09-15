@@ -19,16 +19,18 @@
 	top: 0;
 	left: 0;
 	z-index: 3;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
-.modal__box {
-	position:fixed;
-	top: 20%;
-	left: 30%;
+.modal__window {
+	position: fixed;
+	top: 10%;
+	left: 50%;
 	z-index: 4;
 }
 
-.modal__box__inner {
+.modal__window__inner {
 	position:relative;
 }
 
@@ -52,19 +54,20 @@
 	background: rgba(0,0,0,0.4);
 }
 
-.modal__box {
+.modal__window {
 	width: 450px;
-	padding: 1em;
 	background-color:#FFF;
 	box-shadow: 0 0 50px rgba(0,0,0,0.5);
 	border-radius: 5px;
+	padding: 1em;
 
 	.ie7-8 & {
 		border: 1px solid #ddd;
 	}
 }
 
-.modal__box__inner {}
+.modal__window__inner {
+}
 
 .modal__content {}
 

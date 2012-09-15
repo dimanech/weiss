@@ -157,7 +157,7 @@ a {
 	}
 
 	//&[href^="tel"], &[href^="mailto"], &[href^="callto"] {
-	//  @extend .psln;
+	//  @extend .i-psln;
 	//}
 }
 
@@ -238,85 +238,8 @@ dl dd {
 
 /* @end */
 
-/* @group Tables
---------------------------------------------------------------------------- */
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	border-width: 0;
-	width: 100%;
-	table-layout: fixed;
-	word-wrap: break-word;
-	empty-cells: hide;
-}
-
-caption {
-	@include adjust-font-size-to($h2-font-size);
-	@include trailer(1, $h2-font-size);
-}
-
-td, th {
-	vertical-align: middle;
-	padding: 0 rhythm(0.4);
-	border: 1px solid #ccc;
-
-	thead & {
-		font-weight: bold;
-	}
-}
-
-tbody {
-
-	td {
-
-		&[colspan] {
-			text-align:center;
-		}
-
-		&[rowspan] {
-			vertical-align:middle;
-		}
-
-		&[colspan="1"] {
-			text-align: left;
-		}
-
-		&[rowspan="1"] {
-			vertical-align: top;
-		}
-
-		&:empty {
-			border: none;
-		}
-	}
-
-	tr:nth-of-type(odd) td {
-		background-color: rgba(0,0,0,0.05);
-	}
-}
-
-tfoot {
-	text-align: center;
-	font-size: .9em;
-	@if $onBodyCustomFont {
-		font-weight: normal;
-		font-family: $customFontIt;
-	} @else {
-		font-style: italic;
-	}
-}
-
-/* @end */
-
 /* ============================================================================
-		1.3. Forms
-============================================================================= */
-
-
-
-/* ============================================================================
-		1.4. Specific
+		1.4 Specific
 ============================================================================= */
 
 // Prevents sub and sup affecting line-height in all browsers gist.github.com/413930
@@ -354,22 +277,4 @@ u {
 
 figure {
 	margin: 0;
-}
-
-/* ============================================================================
-		1.6 Embed content reset
-============================================================================= */
-
-#plusone,
-.YMaps-b-balloon-frame,
-#vkshare0,
-div.bx-core-dialog-content,
-div.bx-core-admin-dialog-content {
-	table, td, th, tr {
-		margin: 0;
-		padding: 0;
-		border: none;
-		border-radius: none;
-		background: initial;
-	}
 }

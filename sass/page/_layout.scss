@@ -41,6 +41,10 @@
 /* @group layout
 --------------------------------------------------------------------------- */
 
+$mainWidth: percentage(724px / $containerWidth);
+$asideWidth: percentage(227px / $containerWidth);
+$twoSdbarsMainWidth: percentage(474px / $containerWidth);
+
 /* main */
 
 .l-2sidebars_main {

@@ -33,9 +33,6 @@ $accentColor: #000;
 $lnColor: #09f;
 $lnHoverColor: lighten($lnColor, 15%);
 $containerWidth: 974px;
-$mainWidth: percentage(724px / $containerWidth);
-$asideWidth: percentage(227px / $containerWidth);
-$twoSdbarsMainWidth: percentage(474px / $containerWidth);
 
 // Crossbrowser custom font support
 

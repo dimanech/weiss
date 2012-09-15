@@ -12,7 +12,7 @@
 	<!--<![endif]-->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta itemprop="name" content="Заголовок страницы">
 		<meta itemprop="description" content="Описание содержимого">
@@ -22,8 +22,7 @@
 		<meta property="og:image" content="images/basel-logo.png" />
 		<title>Weiss - swicc static theme</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.customforms.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>
 		<!--[if lt IE 9]>
@@ -38,25 +37,29 @@
 					return false;
 				});
 
+				var main = $('.region-main'),
+					aside1 = $('.region-aside_first'),
+					aside2 = $('.region-aside_second');
+
 				$('#twocolumn-s').click(function() {
-					$('.region-main').removeClass().addClass('region-main l-sidebar-second_main weiss-cf');
-					$('.region-aside_first').removeClass().addClass('region-aside_first l-sidebar-second_aside weiss-cf');
-					$('.region-aside_second').removeClass().addClass('region-aside_second l-sidebar-second_aside weiss-cf');
+					main.removeClass().addClass('region-main l-sidebar-second_main weiss-cf');
+					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-second_aside weiss-cf');
+					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-second_aside weiss-cf');
 				});
 				$('#twocolumn-f').click(function() {
-					$('.region-main').removeClass().addClass('region-main l-sidebar-first_main weiss-cf');
-					$('.region-aside_first').removeClass().addClass('region-aside_first l-sidebar-first_aside weiss-cf');
-					$('.region-aside_second').removeClass().addClass('region-aside_second l-sidebar-first_aside weiss-cf');
+					main.removeClass().addClass('region-main l-sidebar-first_main weiss-cf');
+					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-first_aside weiss-cf');
+					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-first_aside weiss-cf');
 				});
 				$('#threecolumn').click(function() {
-					$('.region-main').removeClass().addClass('region-main l-2sidebars_main weiss-cf');
-					$('.region-aside_first').removeClass().addClass('region-aside_first l-2sidebars_sidebar-first weiss-cf');
-					$('.region-aside_second').removeClass().addClass('region-aside_second l-2sidebars_sidebar-second weiss-cf');
+					main.removeClass().addClass('region-main l-2sidebars_main weiss-cf');
+					aside1.removeClass().addClass('region-aside region-aside_first l-2sidebars_sidebar-first weiss-cf');
+					aside2.removeClass().addClass('region-aside region-aside_second l-2sidebars_sidebar-second weiss-cf');
 				});
 				$('#nocolumn').click(function() {
-					$('.region-main').removeClass().addClass('region-main weiss-cf');
-					$('.region-aside_first').removeClass().addClass('region-aside_first weiss-cf');
-					$('.region-aside_second').removeClass().addClass('region-aside_second weiss-cf');
+					main.removeClass().addClass('region-main weiss-cf');
+					aside1.removeClass().addClass('region-aside region-aside_first weiss-cf');
+					aside2.removeClass().addClass('region-aside region-aside_second weiss-cf');
 				});
 			});
 		</script>
@@ -435,7 +438,7 @@
 						<h5>Уровень 05 Заголовок</h5>
 						<h6>Уровень 06 Заголовок</h6>
 						<hr>
-						<table itemscope itemtype="http://schema.org/Table">
+						<table class="table" itemscope itemtype="http://schema.org/Table">
 							<caption itemprop="about">
 								Таблица: Jimi Hendrix - альбомы
 							</caption>
@@ -533,7 +536,7 @@ _body.appendChild(_coverElement);
 								<div class="form__row">
 									<label for="log-name">Введите ваш логин</label>
 									<input type="text" id="log-name" name="name" placeholder="placeholder login"/>
-								</div>Ы
+								</div>
 								<div class="form__row">
 									<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
 								</div>
@@ -545,7 +548,7 @@ _body.appendChild(_coverElement);
 								</div>
 							</fieldset>
 						</form>
-						<form class="form form_order-submit custom" action="post" method="get" accept-charset="utf-8">
+						<form class="form form_vert form_order-submit custom" action="post" method="get" accept-charset="utf-8">
 							<div class="form__row">
 								<label for="name">Фамилия, Имя, Отчество</label>
 								<input type="text" id="name" name="name" required/>

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* ============================================================================
+   @group Table support
+============================================================================ */
+
+@import "config";
+@import "helpers/mixins";
+
+.table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-width: 0;
+	width: 100%;
+	empty-cells: hide;
+
+	caption {
+		@include adjust-font-size-to($h2-font-size);
+		@include trailer(1, $h2-font-size);
+	}
+
+	td, th {
+		vertical-align: middle;
+		padding: 0 rhythm(0.4);
+		border: 1px solid #ccc;
+
+		thead & {
+			font-weight: bold;
+		}
+	}
+
+	tbody {
+
+		td {
+
+			&[colspan] {
+				text-align:center;
+			}
+
+			&[rowspan] {
+				vertical-align:middle;
+			}
+
+			&[colspan="1"] {
+				text-align: left;
+			}
+
+			&[rowspan="1"] {
+				vertical-align: top;
+			}
+
+			&:empty {
+				border: none;
+			}
+		}
+
+		tr:nth-of-type(odd) td {
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+
+	tfoot {
+		text-align: center;
+		font-size: .9em;
+		@if $onBodyCustomFont {
+			font-weight: normal;
+			font-family: $customFontIt;
+		} @else {
+			font-style: italic;
+		}
+	}
+}
+
+.table_fixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+
+/* @end */

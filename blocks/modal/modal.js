@@ -2,24 +2,21 @@ $(document).ready(function() {
     modal();
 });
 
-/*TODO: position*/
-
 function modal() {
     var modal = $('.js-modal'),
-        modalBox = $('.modal__box'),
+        modalBox = $('.modal__window'),
+        modalBoxPosL = modalBox.outerWidth() / 2,
         modalOpen = $('.js-modal-open'),
         modalClose = $('.js-modal-close');
 
     $('.modal-content').hide();
 
+    // modal position
+    modalBox.css('margin-left', '-' + modalBoxPosL + 'px');
+
+    // actions
     modalOpen.live("click", function() {
         $('.modal__content').html('').prepend( $('#' + $(this).attr('data-modal-rel')).html() );
-
-        if (modal.height() > $(window).height()) {
-            modalBox.css('position', 'absolute');
-        } else {
-            modalBox.css('position', 'fixed');
-        }
 
         modal.fadeIn(200);
         return false;
