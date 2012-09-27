@@ -7,19 +7,18 @@
 @import "config";
 @import "helpers/mixins";
 
-
 /* 3 elements button generic classes
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 
 .btn-3el {
-	display:inline-block;
+	display: inline-block;
 	padding: 0 7px;
 	vertical-align: text-bottom;
 	text-decoration: none;
 	white-space: nowrap;
 
 	.ie6-7 & {
-		display:inline;
+		display: inline;
 		zoom: 1;
 	}
 
@@ -46,13 +45,13 @@
 .btn-3el__l-s,
 .btn-3el__mid,
 .btn-3el__r-s {
-	display:inline-block;
+	display: inline-block;
 	vertical-align: top;
 	float: left;
 	background-repeat: repeat-x;
 
 	.ie6-7 & {
-		display:inline;
+		display: inline;
 		zoom: 1;
 	}
 }
@@ -63,7 +62,8 @@
 }
 
 .btn-3el__mid {
-	background-position: left bottom !important; // input bg fix
+	background-position: left bottom !important;
+	// input bg fix
 }
 
 .btn-3el__l-s {
@@ -78,9 +78,8 @@
 
 /* @end */
 
-
 /* @group 3 element button Primary button
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 
 .btn-3el_prim {
 	$btn-3elHeight: 40px;
@@ -125,9 +124,8 @@
 
 /* @end */
 
-
 /* @group 3 element button Secondary button
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 
 .btn-3el_sec {
 	$btn-3elHeight: 30px;

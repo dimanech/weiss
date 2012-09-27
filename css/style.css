@@ -33,7 +33,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 body {
   font-size: 14px;
-  line-height: 1.286em;
+  line-height: 1.28571em;
   font-family: Arial, FreeSans, sans-serif;
   color: #434343;
   background: white;
@@ -59,38 +59,38 @@ h6, .h6 {
 
 h1, .h1 {
   font-size: 1.942em;
-  line-height: 1.324em;
-  margin-bottom: 0.662em;
+  line-height: 1.32411em;
+  margin-bottom: 0.66206em;
 }
 
 h2, .h2 {
   font-size: 1.618em;
-  line-height: 1.589em;
-  margin-bottom: 0.795em;
+  line-height: 1.58926em;
+  margin-bottom: 0.79463em;
 }
 
 h3, .h3 {
   font-size: 1.201em;
-  line-height: 2.141em;
-  margin-bottom: 1.071em;
+  line-height: 2.14107em;
+  margin-bottom: 1.07054em;
 }
 
 h4, .h4 {
   font-size: 1em;
-  line-height: 1.286em;
-  margin-bottom: 1.286em;
+  line-height: 1.28571em;
+  margin-bottom: 1.28571em;
 }
 
 h5, .h5 {
   font-size: 0.742em;
-  line-height: 1.733em;
-  margin-bottom: 1.733em;
+  line-height: 1.73277em;
+  margin-bottom: 1.73277em;
 }
 
 h6, .h6 {
   font-size: 0.618em;
-  line-height: 2.08em;
-  margin-bottom: 2.08em;
+  line-height: 2.08044em;
+  margin-bottom: 2.08044em;
 }
 
 hr, .hr {
@@ -99,16 +99,16 @@ hr, .hr {
   background: #666;
   width: 100%;
   clear: both;
-  margin: 1.286em 0;
+  margin: 1.28571em 0;
 }
 
 p, pre, blockquote, table {
   margin: 0;
-  margin-bottom: 1.286em;
+  margin-bottom: 1.28571em;
 }
 
 blockquote {
-  margin: 1.286em 4.2em 0;
+  margin: 1.28571em 4.2em 0;
   font-style: italic;
 }
 
@@ -149,12 +149,12 @@ video {
 /* @group Lists
 --------------------------------------------------------------------------- */
 ul, ol, dl {
-  margin: 1.286em 0;
+  margin: 1.28571em 0;
   padding-left: 1.5em;
 }
 
 ul li, ol li {
-  margin: 0.257em 0;
+  margin: 0.25714em 0;
 }
 
 ul {
@@ -243,7 +243,7 @@ a abbr {
 pre, code, tt, samp, kbd {
   font-family: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
   font-size: 1em;
-  line-height: 1.286em;
+  line-height: 1.28571em;
 }
 
 pre {
@@ -323,8 +323,8 @@ ins {
 /* main */
 .l-2sidebars_main {
   float: left;
-  margin-left: 25.806%;
-  width: 48.665%;
+  margin-left: 25.80595%;
+  width: 48.6653%;
 }
 .ie6-7 .l-2sidebars_main {
   display: inline;
@@ -332,32 +332,32 @@ ins {
 
 .l-sidebar-first_main {
   float: right;
-  width: 74.333%;
+  width: 74.33265%;
 }
 
 .l-sidebar-second_main {
   float: left;
   margin: 0;
   padding: 0;
-  width: 74.333%;
+  width: 74.33265%;
 }
 
 /* sidebars */
 .l-2sidebars_sidebar-first {
   float: left;
-  margin-left: -74.333%;
-  width: 23.306%;
+  margin-left: -74.33265%;
+  width: 23.30595%;
 }
 
 .l-2sidebars_sidebar-second {
   float: right;
-  width: 23.306%;
+  width: 23.30595%;
 }
 
 .l-sidebar-first_aside,
 .l-sidebar-second_aside {
   float: left;
-  width: 23.306%;
+  width: 23.30595%;
 }
 
 .l-sidebar-second_aside {
@@ -755,7 +755,9 @@ ins {
 }
 .btn-3el:hover .btn-3el__l-s,
 .btn-3el:hover .btn-3el__mid,
-.btn-3el:hover .btn-3el__r-s, .btn-3el:focus .btn-3el__l-s, .btn-3el:focus .btn-3el__mid, .btn-3el:focus .btn-3el__r-s {
+.btn-3el:hover .btn-3el__r-s, .btn-3el:focus .btn-3el__l-s,
+.btn-3el:focus .btn-3el__mid,
+.btn-3el:focus .btn-3el__r-s {
   opacity: .92;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
   filter: alpha(opacity=92);
@@ -1037,9 +1039,9 @@ ins {
 .form fieldset {
   border: 1px solid #ccc;
   margin: 0 2px;
-  margin-top: 1.286em;
-  padding-top: 0.514em;
-  padding-bottom: 1.286em;
+  margin-top: 1.28571em;
+  padding-top: 0.51429em;
+  padding-bottom: 1.28571em;
   margin-bottom: 0em;
 }
 .form legend {
@@ -1093,12 +1095,12 @@ ins {
 }
 .table caption {
   font-size: 1.618em;
-  line-height: 1.589em;
-  margin-bottom: 0.795em;
+  line-height: 1.58926em;
+  margin-bottom: 0.79463em;
 }
 .table td, .table th {
   vertical-align: middle;
-  padding: 0 0.514em;
+  padding: 0 0.51429em;
   border: 1px solid #ccc;
 }
 thead .table td, thead .table th {
@@ -1236,7 +1238,8 @@ form.custom div.custom.dropdown a.selector:after {
   margin-left: -5px;
 }
 form.custom div.custom.dropdown:hover a.current,
-form.custom div.custom.dropdown:hover a.selector, form.custom div.custom.dropdown.open a.current, form.custom div.custom.dropdown.open a.selector {
+form.custom div.custom.dropdown:hover a.selector, form.custom div.custom.dropdown.open a.current,
+form.custom div.custom.dropdown.open a.selector {
   border-color: #777;
 }
 form.custom div.custom.dropdown:hover a.selector:after, form.custom div.custom.dropdown.open a.selector:after {
