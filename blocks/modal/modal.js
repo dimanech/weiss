@@ -1,7 +1,3 @@
-$(document).ready(function() {
-    modal();
-});
-
 function modal() {
     var modal = $('.js-modal'),
         modalBox = $('.modal__window'),
@@ -16,7 +12,7 @@ function modal() {
 
     // actions
     modalOpen.live("click", function() {
-        $('.modal__content').html('').prepend( $('#' + $(this).attr('data-modal-rel')).html() );
+	    $('.modal__content').html('').prepend( $($(this).attr('href')).html() );
 
         modal.fadeIn(200);
         return false;
@@ -26,3 +22,9 @@ function modal() {
         modal.fadeOut(200);
     });
 }
+
+$(document).ready(function() {
+
+	modal();
+
+});

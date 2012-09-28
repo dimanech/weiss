@@ -25,13 +25,12 @@ function contentTabsUnordered() {
 
 			content.hide();
 			$(self.attr('href')).fadeIn(200);
-			$('body').animate({scrollTop:self.offset().top}, 500);
+			//$('body').animate({scrollTop:self.offset().top}, 500);
 			return false;
 		}
 	});
 }
 
-/*
 function contentTabsOrdered() {
 	var links = $('.js-tab-ln'),
 		content = $('.js-tab-content'),
@@ -51,8 +50,8 @@ function contentTabsOrdered() {
 			self.addClass(activeClass);
 
 			content.hide();
-			content.eq(self.index(links)).fadeIn(200);
+			content.eq(self.index('.js-tab-ln-wr .js-tab-ln')).fadeIn(200);
 			return false;
 		}
 	});
-}*/
+}

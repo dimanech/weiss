@@ -217,6 +217,7 @@ $form-item-padding: 10px;
 }
 
 @each $itemWidth in 50, 100, 145, 200 {
+
 	.form__item_w#{$itemWidth} {
 		width: $itemWidth - ($form-item-padding);
 
@@ -232,7 +233,9 @@ $form-item-padding: 10px;
 $sbPadding: 2px;
 
 @each $sbWidth in 200 {
+
 	.sb-w#{$sbWidth} {
+
 		.dropdown,
 		select {
 			width: $sbWidth +px !important;
