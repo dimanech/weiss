@@ -11,19 +11,19 @@ function modal() {
     modalBox.css('margin-left', '-' + modalBoxPosL + 'px');
 
     // actions
-    modalOpen.live("click", function() {
-	    $('.modal__content').html('').prepend( $($(this).attr('href')).html() );
+    modalOpen.on("click", function () {
+	    $('.modal__content').html('').prepend($($(this).attr('href')).html());
 
         modal.fadeIn(200);
         return false;
     });
 
-    modalClose.click(function() {
+    modalClose.click(function () {
         modal.fadeOut(200);
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	modal();
 

@@ -4,13 +4,13 @@ function collapse() {
         activeClass = 'js-collap-ln_active';
 
     links.removeClass(activeClass);
-
 	descriptions.hide();
 	$(links[0]).addClass(activeClass);
 	$(descriptions[0]).show();
-    links.click(function() {
+
+    links.on('click', function() {
         var self = $(this);
-        if(self.hasClass(activeClass)) {
+        if (self.hasClass(activeClass)) {
             self.removeClass(activeClass).parent().next(descriptions).slideUp();
         } else {
             links.removeClass(activeClass);
@@ -24,7 +24,7 @@ function collapse() {
 
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	collapse();
 
