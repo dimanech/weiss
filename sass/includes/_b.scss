@@ -22,6 +22,7 @@
 
 .i-emph {
 	@if $onBodyCustomFont {
+		font-style: normal;
 		font-weight: normal;
 		font-family: $customFontIt;
 	} @else {
@@ -98,11 +99,6 @@
 
 .i-spacer-30 {
 	padding-bottom: 30px;
-}
-
-.alt-title,
-.lead {
-
 }
 
 // ============================================================================

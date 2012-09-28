@@ -147,7 +147,7 @@ video {
 		1.2. Lists and tables
 ============================================================================= */
 /* @group Lists
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 ul, ol, dl {
   margin: 1.28571em 0;
   padding-left: 1.5em;
@@ -299,7 +299,7 @@ ins {
 }
 
 /* @group header
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .l-global-header {
   margin-bottom: 1.5em;
 }
@@ -319,7 +319,7 @@ ins {
 
 /* @end */
 /* @group layout
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 /* main */
 .l-2sidebars_main {
   float: left;
@@ -366,7 +366,7 @@ ins {
 
 /* @end */
 /* @group footer
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .l-global-footer {
   clear: both;
   overflow: hidden;
@@ -388,7 +388,7 @@ ins {
 
 /* @end */
 /* @group Styicky footer
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 @media screen and (max-width: 2400px) {
   html, body {
     height: 100%;
@@ -590,7 +590,7 @@ ins {
 		Header
 ============================================================================= */
 /* @group Site branding
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .site-name, .site-slogan {
   display: block;
   font-size: 1em;
@@ -628,7 +628,7 @@ ins {
    @group Collapse-content-block
 ============================================================================ */
 /* Collapse-content-block Behavior
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .js-collap-ln {
   cursor: pointer;
   color: #0099ff;
@@ -643,7 +643,7 @@ ins {
 }
 
 /* Collapse-content-block Styles
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .collapse-content__details {
   padding: 20px;
 }
@@ -653,9 +653,9 @@ ins {
    @group Tabs-content-block
 ============================================================================ */
 /* Tabs behavior
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 /* Tabs styles
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .content-tabs__nav li {
   display: inline;
 }
@@ -670,7 +670,7 @@ ins {
    @group Modal block
 ============================================================================ */
 /* Modal behavior
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .modal__bg {
   width: 100%;
   height: 100%;
@@ -700,7 +700,7 @@ ins {
 
 /* @end */
 /* Modal styles
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .modal {
   display: none;
 }
@@ -735,7 +735,7 @@ ins {
    Compose 3 element button
 ============================================================================ */
 /* 3 elements button generic classes
----------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .btn-3el {
   display: inline-block;
   padding: 0 7px;
@@ -800,7 +800,7 @@ ins {
 
 /* @end */
 /* @group 3 element button Primary button
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .btn-3el_prim {
   height: 40px;
   line-height: 40px;
@@ -833,7 +833,7 @@ ins {
 
 /* @end */
 /* @group 3 element button Secondary button
---------------------------------------------------------------------------- */
+  --------------------------------------------------------------------------- */
 .btn-3el_sec {
   height: 30px;
   line-height: 30px;
@@ -954,7 +954,6 @@ ins {
   font-weight: normal;
 }
 .form input[type="button"], .form input[type="submit"], .form input[type="reset"], .form input[type="image"] {
-  cursor: default;
   -webkit-appearance: button;
 }
 .form input[type="checkbox"], .form input[type="radio"] {
@@ -973,7 +972,7 @@ ins {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-.form input[type="search"]::-webkit-search-decoration {
+.form input[type="search"]::-webkit-search-decoration, .form input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 .form input[type="text"],
@@ -984,9 +983,9 @@ ins {
   border: 1px solid;
   border-color: #777 #ccc #ccc;
   background: #fff;
-  padding: 0 .429em;
-  height: 1.4em;
-  line-height: 1.4em;
+  padding: 0 5px;
+  height: 20px;
+  line-height: 20px;
 }
 .form input[type="text"]:hover,
 .form input[type="password"]:hover,
@@ -1020,12 +1019,18 @@ ins {
 .form button:focus {
   border-color: #0099ff;
 }
+.form input[type="button"]:active,
+.form input[type="submit"]:active,
+.form input[type="image"]:active,
+.form button:active {
+  background-color: #606060;
+}
 .form textarea {
   overflow: auto;
   vertical-align: top;
   height: auto;
-  line-height: 1.2em;
-  padding: .2em .429em;
+  line-height: 20px;
+  padding: 5px 5px;
   resize: vertical;
   min-height: 4em;
 }
@@ -1048,8 +1053,7 @@ ins {
   border: 0;
   padding: 0;
 }
-.form button::-moz-focus-inner,
-.form input::-moz-focus-inner {
+.form button::-moz-focus-inner, .form input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -1074,12 +1078,63 @@ ins {
 }
 
 .form__row {
-  padding: .4em 0;
+  clear: both;
+  padding: 10px 0;
+  margin: 0 10px;
+}
+
+.form__row_r {
+  text-align: right;
+}
+
+.form__row_c {
+  text-align: center;
 }
 
 .form__item {
   float: left;
-  padding: 0 .4em 0 0;
+  padding: 0 10px 0 0;
+  margin-left: 5px;
+}
+
+.form__item_w50 {
+  width: 40px;
+}
+.form__item_w50 input[type="text"],
+.form__item_w50 textarea {
+  width: 40px;
+}
+
+.form__item_w100 {
+  width: 90px;
+}
+.form__item_w100 input[type="text"],
+.form__item_w100 textarea {
+  width: 90px;
+}
+
+.form__item_w145 {
+  width: 135px;
+}
+.form__item_w145 input[type="text"],
+.form__item_w145 textarea {
+  width: 135px;
+}
+
+.form__item_w200 {
+  width: 190px;
+}
+.form__item_w200 input[type="text"],
+.form__item_w200 textarea {
+  width: 190px;
+}
+
+.sb-w200 .dropdown,
+.sb-w200 select {
+  width: 200px !important;
+}
+.sb-w200 .dropdown ul {
+  width: 198px !important;
 }
 
 /* @end */
@@ -1188,7 +1243,7 @@ form.custom span.custom.radio.checked:before {
 form.custom span.custom.checkbox.checked:before {
   color: #222;
 }
-form.custom div.custom.dropdown {
+form.custom .custom.dropdown {
   display: block;
   position: relative;
   width: auto;
@@ -1196,7 +1251,7 @@ form.custom div.custom.dropdown {
   margin-bottom: 9px;
   margin-top: 2px;
 }
-form.custom div.custom.dropdown a.current {
+form.custom .custom.dropdown a.current {
   display: block;
   width: auto;
   height: 1.4em;
@@ -1211,7 +1266,7 @@ form.custom div.custom.dropdown a.current {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-form.custom div.custom.dropdown a.selector {
+form.custom .custom.dropdown a.selector {
   position: absolute;
   width: 20px;
   height: 1.4em;
@@ -1222,7 +1277,7 @@ form.custom div.custom.dropdown a.selector {
   border-color: #777777 #cccccc #cccccc;
   background-color: #fff;
 }
-form.custom div.custom.dropdown a.selector:after {
+form.custom .custom.dropdown a.selector:after {
   content: "";
   display: block;
   content: "";
@@ -1237,12 +1292,12 @@ form.custom div.custom.dropdown a.selector:after {
   margin-top: -2px;
   margin-left: -5px;
 }
-form.custom div.custom.dropdown:hover a.current,
-form.custom div.custom.dropdown:hover a.selector, form.custom div.custom.dropdown.open a.current,
-form.custom div.custom.dropdown.open a.selector {
+form.custom .custom.dropdown:hover a.current,
+form.custom .custom.dropdown:hover a.selector, form.custom .custom.dropdown.open a.current,
+form.custom .custom.dropdown.open a.selector {
   border-color: #777;
 }
-form.custom div.custom.dropdown:hover a.selector:after, form.custom div.custom.dropdown.open a.selector:after {
+form.custom .custom.dropdown:hover a.selector:after, form.custom .custom.dropdown.open a.selector:after {
   content: "";
   display: block;
   width: 0;
@@ -1250,35 +1305,35 @@ form.custom div.custom.dropdown:hover a.selector:after, form.custom div.custom.d
   border: solid 5px;
   border-color: #222222 transparent transparent transparent;
 }
-form.custom div.custom.dropdown.open ul {
+form.custom .custom.dropdown.open ul {
   display: block;
   z-index: 10;
 }
-form.custom div.custom.dropdown.small {
+form.custom .custom.dropdown.small {
   width: 134px !important;
 }
-form.custom div.custom.dropdown.medium {
+form.custom .custom.dropdown.medium {
   width: 254px !important;
 }
-form.custom div.custom.dropdown.large {
+form.custom .custom.dropdown.large {
   width: 434px !important;
 }
-form.custom div.custom.dropdown.expand {
+form.custom .custom.dropdown.expand {
   width: 100% !important;
 }
-form.custom div.custom.dropdown.open.small ul {
+form.custom .custom.dropdown.open.small ul {
   width: 134px !important;
 }
-form.custom div.custom.dropdown.open.medium ul {
+form.custom .custom.dropdown.open.medium ul {
   width: 254px !important;
 }
-form.custom div.custom.dropdown.open.large ul {
+form.custom .custom.dropdown.open.large ul {
   width: 434px !important;
 }
-form.custom div.custom.dropdown.open.expand ul {
+form.custom .custom.dropdown.open.expand ul {
   width: 100% !important;
 }
-form.custom div.custom.dropdown ul {
+form.custom .custom.dropdown ul {
   position: absolute;
   width: auto;
   display: none;
@@ -1292,30 +1347,32 @@ form.custom div.custom.dropdown ul {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   border: 1px solid transparent;
 }
-form.custom div.custom.dropdown ul li {
+form.custom .custom.dropdown ul li {
   color: #555;
   cursor: pointer;
-  padding: 3px 38px 3px 6px;
+  padding: 3px 6px;
   min-height: 16px;
   line-height: 16px;
   margin: 0;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   list-style: none;
 }
-form.custom div.custom.dropdown ul li.selected {
+form.custom .custom.dropdown ul li.selected {
   background: darkgrey;
   color: #000;
 }
-form.custom div.custom.dropdown ul li:hover {
+form.custom .custom.dropdown ul li:hover {
   background-color: #b6b6b6;
   color: #222;
 }
-form.custom div.custom.dropdown ul li.selected:hover {
+form.custom .custom.dropdown ul li.selected:hover {
   background: darkgrey;
   cursor: default;
   color: #000;
 }
-form.custom div.custom.dropdown ul.show {
+form.custom .custom.dropdown ul.show {
   display: block;
 }
 form.custom .custom.disabled {

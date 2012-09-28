@@ -60,7 +60,7 @@ form.custom {
 
   $input-border-color: #777 #ccc #ccc;
 
-  div.custom.dropdown {
+  .custom.dropdown {
     display: block;
     position: relative;
     width: auto;
@@ -155,7 +155,7 @@ form.custom {
     }
   }
 
-  div.custom.dropdown ul {
+  .custom.dropdown ul {
     position: absolute;
     width: auto;
     display: none;
@@ -172,11 +172,13 @@ form.custom {
     li {
       color: #555;
       cursor: pointer;
-      padding: 3px 38px 3px 6px;
+      padding: 3px 6px;
       min-height: 16px;
       line-height: 16px;
       margin: 0;
       white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
       list-style: none;
 
       &.selected {
