@@ -1,20 +1,13 @@
-$(document).ready(function() {
-
-    collapse();
-
-});
-
 function collapse() {
-    var links = $('.js-collap-ln'),
+	var links = $('.js-collap-ln'),
         descriptions = $('.js-collap-content'),
         activeClass = 'js-collap-ln_active';
 
-    // init
     links.removeClass(activeClass);
-    descriptions.hide();
-    $(links[0]).addClass(activeClass);
-    $(descriptions[0]).show();
 
+	descriptions.hide();
+	$(links[0]).addClass(activeClass);
+	$(descriptions[0]).show();
     links.click(function() {
         var self = $(this);
         if(self.hasClass(activeClass)) {
@@ -28,4 +21,11 @@ function collapse() {
         }
         return false;
     });
+
 }
+
+$(document).ready(function() {
+
+	collapse();
+
+});
