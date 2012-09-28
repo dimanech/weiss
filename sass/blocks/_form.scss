@@ -216,56 +216,31 @@ $form-item-padding: 10px;
 	margin-left: 5px;
 }
 
-.form__item_w50 {
-	$itemWidth: 50px;
-	width: $itemWidth - ($form-item-padding);
+@each $itemWidth in 50, 100, 145, 200 {
+	.form__item_w#{$itemWidth} {
+		width: $itemWidth - ($form-item-padding);
 
-	input[type="text"],
-	textarea {
-		width: $itemWidth - ($inputPadding * 2);
-	}
-}
-
-.form__item_w100 {
-	$itemWidth: 100px;
-	width: $itemWidth - ($form-item-padding);
-
-	input[type="text"],
-	textarea {
-		width: $itemWidth - ($inputPadding * 2);
-	}
-}
-
-.form__item_w145 {
-	$itemWidth: 145px;
-	width: $itemWidth - ($form-item-padding);
-
-	input[type="text"],
-	textarea {
-		width: $itemWidth - ($inputPadding * 2);
-	}
-}
-
-.form__item_w200 {
-	$itemWidth: 200px;
-	width: $itemWidth - ($form-item-padding);
-
-	input[type="text"],
-	textarea {
-		width: $itemWidth - ($inputPadding * 2);
+		input[type="text"],
+		textarea {
+			width: $itemWidth - ($inputPadding * 2);
+		}
 	}
 }
 
 // Selectbox plugin support
 
-.sb-w200 {
-	.dropdown,
-	select {
-		width: 200px !important;
-	}
+$sbPadding: 2px;
 
-	.dropdown ul {
-		width: 198px !important;
+@each $sbWidth in 200 {
+	.sb-w#{$sbWidth} {
+		.dropdown,
+		select {
+			width: $sbWidth +px !important;
+		}
+
+		.dropdown ul {
+			width: $sbWidth - $sbPadding !important;
+		}
 	}
 }
 
