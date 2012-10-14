@@ -3,7 +3,8 @@ function modal() {
         modalBox = $('.modal__window'),
         modalBoxPosL = modalBox.outerWidth() / 2,
         modalOpen = $('.js-modal-open'),
-        modalClose = $('.js-modal-close');
+        modalClose = $('.js-modal-close'),
+	    modalCloseAction = modal.fadeOut(200);
 
     $('.modal-content').hide();
 
@@ -18,9 +19,15 @@ function modal() {
         return false;
     });
 
-    modalClose.click(function () {
-        modal.fadeOut(200);
+    modalClose.on('click', function () {
+	    modal.fadeOut(200);
     });
+
+	modalClose.bind('keyup', function (e) {
+		if (e.keyCode == 13) {
+			modal.fadeOut(200);
+		}
+	});
 }
 
 $(document).ready(function () {

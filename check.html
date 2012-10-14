@@ -105,8 +105,16 @@
 				<!-- /.region-header -->
 				<div class="region-main i-clfx" role="main">
 					<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-						<a href="#" itemprop="url"><span itemprop="title">Главная</span></a> →
-						Typography
+						<nav role="navigation">
+							<ol>
+								<li>
+									<a href="#" itemprop="url"><span itemprop="title">Главная</span></a> →
+								</li>
+								<li>
+									Typography
+								</li>
+							</ol>
+						</nav>
 					</div>
 					<div class="region-main__content">
 						<h1>Заголовок 1</h1>
@@ -430,11 +438,11 @@
 							</caption>
 							<thead>
 								<tr>
-									<th>Lorem</th>
-									<th>Ipsum</th>
-									<th>Dolor</th>
-									<th>Sit</th>
-									<th>Amet</th>
+									<th scope="col">Lorem</th>
+									<th scope="col">Ipsum</th>
+									<th scope="col">Dolor</th>
+									<th scope="col">Sit</th>
+									<th scope="col">Amet</th>
 								</tr>
 							</thead>
 							<tfoot>
