@@ -86,6 +86,10 @@
 	background-color: transparent;
 }
 
+.i-wai {
+	@include vishidden;
+}
+
 .i-img-container { // image wrapper
 	overflow: hidden;
 	@extend .i-dib;

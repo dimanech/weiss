@@ -7,6 +7,7 @@
 
 $inputPadding: 5px;
 $inputHeight: 20px;
+$formRowMargin: 10px;
 
 .form {
 	border: none;
@@ -130,15 +131,39 @@ $inputHeight: 20px;
 		background: #ccc;
 	}
 
-	fieldset {
-		border: 1px solid #ccc;
-		margin: 0 2px;
-		@include rhythm(1, 0.4, 1, 0, $base-font-size);
+	// Fieldset styles
+
+	// generic
+
+	.form__set { // fieldset
+		position: relative;
+		border: none;
+		margin: 0;
+		padding: 20px 0 0;
 	}
 
-	legend {
+	.form__set__legend { // legend
 		border: 0;
 		padding: 0;
+		font-size: $h3-font-size;
+		font-weight: bold;
+
+		span {
+			position: absolute;
+			top: 0;
+			left: $formRowMargin;
+		}
+	}
+
+	//mods
+
+	.form__set_main {
+		padding-top: 20px;
+	}
+
+	.form__set__legend_main {
+		font-size: $h2-font-size;
+		font-weight: bold;
 	}
 
 	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
@@ -196,8 +221,8 @@ $inputHeight: 20px;
 .form__row {
 	@extend .i-clfx;
 	clear: both;
-	padding: 10px 0;
-	margin: 0 10px;
+	padding: 5px 0;
+	margin: 0 $formRowMargin;
 }
 
 .form__row_r {
@@ -244,6 +269,14 @@ $sbPadding: 2px;
 		.dropdown ul {
 			width: $sbWidth - $sbPadding !important;
 		}
+	}
+}
+
+// additional
+
+.form_name2 {
+	.form__set__legend span {
+		left: 14px;
 	}
 }
 
