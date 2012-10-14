@@ -11,7 +11,7 @@ function modal() {
     modalBox.css('margin-left', '-' + modalBoxPosL + 'px');
 
     // actions
-    modalOpen.on("click", function () {
+    modalOpen.on('click', function () {
 	    $('.modal__content').html('').prepend($($(this).attr('href')).html());
 
         modal.fadeIn(200);

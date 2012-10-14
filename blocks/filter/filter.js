@@ -3,7 +3,7 @@ function itemsFilter() {
 		sortBtnActClass = 'js-filter-btn_active',
 		sortItem = $('.js-filter-item');
 
-	sortBtn.click( function (e) {
+	sortBtn.on('click', function (e) {
 		e.preventDefault();
 
 		var self = $(this),
@@ -12,7 +12,9 @@ function itemsFilter() {
 
 		if (filter === '*') query = '[data-filter]';
 
-		if (self.hasClass(sortBtnActClass)) return;
+		if (self.hasClass(sortBtnActClass)) {
+			return
+		}
 
 		sortBtn.removeClass(sortBtnActClass);
 		self.addClass(sortBtnActClass);
