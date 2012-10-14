@@ -29,15 +29,15 @@
 				<div class="region-main i-clfx" role="main">
 					<div class="region-main__content">
 						<h1>Заголовок 1</h1>
-						<div class="content-tabs">
+						<div class="content-tabs" role="tablist">
 							<div class="content-tabs__nav js-tab-ln-wr">
 								<ul class="content-tabs__nav__inner">
-									<li><a href="#tab1" class="content-tabs__nav__ln js-tab-ln">tab1</a></li>
-									<li><a href="#tab2" class="content-tabs__nav__ln js-tab-ln">tab2</a></li>
-									<li><a href="#tab3" class="content-tabs__nav__ln js-tab-ln">tab3</a></li>
+									<li><a href="#tab1" class="content-tabs__nav__ln js-tab-ln" id="tad1-aria-label" role="tab">tab1</a></li>
+									<li><a href="#tab2" class="content-tabs__nav__ln js-tab-ln" id="tad2-aria-label" role="tab">tab2</a></li>
+									<li><a href="#tab3" class="content-tabs__nav__ln js-tab-ln" id="tad3-aria-label" role="tab">tab3</a></li>
 								</ul>
 							</div>
-							<div id="tab1" class="content-tabs__item js-tab-content">
+							<div id="tab1" class="content-tabs__item js-tab-content" aria-labelledby="tab1-aria-label">
 								<p>
 									Альпы (фр. Alpes, нем. Alpen, итал. Alpi, словен. Alpe) — наиболее высокая горная система Западной
 									Европы. В пределах географических границ Альп полностью или частично находятся территории 8 стран;
@@ -53,7 +53,7 @@
 									(17%), Франция (7%), Германия (3%).
 								</p>
 							</div>
-							<div id="tab2" class="content-tabs__item js-tab-content">
+							<div id="tab2" class="content-tabs__item js-tab-content" aria-labelledby="tab2-aria-label">
 								<p>
 									Сложная система хребтов и массивов, протягивающаяся выпуклой к северо-западу дугой от Лигурийского
 									моря до Среднедунайской равнины. Длина около 1 200 км (по внутреннему краю дуги около 750 км).
@@ -62,7 +62,7 @@
 									(высота до 4 049 м, гора Бернина).
 								</p>
 							</div>
-							<div id="tab3" class="content-tabs__item js-tab-content">
+							<div id="tab3" class="content-tabs__item js-tab-content" aria-labelledby="tab3-aria-label">
 								<p>
 									Складчатая структура Альп создана в основном движениями альпийского возраста. Наиболее высокая —
 									осевая зона Альп сложена древними кристаллическими (гнейсы, слюдяные сланцы) и метаморфическими
