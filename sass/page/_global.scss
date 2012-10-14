@@ -65,12 +65,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
 	margin: 0;
-	@if $onBodyCustomFont {
-		font-weight: normal;
-		font-family: $customFontBold;
-	} @else {
-		font-weight: bold;
-	}
+	font-weight: bold;
 }
 
 h1, .h1 {
@@ -119,31 +114,15 @@ p, pre, blockquote, table {
 
 blockquote {
 	margin: rhythm(1) 4.2em 0;
-
-	@if $onBodyCustomFont {
-		font-style: normal;
-		font-family: $customFontIt;
-	} @else {
-		font-style: italic;
-	}
+	font-style: italic;
 }
 
 strong, b {
-	@if $onBodyCustomFont {
-		font-weight: normal;
-		font-family: $customFontBold;
-	} @else {
-		font-weight: bold;
-	}
+	font-weight: bold;
 }
 
 em, i, cite {
-	@if $onBodyCustomFont {
-		font-weight: normal;
-		font-family: $customFontIt;
-	} @else {
-		font-style: italic;
-	}
+	font-style: italic;
 }
 
 // NOTE: link pseudoclases order -- link, visited, hover, active
