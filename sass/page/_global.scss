@@ -10,17 +10,21 @@
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, nav, section {
-	display: block; // anonymous inline element fix for older browsers if js has been off
+	display: block; // Corrects `block` display not defined in IE 8/9.
 }
 
-audio, canvas, video {
-	display: inline-block;
+audio,
+canvas,
+video {
+	display: inline-block; // Corrects `inline-block` display not defined in IE 8/9.
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 
-	&:before, &:after {
+	&:before,
+	&:after {
 		content: ''; // remove this because real user don`t format this way
 	}
 }
@@ -40,6 +44,11 @@ blockquote, q {
 		font-style: normal;
 }
 
+html {
+	-webkit-text-size-adjust: 100%; // Prevents iOS text size adjust after orientation change, without disabling user zoom.
+	-ms-text-size-adjust: 100%;
+}
+
 body {
 	font-size: $base-font-size;
 	@include adjust-leading-to(1);
@@ -47,7 +56,7 @@ body {
 	color: $baseColor;
 	background: $mainBgColor;
 	overflow-y: scroll; // force scroll
-	margin: 0; // overwrite default browser style
+	margin: 0; // Removes default margin.
 
 	.ie6-7 & {
 		overflow-y: auto; // ie sticky footer fix
@@ -107,7 +116,10 @@ hr, .hr {
 	margin: rhythm(1) 0;
 }
 
-p, pre, blockquote, table {
+p,
+pre,
+blockquote,
+table {
 	margin: 0;
 	@include trailer(1);
 }
@@ -117,11 +129,14 @@ blockquote {
 	font-style: italic;
 }
 
-strong, b {
-	font-weight: bold;
+strong,
+b {
+	font-weight: bold; // Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
 }
 
-em, i, cite {
+em,
+i,
+cite {
 	font-style: italic;
 }
 
@@ -133,6 +148,11 @@ a {
 	&:hover,
 	&:active {
 		color: $lnHoverColor;
+		outline: none; // Improves readability when focused and also mouse hovered in all browsers.
+	}
+
+	&:focus {
+		outline: thin dotted; // Addresses `outline` inconsistency between Chrome and other browsers.
 	}
 
 	//&[href^="tel"], &[href^="mailto"], &[href^="callto"] {
@@ -255,6 +275,6 @@ u {
 }
 
 figure {
-	margin: 0;
+	margin: 0; // Addresses margin not present in IE 8/9 and Safari 5.
 }
 

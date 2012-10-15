@@ -17,8 +17,13 @@ $formRowMargin: 10px;
 	select,
 	textarea {
 		font: 1em/1.429em #{$baseFontFamily};
-		//margin: 0;
+		//margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
 		vertical-align: baseline;
+	}
+
+	button,
+	input {
+		line-height: normal; // Addresses Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
 	}
 
 	label {
@@ -36,8 +41,8 @@ $formRowMargin: 10px;
 
 		&[type="checkbox"],
 		&[type="radio"] {
-			box-sizing: border-box;
-			padding: 0;
+			box-sizing: border-box; // Addresses box sizing set to `content-box` in IE 8/9.
+			padding: 0; // Removes excess padding in IE 8/9.
 		}
 
 		&[type="radio"]{
@@ -49,14 +54,14 @@ $formRowMargin: 10px;
 		}
 
 		&[type="search"] {
-			-webkit-appearance: none;
+			-webkit-appearance: textfield; // Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
 			-moz-box-sizing: content-box;
-			-webkit-box-sizing: content-box;
+			-webkit-box-sizing: content-box; // Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof)
 			box-sizing: content-box;
 
 			&::-webkit-search-decoration,
 			&::-webkit-search-cancel-button {
-				-webkit-appearance: none;
+				-webkit-appearance: none; // Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
 			}
 		}
 
@@ -98,7 +103,7 @@ $formRowMargin: 10px;
 		&:focus {
 			border-color: $lnColor;
 		}
-		
+
 		&:active {
 			background-color: lighten(#2d2d2d, 20%);
 		}
@@ -133,6 +138,13 @@ $formRowMargin: 10px;
 
 	// Fieldset styles
 
+	fieldset {}
+
+	legend {
+	  border: 0; // Corrects color not being inherited in IE 8/9.
+	  padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+	}
+
 	// generic
 
 	.form__set { // fieldset
@@ -166,10 +178,9 @@ $formRowMargin: 10px;
 		font-weight: bold;
 	}
 
-	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 	button,	input {
 		&::-moz-focus-inner {
-			border: 0;
+			border: 0; 	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 			padding: 0;
 		}
 	}
@@ -185,8 +196,8 @@ $formRowMargin: 10px;
 
 		input[type="checkbox"],
 		input[type="radio"] {
-			height: 13px;
-			width: 13px;
+			box-sizing: border-box; //addresses box sizing set to `content-box` in IE 8/9.
+			padding: 0; //Removes excess padding in IE 8/9.
 		}
 	}
 

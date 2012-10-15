@@ -7,16 +7,18 @@
 
 /* science */
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #3a3739;
 	cursor: help;
 	font-weight: inherit;
 	text-transform: uppercase;
 }
 
-abbr, dfn {
+abbr,
+dfn {
 	&[title] {
-		border-bottom: 1px dotted #888;
+		border-bottom: 1px dotted;
 		cursor: help;
 	}
 }
@@ -27,7 +29,11 @@ a abbr {
 
 /* computer science */
 
-pre, code, tt, samp, kbd {
+pre,
+code,
+tt,
+samp,
+kbd {
 	font-family: $baseFontFamilyMono;
 	@include adjust-font-size-to( 1 * $base-font-size );
 }

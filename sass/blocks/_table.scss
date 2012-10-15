@@ -6,8 +6,8 @@
 @import "helpers/mixins";
 
 .table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse: collapse; //Remove most spacing between table cells.
+	border-spacing: 0; //Remove most spacing between table cells.
 	border-width: 0;
 	width: 100%;
 	empty-cells: hide;
@@ -17,7 +17,8 @@
 		@include trailer(1, $h2-font-size);
 	}
 
-	td, th {
+	td,
+	th {
 		vertical-align: middle;
 		padding: 0 rhythm(0.4);
 		border: 1px solid #ccc;
