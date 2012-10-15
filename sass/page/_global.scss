@@ -155,7 +155,9 @@ a {
 		outline: thin dotted; // Addresses `outline` inconsistency between Chrome and other browsers.
 	}
 
-	//&[href^="tel"], &[href^="mailto"], &[href^="callto"] {
+	//&[href^="tel"],
+	//&[href^="mailto"],
+	//&[href^="callto"] {
 	//  @extend .i-psln;
 	//}
 }
@@ -180,19 +182,19 @@ video {
 // selection fixes
 
 // ::-moz-selection {
-	// text-shadow: none;
+// 	text-shadow: none;
 // }
 //
 // ::selection {
-	// text-shadow: none;
+// 	text-shadow: none;
 // }
 //
 // body {
-	// -webkit-tap-highlight-color: rgb(255,255,158);
+// 	-webkit-tap-highlight-color: rgb(255,255,158);
 // }
 //
 // *:target {
-	// border-bottom: 3px solid rgba(0, 0, 0, .1);
+// 	border-bottom: 3px solid rgba(0, 0, 0, .1);
 // }
 
 /* ============================================================================
@@ -202,12 +204,15 @@ video {
 /* @group Lists
   --------------------------------------------------------------------------- */
 
-ul, ol, dl {
+ul,
+ol,
+dl {
 	margin: rhythm(1) 0;
 	padding-left: 1.5em;
 }
 
-ul, ol {
+ul,
+ol {
 	li {
 		margin: rhythm(0.2) 0;
 	}
@@ -241,8 +246,9 @@ dl dd {
 		1.4 Specific
 ============================================================================= */
 
-// Prevents sub and sup affecting line-height in all browsers gist.github.com/413930
-sup, sub {
+// Prevents sub and sup affecting line-height in all browsers
+sup,
+sub {
 	vertical-align:baseline;
 	position: relative;
 	font-size: .8em;

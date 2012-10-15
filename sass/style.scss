@@ -2,7 +2,7 @@
 
 /* ============================================================================
 
-	Weiss 2012
+	Copyright 2012
 
 ============================================================================= */
 
@@ -22,18 +22,18 @@
 // Common styles
 // --------------------------------------------------------------------------
 
-@import "common";
+@import "page/common";
 
 // Blocks
 // --------------------------------------------------------------------------
 
-@import "blocks/collapse";
-@import "blocks/tabs";
-@import "blocks/modal";
-@import "blocks/btn";
-@import "blocks/menu-horiz";
 @import "blocks/form";
 @import "blocks/table";
+@import "blocks/menu-horiz";
+@import "blocks/btn";
+@import "blocks/tabs";
+@import "blocks/modal";
+@import "blocks/collapse";
 
 // Plugins
 // --------------------------------------------------------------------------

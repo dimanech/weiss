@@ -1,5 +1,5 @@
 /* ============================================================================
-   @group Form support
+   Form support
 ============================================================================ */
 
 @import "config";
@@ -67,7 +67,8 @@ $formRowMargin: 10px;
 
 	}
 
-	// themed form
+	// Themed form
+	//  ---------------------------------------------------------------------------
 
 	input[type="text"],
 	input[type="password"],
@@ -82,7 +83,7 @@ $formRowMargin: 10px;
 		line-height: $inputHeight;
 
 		&:hover {
-			border-color:#777;
+			border-color: darken(#ccc, 10%);
 		}
 
 		&:focus {
@@ -125,10 +126,9 @@ $formRowMargin: 10px;
 	}
 
 	select {
-	}
-
-	select[multiple="multiple"]{
-		height: auto; // overwrite theming on form element
+		&[multiple="multiple"]{
+			height: auto; // overwrite theming on form element
+		}
 	}
 
 	optgroup {
@@ -137,6 +137,7 @@ $formRowMargin: 10px;
 	}
 
 	// Fieldset styles
+	//  ---------------------------------------------------------------------------
 
 	fieldset {}
 
@@ -178,6 +179,9 @@ $formRowMargin: 10px;
 		font-weight: bold;
 	}
 
+	// Additional resets
+	//  ---------------------------------------------------------------------------
+
 	button,	input {
 		&::-moz-focus-inner {
 			border: 0; 	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
@@ -201,7 +205,8 @@ $formRowMargin: 10px;
 		}
 	}
 
-	// placeholder styles
+	// Placeholder styles
+	//  ---------------------------------------------------------------------------
 
 	// input::-webkit-input-placeholder {
 	// }
@@ -211,11 +216,16 @@ $formRowMargin: 10px;
 
 	// Colors for native form validition
 
-	// input:valid, textarea:valid {}
+	// input:valid,
+	//textarea:valid {}
 	//
-	// input:invalid, textarea:invalid {}
+	// input:invalid,
+	//textarea:invalid {}
 
 }
+
+/* @group Form mods
+  --------------------------------------------------------------------------- */
 
 .form_horiz {
 	label {
@@ -228,6 +238,11 @@ $formRowMargin: 10px;
 		display: block;
 	}
 }
+
+/* @end */
+
+/* @group Form elements
+  --------------------------------------------------------------------------- */
 
 .form__row {
 	@extend .i-clfx;
@@ -264,7 +279,10 @@ $form-item-padding: 10px;
 	}
 }
 
-// Selectbox plugin support
+/* @end */
+
+/* @group Selectbox plugin support
+  --------------------------------------------------------------------------- */
 
 $sbPadding: 2px;
 
@@ -283,13 +301,18 @@ $sbPadding: 2px;
 	}
 }
 
-// additional
+/* @end */
+
+/* @group Form Themed
+  --------------------------------------------------------------------------- */
 
 .form_name2 {
 	.form__set__legend span {
 		left: 14px;
 	}
 }
+
+/* @end */
 
 
 // /* ============================================================================
@@ -314,5 +337,3 @@ $sbPadding: 2px;
 // 		 border: none;
 // 	 }
 // }
-
-/* @end */
