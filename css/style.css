@@ -1281,6 +1281,47 @@ thead .table td, thead
 }
 
 /* @end */
+/* ============================================================================
+   @group Pagination
+============================================================================ */
+.pages ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pages li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.pages li .pages__item {
+  color: #909090;
+}
+.pages li .pages__item_current {
+  background: #0099ff;
+  color: #fff;
+}
+.pages a {
+  text-decoration: none;
+  color: #434343;
+}
+.pages a .pages__item {
+  color: #434343;
+}
+.pages a:hover .pages__item {
+  background: #ccc;
+}
+
+.pages__item {
+  display: inline-block;
+  padding: 3px 8px;
+}
+.ie6-7 .pages__item {
+  display: inline;
+  zoom: 1;
+}
+
+/* @end */
 /* Custom Forms ----------------------*/
 form.custom {
   /* Custom input, disabled */
