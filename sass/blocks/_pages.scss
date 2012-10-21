@@ -6,11 +6,18 @@
 @import "helpers/mixins";
 
 .pages {
+	text-align: center;
 
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		display: inline-block;
+
+		.ie6-7 & {
+			display: inline;
+			zoom: 1;
+		}
 	}
 
 	li {

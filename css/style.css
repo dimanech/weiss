@@ -1224,6 +1224,35 @@ thead .table td, thead
 }
 
 /* @end */
+/* @group Modal animation
+  --------------------------------------------------------------------------- */
+.js-modal-animated .l-main-aux__inner {
+  -webkit-filter: blur(2px);
+  filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2);
+  -webkit-transform: scale(0.99);
+  -webkit-transition: all linear 200ms;
+  -moz-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+}
+
+.l-main-aux__inner {
+  -webkit-filter: blur(0);
+  -webkit-transform: scale(1);
+  -webkit-transition: all linear 200ms;
+  -moz-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+}
+
+.modal__window {
+  -webkit-transition: all linear 200ms;
+  -moz-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+}
+
+/* @end */
 /* Modal styles
   --------------------------------------------------------------------------- */
 .modal {
@@ -1284,10 +1313,18 @@ thead .table td, thead
 /* ============================================================================
    @group Pagination
 ============================================================================ */
+.pages {
+  text-align: center;
+}
 .pages ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: inline-block;
+}
+.ie6-7 .pages ul {
+  display: inline;
+  zoom: 1;
 }
 .pages li {
   display: inline;
