@@ -1016,7 +1016,7 @@ thead .table td, thead
   color: #434343;
 }
 .g-nav__item:hover .g-nav__submenu {
-  display: block;
+  visibility: visible;
 }
 
 /* Global nav submenu generic*/
@@ -1028,7 +1028,7 @@ thead .table td, thead
   top: 1em;
   left: 0;
   z-index: 2;
-  display: none;
+  visibility: hidden;
 }
 
 .g-nav__submenu__ln {
