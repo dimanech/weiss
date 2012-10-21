@@ -50,7 +50,6 @@
 		-webkit-filter: blur(2px);
 		filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2);
 		-webkit-transform: scale(.99);
-		@include transition(all linear 200ms);
 	}
 }
 

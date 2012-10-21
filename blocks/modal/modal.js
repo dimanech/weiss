@@ -1,34 +1,34 @@
 function modal() {
-    var modal = $('.js-modal'),
-        modalBox = $('.modal__window'),
-        modalBoxPosL = modalBox.outerWidth() / 2,
-        modalOpen = $('.js-modal-open'),
-        modalClose = $('.js-modal-close'),
-	    modalCloseAction = modal.fadeOut(200);
+	var modal = $('.js-modal'),
+		modalBox = $('.modal__window'),
+		modalBoxPosL = modalBox.outerWidth() / 2,
+		modalOpen = $('.js-modal-open'),
+		modalClose = $('.js-modal-close');
 
-    $('.modal-content').hide();
+	$('.modal-content').hide();
 
-    // modal position
-    modalBox.css('margin-left', '-' + modalBoxPosL + 'px');
+	// modal position
+	modalBox.css('margin-left', '-' + modalBoxPosL + 'px');
 
-    // actions
-    modalOpen.on('click', function (e) {
-	    e.preventDefault();
+	// actions
+	modalOpen.on('click', function (e) {
+		e.preventDefault();
 
-	    $('.modal__content').html('').prepend($($(this).attr('href')).html());
+		$('.modal__content').html('').prepend($($(this).attr('href')).html());
 
-        modal.fadeIn(200);
-	    $('body').addClass('js-modal-animated');
-    });
+		modal.fadeIn(200);
+		$('body').addClass('js-modal-animated');
+	});
 
-    modalClose.on('click', function () {
-	    modal.fadeOut(200);
-	    $('body').removeClass('js-modal-animated');
-    });
+	modalClose.on('click', function () {
+		modal.fadeOut(200);
+		$('body').removeClass('js-modal-animated');
+	});
 
 	modalClose.bind('keyup', function (e) {
 		if (e.keyCode == 13) {
 			modal.fadeOut(200);
+			$('body').removeClass('js-modal-animated');
 		}
 	});
 }
