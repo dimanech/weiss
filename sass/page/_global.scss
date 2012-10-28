@@ -25,7 +25,7 @@ q {
 
 	&:before,
 	&:after {
-		content: ''; // remove this because real user don`t format this way
+		content: '';
 	}
 }
 
@@ -38,8 +38,7 @@ q {
 		src: url('../fonts/ASLRubl/rouble-webfont.eot');
 		src: url('../fonts/ASLRubl/rouble-webfont.eot?#iefix') format('embedded-opentype'),
 				 url('../fonts/ASLRubl/rouble-webfont.woff') format('woff'),
-				 url('../fonts/ASLRubl/rouble-webfont.ttf') format('truetype'),
-				 url('../fonts/ASLRubl/rouble-webfont.svg#ALSRublRegular') format('svg');
+				 url('../fonts/ASLRubl/rouble-webfont.ttf') format('truetype');
 		font-weight: normal;
 		font-style: normal;
 }
