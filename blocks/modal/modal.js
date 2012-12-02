@@ -1,23 +1,31 @@
 function modal() {
 	var modal = $('.js-modal'),
-		modalBox = $('.modal__window'),
-		modalBoxPosL = modalBox.outerWidth() / 2,
-		modalOpen = $('.js-modal-open'),
-		modalClose = $('.js-modal-close');
+			modalOpen = $('.js-modal-open'),
+			modalClose = $('.js-modal-close');
 
 	$('.modal-content').hide();
 
 	// modal position
-	modalBox.css('margin-left', '-' + modalBoxPosL + 'px');
+	$('.modal__window').each(function() {
+		var self = $(this),
+				modalBoxPosL = self.outerWidth() / 2;
+
+		self.css('margin-left', '-' + modalBoxPosL + 'px');
+	});
 
 	// actions
 	modalOpen.on('click', function (e) {
 		e.preventDefault();
 
-		$('.modal__content').html('').prepend($($(this).attr('href')).html());
+		var self = $(this),
+				modalType = $('.' + self.data('modal'));
 
-		modal.fadeIn(200);
+		modalType.find('.modal__content').html('').prepend($($(this).attr('href')).html());
+
+		modalType.fadeIn(200);
+		$('body, html').animate({scrollTop:0}, 500);
 		$('body').addClass('js-modal-animated');
+		$('.modal-content__holder').jScrollPane(); // FIXME: Second time don`t show
 	});
 
 	modalClose.on('click', function () {

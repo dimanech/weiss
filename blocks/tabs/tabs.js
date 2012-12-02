@@ -18,7 +18,7 @@ function contentTabsUnordered() {
 
 			content.hide();
 			$(self.attr('href')).fadeIn(200);
-			//$('body').animate({scrollTop:self.offset().top}, 500);
+			//$('body, html').animate({scrollTop:self.offset().top}, 500);
 		}
 	});
 }

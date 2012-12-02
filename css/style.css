@@ -504,7 +504,7 @@ ins {
 }
 
 .i-ir {
-  border: 0;
+  border: none;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;

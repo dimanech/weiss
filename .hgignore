@@ -1,7 +1,13 @@
 syntax: glob
 
-*.psd
 arch
+design
+
+*.psd
+*.zip
+*.7zip
+*.tar
+*.rar
 
 *.diff
 *.err
@@ -24,3 +30,4 @@ Thumbs.db
 .pydevproject
 .externalToolBuilders
 .settings
+/nbproject/private/

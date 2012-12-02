@@ -79,7 +79,7 @@
 }
 
 .i-ir {
-	border: 0;
+	border: none;
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
@@ -87,7 +87,7 @@
 }
 
 .i-wai {
-	@include vishidden;
+	@include i-hide_vis;
 }
 
 .i-img-container { // image wrapper

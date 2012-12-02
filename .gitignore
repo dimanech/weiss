@@ -1,5 +1,11 @@
-*.psd
 arch
+design
+
+*.psd
+*.zip
+*.7zip
+*.tar
+*.rar
 
 *.diff
 *.err

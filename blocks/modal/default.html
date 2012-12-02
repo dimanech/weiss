@@ -27,9 +27,9 @@
 				<div class="region-main i-clfx" role="main">
 					<div class="region-main__content">
 						<h1>Заголовок 1</h1>
-						<a href="#modal1" class="js-modal-open">Модальное окно 1</a>
-						<a href="#modal2" class="js-modal-open">Модальное окно 2</a>
-						<a href="#modal3" class="js-modal-open">Модальное окно 3</a>
+						<a href="#modal1" class="js-modal-open" data-modal="modal_type-1">Модальное окно 1</a>
+						<a href="#modal2" class="js-modal-open" data-modal="modal_type-2">Модальное окно 2</a>
+						<a href="#modal3" class="js-modal-open" data-modal="modal_type-1">Модальное окно 3</a>
 
 						<div class="modal-content" id="modal1">
 							<h2 class="modal__title">Заголовок модального окна 1</h2>
@@ -95,16 +95,31 @@
 			<!-- /.l-main-aux__inner -->
 		</div>
 		<!-- /.l-main-aux -->
-		<div class="modal js-modal">
+
+		<!-- modal template 4 -->
+		<div class="modal modal_type-1 js-modal">
 			<div class="modal__bg js-modal-close"></div>
 			<div class="modal__window">
 				<div class="modal__window__inner">
-					<div class="modal__content">
-					</div>
-					<span class="modal__close-btn js-modal-close" role="button" title="Закрыть окно" tabindex="0">×</span>
+					<div class="modal__content"></div>
+					<i class="modal__close-btn js-modal-close" role="button" title="Закрыть окно" tabindex="0"></i>
 				</div>
 			</div>
 		</div>
+		<!-- /modal template -->
+
+		<!-- modal template 5 -->
+		<div class="modal modal_type-2 js-modal">
+			<div class="modal__bg js-modal-close"></div>
+			<div class="modal__window">
+				<div class="modal__window__inner">
+					<div class="modal__content"></div>
+					<i class="modal__close-btn js-modal-close" role="button" title="Закрыть окно" tabindex="0"></i>
+				</div>
+			</div>
+		</div>
+		<!-- /modal template -->
+
 		<script src="../../js/jquery.min.js" charset="utf-8"></script>
 		<script src="modal.js" type="text/javascript" charset="utf-8"></script>
 	</body>

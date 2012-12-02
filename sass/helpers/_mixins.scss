@@ -3,13 +3,13 @@
 //=============================================================================
 
 // Hide from both screenreaders and browsers
-@mixin hidden {
+@mixin i-hide {
 	display: none !important;
 	visibility: hidden;
 }
 
 // Hide only visually, but have it available for screenreaders
-@mixin vishidden {
+@mixin i-hide_vis {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
 	height: 1px;
@@ -25,8 +25,9 @@
 }
 
 // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard
-@mixin vishiddenFocus {
-	&:focus, &:active {
+@mixin i-hide_vis_focus {
+	&:focus,
+	&:active {
 		clip: auto;
 		height: auto;
 		margin: 0;
@@ -34,15 +35,14 @@
 		position: static;
 		width: auto;
 	}
-
 }
 
 // Hide visually and from screenreaders, but maintain layout
-@mixin invisible {
+@mixin i-hide_invisible {
 	visibility: hidden;
 }
 
-@mixin linkOffscreen() {
+@mixin i-hide_offscreen {
 	text-indent: -9999px;
 	overflow: hidden;
 	text-decoration: none;
