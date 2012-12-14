@@ -836,46 +836,46 @@ ins {
   margin-left: 5px;
 }
 
-.form__item_w50 {
+.form__item_w-50 {
   width: 40px;
 }
-.form__item_w50 input[type="text"],
-.form__item_w50 textarea {
+.form__item_w-50 input[type="text"],
+.form__item_w-50 textarea {
   width: 40px;
 }
 
-.form__item_w100 {
+.form__item_w-100 {
   width: 90px;
 }
-.form__item_w100 input[type="text"],
-.form__item_w100 textarea {
+.form__item_w-100 input[type="text"],
+.form__item_w-100 textarea {
   width: 90px;
 }
 
-.form__item_w145 {
+.form__item_w-145 {
   width: 135px;
 }
-.form__item_w145 input[type="text"],
-.form__item_w145 textarea {
+.form__item_w-145 input[type="text"],
+.form__item_w-145 textarea {
   width: 135px;
 }
 
-.form__item_w200 {
+.form__item_w-200 {
   width: 190px;
 }
-.form__item_w200 input[type="text"],
-.form__item_w200 textarea {
+.form__item_w-200 input[type="text"],
+.form__item_w-200 textarea {
   width: 190px;
 }
 
 /* @end */
 /* @group Selectbox plugin support
   --------------------------------------------------------------------------- */
-.sb-w200 .dropdown,
-.sb-w200 select {
+.sb-w-200 .dropdown,
+.sb-w-200 select {
   width: 200px !important;
 }
-.sb-w200 .dropdown ul {
+.sb-w-200 .dropdown ul {
   width: 198px !important;
 }
 
