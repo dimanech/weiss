@@ -16,7 +16,7 @@ $formRowMargin: 10px;
 	input,
 	select,
 	textarea {
-		font: 1em/1.429em #{$baseFontFamily};
+		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
 		//margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
 		vertical-align: baseline;
 		padding: 0;
@@ -28,7 +28,8 @@ $formRowMargin: 10px;
 	}
 
 	label {
-		font-weight: normal;
+		display: block;
+		line-height: $inputHeight;
 	}
 
 	input {
@@ -38,8 +39,8 @@ $formRowMargin: 10px;
 		}
 
 		&[type="button"],
-		&[type="submit"],
-		&[type="reset"],
+		// &[type="submit"],
+		// &[type="reset"],
 		&[type="image"] {
 			-webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
 		}
@@ -48,6 +49,7 @@ $formRowMargin: 10px;
 		&[type="radio"] {
 			box-sizing: border-box; // Addresses box sizing set to `content-box` in IE 8/9.
 			padding: 0; // Removes excess padding in IE 8/9.
+			width: auto !important; // form__item_w* normilize
 		}
 
 		&[type="radio"]{
@@ -64,8 +66,8 @@ $formRowMargin: 10px;
 	//  ---------------------------------------------------------------------------
 
 	input[type="text"],
-	input[type="password"],
-	input[type="search"],
+	// input[type="password"],
+	// input[type="search"],
 	select,
 	textarea {
 		border: 1px solid;
@@ -88,7 +90,6 @@ $formRowMargin: 10px;
 
 	input[type="button"],
 	input[type="submit"],
-	input[type="image"],
 	button {
 		color: #efefef;
 		background: #2d2d2d;
@@ -113,10 +114,10 @@ $formRowMargin: 10px;
 		overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
 		vertical-align: top; //Improves readability and alignment in all browsers
 		height: auto; // overwrite theming on form element
-		line-height: $inputHeight;
+		min-height: 4em;
+		line-height: $base-line-height;
 		padding: 5px $inputPadding;
 		resize: vertical;
-		min-height: 4em;
 	}
 
 	select {
@@ -133,10 +134,14 @@ $formRowMargin: 10px;
 	// Fieldset styles
 	//  ---------------------------------------------------------------------------
 
-	fieldset {}
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
 
 	legend {
-	  border: 0; // Corrects color not being inherited in IE 8/9.
+	  border: none; // Corrects color not being inherited in IE 8/9.
 	  padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
 	}
 
@@ -144,14 +149,11 @@ $formRowMargin: 10px;
 
 	.form__set { // fieldset
 		position: relative;
-		border: none;
-		margin: 0;
 		padding: 20px 0 0;
 	}
 
 	.form__set__legend { // legend
 		border: 0;
-		padding: 0;
 		font-size: $h3-font-size;
 		font-weight: bold;
 
@@ -162,21 +164,11 @@ $formRowMargin: 10px;
 		}
 	}
 
-	//mods
-
-	.form__set_main {
-		padding-top: 20px;
-	}
-
-	.form__set__legend_main {
-		font-size: $h2-font-size;
-		font-weight: bold;
-	}
-
 	// Additional resets
 	//  ---------------------------------------------------------------------------
 
-	button,	input {
+	button,
+	input {
 		&::-moz-focus-inner {
 			border: 0; 	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 			padding: 0;
@@ -184,11 +176,15 @@ $formRowMargin: 10px;
 	}
 
 	.ie6-7 & {
-		button, input, select, textarea {
+		button,
+		input,
+		select,
+		textarea {
 			vertical-align: middle;
 		}
 
-		button, input {
+		button,
+		input {
 			overflow: visible; //Removes inner spacing in IE7 without affecting normal text inputs
 		}
 	}
@@ -196,11 +192,26 @@ $formRowMargin: 10px;
 	// Placeholder styles
 	//  ---------------------------------------------------------------------------
 
-	// input::-webkit-input-placeholder {
-	// }
-	//
-	// input:-moz-placeholder {
-	// }
+	input {
+
+		&::-webkit-input-placeholder {
+			color: $baseColor;
+		}
+
+		&:-moz-placeholder {
+			color: $baseColor;
+		}
+
+		&:focus {
+			&::-webkit-input-placeholder {
+				color: lighten($baseColor, 10%);
+			}
+
+			&:-moz-placeholder {
+				color: lighten($baseColor, 10%);
+			}
+		}
+	}
 
 	// Colors for native form validition
 
@@ -212,41 +223,36 @@ $formRowMargin: 10px;
 
 }
 
-/* @group Form mods
-  --------------------------------------------------------------------------- */
-
-
-
-/* @end */
-
 /* @group Form elements
   --------------------------------------------------------------------------- */
+$formItemPadding: 10px;
 
 .form__row {
 	@extend .i-clfx;
-	clear: both;
 	padding: 5px 0;
 	margin: 0 $formRowMargin;
 }
 
-$form-item-padding: 10px;
-
 .form__item {
 	float:left;
-	padding: 0 $form-item-padding 0 0;
+	padding: 0 $formItemPadding 0 0;
 	margin-left: 5px;
 }
 
 @each $itemWidth in 50, 100, 145, 200 {
 
 	.form__item_w-#{$itemWidth} {
-		width: $itemWidth - ($form-item-padding);
+		width: $itemWidth - ($formItemPadding);
 
-		input[type="text"],
+		input,
 		textarea {
 			width: $itemWidth - ($inputPadding * 2);
 		}
 	}
+}
+
+.form__row_submit {
+
 }
 
 /* @end */
@@ -275,6 +281,19 @@ $sbPadding: 2px;
 
 /* @group Form Themed
   --------------------------------------------------------------------------- */
+
+.form {
+
+	//mods
+	.form__set_main {
+		padding-top: 20px;
+	}
+
+	.form__set__legend_main {
+		font-size: $h2-font-size;
+		font-weight: bold;
+	}
+}
 
 .form_name2 {
 	.form__set__legend span {
