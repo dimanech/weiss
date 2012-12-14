@@ -688,6 +688,7 @@ ins {
 .form textarea {
   font: 1em/1.429em Arial, FreeSans, sans-serif;
   vertical-align: baseline;
+  padding: 0;
 }
 .form button,
 .form input {
@@ -695,6 +696,9 @@ ins {
 }
 .form label {
   font-weight: normal;
+}
+.form input[type="text"] {
+  -webkit-appearance: none;
 }
 .form input[type="button"], .form input[type="submit"], .form input[type="reset"], .form input[type="image"] {
   -webkit-appearance: button;
@@ -709,15 +713,6 @@ ins {
 .form input[type="checkbox"] {
   vertical-align: baseline;
 }
-.form input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.form input[type="search"]::-webkit-search-decoration, .form input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
 .form input[type="text"],
 .form input[type="password"],
 .form input[type="search"],
@@ -727,6 +722,7 @@ ins {
   border-color: #777 #ccc #ccc;
   background: #fff;
   padding: 0 5px;
+  margin: 0;
   height: 20px;
   line-height: 20px;
 }
@@ -816,28 +812,15 @@ ins {
   border: 0;
   padding: 0;
 }
-.form .ie6-7 button, .form .ie6-7 input, .form .ie6-7 select, .form .ie6-7 textarea {
+.ie6-7 .form button, .ie6-7 .form input, .ie6-7 .form select, .ie6-7 .form textarea {
   vertical-align: middle;
 }
-.form .ie6-7 button, .form .ie6-7 input {
+.ie6-7 .form button, .ie6-7 .form input {
   overflow: visible;
-}
-.form .ie6-7 input[type="checkbox"],
-.form .ie6-7 input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
 }
 
 /* @group Form mods
   --------------------------------------------------------------------------- */
-.form_horiz label {
-  display: inline;
-}
-
-.form_vert label {
-  display: block;
-}
-
 /* @end */
 /* @group Form elements
   --------------------------------------------------------------------------- */
@@ -845,14 +828,6 @@ ins {
   clear: both;
   padding: 5px 0;
   margin: 0 10px;
-}
-
-.form__row_r {
-  text-align: right;
-}
-
-.form__row_c {
-  text-align: center;
 }
 
 .form__item {
@@ -1195,6 +1170,10 @@ thead .table td, thead
 ============================================================================ */
 /* Modal behavior
   --------------------------------------------------------------------------- */
+.modal {
+  display: none;
+}
+
 .modal__bg {
   width: 100%;
   height: 100%;
@@ -1222,18 +1201,22 @@ thead .table td, thead
   cursor: pointer;
 }
 
+.l-main-aux {
+  position: relative;
+  z-index: 0;
+}
+
 /* @end */
 /* @group Modal animation
   --------------------------------------------------------------------------- */
 .js-modal-animated .l-main-aux__inner {
   -webkit-filter: blur(2px);
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2);
-  -webkit-transform: scale(0.99);
 }
 
 .l-main-aux__inner {
   -webkit-filter: blur(0);
   -webkit-transform: scale(1);
+  -webkit-transform: translateZ(0);
   -webkit-transition: all linear 200ms;
   -moz-transition: all linear 200ms;
   -o-transition: all linear 200ms;
@@ -1250,12 +1233,9 @@ thead .table td, thead
 /* @end */
 /* Modal styles
   --------------------------------------------------------------------------- */
-.modal {
-  display: none;
-}
-
 .modal__bg {
-  background: rgba(0, 0, 0, 0.4);
+  background: #000;
+  opacity: 0.4;
 }
 
 .modal__window {
@@ -1265,7 +1245,7 @@ thead .table td, thead
   border-radius: 5px;
   padding: 1em;
 }
-.ie7-8 .modal__window {
+.ie6-7 .modal__window {
   border: 1px solid #ddd;
 }
 

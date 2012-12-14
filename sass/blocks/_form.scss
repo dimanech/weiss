@@ -19,6 +19,7 @@ $formRowMargin: 10px;
 		font: 1em/1.429em #{$baseFontFamily};
 		//margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
 		vertical-align: baseline;
+		padding: 0;
 	}
 
 	button,
@@ -31,6 +32,10 @@ $formRowMargin: 10px;
 	}
 
 	input {
+
+		&[type="text"] {
+			-webkit-appearance: none;
+		}
 
 		&[type="button"],
 		&[type="submit"],
@@ -51,18 +56,6 @@ $formRowMargin: 10px;
 
 		&[type="checkbox"] {
 			vertical-align: baseline;
-		}
-
-		&[type="search"] {
-			-webkit-appearance: textfield; // Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
-			-moz-box-sizing: content-box;
-			-webkit-box-sizing: content-box; // Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof)
-			box-sizing: content-box;
-
-			&::-webkit-search-decoration,
-			&::-webkit-search-cancel-button {
-				-webkit-appearance: none; // Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
-			}
 		}
 
 	}
@@ -190,19 +183,13 @@ $formRowMargin: 10px;
 		}
 	}
 
-	.ie6-7 {
+	.ie6-7 & {
 		button, input, select, textarea {
 			vertical-align: middle;
 		}
 
 		button, input {
 			overflow: visible; //Removes inner spacing in IE7 without affecting normal text inputs
-		}
-
-		input[type="checkbox"],
-		input[type="radio"] {
-			box-sizing: border-box; //addresses box sizing set to `content-box` in IE 8/9.
-			padding: 0; //Removes excess padding in IE 8/9.
 		}
 	}
 
@@ -228,17 +215,7 @@ $formRowMargin: 10px;
 /* @group Form mods
   --------------------------------------------------------------------------- */
 
-.form_horiz {
-	label {
-		display: inline;
-	}
-}
 
-.form_vert {
-	label {
-		display: block;
-	}
-}
 
 /* @end */
 
@@ -250,14 +227,6 @@ $formRowMargin: 10px;
 	clear: both;
 	padding: 5px 0;
 	margin: 0 $formRowMargin;
-}
-
-.form__row_r {
-	text-align: right;
-}
-
-.form__row_c {
-	text-align: center;
 }
 
 $form-item-padding: 10px;
