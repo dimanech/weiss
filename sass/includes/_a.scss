@@ -29,21 +29,6 @@
 	margin: 0 auto;
 }
 
-.i-left {
-	float:left;
-}
-
-.i-right {
-	float:right;
-}
-
-// .ie6 {
- // .i-left,
- //.i-right {
-	 // display:inline;
- // }
-// }
-
 .i-br {
 	display:block;
 }
@@ -65,12 +50,6 @@
 
 /* hacks and long rules */
 
-.i-op {
-	opacity: .85;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
-	filter: alpha(opacity = 85);
-}
-
 .i-dib { // additional classes for overwrite IE make trouble in @extend funct
 	display:inline-block;
 	vertical-align: top;
@@ -90,6 +69,12 @@
 	@include i-hide_vis;
 }
 
+.i-op {
+	opacity: .85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
+	filter: alpha(opacity = 85);
+}
+
 .i-img-container { // image wrapper
 	overflow: hidden;
 	@extend .i-dib;
@@ -97,20 +82,5 @@
 	img {
 		display: block;
 		position: static;
-	}
-}
-
-/* ============================================================================
-		Sprite support
-============================================================================= */
-
-.i-ico {
-	/* background: url("../images/main-sprite.png") 0 0 no-repeat; */
-	display: inline-block;
-	position: relative;
-
-	.ie6-7 & {
-		display: inline;
-		zoom: 1;
 	}
 }

@@ -280,22 +280,11 @@ kbd {
 }
 
 pre {
-  white-space: pre;
-  white-space: pre-line;
-  word-wrap: break-word;
   background-color: #3a3739;
   color: #ccc;
   padding: .643em 0 .643em 2em;
   width: 94%;
   overflow-x: auto;
-}
-
-code {
-  color: green;
-}
-
-samp {
-  color: maroon;
 }
 
 kbd {
@@ -465,14 +454,6 @@ ins {
   margin: 0 auto;
 }
 
-.i-left {
-  float: left;
-}
-
-.i-right {
-  float: right;
-}
-
 .i-br {
   display: block;
 }
@@ -490,12 +471,6 @@ ins {
 }
 
 /* hacks and long rules */
-.i-op {
-  opacity: .85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
-  filter: alpha(opacity=85);
-}
-
 .i-dib, .i-img-container {
   display: inline-block;
   vertical-align: top;
@@ -525,25 +500,18 @@ ins {
   clip: rect(1px 1px 1px 1px);
 }
 
+.i-op {
+  opacity: .85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
+  filter: alpha(opacity=85);
+}
+
 .i-img-container {
   overflow: hidden;
 }
 .i-img-container img {
   display: block;
   position: static;
-}
-
-/* ============================================================================
-		Sprite support
-============================================================================= */
-.i-ico {
-  /* background: url("../images/main-sprite.png") 0 0 no-repeat; */
-  display: inline-block;
-  position: relative;
-}
-.ie6-7 .i-ico {
-  display: inline;
-  zoom: 1;
 }
 
 /* ============================================================================
