@@ -2,14 +2,9 @@
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
-//@import "compass/utilities/sprites";
 // $myicons-layout: vertical;
 // $myicons-spacing: 10px;
 // @import "myicons/*.png";
-
-//@import "helpers/modular-scale";
-// http://www.modularscale.com by Tim Brown
-// https://github.com/scottkellum/modular-scale by scottkellum
 
 $sans: Arial, FreeSans, sans-serif;
 $hSans: Verdana,"Bitstream Vera Sans","DejaVu Sans", sans-serif;
@@ -44,7 +39,8 @@ $baseFontFamilyMono: $monospSerif;
 $base-font-size: 14px; // The font size set on the root html element.
 $base-line-height: 18px; // This line-height determines the basic unit of vertical rhythm.
 
-// http://modularscale.com/
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
 
 $h1-font-size: 1.942 * $base-font-size;
 $h2-font-size: 1.618 * $base-font-size;
@@ -58,52 +54,20 @@ $h6-font-size: 0.618 * $base-font-size;
 //    Non-semantic grid support
 //=============================================================================
 
-//@import "susy-grid";
+@import "susy";
 
-//$total-columns  : 12;             // a 12-column grid
-//$column-width   : 4em;            // each column is 4em wide
-//$gutter-width   : 1em;            // 1em gutters between columns
-//$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
 
-// Crossbrowser font face example
-
-//@font-face {
-//	font-family: 'MyrPro';
-//	src: url('../fonts/myriad/myriadpro-boldit-webfont.eot');
-//	src: url('../fonts/myriad/myriadpro-boldit-webfont.eot?#iefix') format('embedded-opentype'),
-//	url('../fonts/myriad/myriadpro-boldit-webfont.woff') format('woff'),
-//	url('../fonts/myriad/myriadpro-boldit-webfont.ttf') format('truetype');
-//	font-weight: bold;
-//	font-style: italic;
-//}
-//
-//@font-face {
-//	font-family: 'MyrPro';
-//	src: url('../fonts/myriad/myriadpro-it-webfont.eot');
-//	src: url('../fonts/myriad/myriadpro-it-webfont.eot?#iefix') format('embedded-opentype'),
-//	url('../fonts/myriad/myriadpro-it-webfont.woff') format('woff'),
-//	url('../fonts/myriad/myriadpro-it-webfont.ttf') format('truetype');
-//	font-weight: normal;
-//	font-style: italic;
-//}
-//
-//@font-face {
-//	font-family: 'MyrPro';
-//	src: url('../fonts/myriad/myriadpro-bold-webfont.eot');
-//	src: url('../fonts/myriad/myriadpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-//	url('../fonts/myriad/myriadpro-bold-webfont.woff') format('woff'),
-//	url('../fonts/myriad/myriadpro-bold-webfont.ttf') format('truetype');
-//	font-weight: bold;
-//	font-style: normal;
-//}
-//
-//@font-face {
-//	font-family: 'MyrPro';
-//	src: url('../fonts/myriad/myrproregular-webfont.eot');
-//	src: url('../fonts/myriad/myrproregular-webfont.eot?#iefix') format('embedded-opentype'),
-//	url('../fonts/myriad/myrproregular-webfont.woff') format('woff'),
-//	url('../fonts/myriad/myrproregular-webfont.ttf') format('truetype');
-//	font-weight: normal;
-//	font-style: normal;
-//}
+$media-desktop_wide: 'screen and (min-width:1281px)';
+$media-desktop: 'screen and (max-width:1280px)';
+$media-tablet_landscape: 'screen and (max-width:1024px)';
+$media-tablet_portrait: 'screen and (max-width:768px)';
+$media-tablet_small: 'screen and (max-width:600px)';
+$media-phone_landscape: 'screen and (max-width:480px)';
+$media-phone_portrait: 'screen and (max-width:320px)';
+$media-portrait: 'screen and (orientation: portrait)';
+$media-landscape: 'screen and (orientation: landscape)';

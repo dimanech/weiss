@@ -32,30 +32,30 @@
 
 		td {
 
-			&[colspan] {
-				text-align:center;
-			}
-
-			&[rowspan] {
-				vertical-align:middle;
-			}
-
-			&[colspan="1"] {
-				text-align: left;
-			}
-
-			&[rowspan="1"] {
-				vertical-align: top;
-			}
-
-			&:empty {
-				border: none;
-			}
+			//&[colspan] {
+			//	text-align:center;
+			//}
+			//
+			//&[rowspan] {
+			//	vertical-align:middle;
+			//}
+			//
+			//&[colspan="1"] {
+			//	text-align: left;
+			//}
+			//
+			//&[rowspan="1"] {
+			//	vertical-align: top;
+			//}
+			//
+			//&:empty {
+			//	border: none;
+			//}
 		}
 
-		tr:nth-of-type(odd) td {
-			background-color: rgba(0,0,0,0.05);
-		}
+		//tr:nth-of-type(odd) td {
+		//	background-color: rgba(0,0,0,0.05);
+		//}
 	}
 
 	tfoot {

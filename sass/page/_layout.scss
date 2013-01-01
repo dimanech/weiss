@@ -41,21 +41,11 @@
 /* @group layout
   --------------------------------------------------------------------------- */
 
-$mainWidth: percentage(724px / $containerWidth);
-$asideWidth: percentage(227px / $containerWidth);
-$twoSdbarsMainWidth: percentage(474px / $containerWidth);
+$mainWidth: columns(8,12);
+$asideWidth: columns(4,12);
+$twoSdbarsMainWidth: columns(4,12);
 
 /* main */
-
-.l-2sidebars_main {
-	float: left;
-	margin-left: $asideWidth+2.5%;
-	width: $twoSdbarsMainWidth;
-
-	.ie6-7 & {
-		display:inline; //double margin ie6 fix
-	}
-}
 
 .l-sidebar-first_main {
 	float: right;
@@ -69,7 +59,27 @@ $twoSdbarsMainWidth: percentage(474px / $containerWidth);
 	width: $mainWidth;
 }
 
+.l-2sidebars_main {
+	float: left;
+	margin-left: $asideWidth + gutter(12);
+	width: $twoSdbarsMainWidth;
+
+	//.ie6-7 & {
+	//	display:inline; //double margin ie6 fix
+	//}
+}
+
 /* sidebars */
+
+.l-sidebar-first_aside,
+.l-sidebar-second_aside {
+	float: left;
+	width: $asideWidth;
+}
+
+.l-sidebar-second_aside {
+	float: right;
+}
 
 .l-2sidebars_sidebar-first {
 	float: left;
@@ -80,16 +90,6 @@ $twoSdbarsMainWidth: percentage(474px / $containerWidth);
 .l-2sidebars_sidebar-second {
 	float: right;
 	width: $asideWidth;
-}
-
-.l-sidebar-first_aside,
-.l-sidebar-second_aside {
-	float: left;
-	width: $asideWidth;
-}
-
-.l-sidebar-second_aside {
-	float: right;
 }
 
 /* @end */
@@ -114,6 +114,77 @@ $twoSdbarsMainWidth: percentage(474px / $containerWidth);
 .l-global-footer__right {
 	float: right;
 	text-align: right;
+}
+
+/* @end */
+
+/* ============================================================================
+    Non-semantic grid support
+ =========================================================================== */
+
+.l-row {
+	@extend .i-clfx;
+}
+
+l-row_flat {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.l-row_w {
+	@include container;
+}
+
+.l-row_ov {
+	overflow: hidden;
+}
+
+.l-span {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.l-span_1 {
+	@include span-columns(1,12);
+}
+
+.l-span_2 {
+	@include span-columns(2,12);
+}
+
+.l-span_4 {
+	@include span-columns(4,12);
+}
+
+.l-span_6 {
+	@include span-columns(6,12);
+}
+
+.l-span_8 {
+	@include span-columns(8,12);
+}
+
+.l-span_10 {
+	@include span-columns(10,12);
+}
+
+.l-span_12 {
+	@include span-columns(12,12);
+}
+
+/* Layout type */
+
+.l-span_4-6-12 {}
+
+.l-span_4-8-12 {}
+
+/* End Layout type */
+
+.l-span_last {
+	float: right !important;
+	margin-right: 0 !important;
 }
 
 /* @end */
@@ -145,6 +216,29 @@ $footer-height: 80px;
 		position: relative;
 		height: $footer-height;
 	}
+}
+
+@media #{$media-tablet_portrait} {
+
+/* Sticky footer reset */
+
+	html, body {
+		height: auto;
+	}
+
+	.l-page {
+		min-height: auto;
+		margin-bottom: auto;
+	}
+
+	.l-main-aux__inner {
+		padding-bottom: 0;
+	}
+
+	.l-global-footer {
+		height: auto;
+	}
+
 }
 
 /* @end */

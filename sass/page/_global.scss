@@ -10,13 +10,7 @@
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, nav, section {
-	display: block; // Corrects `block` display not defined in IE 8/9.
-}
-
-audio,
-canvas,
-video {
-	display: inline-block; // Corrects `inline-block` display not defined in IE 8/9.
+	display: block; // Corrects `block` display not defined in IE 9.
 }
 
 blockquote,
@@ -42,6 +36,48 @@ q {
 		font-weight: normal;
 		font-style: normal;
 }
+
+// Crossbrowser font face example
+
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myriadpro-boldit-webfont.eot');
+//	src: url('../fonts/myriad/myriadpro-boldit-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myriadpro-boldit-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myriadpro-boldit-webfont.ttf') format('truetype');
+//	font-weight: bold;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myriadpro-it-webfont.eot');
+//	src: url('../fonts/myriad/myriadpro-it-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myriadpro-it-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myriadpro-it-webfont.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myriadpro-bold-webfont.eot');
+//	src: url('../fonts/myriad/myriadpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myriadpro-bold-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myriadpro-bold-webfont.ttf') format('truetype');
+//	font-weight: bold;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myrproregular-webfont.eot');
+//	src: url('../fonts/myriad/myrproregular-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myrproregular-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myrproregular-webfont.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: normal;
+//}
 
 html {
 	-webkit-text-size-adjust: 100%; // Prevents iOS text size adjust after orientation change, without disabling user zoom.
@@ -150,10 +186,6 @@ a {
 		outline: none; // Improves readability when focused and also mouse hovered in all browsers.
 	}
 
-	&:focus {
-		outline: thin dotted; // Addresses `outline` inconsistency between Chrome and other browsers.
-	}
-
 	//&[href^="tel"],
 	//&[href^="mailto"],
 	//&[href^="callto"] {
@@ -166,10 +198,16 @@ a {
 img {
 	font-size: 1em;
 	color: $baseColor; // alt text style
-	position: relative;  // Chrome outline around img in a; ie5-6 floating image disappearing fix
 	border: none; // remove border if in <a> elem
 	-ms-interpolation-mode: bicubic; // improve IE7's resizing of images http://code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
 }
+
+//@media #{$media-tablet_small} {
+//	img, object, embed, video, iframe {
+//		max-width: 100%;
+//		height: auto;
+//	}
+//}
 
 object,
 embed,

@@ -11,37 +11,32 @@ $formRowMargin: 10px;
 
 .form {
 	border: none;
+	margin: 0; // IE7
 
-	button,
+	//button,
 	input,
 	select,
 	textarea {
-		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
-		//margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
-		vertical-align: baseline;
+		margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
 		padding: 0;
+		vertical-align: baseline;
 	}
 
-	button,
+	//button,
 	input {
 		line-height: normal; // Addresses Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
 	}
 
 	label {
 		display: block;
-		line-height: $inputHeight;
 	}
 
 	input {
 
-		&[type="text"] {
-			-webkit-appearance: none;
-		}
-
-		&[type="button"],
-		// &[type="submit"],
-		// &[type="reset"],
-		&[type="image"] {
+		//&[type="button"],
+		//&[type="image"],
+		&[type="submit"],
+		&[type="reset"] {
 			-webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
 		}
 
@@ -65,9 +60,20 @@ $formRowMargin: 10px;
 	// Themed form
 	//  ---------------------------------------------------------------------------
 
-	input[type="text"],
+	//button,
+	input,
+	select,
+	textarea {
+		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+	}
+
+	label {
+		line-height: $inputHeight;
+	}
+
 	// input[type="password"],
 	// input[type="search"],
+	input[type="text"],
 	select,
 	textarea {
 		border: 1px solid;
@@ -88,9 +94,9 @@ $formRowMargin: 10px;
 		}
 	}
 
-	input[type="button"],
-	input[type="submit"],
-	button {
+	//input[type="button"],
+	//button,
+	input[type="submit"] {
 		color: #efefef;
 		background: #2d2d2d;
 		border: 1px solid #2d2d2d;
@@ -170,7 +176,7 @@ $formRowMargin: 10px;
 	button,
 	input {
 		&::-moz-focus-inner {
-			border: 0; 	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+			border: none; 	// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 			padding: 0;
 		}
 	}
