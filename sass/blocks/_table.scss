@@ -1,9 +1,9 @@
+@import "config";
+@import "helpers/mixins";
+
 /* ============================================================================
    @group Table support
 ============================================================================ */
-
-@import "config";
-@import "helpers/mixins";
 
 .table {
 	border-collapse: collapse; //Remove most spacing between table cells.

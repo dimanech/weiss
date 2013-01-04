@@ -13,7 +13,7 @@
 // --------------------------------------------------------------------------
 
 @import "page/global";
-@import "page/specific-html-support";
+@import "page/specific-html";
 @import "page/layout";
 
 // Includes
@@ -33,12 +33,13 @@
 
 @import "blocks/form";
 @import "blocks/table";
+@import "blocks/lists";
 @import "blocks/menu-horiz";
-@import "blocks/btn";
+@import "blocks/pagination";
 @import "blocks/tabs";
 @import "blocks/modal";
 @import "blocks/collapse";
-@import "blocks/pages";
+@import "blocks/btn";
 
 // Plugins
 // --------------------------------------------------------------------------

@@ -24,7 +24,7 @@ q {
 }
 
 /* ============================================================================
-		1. GLOBAL
+		GLOBAL
 ============================================================================= */
 
 @font-face {
@@ -99,7 +99,7 @@ body {
 }
 
 /* ============================================================================
-		1.1. Typography
+		Typography
 ============================================================================= */
 
 h1, .h1,
@@ -199,6 +199,7 @@ img {
 	font-size: 1em;
 	color: $baseColor; // alt text style
 	border: none; // remove border if in <a> elem
+	background-color: #ccc;
 	-ms-interpolation-mode: bicubic; // improve IE7's resizing of images http://code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
 }
 
@@ -216,7 +217,8 @@ video {
 	height:auto;
 }
 
-// selection fixes
+/* @group selection fixes
+  --------------------------------------------------------------------------- */
 
 // ::-moz-selection {
 // 	text-shadow: none;
@@ -234,53 +236,10 @@ video {
 // 	border-bottom: 3px solid rgba(0, 0, 0, .1);
 // }
 
-/* ============================================================================
-		1.2. Lists and tables
-============================================================================= */
-
-/* @group Lists
-  --------------------------------------------------------------------------- */
-
-ul,
-ol,
-dl {
-	margin: rhythm(1) 0;
-	padding-left: 1.5em;
-}
-
-ul,
-ol {
-	li {
-		margin: rhythm(0.2) 0;
-	}
-}
-
-ul {
-	list-style: disc outside;
-}
-
-ol {
-	list-style: decimal outside;
-}
-
-ol ul {
-	list-style: disc; // ul inside ul fix
-}
-
-dl dt,
-dfn {
-	font-weight: bold;
-	font-style: italic;
-}
-
-dl dd {
-	margin-left: 1.5em;
-}
-
 /* @end */
 
 /* ============================================================================
-		1.4 Specific
+		Specific
 ============================================================================= */
 
 // Prevents sub and sup affecting line-height in all browsers
@@ -302,15 +261,6 @@ sub {
 
 small {
 	font-size: .75em;
-}
-
-address {
-	font-style:normal;
-}
-
-mark {
-	background-color: #ff9;
-	color: #000;
 }
 
 u {

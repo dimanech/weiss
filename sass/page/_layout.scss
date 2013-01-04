@@ -1,9 +1,9 @@
+@import "config";
+@import "helpers/mixins";
+
 /* ============================================================================
 		PAGE LAYOUT
 ============================================================================= */
-
-@import "config";
-@import "helpers/mixins";
 
 .l-main-aux {
 	background-color: $mainFgColor;

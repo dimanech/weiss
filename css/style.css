@@ -23,7 +23,7 @@ q:after {
 }
 
 /* ============================================================================
-		1. GLOBAL
+		GLOBAL
 ============================================================================= */
 @font-face {
   font-family: 'ALSRublRegular';
@@ -52,7 +52,7 @@ body {
 }
 
 /* ============================================================================
-		1.1. Typography
+		Typography
 ============================================================================= */
 h1, .h1,
 h2, .h2,
@@ -146,6 +146,7 @@ img {
   font-size: 1em;
   color: #434343;
   border: none;
+  background-color: #ccc;
   -ms-interpolation-mode: bicubic;
 }
 
@@ -156,48 +157,11 @@ video {
   height: auto;
 }
 
-/* ============================================================================
-		1.2. Lists and tables
-============================================================================= */
-/* @group Lists
+/* @group selection fixes
   --------------------------------------------------------------------------- */
-ul,
-ol,
-dl {
-  margin: 1.28571em 0;
-  padding-left: 1.5em;
-}
-
-ul li,
-ol li {
-  margin: 0.25714em 0;
-}
-
-ul {
-  list-style: disc outside;
-}
-
-ol {
-  list-style: decimal outside;
-}
-
-ol ul {
-  list-style: disc;
-}
-
-dl dt,
-dfn {
-  font-weight: bold;
-  font-style: italic;
-}
-
-dl dd {
-  margin-left: 1.5em;
-}
-
 /* @end */
 /* ============================================================================
-		1.4 Specific
+		Specific
 ============================================================================= */
 sup,
 sub {
@@ -217,15 +181,6 @@ sub {
 
 small {
   font-size: .75em;
-}
-
-address {
-  font-style: normal;
-}
-
-mark {
-  background-color: #ff9;
-  color: #000;
 }
 
 u {
@@ -696,43 +651,43 @@ l-row_flat {
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #2b4b4f;
+    background: #2ca05d;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #2f7093;
+    background: #dc457a;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #6ed35a;
+    background: #123bc6;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #0296d1;
+    background: #e69441;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #e0ce45;
+    background: #a965cb;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #c90685;
+    background: #f6efff;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #7b8408;
+    background: #b19f2e;
   }
 }
 /* @end */
@@ -1092,6 +1047,46 @@ thead .table td, thead
 
 /* @end */
 /* ============================================================================
+		Lists
+============================================================================= */
+/* @group Lists generic
+  --------------------------------------------------------------------------- */
+ul,
+ol,
+dl {
+  margin: 1.28571em 0;
+  padding-left: 1.5em;
+}
+
+ul li,
+ol li {
+  margin: 0.25714em 0;
+}
+
+ul {
+  list-style: disc outside;
+}
+
+ol {
+  list-style: decimal outside;
+}
+
+ol ul {
+  list-style: disc;
+}
+
+dl dt,
+dfn {
+  font-weight: bold;
+  font-style: italic;
+}
+
+dl dd {
+  margin-left: 1.5em;
+}
+
+/* @end */
+/* ============================================================================
    @group Horizontal menu
 ============================================================================ */
 /* navigation generic class */
@@ -1164,134 +1159,51 @@ thead .table td, thead
 
 /* @end */
 /* ============================================================================
-   Compose 3 element button
+   @group Pagination
 ============================================================================ */
-/* 3 elements button generic classes
-  --------------------------------------------------------------------------- */
-.btn-3el {
-  display: inline-block;
-  padding: 0 7px;
-  vertical-align: text-bottom;
-  text-decoration: none;
-  white-space: nowrap;
+.pages {
+  text-align: center;
 }
-.ie6-7 .btn-3el {
-  display: inline;
-  zoom: 1;
-}
-.btn-3el input {
-  padding: 0;
+.pages ul {
   margin: 0;
-  background: transparent;
-  border: none !important;
-}
-.btn-3el:hover .btn-3el__l-s,
-.btn-3el:hover .btn-3el__mid,
-.btn-3el:hover .btn-3el__r-s, .btn-3el:focus .btn-3el__l-s,
-.btn-3el:focus .btn-3el__mid,
-.btn-3el:focus .btn-3el__r-s {
-  opacity: .92;
-  cursor: pointer;
-}
-
-.btn-3el__l-s,
-.btn-3el__mid,
-.btn-3el__r-s {
+  padding: 0;
+  list-style: none;
   display: inline-block;
-  vertical-align: top;
-  float: left;
-  background-repeat: repeat-x;
 }
-.ie6-7 .btn-3el__l-s, .ie6-7
-.btn-3el__mid, .ie6-7
-.btn-3el__r-s {
+.ie6-7 .pages ul {
   display: inline;
   zoom: 1;
 }
-
-.btn-3el__l-s,
-.btn-3el__r-s {
-  width: 7px;
+.pages li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.pages li .pages__item {
+  color: #909090;
+}
+.pages li .pages__item_current {
+  background: #0099ff;
+  color: #fff;
+}
+.pages a {
+  text-decoration: none;
+  color: #434343;
+}
+.pages a .pages__item {
+  color: #434343;
+}
+.pages a:hover .pages__item {
+  background: #ccc;
 }
 
-.btn-3el__mid {
-  background-position: left bottom !important;
+.pages__item {
+  display: inline-block;
+  padding: 3px 8px;
 }
-
-.btn-3el__l-s {
-  background-position: left top;
-  margin-left: -4px;
-}
-
-.btn-3el__r-s {
-  background-position: right top;
-  margin-right: -4px;
-}
-
-/* @end */
-/* @group 3 element button Primary button
-  --------------------------------------------------------------------------- */
-.btn-3el_prim {
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-}
-.btn-3el_prim .btn-3el__l-s,
-.btn-3el_prim .btn-3el__mid,
-.btn-3el_prim .btn-3el__r-s {
-  height: 40px;
-  line-height: 40px;
-}
-.btn-3el_prim .btn-3el__mid {
-  padding: 0 .4em;
-}
-
-.btn-3el_prim_green {
-  color: white;
-}
-.btn-3el_prim_green:hover, .btn-3el_prim_green:focus {
-  color: white;
-}
-.btn-3el_prim_green input {
-  color: white;
-}
-.btn-3el_prim_green .btn-3el__l-s,
-.btn-3el_prim_green .btn-3el__mid,
-.btn-3el_prim_green .btn-3el__r-s {
-  background-image: url(../images/compose-btn-3el/button-primary-green.gif);
-}
-
-/* @end */
-/* @group 3 element button Secondary button
-  --------------------------------------------------------------------------- */
-.btn-3el_sec {
-  height: 30px;
-  line-height: 30px;
-  font-size: 16px;
-}
-.btn-3el_sec .btn-3el__l-s,
-.btn-3el_sec .btn-3el__mid,
-.btn-3el_sec .btn-3el__r-s {
-  height: 30px;
-  line-height: 30px;
-}
-.btn-3el_sec .btn-3el__mid {
-  padding: 0 .4em;
-}
-
-.btn-3el_sec_green {
-  color: white;
-}
-.btn-3el_sec_green:hover, .btn-3el_sec_green:focus {
-  color: white;
-}
-.btn-3el_sec_green input {
-  color: white;
-}
-.btn-3el_sec_green .btn-3el__l-s,
-.btn-3el_sec_green .btn-3el__mid,
-.btn-3el_sec_green .btn-3el__r-s {
-  background-image: url(../images/compose-btn-3el/button-secondary-green.gif);
+.ie6-7 .pages__item {
+  display: inline;
+  zoom: 1;
 }
 
 /* @end */
@@ -1433,51 +1345,134 @@ thead .table td, thead
 
 /* @end */
 /* ============================================================================
-   @group Pagination
+   Compose 3 element button
 ============================================================================ */
-.pages {
-  text-align: center;
-}
-.pages ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* 3 elements button generic classes
+  --------------------------------------------------------------------------- */
+.btn-3el {
   display: inline-block;
+  padding: 0 7px;
+  vertical-align: text-bottom;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.ie6-7 .pages ul {
+.ie6-7 .btn-3el {
   display: inline;
   zoom: 1;
 }
-.pages li {
-  display: inline;
-  margin: 0;
+.btn-3el input {
   padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none !important;
 }
-.pages li .pages__item {
-  color: #909090;
-}
-.pages li .pages__item_current {
-  background: #0099ff;
-  color: #fff;
-}
-.pages a {
-  text-decoration: none;
-  color: #434343;
-}
-.pages a .pages__item {
-  color: #434343;
-}
-.pages a:hover .pages__item {
-  background: #ccc;
+.btn-3el:hover .btn-3el__l-s,
+.btn-3el:hover .btn-3el__mid,
+.btn-3el:hover .btn-3el__r-s, .btn-3el:focus .btn-3el__l-s,
+.btn-3el:focus .btn-3el__mid,
+.btn-3el:focus .btn-3el__r-s {
+  opacity: .92;
+  cursor: pointer;
 }
 
-.pages__item {
+.btn-3el__l-s,
+.btn-3el__mid,
+.btn-3el__r-s {
   display: inline-block;
-  padding: 3px 8px;
+  vertical-align: top;
+  float: left;
+  background-repeat: repeat-x;
 }
-.ie6-7 .pages__item {
+.ie6-7 .btn-3el__l-s, .ie6-7
+.btn-3el__mid, .ie6-7
+.btn-3el__r-s {
   display: inline;
   zoom: 1;
+}
+
+.btn-3el__l-s,
+.btn-3el__r-s {
+  width: 7px;
+}
+
+.btn-3el__mid {
+  background-position: left bottom !important;
+}
+
+.btn-3el__l-s {
+  background-position: left top;
+  margin-left: -4px;
+}
+
+.btn-3el__r-s {
+  background-position: right top;
+  margin-right: -4px;
+}
+
+/* @end */
+/* @group 3 element button Primary button
+  --------------------------------------------------------------------------- */
+.btn-3el_prim {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.btn-3el_prim .btn-3el__l-s,
+.btn-3el_prim .btn-3el__mid,
+.btn-3el_prim .btn-3el__r-s {
+  height: 40px;
+  line-height: 40px;
+}
+.btn-3el_prim .btn-3el__mid {
+  padding: 0 .4em;
+}
+
+.btn-3el_prim_green {
+  color: white;
+}
+.btn-3el_prim_green:hover, .btn-3el_prim_green:focus {
+  color: white;
+}
+.btn-3el_prim_green input {
+  color: white;
+}
+.btn-3el_prim_green .btn-3el__l-s,
+.btn-3el_prim_green .btn-3el__mid,
+.btn-3el_prim_green .btn-3el__r-s {
+  background-image: url(../images/compose-btn-3el/button-primary-green.gif);
+}
+
+/* @end */
+/* @group 3 element button Secondary button
+  --------------------------------------------------------------------------- */
+.btn-3el_sec {
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+}
+.btn-3el_sec .btn-3el__l-s,
+.btn-3el_sec .btn-3el__mid,
+.btn-3el_sec .btn-3el__r-s {
+  height: 30px;
+  line-height: 30px;
+}
+.btn-3el_sec .btn-3el__mid {
+  padding: 0 .4em;
+}
+
+.btn-3el_sec_green {
+  color: white;
+}
+.btn-3el_sec_green:hover, .btn-3el_sec_green:focus {
+  color: white;
+}
+.btn-3el_sec_green input {
+  color: white;
+}
+.btn-3el_sec_green .btn-3el__l-s,
+.btn-3el_sec_green .btn-3el__mid,
+.btn-3el_sec_green .btn-3el__r-s {
+  background-image: url(../images/compose-btn-3el/button-secondary-green.gif);
 }
 
 /* @end */

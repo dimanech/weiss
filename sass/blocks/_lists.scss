@@ -1,0 +1,47 @@
+@import "config";
+@import "helpers/mixins";
+
+/* ============================================================================
+		Lists
+============================================================================= */
+
+/* @group Lists generic
+  --------------------------------------------------------------------------- */
+
+ul,
+ol,
+dl {
+	margin: rhythm(1) 0;
+	padding-left: 1.5em;
+}
+
+ul,
+ol {
+	li {
+		margin: rhythm(0.2) 0;
+	}
+}
+
+ul {
+	list-style: disc outside;
+}
+
+ol {
+	list-style: decimal outside;
+}
+
+ol ul {
+	list-style: disc; // ul inside ul fix
+}
+
+dl dt,
+dfn {
+	font-weight: bold;
+	font-style: italic;
+}
+
+dl dd {
+	margin-left: 1.5em;
+}
+
+/* @end */
