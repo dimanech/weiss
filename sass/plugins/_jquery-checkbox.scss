@@ -3,48 +3,48 @@
 ============================================================================= */
 
 .jquery-checkbox {
-  display: inline;
-  font-size: 20px;
-  line-height: 20px;
-  cursor: pointer;
+	display: inline;
+	font-size: 20px;
+	line-height: 20px;
+	cursor: pointer;
 }
 
 .jquery-checkbox .mark {
-  display: inline;
+	display: inline;
 }
 
 .jquery-checkbox img {
-  vertical-align: middle;
-  width: 13px;
-  height: 13px;
+	vertical-align: middle;
+	width: 13px;
+	height: 13px;
 }
 
 .jquery-checkbox img {
-  background: transparent url(../images/checkbox.png) no-repeat;
+	background: transparent url(../images/checkbox.png) no-repeat;
 }
 
 .jquery-checkbox img {
-  background-position: 0px 0px;
+	background-position: 0px 0px;
 }
 
 .jquery-checkbox-hover img {
-  background-position: 0px -15px;
+	background-position: 0px -15px;
 }
 
 .jquery-checkbox-checked img {
-  background-position: 0px -31px;
+	background-position: 0px -31px;
 }
 
 .jquery-checkbox-checked .jquery-checkbox-hover img {
-  background-position: 0px -47px;
+	background-position: 0px -47px;
 }
 
 .jquery-checkbox-disabled img {
-  background-position: 0px 0px;
-  opacity: .5;
+	background-position: 0px 0px;
+	opacity: .5;
 }
 
 .jquery-checkbox-checked .jquery-checkbox-disabled img {
-  background-position: 0px 0px;
-  opacity: .5em
+	background-position: 0px 0px;
+	opacity: .5em
 }

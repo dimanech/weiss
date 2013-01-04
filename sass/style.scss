@@ -27,12 +27,20 @@
 @import "page/global/html__additional";
 @import "page/global/html__specific";
 
-@import "page/layout";
+@import "page/layout/layout__global";
+@import "page/layout/layout__seo-friendly-columns";
+@import "page/layout/layout__non-semantic-grid";
+@import "page/layout/layout__sticky-footer";
 
-@import "page/global/parts__embed";
-@import "page/global/parts__lists";
-@import "page/global/parts__tables";
-@import "page/global/parts__forms";
+@import "page/global/html__embed";
+@import "page/global/html__lists";
+@import "page/global/html__tables";
+@import "page/global/html__forms";
+
+@import "page/parts/parts__header";
+@import "page/parts/parts__main";
+@import "page/parts/parts__aside";
+@import "page/parts/parts__footer";
 
 // Includes
 // --------------------------------------------------------------------------
@@ -40,11 +48,6 @@
 @import "includes/a";
 @import "includes/b";
 @import "includes/c";
-
-// Common styles
-// --------------------------------------------------------------------------
-
-@import "page/common";
 
 // Blocks
 // --------------------------------------------------------------------------
@@ -60,6 +63,7 @@
 // --------------------------------------------------------------------------
 
 @import "plugins/foundation-custom-form";
+
 //@import "plugins/custom-selectbox";
 //@import "plugins/jquery-checkbox";
 //@import "plugins/fancybox";

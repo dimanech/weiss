@@ -9,8 +9,10 @@
   --------------------------------------------------------------------------- */
 
 .table {
-	border-collapse: collapse; //Remove most spacing between table cells.
-	border-spacing: 0; //Remove most spacing between table cells.
+	border-collapse: collapse;
+	//Remove most spacing between table cells.
+	border-spacing: 0;
+	//Remove most spacing between table cells.
 	border-width: 0;
 	width: 100%;
 	empty-cells: hide;

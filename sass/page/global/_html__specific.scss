@@ -35,7 +35,7 @@ tt,
 samp,
 kbd {
 	font-family: $baseFontFamilyMono;
-	@include adjust-font-size-to( 1 * $base-font-size );
+	@include adjust-font-size-to(1 * $base-font-size);
 }
 
 pre {

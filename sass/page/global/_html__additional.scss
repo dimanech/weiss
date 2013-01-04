@@ -8,7 +8,7 @@
 // Prevents sub and sup affecting line-height in all browsers
 sup,
 sub {
-	vertical-align:baseline;
+	vertical-align: baseline;
 	position: relative;
 	font-size: .8em;
 	font-weight: inherit;
@@ -27,9 +27,11 @@ small {
 }
 
 u {
-	text-decoration: none; // remove textdecoration for save <a> style
+	text-decoration: none;
+	// remove textdecoration for save <a> style
 }
 
 figure {
-	margin: 0; // Addresses margin not present in IE 8/9 and Safari 5.
+	margin: 0;
+	// Addresses margin not present in IE 8/9 and Safari 5.
 }

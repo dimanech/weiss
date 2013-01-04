@@ -9,12 +9,12 @@
 
 	&:before,
 	&:after {
-		content:"";
-		display:table;
+		content: "";
+		display: table;
 	}
 
 	&:after {
-		clear:both;
+		clear: both;
 	}
 
 	.ie6-7 & {
@@ -30,14 +30,14 @@
 }
 
 .i-br {
-	display:block;
+	display: block;
 }
 
 /* style support */
 
 .i-psln {
 	color: $lnColor;
-	text-decoration:none;
+	text-decoration: none;
 	border-bottom: 1px dashed;
 	position: relative;
 	cursor: pointer;
@@ -50,8 +50,9 @@
 
 /* hacks and long rules */
 
-.i-dib { // additional classes for overwrite IE make trouble in @extend funct
-	display:inline-block;
+.i-dib {
+	// additional classes for overwrite IE make trouble in @extend funct
+	display: inline-block;
 	vertical-align: top;
 	*display: inline;
 	*zoom: 1;
@@ -75,7 +76,8 @@
 	filter: alpha(opacity = 85);
 }
 
-.i-img-container { // image wrapper
+.i-img-container {
+	// image wrapper
 	overflow: hidden;
 	@extend .i-dib;
 

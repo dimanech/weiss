@@ -29,13 +29,7 @@ body {
   overflow-y: scroll;
   margin: 0;
 }
-.ie6-7 body {
-  overflow-y: auto;
-}
 
-/* @group selection fixes
-  --------------------------------------------------------------------------- */
-/* @end */
 /* ============================================================================
 		Embed fonts
 ============================================================================= */
@@ -239,42 +233,105 @@ ins {
 }
 
 /* ============================================================================
-		PAGE LAYOUT
+		Layout: global
 ============================================================================= */
 .l-main-aux {
   background-color: #cccccc;
 }
 
 .l-main-aux__inner {
-  width: 974px;
-  margin: 0 auto;
   position: relative;
   background-color: white;
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-main-aux__inner:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* @group header
+/* @group layout header
   --------------------------------------------------------------------------- */
 .l-global-header {
-  margin-bottom: 1.5em;
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-global-header:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .l-global-header__left,
 .l-global-header__right {
-  width: 45%;
-}
-
-.l-global-header__left {
+  width: 49.15254%;
   float: left;
+  margin-right: 1.69492%;
+  display: inline;
 }
 
 .l-global-header__right {
   float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline;
 }
 
 /* @end */
-/* @group layout
+/* @group layout footer
   --------------------------------------------------------------------------- */
-/* main */
+.l-global-footer {
+  clear: both;
+  overflow: hidden;
+}
+
+.l-global-footer__inner {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-global-footer__inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.l-global-footer__left,
+.l-global-footer__right {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+.l-global-footer__right {
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  display: inline;
+  text-align: right;
+}
+
+/* @end */
+/* ============================================================================
+		@group layout: seo-friendly-columns
+============================================================================= */
+/* seo-friendly-columns: main */
 .l-sidebar-first_main {
   float: right;
   width: 66.10169%;
@@ -293,7 +350,7 @@ ins {
   width: 32.20339%;
 }
 
-/* sidebars */
+/* seo-friendly-columns: sidebars */
 .l-sidebar-first_aside,
 .l-sidebar-second_aside {
   float: left;
@@ -316,31 +373,11 @@ ins {
 }
 
 /* @end */
-/* @group footer
-  --------------------------------------------------------------------------- */
-.l-global-footer {
-  clear: both;
-  overflow: hidden;
-}
-
-.l-global-footer__left,
-.l-global-footer__right {
-  width: 45%;
-}
-
-.l-global-footer__left {
-  float: left;
-}
-
-.l-global-footer__right {
-  float: right;
-  text-align: right;
-}
-
-/* @end */
 /* ============================================================================
     Non-semantic grid support
  =========================================================================== */
+/* @group Non-semantic grid support : generic
+  --------------------------------------------------------------------------- */
 l-row_flat {
   margin: 0;
   padding: 0;
@@ -421,7 +458,7 @@ l-row_flat {
   display: inline;
 }
 
-/* Layout type */
+/* Non-semantic grid support : Layout type */
 /* End Layout type */
 .l-span_last {
   float: right !important;
@@ -429,8 +466,13 @@ l-row_flat {
 }
 
 /* @end */
-/* @group Styicky footer
-  --------------------------------------------------------------------------- */
+/* ============================================================================
+		 @group Sticky footer
+============================================================================= */
+.ie6-7 body {
+  overflow-y: auto;
+}
+
 @media screen and (max-width: 2400px) {
   html, body {
     height: 100%;
@@ -480,7 +522,6 @@ img {
   font-size: 1em;
   color: #434343;
   border: none;
-  background-color: #ccc;
   -ms-interpolation-mode: bicubic;
 }
 
@@ -791,6 +832,46 @@ thead .table td, thead
 
 /* @end */
 /* ============================================================================
+		Header
+============================================================================= */
+/* @group Site branding
+  --------------------------------------------------------------------------- */
+.site-name, .site-slogan {
+  display: block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* @end */
+/* ============================================================================
+		Main
+============================================================================= */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.breadcrumb li {
+  display: inline;
+}
+
+/* ============================================================================
+		Aside
+============================================================================= */
+/* ============================================================================
+		Footer
+============================================================================= */
+.region-footer p {
+  padding: 0 1em;
+}
+
+.develop img {
+  vertical-align: middle;
+}
+
+/* ============================================================================
 		MASTER-CLASSES A
 ============================================================================= */
 .i-clfx:before, .l-row:before, .form__row:before, .i-clfx:after, .l-row:after, .form__row:after {
@@ -955,43 +1036,43 @@ thead .table td, thead
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #377eb5;
+    background: #764b4f;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #404317;
+    background: #da9d60;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #e8979c;
+    background: #a2f28f;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #961f87;
+    background: #cf99f5;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #87951b;
+    background: #e67825;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #dd8a21;
+    background: #fe60a5;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #765453;
+    background: #669baf;
   }
 }
 /* @end */
@@ -1049,56 +1130,6 @@ thead .table td, thead
 /* @group Action Retina
   --------------------------------------------------------------------------- */
 /* @end */
-/* ============================================================================
-		COMMON (Design specific rules)
-============================================================================= */
-/* ============================================================================
-		Header
-============================================================================= */
-/* @group Site branding
-  --------------------------------------------------------------------------- */
-.site-name, .site-slogan {
-  display: block;
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-/* @end */
-/* ============================================================================
-		Main
-============================================================================= */
-.breadcrumb ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.breadcrumb li {
-  display: inline;
-}
-
-/* ============================================================================
-		Aside
-============================================================================= */
-/* ============================================================================
-		Pages
-============================================================================= */
-/* ============================================================================
-		Footer
-============================================================================= */
-.region-footer p {
-  padding: 0 1em;
-}
-
-.develop img {
-  vertical-align: middle;
-}
-
-/* ============================================================================
-		Other
-============================================================================= */
-/* Opera speed dial minimized */
 /* ============================================================================
    @group Horizontal menu
 ============================================================================ */
@@ -1685,7 +1716,7 @@ form.custom .custom.disabled {
   /* some general resets */
   @page {
     margin: 1.5cm;
-	}
+}
 
   * {
     background: transparent !important;

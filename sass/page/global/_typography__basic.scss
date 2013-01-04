@@ -16,32 +16,32 @@ h6, .h6 {
 }
 
 h1, .h1 {
-	@include adjust-font-size-to( $h1-font-size );
+	@include adjust-font-size-to($h1-font-size);
 	@include trailer(1, $h1-font-size);
 }
 
 h2, .h2 {
-	@include adjust-font-size-to( $h2-font-size );
+	@include adjust-font-size-to($h2-font-size);
 	@include trailer(1, $h2-font-size);
 }
 
 h3, .h3 {
-	@include adjust-font-size-to( $h3-font-size );
+	@include adjust-font-size-to($h3-font-size);
 	@include trailer(1, $h3-font-size);
 }
 
 h4, .h4 {
-	@include adjust-font-size-to( $h4-font-size );
+	@include adjust-font-size-to($h4-font-size);
 	@include trailer(1, $h4-font-size);
 }
 
 h5, .h5 {
-	@include adjust-font-size-to( $h5-font-size );
+	@include adjust-font-size-to($h5-font-size);
 	@include trailer(1, $h5-font-size);
 }
 
 h6, .h6 {
-	@include adjust-font-size-to( $h6-font-size );
+	@include adjust-font-size-to($h6-font-size);
 	@include trailer(1, $h6-font-size);
 }
 
@@ -79,7 +79,8 @@ blockquote {
 
 strong,
 b {
-	font-weight: bold; // Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+	font-weight: bold;
+	// Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
 }
 
 em,
@@ -96,7 +97,8 @@ a {
 	&:hover,
 	&:active {
 		color: $lnHoverColor;
-		outline: none; // Improves readability when focused and also mouse hovered in all browsers.
+		outline: none;
+		// Improves readability when focused and also mouse hovered in all browsers.
 	}
 
 	//&[href^="tel"],

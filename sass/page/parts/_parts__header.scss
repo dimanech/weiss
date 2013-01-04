@@ -1,0 +1,26 @@
+@import "config";
+@import "helpers/mixins";
+
+/* ============================================================================
+		Header
+============================================================================= */
+
+.region-header {
+}
+
+/* @group Site branding
+  --------------------------------------------------------------------------- */
+
+.site-name {
+	display: block;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.site-slogan {
+	@extend .site-name;
+}
+
+/* @end */

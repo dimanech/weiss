@@ -31,19 +31,21 @@
 }
 
 .modal__window__inner {
-	position:relative;
+	position: relative;
 }
 
-.modal__content {}
+.modal__content {
+}
 
 .modal__close-btn {
-	position:absolute;
-	cursor:pointer;
+	position: absolute;
+	cursor: pointer;
 }
 
 .l-main-aux {
 	position: relative;
-	z-index: 0; // fadeIn fix
+	z-index: 0;
+	// fadeIn fix
 }
 
 /* @end */
@@ -87,8 +89,8 @@
 
 .modal__window {
 	width: 450px;
-	background-color:#FFF;
-	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+	background-color: #FFF;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 	border-radius: 5px;
 	padding: 1em;
 
@@ -100,7 +102,8 @@
 .modal__window__inner {
 }
 
-.modal__content {}
+.modal__content {
+}
 
 .modal__close-btn {
 	top: 0;
@@ -110,7 +113,7 @@
 
 	&:hover,
 	&:focus {
-		color:$lnColor;
+		color: $lnColor;
 	}
 }
 

@@ -18,18 +18,21 @@
 }
 
 .js-collap-content {
-	overflow: hidden; // prevent jquery slideUp-Down bounce
+	overflow: hidden;
+	// prevent jquery slideUp-Down bounce
 }
-
 
 /* Collapse-content-block Styles
   --------------------------------------------------------------------------- */
 
-.collapse-content {}
+.collapse-content {
+}
 
-.collapse-content__item {}
+.collapse-content__item {
+}
 
-.collapse-content__title {}
+.collapse-content__title {
+}
 
 .collapse-content__details {
 	padding: 20px;

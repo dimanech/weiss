@@ -13,7 +13,7 @@
 .region-aside,
 .region-beforecontent,
 .region-undercontent {
-		outline: 1px dashed #ccc;
+	outline: 1px dashed #ccc;
 }
 
 /* ============================================================================
@@ -44,13 +44,17 @@
 
 // Font size
 
-.i-emph_fz_sm {}
+.i-emph_fz_sm {
+}
 
-.i-emph_fz_md {}
+.i-emph_fz_md {
+}
 
-.i-emph_fz_big {}
+.i-emph_fz_big {
+}
 
-.i-emph_fz_huge {}
+.i-emph_fz_huge {
+}
 
 .i-emph_serif {
 	font-family: $serif;
