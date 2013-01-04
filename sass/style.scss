@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+//  __  __  __    _
+//  \ \/  \/ /__ (_) __  __                /\
+//   \  /\  / -_)| |(__ (__            /\ /  \/\
+//    \/  \/\___||_| __) __) css helper    /\/\ \
+//          http://dimanech.github.com/weiss/  \ \
+//
+
 /* ============================================================================
 
 	Copyright 2012
@@ -9,12 +16,23 @@
 
 ============================================================================= */
 
-// Global
+// Pages
 // --------------------------------------------------------------------------
 
-@import "page/global";
-@import "page/specific-html";
+@import "page/global/global";
+
+@import "page/global/typography__fonts";
+@import "page/global/typography__basic";
+
+@import "page/global/html__additional";
+@import "page/global/html__specific";
+
 @import "page/layout";
+
+@import "page/global/parts__embed";
+@import "page/global/parts__lists";
+@import "page/global/parts__tables";
+@import "page/global/parts__forms";
 
 // Includes
 // --------------------------------------------------------------------------
@@ -31,9 +49,6 @@
 // Blocks
 // --------------------------------------------------------------------------
 
-@import "blocks/form";
-@import "blocks/table";
-@import "blocks/lists";
 @import "blocks/menu-horiz";
 @import "blocks/pagination";
 @import "blocks/tabs";

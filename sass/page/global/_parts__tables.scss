@@ -2,8 +2,11 @@
 @import "helpers/mixins";
 
 /* ============================================================================
-   @group Table support
+  Table support
 ============================================================================ */
+
+/* @group Table generic
+  --------------------------------------------------------------------------- */
 
 .table {
 	border-collapse: collapse; //Remove most spacing between table cells.
@@ -65,10 +68,14 @@
 	}
 }
 
+/* @end */
+
+/* @group Table mod: cell fixed width
+  --------------------------------------------------------------------------- */
+
 .table_fixed {
 	table-layout: fixed;
 	word-wrap: break-word;
 }
-
 
 /* @end */

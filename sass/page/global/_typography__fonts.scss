@@ -1,0 +1,58 @@
+@import "config";
+@import "helpers/mixins";
+
+/* ============================================================================
+		Embed fonts
+============================================================================= */
+
+@font-face {
+	font-family: 'ALSRublRegular';
+	src: url('../fonts/ASLRubl/rouble-webfont.eot');
+	src: url('../fonts/ASLRubl/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/ASLRubl/rouble-webfont.woff') format('woff'),
+	url('../fonts/ASLRubl/rouble-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Crossbrowser font face example
+
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myriadpro-boldit-webfont.eot');
+//	src: url('../fonts/myriad/myriadpro-boldit-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myriadpro-boldit-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myriadpro-boldit-webfont.ttf') format('truetype');
+//	font-weight: bold;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myriadpro-it-webfont.eot');
+//	src: url('../fonts/myriad/myriadpro-it-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myriadpro-it-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myriadpro-it-webfont.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myriadpro-bold-webfont.eot');
+//	src: url('../fonts/myriad/myriadpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myriadpro-bold-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myriadpro-bold-webfont.ttf') format('truetype');
+//	font-weight: bold;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'MyrPro';
+//	src: url('../fonts/myriad/myrproregular-webfont.eot');
+//	src: url('../fonts/myriad/myrproregular-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/myriad/myrproregular-webfont.woff') format('woff'),
+//	url('../fonts/myriad/myrproregular-webfont.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: normal;
+//}

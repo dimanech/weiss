@@ -9,6 +9,9 @@ $inputPadding: 5px;
 $inputHeight: 20px;
 $formRowMargin: 10px;
 
+/* @group Forms generic
+  --------------------------------------------------------------------------- */
+
 .form {
 	border: none;
 	margin: 0; // IE7
@@ -147,8 +150,8 @@ $formRowMargin: 10px;
 	}
 
 	legend {
-	  border: none; // Corrects color not being inherited in IE 8/9.
-	  padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+		border: none; // Corrects color not being inherited in IE 8/9.
+		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
 	}
 
 	// generic
@@ -228,6 +231,8 @@ $formRowMargin: 10px;
 	//textarea:invalid {}
 
 }
+
+/* @end */
 
 /* @group Form elements
   --------------------------------------------------------------------------- */
