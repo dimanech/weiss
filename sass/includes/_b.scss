@@ -78,14 +78,26 @@
 	display: block;
 }
 
-.i-spacer-10 {
-	padding-bottom: 10px;
+//.i-spacer-10 {
+//	padding-bottom: 10px;
+//}
+//
+//.i-spacer-20 {
+//	padding-bottom: 20px;
+//}
+//
+//.i-spacer-30 {
+//	padding-bottom: 30px;
+//}
+
+.i-spacer-1 {
+	@include padding-leader(1, $base-font-size);
 }
 
-.i-spacer-20 {
-	padding-bottom: 20px;
+.i-spacer-2 {
+	@include padding-leader(2, $base-font-size);
 }
 
-.i-spacer-30 {
-	padding-bottom: 30px;
+.i-spacer-3 {
+	@include padding-leader(3, $base-font-size);
 }
