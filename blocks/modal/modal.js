@@ -25,7 +25,6 @@ function modal() {
 		modalType.fadeIn(200);
 		$('body, html').animate({scrollTop:0}, 500);
 		$('body').addClass('js-modal-animated');
-		$('.modal-content__holder').jScrollPane(); // FIXME: Second time don`t show
 	});
 
 	modalClose.on('click', function () {

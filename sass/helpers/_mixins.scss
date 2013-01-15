@@ -55,27 +55,18 @@
 //    Vendor prefix Mixins
 //=============================================================================
 
-@mixin vendor($property, $value) {
-	-webkit-#{$property}: $value;
-	-moz-#{$property}: $value;
-	-ms-#{$property}: $value;
-	-o-#{$property}: $value;
-	#{$property}: $value;
+$prefix_defaults: -moz- -webkit- -o- -ms- '' !default;
+
+@mixin vendor($property, $value, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}#{$property}: $value;
+	}
 }
 
-@mixin transition($transition: all linear 200ms) {
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-o-transition: $transition;
-	transition: $transition;
-}
-
-@mixin border-radius($radius: 5px) {
-	-moz-border-radius: $radius;
-	-webkit-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-	-webkit-background-clip: padding-box;
+@mixin transition($value: all .2s linear, $prefixes: $prefix_defaults) {
+	@each $prefix in $prefixes {
+		#{$prefix}transition: $value;
+	}
 }
 
 //============================================================================
@@ -132,31 +123,4 @@ $extension: png !default;
 	@include hidpi ($image, $extension) {
 		background-size: em($width) em($height);
 	}
-}
-
-//============================================================================
-//   Create CSS Triangles
-//============================================================================
-
-// Create CSS Triangles in a Breeze
-
-@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border: solid $triangleSize;
-	@if ($triangleDirection == top) {
-		border-color: $triangleColor transparent transparent transparent;
-	}
-	@if ($triangleDirection == bottom) {
-		border-color: transparent transparent $triangleColor transparent;
-	}
-	@if ($triangleDirection == left) {
-		border-color: transparent transparent transparent $triangleColor;
-	}
-	@if ($triangleDirection == right) {
-		border-color: transparent $triangleColor transparent transparent;
-	}
-// .example { @include css-triangle(5px, #fff, bottom); }
 }

@@ -1036,43 +1036,43 @@ thead .table td, thead
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #c7f3da;
+    background: #3c44b8;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #563b10;
+    background: #c68029;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #a35a24;
+    background: #2dc1da;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #ae7339;
+    background: #ccb154;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #16f388;
+    background: #64e338;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #6d7b8b;
+    background: #84f23f;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #06dae1;
+    background: #eb26d5;
   }
 }
 /* @end */
@@ -1320,16 +1320,18 @@ thead .table td, thead
   -webkit-filter: blur(0);
   -webkit-transform: scale(1);
   -webkit-transform: translateZ(0);
-  -webkit-transition: all linear 200ms;
   -moz-transition: all linear 200ms;
+  -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
+  -ms-transition: all linear 200ms;
   transition: all linear 200ms;
 }
 
 .modal__window {
-  -webkit-transition: all linear 200ms;
   -moz-transition: all linear 200ms;
+  -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
+  -ms-transition: all linear 200ms;
   transition: all linear 200ms;
 }
 
@@ -1538,8 +1540,8 @@ form.custom span.custom.radio {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   -o-border-radius: 100%;
+  -ms-border-radius: 100%;
   border-radius: 100%;
-  -webkit-background-clip: padding-box;
 }
 form.custom span.custom.checkbox:before {
   content: "\00d7";
@@ -1562,8 +1564,8 @@ form.custom span.custom.radio.checked:before {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   -o-border-radius: 100%;
+  -ms-border-radius: 100%;
   border-radius: 100%;
-  -webkit-background-clip: padding-box;
   background: #222;
   position: relative;
   top: 2px;

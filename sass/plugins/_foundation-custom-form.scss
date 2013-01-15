@@ -1,6 +1,33 @@
 @import "weiss-config";
 @import "helpers/mixins";
 
+//============================================================================
+//   Create CSS Triangles
+//============================================================================
+
+// Create CSS Triangles in a Breeze
+
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: solid $triangleSize;
+	@if ($triangleDirection == top) {
+		border-color: $triangleColor transparent transparent transparent;
+	}
+	@if ($triangleDirection == bottom) {
+		border-color: transparent transparent $triangleColor transparent;
+	}
+	@if ($triangleDirection == left) {
+		border-color: transparent transparent transparent $triangleColor;
+	}
+	@if ($triangleDirection == right) {
+		border-color: transparent $triangleColor transparent transparent;
+	}
+// .example { @include css-triangle(5px, #fff, bottom); }
+}
+
 /* Custom Forms ----------------------*/
 
 form.custom {
@@ -16,7 +43,7 @@ form.custom {
 		cursor: pointer;
 
 		&.radio {
-			@include border-radius(100%);
+			@include vendor(border-radius, 100%);
 		}
 
 		&.checkbox {
@@ -41,7 +68,7 @@ form.custom {
 				display: block;
 				width: 8px;
 				height: 8px;
-				@include border-radius(100%);
+				@include vendor(border-radius, 100%);
 				background: #222;
 				position: relative;
 				top: 2px;
