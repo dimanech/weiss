@@ -2,12 +2,6 @@
 //  WAI and W3C support
 //=============================================================================
 
-// Hide from both screenreaders and browsers
-@mixin i-hide {
-	display: none !important;
-	visibility: hidden;
-}
-
 // Hide only visually, but have it available for screenreaders
 @mixin i-hide_vis {
 	border: 0;
@@ -35,20 +29,6 @@
 		position: static;
 		width: auto;
 	}
-}
-
-// Hide visually and from screenreaders, but maintain layout
-@mixin i-hide_invisible {
-	visibility: hidden;
-}
-
-@mixin i-hide_offscreen {
-	text-indent: -9999px;
-	overflow: hidden;
-	text-decoration: none;
-	display: block;
-	font-size: 0;
-	text-align: start;
 }
 
 // ============================================================================
