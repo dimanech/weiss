@@ -15,6 +15,10 @@ Based around tasks and problems that arise with me every day in my work - so in 
 
 ## Change Log
 
+**[v2.1](https://github.com/dimanech/weiss/archive/v2.1.zip)**
+
+* Added jstyling as default input styling plugin
+
 **[v2.0](https://github.com/dimanech/weiss/archive/v2.0.1.zip)**
 
 * Added folder structure
