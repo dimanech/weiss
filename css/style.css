@@ -127,12 +127,6 @@ b {
   font-weight: bold;
 }
 
-em,
-i,
-cite {
-  font-style: italic;
-}
-
 a {
   color: #0099ff;
 }
@@ -375,7 +369,7 @@ ins {
 /* @end */
 /* ============================================================================
     Non-semantic grid support
- =========================================================================== */
+ ============================================================================ */
 /* @group Non-semantic grid support : generic
   --------------------------------------------------------------------------- */
 l-row_flat {
@@ -482,7 +476,6 @@ l-row_flat {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto;
     margin-bottom: -80px;
   }
 
@@ -495,34 +488,17 @@ l-row_flat {
     height: 80px;
   }
 }
-@media screen and (max-width: 768px) {
-  /* Sticky footer reset */
-  html, body {
-    height: auto;
-  }
-
-  .l-main-aux {
-    min-height: auto;
-    margin-bottom: auto;
-  }
-
-  .l-main-aux__inner {
-    padding-bottom: 0;
-  }
-
-  .l-global-footer {
-    height: auto;
-  }
-}
 /* @end */
 /* ============================================================================
    Embed content
-============================================================================ */
+============================================================================= */
 img {
   font-size: 1em;
   color: #434343;
-  border: none;
   -ms-interpolation-mode: bicubic;
+}
+a img {
+  border: none;
 }
 
 object,
@@ -572,6 +548,33 @@ dl dd {
 }
 
 /* @end */
+/* @group Lists specific
+  --------------------------------------------------------------------------- */
+.list_unstyled, .list_inline {
+  padding: 0;
+  list-style: none;
+}
+
+.list_flat {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list_flat .list__item {
+  margin: 0;
+  padding: 0;
+}
+
+.list_inline .list__item {
+  display: inline-block;
+  vertical-align: top;
+}
+.ie6-7 .list_inline .list__item {
+  display: inline;
+  zoom: 1;
+}
+
+/* @end */
 /* ============================================================================
   Table support
 ============================================================================ */
@@ -617,7 +620,7 @@ thead .table td, thead
 /* ============================================================================
    Form support
 ============================================================================ */
-/* @group Forms generic
+/* @group Forms generic reset
   --------------------------------------------------------------------------- */
 .form {
   border: none;
@@ -629,12 +632,6 @@ thead .table td, thead
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-}
-.form input {
-  line-height: normal;
-}
-.form label {
-  display: block;
 }
 .form input[type="submit"], .form input[type="reset"] {
   -webkit-appearance: button;
@@ -650,12 +647,17 @@ thead .table td, thead
 .form input[type="checkbox"] {
   vertical-align: baseline;
 }
+
+/* @end */
+/* @group Form generic themed styles
+	--------------------------------------------------------------------------- */
 .form input,
 .form select,
 .form textarea {
   font: 14px/18px Arial, FreeSans, sans-serif;
 }
 .form label {
+  display: block;
   line-height: 20px;
 }
 .form input[type="text"],
@@ -703,10 +705,10 @@ thead .table td, thead
 .form select[multiple="multiple"] {
   height: auto;
 }
-.form optgroup {
-  font-weight: normal;
-  background: #ccc;
-}
+
+/* @end */
+/* @group Form Fieldsets
+  --------------------------------------------------------------------------- */
 .form fieldset {
   margin: 0;
   padding: 0;
@@ -728,8 +730,12 @@ thead .table td, thead
 .form .form__set__legend span {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 0px;
 }
+
+/* @end */
+/* @group Form Additional resets
+  --------------------------------------------------------------------------- */
 .form button::-moz-focus-inner,
 .form input::-moz-focus-inner {
   border: none;
@@ -745,6 +751,10 @@ thead .table td, thead
 .ie6-7 .form input {
   overflow: visible;
 }
+
+/* @end */
+/* @group Form Placeholders
+  --------------------------------------------------------------------------- */
 .form input::-webkit-input-placeholder {
   color: #434343;
 }
@@ -759,21 +769,21 @@ thead .table td, thead
 }
 
 /* @end */
-/* @group Form elements
+/* @group Form Elements
   --------------------------------------------------------------------------- */
 .form__row {
   padding: 5px 0;
-  margin: 0 10px;
+  margin: 0 0px;
 }
 
 .form__item {
   float: left;
-  padding: 0 10px 0 0;
+  padding: 0 0px 0 0;
   margin-left: 5px;
 }
 
 .form__item_w-50 {
-  width: 40px;
+  width: 50px;
 }
 .form__item_w-50 input,
 .form__item_w-50 textarea {
@@ -781,7 +791,7 @@ thead .table td, thead
 }
 
 .form__item_w-100 {
-  width: 90px;
+  width: 100px;
 }
 .form__item_w-100 input,
 .form__item_w-100 textarea {
@@ -789,7 +799,7 @@ thead .table td, thead
 }
 
 .form__item_w-145 {
-  width: 135px;
+  width: 145px;
 }
 .form__item_w-145 input,
 .form__item_w-145 textarea {
@@ -797,22 +807,11 @@ thead .table td, thead
 }
 
 .form__item_w-200 {
-  width: 190px;
+  width: 200px;
 }
 .form__item_w-200 input,
 .form__item_w-200 textarea {
   width: 190px;
-}
-
-/* @end */
-/* @group Selectbox plugin support
-  --------------------------------------------------------------------------- */
-.sb-w-200 .dropdown,
-.sb-w-200 select {
-  width: 200px !important;
-}
-.sb-w-200 .dropdown ul {
-  width: 198px !important;
 }
 
 /* @end */
@@ -857,9 +856,6 @@ thead .table td, thead
   display: inline;
 }
 
-/* ============================================================================
-		Aside
-============================================================================= */
 /* ============================================================================
 		Footer
 ============================================================================= */
@@ -1036,43 +1032,43 @@ thead .table td, thead
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #213a3e;
+    background: #adc435;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #e6afd2;
+    background: #46f105;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #b17307;
+    background: #e9fe5d;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #8bdcf3;
+    background: #58b992;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #4dca17;
+    background: #8e5c0b;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #d7d701;
+    background: #981dd0;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #3b81a5;
+    background: #0a17ca;
   }
 }
 /* @end */
@@ -1322,16 +1318,12 @@ thead .table td, thead
   -webkit-transform: translateZ(0);
   -moz-transition: all linear 200ms;
   -webkit-transition: all linear 200ms;
-  -o-transition: all linear 200ms;
-  -ms-transition: all linear 200ms;
   transition: all linear 200ms;
 }
 
 .modal__window {
   -moz-transition: all linear 200ms;
   -webkit-transition: all linear 200ms;
-  -o-transition: all linear 200ms;
-  -ms-transition: all linear 200ms;
   transition: all linear 200ms;
 }
 
@@ -1546,7 +1538,6 @@ thead .table td, thead
   overflow-y: auto;
   z-index: 1000;
 }
-
 .jstyling-select-l div {
   list-style: none;
   display: block;
@@ -1557,19 +1548,26 @@ thead .table td, thead
 .jstyling-select.active {
   z-index: 700;
 }
-
 .jstyling-select.active .jstyling-select-l {
   display: block;
 }
 
-.jstyling-checkbox, .jstyling-radio {
+.jstyling-checkbox,
+.jstyling-radio {
   margin: 0;
   padding: 0;
   display: inline-block;
   z-index: 1;
 }
-
-.jstyling-checkbox input[type=checkbox], .jstyling-radio input[type=radio] {
+.ie6-7 .jstyling-checkbox, .ie6-7
+.jstyling-radio {
+  display: inline;
+  zoom: 1;
+}
+.jstyling-checkbox input[type=checkbox],
+.jstyling-checkbox input[type=radio],
+.jstyling-radio input[type=checkbox],
+.jstyling-radio input[type=radio] {
   opacity: 0;
   filter: alpha(opacity=0);
   z-index: 0;
@@ -1581,17 +1579,10 @@ thead .table td, thead
   display: inline-block;
   position: relative;
 }
-
-.jstyling-file-f {
-  overflow: hidden;
-  white-space: nowrap;
+.ie6-7 .jstyling-file {
+  display: inline;
+  zoom: 1;
 }
-
-.jstyling-file-b {
-  position: relative;
-  overflow: hidden;
-}
-
 .jstyling-file input[type=file] {
   margin: 0;
   padding: 0;
@@ -1601,6 +1592,16 @@ thead .table td, thead
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.jstyling-file-f {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.jstyling-file-b {
+  position: relative;
+  overflow: hidden;
 }
 
 /**
@@ -1634,25 +1635,20 @@ thead .table td, thead
   top: 27px;
   left: -1px;
 }
-
 .jstyling-select-l div {
   height: 20px;
   border-top: 1px dotted #cccccc;
   padding: 2px;
 }
-
 .jstyling-select-l div:hover {
   background: #eeeeee;
 }
-
 .jstyling-select-l div.disabled {
   background: #E5E5E5;
 }
-
 .jstyling-select-l div.disabled:hover {
   color: #000000;
 }
-
 .jstyling-select-l div:first-child {
   border-top: 0;
 }
@@ -1660,7 +1656,6 @@ thead .table td, thead
 .jstyling-select.active {
   background-position: 100% -28px;
 }
-
 .jstyling-select.disabled {
   background-color: #E5E5E5;
 }
@@ -1672,15 +1667,12 @@ thead .table td, thead
   background: url(../images/plugins/jstyling/jcusel-checkbox-radio.png) no-repeat;
   vertical-align: middle;
 }
-
 .jstyling-checkbox.active {
   background-position: 100% -16px;
 }
-
 .jstyling-checkbox.disabled {
   background-position: 100% -32px;
 }
-
 .jstyling-checkbox.active.disabled {
   background-position: 100% -48px;
 }
@@ -1693,15 +1685,12 @@ thead .table td, thead
   background-position: 100% -64px;
   vertical-align: middle;
 }
-
 .jstyling-radio.active {
   background-position: 100% -80px;
 }
-
 .jstyling-radio.disabled {
   background-position: 100% -96px;
 }
-
 .jstyling-radio.active.disabled {
   background-position: 100% -112px;
 }
@@ -1724,12 +1713,6 @@ thead .table td, thead
   height: 20px;
   background: #eee;
   text-align: center;
-}
-
-.ie6-7 .jcusel-checkbox,
-.ie6-7 .jcusel-radio {
-  display: inline;
-  zoom: 1;
 }
 
 @media print {

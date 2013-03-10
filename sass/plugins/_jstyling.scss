@@ -22,50 +22,73 @@
 	position: absolute;
 	overflow-y: auto;
 	z-index: 1000;
-}
 
-.jstyling-select-l div {
-	list-style: none;
-	display: block;
-	white-space: nowrap;
-	overflow: hidden;
-}
+	div {
+		list-style: none;
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
 
-.jstyling-select-l div:hover {
-}
+		&:hover {
+		}
 
-.jstyling-select-l div.disabled {
-}
+		&.disabled {
+		}
 
-.jstyling-select-l div.disabled:hover {
+		&.disabled:hover {
+		}
+	}
 }
 
 .jstyling-select.active {
 	z-index: 700;
+
+	.jstyling-select-l {
+		display: block;
+	}
 }
 
-.jstyling-select.active .jstyling-select-l {
-	display: block;
-}
-
-.jstyling-checkbox, .jstyling-radio {
+.jstyling-checkbox,
+.jstyling-radio {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
 	z-index: 1;
-}
 
-.jstyling-checkbox input[type=checkbox], .jstyling-radio input[type=radio] {
-	opacity: 0;
-	filter: alpha(opacity = 0);
-	z-index: 0;
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		z-index: 0;
+	}
 }
 
 .jstyling-file {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
-	position: relative
+	position: relative;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	input[type=file] {
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 }
 
 .jstyling-file-f {
@@ -76,17 +99,6 @@
 .jstyling-file-b {
 	position: relative;
 	overflow: hidden
-}
-
-.jstyling-file input[type=file] {
-	margin: 0;
-	padding: 0;
-	opacity: 0;
-	filter: alpha(opacity = 0);
-	z-index: 1;
-	position: absolute;
-	top: 0;
-	right: 0;
 }
 
 /**
@@ -123,36 +135,39 @@
 	border-top: 0;
 	top: 27px;
 	left: -1px;
+
+	div {
+		height: 20px;
+		border-top: 1px dotted #cccccc;
+		padding: 2px;
+
+		&:hover {
+			background: #eeeeee;
+		}
+
+		&.disabled {
+			background: #E5E5E5;
+		}
+
+		&.disabled:hover {
+			color: #000000;
+		}
+
+		&:first-child {
+			border-top: 0
+		}
+	}
+
 }
 
-.jstyling-select-l div {
-	height: 20px;
-	border-top: 1px dotted #cccccc;
-	padding: 2px;
-}
+.jstyling-select {
+	&.active {
+		background-position: 100% -28px;
+	}
 
-.jstyling-select-l div:hover {
-	background: #eeeeee;
-}
-
-.jstyling-select-l div.disabled {
-	background: #E5E5E5;
-}
-
-.jstyling-select-l div.disabled:hover {
-	color: #000000;
-}
-
-.jstyling-select-l div:first-child {
-	border-top: 0
-}
-
-.jstyling-select.active {
-	background-position: 100% -28px;
-}
-
-.jstyling-select.disabled {
-	background-color: #E5E5E5;
+	&.disabled {
+		background-color: #E5E5E5;
+	}
 }
 
 /* Checkbox */
@@ -162,18 +177,18 @@
 	height: 16px;
 	background: url(../images/plugins/jstyling/jcusel-checkbox-radio.png) no-repeat;
 	vertical-align: middle;
-}
 
-.jstyling-checkbox.active {
-	background-position: 100% -16px;
-}
+	&.active {
+		background-position: 100% -16px;
+	}
 
-.jstyling-checkbox.disabled {
-	background-position: 100% -32px;
-}
+	&.disabled {
+		background-position: 100% -32px;
+	}
 
-.jstyling-checkbox.active.disabled {
-	background-position: 100% -48px;
+	&.active.disabled {
+		background-position: 100% -48px;
+	}
 }
 
 /* Radio button */
@@ -184,18 +199,18 @@
 	background: url(../images/plugins/jstyling/jcusel-checkbox-radio.png) no-repeat;
 	background-position: 100% -64px;
 	vertical-align: middle;
-}
 
-.jstyling-radio.active {
-	background-position: 100% -80px;
-}
+	&.active {
+		background-position: 100% -80px;
+	}
 
-.jstyling-radio.disabled {
-	background-position: 100% -96px;
-}
+	&.disabled {
+		background-position: 100% -96px;
+	}
 
-.jstyling-radio.active.disabled {
-	background-position: 100% -112px;
+	&.active.disabled {
+		background-position: 100% -112px;
+	}
 }
 
 /* File input */
@@ -217,10 +232,4 @@
 	height: 20px;
 	background: #eee;
 	text-align: center;
-}
-
-.ie6-7 .jcusel-checkbox,
-.ie6-7 .jcusel-radio {
-	display:inline;
-	zoom: 1;
 }

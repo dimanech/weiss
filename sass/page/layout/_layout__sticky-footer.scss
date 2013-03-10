@@ -24,7 +24,6 @@ body {
 		min-height: 100%;
 		height: auto !important;
 		height: 100%;
-		margin: 0 auto;
 		margin-bottom: -$footer-height;
 	}
 
@@ -38,27 +37,27 @@ body {
 	}
 }
 
-@media #{$media-tablet_portrait} {
-
-/* Sticky footer reset */
-
-	html, body {
-		height: auto;
-	}
-
-	.l-main-aux {
-		min-height: auto;
-		margin-bottom: auto;
-	}
-
-	.l-main-aux__inner {
-		padding-bottom: 0;
-	}
-
-	.l-global-footer {
-		height: auto;
-	}
-
-}
+//@media #{$media-tablet_portrait} {
+//
+///* Sticky footer reset */
+//
+//	html, body {
+//		height: auto;
+//	}
+//
+//	.l-main-aux {
+//		min-height: auto;
+//		margin-bottom: auto;
+//	}
+//
+//	.l-main-aux__inner {
+//		padding-bottom: 0;
+//	}
+//
+//	.l-global-footer {
+//		height: auto;
+//	}
+//
+//}
 
 /* @end */

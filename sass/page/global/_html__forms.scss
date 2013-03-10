@@ -7,9 +7,9 @@
 
 $inputPadding: 5px;
 $inputHeight: 20px;
-$formRowMargin: 10px;
+$formRowMargin: 0px;
 
-/* @group Forms generic
+/* @group Forms generic reset
   --------------------------------------------------------------------------- */
 
 .form {
@@ -27,18 +27,7 @@ $formRowMargin: 10px;
 		vertical-align: baseline;
 	}
 
-	//button,
 	input {
-		line-height: normal;
-		// Addresses Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
-	}
-
-	label {
-		display: block;
-	}
-
-	input {
-
 		//&[type="button"],
 		//&[type="image"],
 		&[type="submit"],
@@ -67,8 +56,13 @@ $formRowMargin: 10px;
 
 	}
 
-	// Themed form
-	//  ---------------------------------------------------------------------------
+}
+/* @end */
+
+/* @group Form generic themed styles
+	--------------------------------------------------------------------------- */
+
+.form {
 
 	//button,
 	input,
@@ -78,6 +72,7 @@ $formRowMargin: 10px;
 	}
 
 	label {
+		display: block;
 		line-height: $inputHeight;
 	}
 
@@ -146,13 +141,14 @@ $formRowMargin: 10px;
 		}
 	}
 
-	optgroup {
-		font-weight: normal;
-		background: #ccc;
-	}
+}
 
-	// Fieldset styles
-	//  ---------------------------------------------------------------------------
+/* @end */
+
+/* @group Form Fieldsets
+  --------------------------------------------------------------------------- */
+
+.form {
 
 	fieldset {
 		margin: 0;
@@ -188,8 +184,14 @@ $formRowMargin: 10px;
 		}
 	}
 
-	// Additional resets
-	//  ---------------------------------------------------------------------------
+}
+
+/* @end */
+
+/* @group Form Additional resets
+  --------------------------------------------------------------------------- */
+
+.form {
 
 	button,
 	input {
@@ -215,8 +217,14 @@ $formRowMargin: 10px;
 		}
 	}
 
-	// Placeholder styles
-	//  ---------------------------------------------------------------------------
+}
+
+/* @end */
+
+/* @group Form Placeholders
+  --------------------------------------------------------------------------- */
+
+.form {
 
 	input {
 
@@ -251,9 +259,9 @@ $formRowMargin: 10px;
 
 /* @end */
 
-/* @group Form elements
+/* @group Form Elements
   --------------------------------------------------------------------------- */
-$formItemPadding: 10px;
+$formItemPadding: 0px;
 
 .form__row {
 	@extend .i-clfx;
@@ -285,28 +293,6 @@ $formItemPadding: 10px;
 
 /* @end */
 
-/* @group Selectbox plugin support
-  --------------------------------------------------------------------------- */
-
-$sbPadding: 2px;
-
-@each $sbWidth in 200 {
-
-	.sb-w-#{$sbWidth} {
-
-		.dropdown,
-		select {
-			width: $sbWidth +px !important;
-		}
-
-		.dropdown ul {
-			width: $sbWidth - $sbPadding !important;
-		}
-	}
-}
-
-/* @end */
-
 /* @group Form Themed
   --------------------------------------------------------------------------- */
 
@@ -330,26 +316,3 @@ $sbPadding: 2px;
 }
 
 /* @end */
-
-// /* ============================================================================
-// 	 input styles IE support
-// ============================================================================= */
-
-// .input-container {
-// 	 display: inline-block;
-// 	 padding: .2em .2em .1em;
-// 	 /* background: url(../images/input.png) 0 0 no-repeat; */
-// 	 vertical-align: bottom;
-
-// 	 .ie6-7 {
-// 		 display:inline;
-// 		 zoom: 1;
-// 	 }
-
-// 	 input {
-// 		 padding: 0 .4em;
-// 		 margin: 0;
-// 		 background: transparent;
-// 		 border: none;
-// 	 }
-// }

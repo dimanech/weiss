@@ -46,3 +46,40 @@ dl dd {
 }
 
 /* @end */
+
+/* @group Lists specific
+  --------------------------------------------------------------------------- */
+
+.list {}
+
+.list_unstyled {
+	padding: 0;
+	list-style: none;
+}
+
+.list_flat {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.list__item {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.list_inline {
+	@extend .list_unstyled;
+
+	.list__item {
+		display: inline-block;
+		vertical-align: top;
+
+		.ie6-7 & {
+			display: inline;
+			zoom: 1;
+		}
+	}
+}
+
+/* @end */

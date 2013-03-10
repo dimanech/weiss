@@ -35,7 +35,7 @@
 //    Vendor prefix Mixins
 //=============================================================================
 
-$prefix_defaults: -moz- -webkit- -o- -ms- '' !default;
+$prefix_defaults: -moz- -webkit- '' !default;
 
 @mixin vendor($property, $value, $prefixes: $prefix_defaults) {
 	@each $prefix in $prefixes {
