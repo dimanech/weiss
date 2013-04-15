@@ -15,6 +15,10 @@ Based around tasks and problems that arise with me every day in my work - so in 
 
 ## Change Log
 
+**[v2.2](https://github.com/dimanech/weiss/archive/v2.2.zip)**
+
+* Changed sass file structure for better work with WebStorm
+
 **[v2.1](https://github.com/dimanech/weiss/archive/v2.1.zip)**
 
 * Added jstyling as default input styling plugin
