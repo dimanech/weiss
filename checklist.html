@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7]>
-<html class="iem7" lang="ru" dir="ltr"><![endif]-->
+<html class="iem7 no-js" lang="ru" dir="ltr"><![endif]-->
 <!--[if (lte IE 6)&(!IEMobile)]>
-<html class="ie6 ie6-7 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie6 ie6-7 ie6-8 no-js" lang="ru" dir="ltr"><![endif]-->
 <!--[if (IE 7)&(!IEMobile)]>
-<html class="ie7 ie6-7 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie7 ie6-7 ie6-8 no-js" lang="ru" dir="ltr"><![endif]-->
 <!--[if (IE 8)&(!IEMobile)]>
-<html class="ie8 ie6-8" lang="ru" dir="ltr"><![endif]-->
+<html class="ie8 ie6-8 no-js" lang="ru" dir="ltr"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html lang="ru" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
+<html class="no-js" lang="ru" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
 	<!--<![endif]-->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
 		<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
 		<!-- Social meta schema.org -->
-		<meta itemprop="name" content="Заголовок страницы" />
-		<meta itemprop="description" content="Описание содержимого" />
-		<meta itemprop="image" content="images/logo.png" />
+			<meta itemprop="name" content="Заголовок страницы" />
+			<meta itemprop="description" content="Описание содержимого" />
+			<meta itemprop="image" content="images/logo.png" />
 		<!-- Social meta schema.org -->
 		<!-- Social meta ogp.me -->
-		<meta property="og:title" content="Заголовок страницы" />
-		<meta property="og:description" content="Описание содержимого" />
-		<meta property="og:image" content="images/logo.png" />
+			<meta property="og:title" content="Заголовок страницы" />
+			<meta property="og:description" content="Описание содержимого" />
+			<meta property="og:image" content="images/logo.png" />
 		<!-- Social meta ogp.me -->
 		<title>Weiss - swicc static theme</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 		<!--[if lt IE 9]>
 			<link href="css/ie-old.css" rel="stylesheet" type="text/css"/>
@@ -39,33 +41,35 @@
 			<div class="l-main-aux__inner i-clfx">
 				<div class="region-header l-global-header">
 					<header role="banner">
-						<div class="l-global-header__left">
-							<hgroup>
-								<h1 class="site-name">Sitename</h1>
-								<h2 class="site-slogan">Site slogan</h2>
-							</hgroup>
-							<!-- <a href="#">
-							<span class="site-name">Sitename</span>
-							<span class="site-slogan">Site slogan</span>
-							</a> -->
+						<div class="i-clfx">
+							<div class="l-global-header__left">
+								<hgroup>
+									<h1 class="site-name">Sitename</h1>
+									<h2 class="site-slogan">Site slogan</h2>
+								</hgroup>
+								<!-- <a href="#">
+								<span class="site-name">Sitename</span>
+								<span class="site-slogan">Site slogan</span>
+								</a> -->
+							</div>
+							<div class="l-global-header__right">
+								<a href="mailto:weiss@mail.com">weiss@mail.com</a>
+							</div>
 						</div>
-						<div class="l-global-header__right">
-							<a href="mailto:weiss@mail.com">weiss@mail.com</a>
-						</div>
-						<div class="global-nav">
-							<nav>
-								<ul class="global-nav__inner" role="navigation">
-									<li>
-										<a href="#" id="twocolumn-f">2 columns: sidebar-first</a>
+						<div class="g-nav">
+							<nav role="navigation">
+								<ul class="g-nav__inner">
+									<li class="g-nav__item">
+										<a class="g-nav__ln" href="#" id="twocolumn-f">2 columns: sidebar-first</a>
 									</li>
-									<li>
-										<a href="#" id="twocolumn-s">2 columns: sidebar-second</a>
+									<li class="g-nav__item">
+										<a class="g-nav__ln" href="#" id="twocolumn-s">2 columns: sidebar-second</a>
 									</li>
-									<li>
-										<a href="#" id="threecolumn">3 columns</a>
+									<li class="g-nav__item">
+										<a class="g-nav__ln" href="#" id="threecolumn">3 columns</a>
 									</li>
-									<li>
-										<a href="#" id="nocolumn">0 columns</a>
+									<li class="g-nav__item g-nav__item_last">
+										<a class="g-nav__ln" href="#" id="nocolumn">0 columns</a>
 									</li>
 								</ul>
 							</nav>
@@ -76,11 +80,11 @@
 				<div class="region-main i-clfx" role="main">
 					<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 						<nav role="navigation">
-							<ol>
-								<li>
-									<a href="#" itemprop="url"><span itemprop="title">Главная</span></a> →
+							<ol class="breadcrumb__inner">
+								<li class="breadcrumb__item">
+									<a href="#" itemprop="url" class="breadcrumb__ln"><span itemprop="title">Главная</span></a> →
 								</li>
-								<li>
+								<li class="breadcrumb__item">
 									Typography
 								</li>
 							</ol>
@@ -486,6 +490,7 @@ _body.appendChild(_coverElement);
 					<!-- /.region-main__content -->
 				</div>
 				<!-- /.region-main-->
+
 				<!-- .region-aside_first -->
 				<div class="region-aside region-aside_first i-clfx">
 					<aside role="complementary">
@@ -495,6 +500,7 @@ _body.appendChild(_coverElement);
 					</aside>
 				</div>
 				<!-- /.region-aside_first -->
+
 				<!-- .region-aside_second -->
 				<div class="region-aside region-aside_second i-clfx">
 					<aside role="complementary">
@@ -504,6 +510,7 @@ _body.appendChild(_coverElement);
 					</aside>
 				</div>
 				<!-- /.region-aside_second -->
+
 				<div class="region-undercontent">
 					<div>
 						<style type="text/css">
@@ -608,51 +615,56 @@ _body.appendChild(_coverElement);
 					</div>
 					<div class="l-global-footer__right">
 						<p class="develop">
-							Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab"/></a>
+							Development <a href="#"><img src="images/copy-uplab.png" alt="Uplab" /></a>
 						</p>
 					</div>
 				</div>
 			</footer>
 		</div>
 		<!-- /.region-footer -->
+
 		<!--[if lt IE 7]>
-		<div style='height: 59px; padding:0 0 0 15px; position: absolute; top: 0; z-index: 9999;'><a
-		href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img
-		src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0016_russian.jpg" border="0"
-		height="42" width="820"
-		alt="Вы используете устаревшую версию браузера Internet Explorer. Выполните обновление для более быстрой и безопасной работы с веб-страницами."/></a>
-		</div> <![endif]-->
+			<div style='height: 59px; padding:0 0 0 15px; position: absolute; top: 0; z-index: 9999;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0016_russian.jpg" border="0" height="42" width="820" alt="Вы используете устаревшую версию браузера Internet Explorer. Выполните обновление для более быстрой и безопасной работы с веб-страницами."/>
+				</a>
+			</div>
+		<![endif]-->
+
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.jstyling.pack.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('.global-nav li a').click(function(e) {
+				$('.g-nav__ln').click(function(e) {
 					e.preventDefault();
 
-					$('.global-nav li a').removeClass('active');
-					$(this).addClass('active');
+					$('.g-nav__item').removeClass('g-nav__item_active');
+					$(this).parent('.g-nav__item').addClass('g-nav__item_active');
 				});
 
 				var main = $('.region-main'),
 						aside1 = $('.region-aside_first'),
 						aside2 = $('.region-aside_second');
-
+				// 2 columns sidebar second
 				$('#twocolumn-s').click(function() {
 					main.removeClass().addClass('region-main l-sidebar-second_main weiss-cf');
 					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-second_aside weiss-cf');
 					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-second_aside weiss-cf');
 				});
+				// 2 columns sidebar firest
 				$('#twocolumn-f').click(function() {
 					main.removeClass().addClass('region-main l-sidebar-first_main weiss-cf');
 					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-first_aside weiss-cf');
 					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-first_aside weiss-cf');
 				});
+				// 3 columns
 				$('#threecolumn').click(function() {
 					main.removeClass().addClass('region-main l-2sidebars_main weiss-cf');
 					aside1.removeClass().addClass('region-aside region-aside_first l-2sidebars_sidebar-first weiss-cf');
 					aside2.removeClass().addClass('region-aside region-aside_second l-2sidebars_sidebar-second weiss-cf');
 				});
+				// no columns
 				$('#nocolumn').click(function() {
 					main.removeClass().addClass('region-main weiss-cf');
 					aside1.removeClass().addClass('region-aside region-aside_first weiss-cf');
