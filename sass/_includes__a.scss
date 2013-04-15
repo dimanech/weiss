@@ -1,0 +1,88 @@
+@import "weiss-config";
+@import "mixins";
+
+/* ============================================================================
+		MASTER-CLASSES A
+============================================================================= */
+
+.i-clfx {
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.ie6-7 & {
+		zoom: 1;
+	}
+}
+
+/* position support */
+
+.i-aux {
+	width: $containerWidth;
+	margin: 0 auto;
+}
+
+.i-br {
+	display: block;
+}
+
+/* style support */
+
+.i-psln {
+	color: $lnColor;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+	position: relative;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		color: $lnHoverColor;
+	}
+}
+
+/* hacks and long rules */
+
+.i-dib {
+	// additional classes for overwrite IE make trouble in @extend funct
+	display: inline-block;
+	vertical-align: top;
+	*display: inline;
+	*zoom: 1;
+}
+
+.i-ir {
+	border: none;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	background-color: transparent;
+}
+
+.i-wai {
+	@include i-hide_vis;
+}
+
+.i-op {
+	opacity: .85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
+	filter: alpha(opacity = 85);
+}
+
+.i-img-container {
+	// image wrapper
+	overflow: hidden;
+	@extend .i-dib;
+
+	img {
+		display: block;
+		position: static;
+	}
+}

@@ -1,0 +1,318 @@
+@import "weiss-config";
+@import "mixins";
+
+/* ============================================================================
+   Form support
+============================================================================ */
+
+$inputPadding: 5px;
+$inputHeight: 20px;
+$formRowMargin: 0px;
+
+/* @group Forms generic reset
+  --------------------------------------------------------------------------- */
+
+.form {
+	border: none;
+	margin: 0;
+	// IE7
+
+	//button,
+	input,
+	select,
+	textarea {
+		margin: 0;
+		// Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+		padding: 0;
+		vertical-align: baseline;
+	}
+
+	input {
+		//&[type="button"],
+		//&[type="image"],
+		&[type="submit"],
+		&[type="reset"] {
+			-webkit-appearance: button;
+			//Corrects inability to style clickable 'input' types in iOS
+		}
+
+		&[type="checkbox"],
+		&[type="radio"] {
+			box-sizing: border-box;
+			// Addresses box sizing set to `content-box` in IE 8/9.
+			padding: 0;
+			// Removes excess padding in IE 8/9.
+			width: auto !important;
+			// form__item_w* normilize
+		}
+
+		&[type="radio"] {
+			vertical-align: text-top;
+		}
+
+		&[type="checkbox"] {
+			vertical-align: baseline;
+		}
+
+	}
+
+}
+/* @end */
+
+/* @group Form generic themed styles
+	--------------------------------------------------------------------------- */
+
+.form {
+
+	//button,
+	input,
+	select,
+	textarea {
+		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+	}
+
+	label {
+		display: block;
+		line-height: $inputHeight;
+	}
+
+	// input[type="password"],
+	// input[type="search"],
+	input[type="text"],
+	select,
+	textarea {
+		border: 1px solid;
+		border-color: #777 #ccc #ccc;
+		background: #fff;
+		padding: 0 $inputPadding;
+		margin: 0;
+		height: $inputHeight;
+		line-height: $inputHeight;
+
+		&:hover {
+			border-color: darken(#ccc, 10%);
+		}
+
+		&:focus {
+			border-color: $lnColor;
+			outline: none;
+		}
+	}
+
+	//input[type="button"],
+	//button,
+	input[type="submit"] {
+		color: #efefef;
+		background: #2d2d2d;
+		border: 1px solid #2d2d2d;
+
+		&:hover,
+		&:focus {
+			border-color: $lnColor;
+		}
+
+		&:active {
+			background-color: lighten(#2d2d2d, 20%);
+		}
+	}
+
+	// button[disabled],
+	// input[disabled] {
+	//   cursor: default;
+	// }
+
+	textarea {
+		overflow: auto;
+		//Removes default vertical scrollbar in IE6/7/8/9
+		vertical-align: top;
+		//Improves readability and alignment in all browsers
+		height: auto;
+		// overwrite theming on form element
+		min-height: 4em;
+		line-height: $base-line-height;
+		padding: 5px $inputPadding;
+		resize: vertical;
+	}
+
+	select {
+		&[multiple="multiple"] {
+			height: auto;
+			// overwrite theming on form element
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Form Fieldsets
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	legend {
+		border: none;
+		// Corrects color not being inherited in IE 8/9.
+		padding: 0;
+		// Remove padding so people aren't caught out if they zero out fieldsets.
+	}
+
+	// generic
+
+	.form__set {
+		// fieldset
+		position: relative;
+		padding: 20px 0 0;
+	}
+
+	.form__set__legend {
+		// legend
+		border: 0;
+		font-size: $h3-font-size;
+		font-weight: bold;
+
+		span {
+			position: absolute;
+			top: 0;
+			left: $formRowMargin;
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Form Additional resets
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	button,
+	input {
+		&::-moz-focus-inner {
+			border: none;
+			// Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+			padding: 0;
+		}
+	}
+
+	.ie6-7 & {
+		button,
+		input,
+		select,
+		textarea {
+			vertical-align: middle;
+		}
+
+		button,
+		input {
+			overflow: visible;
+			//Removes inner spacing in IE7 without affecting normal text inputs
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Form Placeholders
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	input {
+
+		&::-webkit-input-placeholder {
+			color: $baseColor;
+		}
+
+		&:-moz-placeholder {
+			color: $baseColor;
+		}
+
+		&:focus {
+			&::-webkit-input-placeholder {
+				color: lighten($baseColor, 10%);
+			}
+
+			&:-moz-placeholder {
+				color: lighten($baseColor, 10%);
+			}
+		}
+	}
+
+	// Colors for native form validition
+
+	// input:valid,
+	//textarea:valid {}
+	//
+	// input:invalid,
+	//textarea:invalid {}
+
+}
+
+/* @end */
+
+/* @group Form Elements
+  --------------------------------------------------------------------------- */
+$formItemPadding: 0px;
+
+.form__row {
+	@extend .i-clfx;
+	padding: 5px 0;
+	margin: 0 $formRowMargin;
+}
+
+.form__item {
+	float: left;
+	padding: 0 $formItemPadding 0 0;
+	margin-left: 5px;
+}
+
+@each $itemWidth in 50, 100, 145, 200 {
+
+	.form__item_w-#{$itemWidth} {
+		width: $itemWidth - ($formItemPadding);
+
+		input,
+		textarea {
+			width: $itemWidth - ($inputPadding * 2);
+		}
+	}
+}
+
+.form__row_submit {
+
+}
+
+/* @end */
+
+/* @group Form Themed
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	//mods
+	.form__set_main {
+		padding-top: 20px;
+	}
+
+	.form__set__legend_main {
+		font-size: $h2-font-size;
+		font-weight: bold;
+	}
+}
+
+.form_name2 {
+	.form__set__legend span {
+		left: 14px;
+	}
+}
+
+/* @end */

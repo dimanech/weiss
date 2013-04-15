@@ -1,0 +1,82 @@
+@import "weiss-config";
+@import "mixins";
+
+/* ============================================================================
+  Table support
+============================================================================ */
+
+/* @group Table generic
+  --------------------------------------------------------------------------- */
+
+.table {
+	border-collapse: collapse;
+	//Remove most spacing between table cells.
+	border-spacing: 0;
+	//Remove most spacing between table cells.
+	border-width: 0;
+	width: 100%;
+	empty-cells: hide;
+
+	caption {
+		@include adjust-font-size-to($h2-font-size);
+		@include trailer(1, $h2-font-size);
+	}
+
+	td,
+	th {
+		vertical-align: middle;
+		padding: 0 rhythm(0.4);
+		border: 1px solid #ccc;
+
+		thead & {
+			font-weight: bold;
+		}
+	}
+
+	tbody {
+
+		td {
+			//&[colspan] {
+			//	text-align:center;
+			//}
+			//
+			//&[rowspan] {
+			//	vertical-align:middle;
+			//}
+			//
+			//&[colspan="1"] {
+			//	text-align: left;
+			//}
+			//
+			//&[rowspan="1"] {
+			//	vertical-align: top;
+			//}
+			//
+			//&:empty {
+			//	border: none;
+			//}
+		}
+
+		//tr:nth-of-type(odd) td {
+		//	background-color: rgba(0,0,0,0.05);
+		//}
+	}
+
+	tfoot {
+		text-align: center;
+		font-size: .9em;
+		font-style: italic;
+	}
+}
+
+/* @end */
+
+/* @group Table mod: cell fixed width
+  --------------------------------------------------------------------------- */
+
+.table_fixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+/* @end */

@@ -1,0 +1,78 @@
+@import "weiss-config";
+@import "mixins";
+
+/* ============================================================================
+    Non-semantic grid support
+ ============================================================================ */
+
+/* @group Non-semantic grid support : generic
+  --------------------------------------------------------------------------- */
+
+.l-row {
+	@extend .i-clfx;
+}
+
+l-row_flat {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.l-row_w {
+	@include container;
+}
+
+.l-row_ov {
+	overflow: hidden;
+}
+
+.l-span {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.l-span_1 {
+	@include span-columns(1, 12);
+}
+
+.l-span_2 {
+	@include span-columns(2, 12);
+}
+
+.l-span_4 {
+	@include span-columns(4, 12);
+}
+
+.l-span_6 {
+	@include span-columns(6, 12);
+}
+
+.l-span_8 {
+	@include span-columns(8, 12);
+}
+
+.l-span_10 {
+	@include span-columns(10, 12);
+}
+
+.l-span_12 {
+	@include span-columns(12, 12);
+}
+
+/* Non-semantic grid support : Layout type */
+
+.l-span_4-6-12 {
+}
+
+.l-span_4-8-12 {
+}
+
+/* End Layout type */
+
+.l-span_last {
+	float: right !important;
+	margin-right: 0 !important;
+}
+
+/* @end */
