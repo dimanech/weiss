@@ -19,10 +19,10 @@
 // Pages
 // -----------------------------------------------------------------------------
 
-@import "global";
+@import "html__global";
 
-@import "typography__fonts";
-@import "typography__basic";
+@import "html__typography__fonts";
+@import "html__typography__basic";
 
 @import "html__additional";
 @import "html__specific";
@@ -51,18 +51,18 @@
 // Blocks
 // -----------------------------------------------------------------------------
 
-@import "blocks/menu-horiz";
-@import "blocks/pagination";
-@import "blocks/tabs";
-@import "blocks/modal";
-@import "blocks/collapse";
-@import "blocks/btn";
+@import "block__menu-horiz";
+@import "block__pagination";
+@import "block__tabs";
+@import "block__modal";
+@import "block__collapse";
+@import "block__btn";
 
 // Plugins
 // -----------------------------------------------------------------------------
 
-@import "plugins/jstyling";
-//@import "plugins/fancybox";
+@import "plugins__jstyling";
+//@import "plugins__fancybox";
 
 // Print styles
 // -----------------------------------------------------------------------------
