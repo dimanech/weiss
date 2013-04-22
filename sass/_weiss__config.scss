@@ -2,10 +2,6 @@
 // http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 
-// $myicons-layout: vertical;
-// $myicons-spacing: 10px;
-// @import "myicons/*.png";
-
 $sans: Arial, FreeSans, sans-serif;
 $hSans: Verdana, "Bitstream Vera Sans", "DejaVu Sans", sans-serif;
 $hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
@@ -38,10 +34,8 @@ $containerWidth: 974px;
 $baseFontFamily: $sans;
 $baseFontFamilyMono: $monospSerif;
 
-$base-font-size: 14px;
-// The font size set on the root html element.
-$base-line-height: 18px;
-// This line-height determines the basic unit of vertical rhythm.
+$base-font-size: 14px; // The font size set on the root html element.
+$base-line-height: 18px; // This line-height determines the basic unit of vertical rhythm.
 
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale by scottkellum
@@ -54,19 +48,38 @@ $h5-font-size: 0.742 * $base-font-size;
 $h6-font-size: 0.618 * $base-font-size;
 
 // ============================================================================
+//    Sprites
+//=============================================================================
+
+//http://beta.compass-style.org/reference/compass/helpers/sprites/#sprite-map
+@import "compass/utilities/sprites/base";
+
+// Usage
+//$icons-map: sprite-map("icons/*.png", $spacing: 20px, $layout: vertical);
+//
+//.i-ico {
+//	background: $icons-map;
+//}
+//
+//.i-ico_dimensions {
+//	@include sprite($icons-map, ico-file-doc, true);
+//}
+//
+//.i-ico_position {
+//	//background-position: sprite-position($icons-map, ico-file-doc-hover);
+//	background-position: sprite-position($icons-map, ico-file-doc-hover, 3px, -2px);
+//}
+
+// ============================================================================
 //    Non-semantic grid support
 //=============================================================================
 
 @import "susy";
 
-$total-columns: 12;
-// a 12-column grid
-$column-width: 4em;
-// each column is 4em wide
-$gutter-width: 1em;
-// 1em gutters between columns
-$grid-padding: $gutter-width;
-// grid-padding equal to gutters
+$total-columns: 12; // a 12-column grid
+$column-width: 4em; // each column is 4em wide
+$gutter-width: 1em; // 1em gutters between columns
+$grid-padding: $gutter-width; // grid-padding equal to gutters
 
 // ============================================================================
 //    Breakpoints

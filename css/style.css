@@ -848,15 +848,19 @@ thead .table td, thead
 /* ============================================================================
 		Main
 ============================================================================= */
-.breadcrumb ol {
+/* @group breadcrumb
+  --------------------------------------------------------------------------- */
+.breadcrumb__inner {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.breadcrumb li {
+
+.breadcrumb__item {
   display: inline;
 }
 
+/* @end */
 /* ============================================================================
 		Footer
 ============================================================================= */
@@ -907,17 +911,8 @@ thead .table td, thead
 /* hacks and long rules */
 .i-dib, .i-img-container {
   display: inline-block;
-  vertical-align: top;
   *display: inline;
   *zoom: 1;
-}
-
-.i-ir {
-  border: none;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
 }
 
 .i-wai {
@@ -932,12 +927,6 @@ thead .table td, thead
 }
 .ie6-7 .i-wai {
   clip: rect(1px 1px 1px 1px);
-}
-
-.i-op {
-  opacity: .85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity = 85)";
-  filter: alpha(opacity=85);
 }
 
 .i-img-container {
@@ -1033,43 +1022,43 @@ thead .table td, thead
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #e3d2be;
+    background: #430325;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #071cb9;
+    background: #cfb191;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #2cf8bf;
+    background: #eec608;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #33acff;
+    background: #8317d2;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #fea3ea;
+    background: #bf1eef;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #7d4b21;
+    background: #6de245;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #92e947;
+    background: #dc8903;
   }
 }
 /* @end */

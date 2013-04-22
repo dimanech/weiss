@@ -31,6 +31,22 @@
 	}
 }
 
+@mixin i-clfx {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.ie6-7 & {
+		zoom: 1;
+	}
+}
+
 // ============================================================================
 //    Vendor prefix Mixins
 //=============================================================================
@@ -47,32 +63,6 @@ $prefix_defaults: -moz- -webkit- '' !default;
 	@each $prefix in $prefixes {
 		#{$prefix}transition: $value;
 	}
-}
-
-//============================================================================
-//   Images and Lemonade-Sprite helpers
-//============================================================================
-
-// sized sprites
-@mixin image-size($path){
-	width: image-width($path);
-	height: image-height($path);
-}
-
-@mixin sized-sprite($map, $sprite){
-	background: sprite($map, $sprite) no-repeat;
-	@include image-size(sprite-file($map, $sprite));
-}
-
-//shortcut
-@mixin s($map, $sprite){
-	background: sprite($map, $sprite) no-repeat;
-	@include image-size(sprite-file($map, $sprite));
-}
-
-//only image, when dimensions are useless
-@mixin si($map, $sprite){
-	background: sprite($map, $sprite) no-repeat;
 }
 
 //============================================================================
