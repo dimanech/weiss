@@ -2,49 +2,18 @@
 @import "weiss__mixins";
 
 /* ============================================================================
-   Compose 3 element button
+   Generic button
 ============================================================================ */
 
-/* 3 elements button generic classes
-  --------------------------------------------------------------------------- */
-
-.btn-3el {
+.btn {
 	display: inline-block;
-	padding: 0 7px;
-	vertical-align: text-bottom;
-	text-decoration: none;
-	white-space: nowrap;
-
-	.ie6-7 & {
-		display: inline;
-		zoom: 1;
-	}
-
-	input {
-		padding: 0;
-		margin: 0;
-		background: transparent;
-		border: none !important;
-	}
-
-	&:hover,
-	&:focus {
-		.btn-3el__l-s,
-		.btn-3el__mid,
-		.btn-3el__r-s {
-			opacity: .92;
-			cursor: pointer;
-		}
-	}
-}
-
-.btn-3el__l-s,
-.btn-3el__mid,
-.btn-3el__r-s {
-	display: inline-block;
+	@include vendor(box-sizing, border-box);
 	vertical-align: top;
-	float: left;
-	background-repeat: repeat-x;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	border: none;
 
 	.ie6-7 & {
 		display: inline;
@@ -52,115 +21,54 @@
 	}
 }
 
-.btn-3el__l-s,
-.btn-3el__r-s {
-	width: 7px;
-}
-
-.btn-3el__mid {
-	background-position: left bottom !important;
-	// input bg fix
-}
-
-.btn-3el__l-s {
-	background-position: left top;
-	margin-left: -4px;
-}
-
-.btn-3el__r-s {
-	background-position: right top;
-	margin-right: -4px;
-}
-
-/* @end */
-
-/* @group 3 element button Primary button
+/* @group Btn colors
   --------------------------------------------------------------------------- */
 
-.btn-3el_prim {
-	$btn-3elHeight: 40px;
-
-	height: $btn-3elHeight;
-	line-height: $btn-3elHeight;
-	font-size: 18px;
-
-	.btn-3el__l-s,
-	.btn-3el__mid,
-	.btn-3el__r-s {
-		height: $btn-3elHeight;
-		line-height: $btn-3elHeight;
-	}
-
-	.btn-3el__mid {
-		padding: 0 .4em;
-	}
-}
-
-.btn-3el_prim_green {
-	$color: #fff;
-	$hcolor: #fff;
-
-	color: $color;
+.btn_grey {
+	background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+	border: 1px solid rgba(0,0,0,.25);
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 
 	&:hover,
 	&:focus {
-		color: $hcolor;
+		border-color: rgba(0,0,0,.35);
+		background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+		box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 	}
+}
 
-	input {
-		color: $color;
-	}
+a.btn_grey {
+	color: $baseColor;
+}
 
-	.btn-3el__l-s,
-	.btn-3el__mid,
-	.btn-3el__r-s {
-		background-image: url(../images/compose-btn-3el/button-primary-green.gif);
+.btn_red {
+	color: #fff !important;
+	background-image: linear-gradient(to bottom, #729fcf, #4c8ed2);
+	border: 1px solid rgba(#4c8ed2,.25);
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.89);
+
+	&:hover,
+	&:focus {
+		background: lighten(#4c8ed2, 5%);
+		box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 	}
 }
 
 /* @end */
 
-/* @group 3 element button Secondary button
+/* @group Btn size
   --------------------------------------------------------------------------- */
 
-.btn-3el_sec {
-	$btn-3elHeight: 30px;
+.btn_medium {
+	font-size: 14px;
+	height: 34px;
+	line-height: 44px;
+	padding: 0 13px;
 
-	height: $btn-3elHeight;
-	line-height: $btn-3elHeight;
-	font-size: 16px;
-
-	.btn-3el__l-s,
-	.btn-3el__mid,
-	.btn-3el__r-s {
-		height: $btn-3elHeight;
-		line-height: $btn-3elHeight;
-	}
-
-	.btn-3el__mid {
-		padding: 0 .4em;
-	}
-}
-
-.btn-3el_sec_green {
-	$color: #fff;
-	$hcolor: #fff;
-
-	color: $color;
-
-	&:hover,
-	&:focus {
-		color: $hcolor;
-	}
-
-	input {
-		color: $color;
-	}
-
-	.btn-3el__l-s,
-	.btn-3el__mid,
-	.btn-3el__r-s {
-		background-image: url(../images/compose-btn-3el/button-secondary-green.gif);
+	.form & {
+		padding: 0 13px;
 	}
 }
 

@@ -627,6 +627,7 @@ thead .table td, thead
   border: none;
   margin: 0;
 }
+.form button,
 .form input,
 .form select,
 .form textarea {
@@ -652,6 +653,7 @@ thead .table td, thead
 /* @end */
 /* @group Form generic themed styles
 	--------------------------------------------------------------------------- */
+.form button,
 .form input,
 .form select,
 .form textarea {
@@ -659,40 +661,32 @@ thead .table td, thead
 }
 .form label {
   display: block;
-  line-height: 20px;
+  line-height: 27px;
 }
 .form input[type="text"],
 .form select,
 .form textarea {
-  border: 1px solid;
-  border-color: #777 #ccc #ccc;
-  background: #fff;
   padding: 0 5px;
   margin: 0;
-  height: 20px;
-  line-height: 20px;
+  height: 27px;
+  line-height: 27px;
+  max-width: 100%;
+  background: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.15), 0px 1px 0 0 rgba(255, 255, 255, 0.89);
 }
 .form input[type="text"]:hover,
 .form select:hover,
 .form textarea:hover {
-  border-color: #b3b3b3;
+  border-color: rgba(0, 0, 0, 0.35);
 }
 .form input[type="text"]:focus,
 .form select:focus,
 .form textarea:focus {
-  border-color: #0099ff;
   outline: none;
-}
-.form input[type="submit"] {
-  color: #efefef;
-  background: #2d2d2d;
-  border: 1px solid #2d2d2d;
-}
-.form input[type="submit"]:hover, .form input[type="submit"]:focus {
-  border-color: #0099ff;
-}
-.form input[type="submit"]:active {
-  background-color: #606060;
+  border-color: #729fcf;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 2px 0 rgba(0, 106, 221, 0.3);
 }
 .form textarea {
   overflow: auto;
@@ -731,7 +725,7 @@ thead .table td, thead
 .form .form__set__legend span {
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
 }
 
 /* @end */
@@ -779,12 +773,11 @@ thead .table td, thead
 
 .form__item {
   float: left;
-  padding: 0 0px 0 0;
-  margin-left: 5px;
+  margin: 0 5px 0 0;
 }
 
 .form__item_w-50 {
-  width: 50px;
+  width: 55px;
 }
 .form__item_w-50 input,
 .form__item_w-50 textarea {
@@ -792,42 +785,27 @@ thead .table td, thead
 }
 
 .form__item_w-100 {
-  width: 100px;
+  width: 105px;
 }
 .form__item_w-100 input,
 .form__item_w-100 textarea {
   width: 90px;
 }
 
-.form__item_w-145 {
+.form__item_w-140 {
   width: 145px;
 }
-.form__item_w-145 input,
-.form__item_w-145 textarea {
-  width: 135px;
+.form__item_w-140 input,
+.form__item_w-140 textarea {
+  width: 130px;
 }
 
 .form__item_w-200 {
-  width: 200px;
+  width: 205px;
 }
 .form__item_w-200 input,
 .form__item_w-200 textarea {
   width: 190px;
-}
-
-/* @end */
-/* @group Form Themed
-  --------------------------------------------------------------------------- */
-.form .form__set_main {
-  padding-top: 20px;
-}
-.form .form__set__legend_main {
-  font-size: 22.652px;
-  font-weight: bold;
-}
-
-.form_name2 .form__set__legend span {
-  left: 14px;
 }
 
 /* @end */
@@ -1022,43 +1000,43 @@ thead .table td, thead
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #430325;
+    background: #ab1a00;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #cfb191;
+    background: #8e11bf;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #eec608;
+    background: #fb1aec;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #8317d2;
+    background: #1a3d0a;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #bf1eef;
+    background: #f0f045;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #6de245;
+    background: #0cc375;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #dc8903;
+    background: #85100f;
   }
 }
 /* @end */
@@ -1373,134 +1351,66 @@ thead .table td, thead
 
 /* @end */
 /* ============================================================================
-   Compose 3 element button
+   Generic button
 ============================================================================ */
-/* 3 elements button generic classes
-  --------------------------------------------------------------------------- */
-.btn-3el {
+.btn {
   display: inline-block;
-  padding: 0 7px;
-  vertical-align: text-bottom;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.ie6-7 .btn-3el {
-  display: inline;
-  zoom: 1;
-}
-.btn-3el input {
-  padding: 0;
-  margin: 0;
-  background: transparent;
-  border: none !important;
-}
-.btn-3el:hover .btn-3el__l-s,
-.btn-3el:hover .btn-3el__mid,
-.btn-3el:hover .btn-3el__r-s, .btn-3el:focus .btn-3el__l-s,
-.btn-3el:focus .btn-3el__mid,
-.btn-3el:focus .btn-3el__r-s {
-  opacity: .92;
-  cursor: pointer;
-}
-
-.btn-3el__l-s,
-.btn-3el__mid,
-.btn-3el__r-s {
-  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   vertical-align: top;
-  float: left;
-  background-repeat: repeat-x;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border: none;
 }
-.ie6-7 .btn-3el__l-s, .ie6-7
-.btn-3el__mid, .ie6-7
-.btn-3el__r-s {
+.ie6-7 .btn {
   display: inline;
   zoom: 1;
 }
 
-.btn-3el__l-s,
-.btn-3el__r-s {
-  width: 7px;
+/* @group Btn colors
+  --------------------------------------------------------------------------- */
+.btn_grey {
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89);
+}
+.btn_grey:hover, .btn_grey:focus {
+  border-color: rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89);
 }
 
-.btn-3el__mid {
-  background-position: left bottom !important;
+a.btn_grey {
+  color: #434343;
 }
 
-.btn-3el__l-s {
-  background-position: left top;
-  margin-left: -4px;
+.btn_red {
+  color: #fff !important;
+  background-image: linear-gradient(to bottom, #729fcf, #4c8ed2);
+  border: 1px solid rgba(76, 142, 210, 0.25);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89);
 }
-
-.btn-3el__r-s {
-  background-position: right top;
-  margin-right: -4px;
+.btn_red:hover, .btn_red:focus {
+  background: #609bd7;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89);
 }
 
 /* @end */
-/* @group 3 element button Primary button
+/* @group Btn size
   --------------------------------------------------------------------------- */
-.btn-3el_prim {
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
+.btn_medium {
+  font-size: 14px;
+  height: 34px;
+  line-height: 44px;
+  padding: 0 13px;
 }
-.btn-3el_prim .btn-3el__l-s,
-.btn-3el_prim .btn-3el__mid,
-.btn-3el_prim .btn-3el__r-s {
-  height: 40px;
-  line-height: 40px;
-}
-.btn-3el_prim .btn-3el__mid {
-  padding: 0 .4em;
-}
-
-.btn-3el_prim_green {
-  color: white;
-}
-.btn-3el_prim_green:hover, .btn-3el_prim_green:focus {
-  color: white;
-}
-.btn-3el_prim_green input {
-  color: white;
-}
-.btn-3el_prim_green .btn-3el__l-s,
-.btn-3el_prim_green .btn-3el__mid,
-.btn-3el_prim_green .btn-3el__r-s {
-  background-image: url(../images/compose-btn-3el/button-primary-green.gif);
-}
-
-/* @end */
-/* @group 3 element button Secondary button
-  --------------------------------------------------------------------------- */
-.btn-3el_sec {
-  height: 30px;
-  line-height: 30px;
-  font-size: 16px;
-}
-.btn-3el_sec .btn-3el__l-s,
-.btn-3el_sec .btn-3el__mid,
-.btn-3el_sec .btn-3el__r-s {
-  height: 30px;
-  line-height: 30px;
-}
-.btn-3el_sec .btn-3el__mid {
-  padding: 0 .4em;
-}
-
-.btn-3el_sec_green {
-  color: white;
-}
-.btn-3el_sec_green:hover, .btn-3el_sec_green:focus {
-  color: white;
-}
-.btn-3el_sec_green input {
-  color: white;
-}
-.btn-3el_sec_green .btn-3el__l-s,
-.btn-3el_sec_green .btn-3el__mid,
-.btn-3el_sec_green .btn-3el__r-s {
-  background-image: url(../images/compose-btn-3el/button-secondary-green.gif);
+.form .btn_medium {
+  padding: 0 13px;
 }
 
 /* @end */

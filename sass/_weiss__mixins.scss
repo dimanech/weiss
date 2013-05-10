@@ -31,6 +31,11 @@
 	}
 }
 
+// ============================================================================
+//  Layout support
+//=============================================================================
+
+// Clearfix
 @mixin i-clfx {
 	&:before,
 	&:after {
@@ -47,22 +52,150 @@
 	}
 }
 
+// Simple static grid
+
+// The $gw-column and $gw-gutter variables must be defined in your base stylesheet to properly use the grid-width function.
+//
+// $gw-column: 100px; // Column Width
+// $gw-gutter: 40px; // Gutter Width
+//
+// div {
+// width: grid-width(4); // returns 520px;
+// margin-left: $gw-gutter; // returns 40px;
+// }
+
+@function grid-width($n) {
+	@return $n * $gw-column + ($n - 1) * $gw-gutter;
+}
+
 // ============================================================================
-//    Vendor prefix Mixins
+//    Vendor prefix Mixins (http://bourbon.io)
 //=============================================================================
 
-$prefix_defaults: -moz- -webkit- '' !default;
+$prefixes-default:     moz webkit spec !default;
 
-@mixin vendor($property, $value, $prefixes: $prefix_defaults) {
+$prefix-for-webkit:    true !default;
+$prefix-for-mozilla:   true !default;
+$prefix-for-microsoft: true !default;
+$prefix-for-opera:     true !default;
+$prefix-for-spec:      true !default; // required for keyframe mixin
+
+@mixin disable-prefix-for-all() {
+	$prefix-for-webkit:    false;
+	$prefix-for-mozilla:   false;
+	$prefix-for-microsoft: false;
+	$prefix-for-opera:     false;
+	$prefix-for-spec:      false;
+}
+
+// Vendor mixin
+//
+// example : @include vendor(transform, translateX(40px))
+// or
+// @include vendor(transform, translateX(40px), moz webkit ms o spec)
+
+@mixin vendor($property, $value, $prefixes: $prefixes-default) {
 	@each $prefix in $prefixes {
-		#{$prefix}#{$property}: $value;
+
+		@if $prefix == webkit {
+			@if $prefix-for-webkit {
+				-webkit-#{$property}: $value;
+			}
+		}
+
+		@else if $prefix == moz {
+			@if $prefix-for-mozilla {
+				-moz-#{$property}: $value;
+			}
+		}
+
+		@else if $prefix == ms {
+			@if $prefix-for-microsoft {
+				-ms-#{$property}: $value;
+			}
+		}
+
+		@else if $prefix == o {
+			@if $prefix-for-opera {
+				-o-#{$property}: $value;
+			}
+		}
+
+		@else if $prefix == spec {
+			@if $prefix-for-spec {
+				#{$property}: $value;
+			}
+		}
+
+		@else  {
+			@warn "Unrecognized prefix: #{$prefix}";
+		}
 	}
 }
 
-@mixin transition($value: all .2s linear, $prefixes: $prefix_defaults) {
-	@each $prefix in $prefixes {
-		#{$prefix}transition: $value;
+// Transition shortcut
+//
+// example :
+// @include transition(all ease-in 600ms)
+// or
+// @include transition()
+
+$transition-default: all linear .2s !default;
+
+@mixin transition($properties: $transition-default) {
+	@include vendor(transition, $properties);
+}
+
+// Animation shortcut
+//
+// example :
+// .element {
+//   @include vendor(animation, fadeInSlide linear .2s);
+// }
+//
+// @include keyframes(fadeInSlide) {
+// 	from {
+//		@include vendor(transform, scale(1) translateX(20px));
+//		opacity: 0;
+//	}
+//	to {
+//		@include vendor(transform, scale(0) translateX(0px));
+//		opacity: 1;
+//	}
+// }
+
+@mixin keyframes($name) {
+	$original-prefix-for-webkit:    $prefix-for-webkit;
+	$original-prefix-for-mozilla:   $prefix-for-mozilla;
+	$original-prefix-for-spec:      $prefix-for-spec;
+
+	@if $original-prefix-for-webkit {
+		@include disable-prefix-for-all();
+		$prefix-for-webkit: true;
+		@-webkit-keyframes #{$name} {
+			@content;
+		}
 	}
+
+	@if $original-prefix-for-mozilla {
+		@include disable-prefix-for-all();
+		$prefix-for-mozilla: true;
+		@-moz-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $original-prefix-for-spec {
+		@include disable-prefix-for-all();
+		$prefix-for-spec: true;
+		@keyframes #{$name} {
+			@content;
+		}
+	}
+
+	$prefix-for-webkit:    $original-prefix-for-webkit;
+	$prefix-for-mozilla:   $original-prefix-for-mozilla;
+	$prefix-for-spec:      $original-prefix-for-spec;
 }
 
 //============================================================================

@@ -1,0 +1,167 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+   Compose 3 element button
+============================================================================ */
+
+/* 3 elements button generic classes
+  --------------------------------------------------------------------------- */
+
+.btn-3el {
+	display: inline-block;
+	padding: 0 7px;
+	vertical-align: text-bottom;
+	text-decoration: none;
+	white-space: nowrap;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	input {
+		padding: 0;
+		margin: 0;
+		background: transparent;
+		border: none !important;
+	}
+
+	&:hover,
+	&:focus {
+		.btn-3el__l-s,
+		.btn-3el__mid,
+		.btn-3el__r-s {
+			opacity: .92;
+			cursor: pointer;
+		}
+	}
+}
+
+.btn-3el__l-s,
+.btn-3el__mid,
+.btn-3el__r-s {
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	background-repeat: repeat-x;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+.btn-3el__l-s,
+.btn-3el__r-s {
+	width: 7px;
+}
+
+.btn-3el__mid {
+	background-position: left bottom !important;
+	// input bg fix
+}
+
+.btn-3el__l-s {
+	background-position: left top;
+	margin-left: -4px;
+}
+
+.btn-3el__r-s {
+	background-position: right top;
+	margin-right: -4px;
+}
+
+/* @end */
+
+/* @group 3 element button Primary button
+  --------------------------------------------------------------------------- */
+
+.btn-3el_prim {
+	$btn-3elHeight: 40px;
+
+	height: $btn-3elHeight;
+	line-height: $btn-3elHeight;
+	font-size: 18px;
+
+	.btn-3el__l-s,
+	.btn-3el__mid,
+	.btn-3el__r-s {
+		height: $btn-3elHeight;
+		line-height: $btn-3elHeight;
+	}
+
+	.btn-3el__mid {
+		padding: 0 .4em;
+	}
+}
+
+.btn-3el_prim_green {
+	$color: #fff;
+	$hcolor: #fff;
+
+	color: $color;
+
+	&:hover,
+	&:focus {
+		color: $hcolor;
+	}
+
+	input {
+		color: $color;
+	}
+
+	.btn-3el__l-s,
+	.btn-3el__mid,
+	.btn-3el__r-s {
+		background-image: url(../images/compose-btn-3el/button-primary-green.gif);
+	}
+}
+
+/* @end */
+
+/* @group 3 element button Secondary button
+  --------------------------------------------------------------------------- */
+
+.btn-3el_sec {
+	$btn-3elHeight: 30px;
+
+	height: $btn-3elHeight;
+	line-height: $btn-3elHeight;
+	font-size: 16px;
+
+	.btn-3el__l-s,
+	.btn-3el__mid,
+	.btn-3el__r-s {
+		height: $btn-3elHeight;
+		line-height: $btn-3elHeight;
+	}
+
+	.btn-3el__mid {
+		padding: 0 .4em;
+	}
+}
+
+.btn-3el_sec_green {
+	$color: #fff;
+	$hcolor: #fff;
+
+	color: $color;
+
+	&:hover,
+	&:focus {
+		color: $hcolor;
+	}
+
+	input {
+		color: $color;
+	}
+
+	.btn-3el__l-s,
+	.btn-3el__mid,
+	.btn-3el__r-s {
+		background-image: url(../images/compose-btn-3el/button-secondary-green.gif);
+	}
+}
+
+/* @end */
