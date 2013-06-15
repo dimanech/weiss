@@ -23,6 +23,7 @@ design
 .DS_Store
 ._*
 Thumbs.db
+
 *.sublime-project
 *.sublime-workspace
 .idea
@@ -31,3 +32,5 @@ Thumbs.db
 .externalToolBuilders
 .settings
 /nbproject/private/
+.bundle
+build

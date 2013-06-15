@@ -148,7 +148,7 @@ $formItemMargin: 5px;
 	}
 
 	.form__set__legend { // legend
-		border: 0;
+		border: none;
 		font-size: $h3-font-size;
 		font-weight: bold;
 
@@ -259,6 +259,10 @@ $formItemMargin: 5px;
 }
 
 .form__row_submit {
+
+}
+
+.form__notes {
 
 }
 

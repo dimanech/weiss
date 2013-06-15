@@ -94,3 +94,7 @@ a {
 		// Improves readability when focused and also mouse hovered in all browsers.
 	}
 }
+
+.ie6-7 a * {
+	cursor: pointer;
+}

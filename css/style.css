@@ -133,6 +133,10 @@ a:hover, a:active {
   outline: none;
 }
 
+.ie6-7 a * {
+  cursor: pointer;
+}
+
 /* ============================================================================
 		ADDITIONAL HTML TAGS
 ============================================================================= */
@@ -615,6 +619,7 @@ thead .table td, thead
 .table_fixed {
   table-layout: fixed;
   word-wrap: break-word;
+  width: auto;
 }
 
 /* @end */
@@ -718,7 +723,7 @@ thead .table td, thead
   padding: 20px 0 0;
 }
 .form .form__set__legend {
-  border: 0;
+  border: none;
   font-size: 16.814px;
   font-weight: bold;
 }
@@ -842,14 +847,26 @@ thead .table td, thead
 /* ============================================================================
 		Footer
 ============================================================================= */
-.region-footer p {
-  padding: 0 1em;
-}
-
-.develop img {
+/* @group develop block
+  --------------------------------------------------------------------------- */
+.develop-block__logo {
+  display: inline-block;
+  width: 90px;
+  height: 31px;
   vertical-align: middle;
+  background: url(../images/uplab-logo.svg) 0 0 no-repeat;
+  background-size: contain;
+  text-decoration: none;
+}
+.ie6-8 .develop-block__logo {
+  background: url(../images/uplab-logo_fallback.png) 0 0 no-repeat;
+}
+.ie6-7 .develop-block__logo {
+  display: inline;
+  zoom: 1;
 }
 
+/* @end */
 /* ============================================================================
 		MASTER-CLASSES A
 ============================================================================= */
@@ -894,7 +911,7 @@ thead .table td, thead
 }
 
 .i-wai {
-  border: 0;
+  border: none;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   margin: -1px;
@@ -1000,43 +1017,43 @@ thead .table td, thead
 @media screen and (min-width: 1281px) {
   .device-visualizer:after {
     content: "screen and (min-width:1281px)";
-    background: #ab1a00;
+    background: #f5c478;
   }
 }
 @media screen and (max-width: 1280px) {
   .device-visualizer:after {
     content: "screen and (max-width:1280px)";
-    background: #8e11bf;
+    background: #66719e;
   }
 }
 @media screen and (max-width: 1024px) {
   .device-visualizer:after {
     content: "screen and (max-width:1024px)";
-    background: #fb1aec;
+    background: #2d7eef;
   }
 }
 @media screen and (max-width: 768px) {
   .device-visualizer:after {
     content: "screen and (max-width:768px)";
-    background: #1a3d0a;
+    background: #84aa30;
   }
 }
 @media screen and (max-width: 600px) {
   .device-visualizer:after {
     content: "screen and (max-width:600px)";
-    background: #f0f045;
+    background: #185a8c;
   }
 }
 @media screen and (max-width: 480px) {
   .device-visualizer:after {
     content: "screen and (max-width:480px)";
-    background: #0cc375;
+    background: #fec5bf;
   }
 }
 @media screen and (max-width: 320px) {
   .device-visualizer:after {
     content: "screen and (max-width:320px)";
-    background: #85100f;
+    background: #cc3fcf;
   }
 }
 /* @end */
