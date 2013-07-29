@@ -1,0 +1,37 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+   Embed content
+============================================================================= */
+
+img {
+	font-size: 1em;
+	color: $baseColor;
+	// alt text style
+	-ms-interpolation-mode: bicubic;
+	// improve IE7's resizing of images http://code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+
+	a & {
+		border: none;
+		// remove border if in <a> elem
+	}
+}
+
+//@media #{$media-tablet_small} {
+//	img, object, embed, video, iframe {
+//		max-width: 100%;
+//		height: auto;
+//	}
+//}
+
+//object,
+//embed,
+//video {
+//	max-width: 100%;
+//	height: auto;
+//}
+
+figure {
+	margin: 0;
+}

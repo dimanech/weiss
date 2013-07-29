@@ -1,0 +1,73 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+   @group Pagination
+============================================================================ */
+
+.pages {
+	text-align: center;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: inline-block;
+
+		.ie6-7 & {
+			display: inline;
+			zoom: 1;
+		}
+	}
+
+	li {
+		display: inline;
+		margin: 0;
+		padding: 0;
+
+		.pages__item {
+			color: lighten($baseColor, 30%);
+		}
+
+		.pages__item_current {
+			background: $lnColor;
+			color: #fff;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $baseColor;
+
+		.pages__item {
+			color: $baseColor;
+		}
+
+		&:hover {
+			.pages__item {
+				background: #ccc;
+			}
+		}
+	}
+}
+
+.pages__item {
+	display: inline-block;
+	padding: 3px 8px;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+.pages__item_arrow {
+}
+
+.pages__item_arrow-prev {
+}
+
+.pages__item_arrow-next {
+}
+
+/* @end */

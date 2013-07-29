@@ -1,0 +1,62 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		@group layout: seo-friendly-columns
+============================================================================= */
+
+// width: grid-width(4); // returns 520px;
+// margin-left: $gw-gutter; // returns 40px;
+
+$mainWidth: grid-width(8);
+$asideWidth: grid-width(4);
+$twoSdbarsMainWidth: grid-width(4);
+
+/* seo-friendly-columns: main */
+
+.l-sidebar-first_main {
+	float: right;
+	width: $mainWidth;
+}
+
+.l-sidebar-second_main {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: $mainWidth;
+}
+
+.l-2sidebars_main {
+	float: left;
+	margin-left: $asideWidth + grid-width(12);
+	width: $twoSdbarsMainWidth;
+
+	//.ie6-7 & {
+	//	display:inline; //double margin ie6 fix
+	//}
+}
+
+/* seo-friendly-columns: sidebars */
+
+.l-sidebar-first_aside,
+.l-sidebar-second_aside {
+	float: left;
+	width: $asideWidth;
+}
+
+.l-sidebar-second_aside {
+	float: right;
+}
+
+.l-2sidebars_sidebar-first {
+	float: left;
+	margin-left: -$mainWidth;
+	width: $asideWidth;
+}
+
+.l-2sidebars_sidebar-second {
+	float: right;
+	width: $asideWidth;
+}
+
+/* @end */

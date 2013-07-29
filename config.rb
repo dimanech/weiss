@@ -1,33 +1,49 @@
-# Require any additional compass plugins here.
+###
+# Compass
+###
 
-require "susy"
+compass_config do |config|
+  config.output_style = :compact
+end
 
-# Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "images"
-javascripts_dir = "js"
+###
+# Page options, layouts, aliases and proxies
+###
 
-# You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
-output_style = :expanded
+with_layout :main do
+  page "*"
+end
 
-# To enable relative paths to assets via compass helper functions. Uncomment:
-relative_assets = true
+# page "index.html", :layout => :front
 
-# To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = false
+###
+# Configuration
+###
 
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'images'
 
-# If you prefer the indented syntax, you might want to regenerate this
-# project again passing --syntax sass, or you can uncomment this:
-# preferred_syntax = :sass
-# and then run:
-# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+###
+# Server
+###
 
-module Sass::Script::Functions
-    def getRandomColor()
-        Sass::Script::String.new("#%06x" % (rand * 0xffffff))
+#for testing case
+#set :port, 80
+#sudo middleman server -p 80 -e development
+
+###
+# Build
+###
+
+configure :build do
+    compass_config do |config|
+        config.output_style = :compressed
+        config.sass_options = {:debug_info => false}
+        config.sass_options = {:line_comments => false}
     end
+
+   set :relative_links, true
+
+   activate :relative_assets
 end

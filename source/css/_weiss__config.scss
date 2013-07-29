@@ -1,0 +1,99 @@
+// Help
+// http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+
+$sans: Arial, FreeSans, sans-serif;
+$hSans: Verdana, "Bitstream Vera Sans", "DejaVu Sans", sans-serif;
+$hSansCond: Tahoma, Geneva, "DejaVu Sans Condensed", sans-serif;
+$serif: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+$bSerif: Georgia, "Bitstream Charter", "Century Schoolbook L", serif;
+$aSerif: Palatino, "Palatino Linotype", Palladio, "URW Palladio L", "Book Antiqua", serif;
+$monospSerif: "Courier New", Courier, FreeMono, "Nimbus Mono L", monospace;
+$monospSans: "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+$grotCond: "Arial Narrow", "DejaVu Sans Condensed", sans-serif;
+$futura: "FuturaMediumRegular", Futura, "URW Gothic L", Arial, FreeSans, sans-serif;
+
+// ============================================================================
+//  Basic configuration
+//=============================================================================
+
+$mainBgColor: #fff;
+$mainFgColor: #ccc;
+$baseColor: #434343;
+$accentColor: #000;
+$lnColor: #09f;
+$lnHoverColor: lighten($lnColor, 15%);
+$containerWidth: 974px;
+
+// Font configuration
+//  ---------------------------------------------------------------------------
+
+@import "compass/typography/vertical_rhythm";
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$baseFontFamily: $sans;
+$baseFontFamilyMono: $monospSerif;
+
+$base-font-size: 14px; // The font size set on the root html element.
+$base-line-height: 18px; // This line-height determines the basic unit of vertical rhythm.
+
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
+
+$h1-font-size: 1.942 * $base-font-size;
+$h2-font-size: 1.618 * $base-font-size;
+$h3-font-size: 1.201 * $base-font-size;
+$h4-font-size: 1 * $base-font-size;
+$h5-font-size: 0.742 * $base-font-size;
+$h6-font-size: 0.618 * $base-font-size;
+
+// ============================================================================
+//    Sprites
+//=============================================================================
+
+//http://beta.compass-style.org/reference/compass/helpers/sprites/#sprite-map
+@import "compass/utilities/sprites/base";
+
+// Usage
+//$icons-map: sprite-map("icons/*.png", $spacing: 20px, $layout: vertical);
+//
+//.i-ico {
+//	background: $icons-map;
+//}
+//
+//.i-ico_dimensions {
+//	@include sprite($icons-map, ico-file-doc, true);
+//}
+//
+//.i-ico_position {
+//	//background-position: sprite-position($icons-map, ico-file-doc-hover);
+//	background-position: sprite-position($icons-map, ico-file-doc-hover, 3px, -2px);
+//}
+
+// ============================================================================
+//    Non-semantic grid support
+//=============================================================================
+
+//@import "susy";
+//$total-columns: 12;
+//$column-width: 4em;
+//$gutter-width: 1em;
+//$grid-padding: $gutter-width;
+
+$gw-column: 4em; // Column Width
+$gw-gutter: 1em; // Gutter Width
+$gw-total: grid-width(12);
+
+// ============================================================================
+//    Breakpoints
+//=============================================================================
+
+$media-desktop_wide: 'screen and (min-width:1281px)';
+$media-desktop: 'screen and (max-width:1280px)';
+$media-tablet_landscape: 'screen and (max-width:1024px)';
+$media-tablet_portrait: 'screen and (max-width:768px)';
+$media-tablet_small: 'screen and (max-width:600px)';
+$media-phone_landscape: 'screen and (max-width:480px)';
+$media-phone_portrait: 'screen and (max-width:320px)';
+$media-portrait: 'screen and (orientation: portrait)';
+$media-landscape: 'screen and (orientation: landscape)';

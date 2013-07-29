@@ -1,0 +1,44 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+   @group Tabs-content-block
+============================================================================ */
+
+/* Tabs behavior
+  --------------------------------------------------------------------------- */
+
+.js-tab-ln {
+}
+
+.js-tab-ln_selected {
+}
+
+.js-tab-content {
+}
+
+/* Tabs styles
+  --------------------------------------------------------------------------- */
+
+.content-tabs {
+}
+
+.content-tabs__nav {
+
+	li {
+		display: inline;
+	}
+}
+
+.content-tabs__nav__inner {
+	margin: 0;
+	padding: 0;
+}
+
+.content-tabs__nav__ln {
+}
+
+.content-tabs__item {
+}
+
+/* @end */

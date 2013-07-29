@@ -1,0 +1,25 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		Main
+============================================================================= */
+
+/* @group breadcrumb
+  --------------------------------------------------------------------------- */
+
+.breadcrumb {}
+
+.breadcrumb__inner {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.breadcrumb__item {
+	display: inline;
+}
+
+.breadcrumb__ln {}
+
+/* @end */

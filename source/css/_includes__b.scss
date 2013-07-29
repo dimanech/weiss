@@ -1,0 +1,103 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		MASTER-CLASSES B
+============================================================================= */
+
+// Add wireframes to the basic layout elements.
+
+.l-global-header,
+.l-global-footer,
+.region-main__content,
+.region-aside,
+.region-beforecontent,
+.region-undercontent {
+	outline: 1px dashed #ccc;
+}
+
+/* ============================================================================
+		Stylize text
+============================================================================= */
+
+//.i-emph {
+//
+//}
+
+// Color
+
+//.i-emph_c {
+//	color: $accentColor;
+//}
+//
+//.i-emph_c_ln {
+//	color: $lnColor;
+//}
+//
+//.i-emph_c_dark {
+//	color: darken($baseColor, 20%);
+//}
+//
+//.i-emph_c_ligh {
+//	color: lighten($baseColor, 20%);
+//}
+
+// Font size
+
+//.i-emph_fz_sm {
+//}
+//
+//.i-emph_fz_md {
+//}
+//
+//.i-emph_fz_big {
+//}
+//
+//.i-emph_fz_huge {
+//}
+//
+//.i-emph_serif {
+//	font-family: $serif;
+//}
+//
+//.i-emph_sans {
+//	font-family: $sans;
+//}
+
+//.i-emph_fz_20 {
+//	font-size: 20px;
+//}
+//
+//.i-emph_fz_30 {
+//	font-size: 30px;
+//}
+
+// Spacesers
+
+//.i-spacer {
+//	display: block;
+//}
+
+//.i-spacer-10 {
+//	padding-bottom: 10px;
+//}
+//
+//.i-spacer-20 {
+//	padding-bottom: 20px;
+//}
+//
+//.i-spacer-30 {
+//	padding-bottom: 30px;
+//}
+
+//.i-spacer-1 {
+//	@include padding-leader(1, $base-font-size);
+//}
+//
+//.i-spacer-2 {
+//	@include padding-leader(2, $base-font-size);
+//}
+//
+//.i-spacer-3 {
+//	@include padding-leader(3, $base-font-size);
+//}
