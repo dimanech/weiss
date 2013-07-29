@@ -11,7 +11,7 @@ Weiss is HTML5-CSS3 blank canvas sass-compass-middleman helper with media query 
 Build with HTML5 and large parts of CSS3, included fluid markup and media queries structure, so you can support mobile devices in one CSS file.
 Based around tasks and problems that arise with me every day in my work - so in some cases it is not universal or full production ready framework.
 
-![Weiss version 3.0 (Barney)](https://raw.github.com/dimanech/weiss/master/images/example/content-example-img.png)
+![Weiss version 3.0 (Barney)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
 
 ## Change Log
 
