@@ -6,16 +6,25 @@ Some parts are based on works Nicolas Gallagher, Stefan Nitzsche, Tyler Tate, Ya
 
 ## About
 
-Weiss is HTML5-CSS3 blank canvas sass-compass-middleman helper with media query and grid system for fast-start development.
+Weiss is HTML5-CSS3 blank canvas sass-middleman helper for fast-start development.
+Based around tasks and problems that arise with me every day on my work - so in some cases it is not universal or full production ready framework.
 
-Build with HTML5 and large parts of CSS3, included fluid markup and media queries structure, so you can support mobile devices in one CSS file.
-Based around tasks and problems that arise with me every day in my work - so in some cases it is not universal or full production ready framework.
+### Main features:
 
-![Weiss version 3.0 (Barney)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
+* Not a prototyping tool like Bootstrap or Foundation, just blank canvas
+* Middelman/sass/compass
+* BEM structure of blocks
+* HTML5 semantic markup
+* CSS3 ready with mixins for working with vendor prefixes
+* Media Query structure and mixins
+* WAI ARIA support
+* Hg/Git -ignore
+
+![Weiss version 3.0 (Barry)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
 
 ## Change Log
 
-**[v3](https://github.com/dimanech/weiss/archive/v3.zip)**
+**[v3.0](https://github.com/dimanech/weiss/archive/v3.0.zip)**
 
 * Forwarding all framework to Middleman!
 
