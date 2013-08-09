@@ -4,30 +4,26 @@
 /* ============================================================================
 		 @group Sticky footer
 ============================================================================= */
+$footer-height: 80px;
 
-@media screen and (max-width: 2400px) {
+html, body {
+	height: 100%;
+}
 
-	$footer-height: 80px;
+.l-main-aux {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-bottom: -$footer-height;
+}
 
-	html, body {
-		height: 100%;
-	}
+.l-main-aux__inner {
+	padding-bottom: $footer-height;
+}
 
-	.l-main-aux {
-		min-height: 100%;
-		height: auto !important;
-		height: 100%;
-		margin-bottom: -$footer-height;
-	}
-
-	.l-main-aux__inner {
-		padding-bottom: $footer-height;
-	}
-
-	.l-global-footer {
-		position: relative;
-		height: $footer-height;
-	}
+.l-global-footer {
+	position: relative;
+	height: $footer-height;
 }
 
 //@media #{$media-tablet_portrait} {

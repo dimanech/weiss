@@ -25,7 +25,8 @@
   --------------------------------------------------------------------------- */
 
 .btn_grey {
-	background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+	color: $baseColor;
+	@include background(linear-gradient(#ffffff, #ebebeb));
 	border: 1px solid rgba(0,0,0,.25);
 	border-radius: 3px;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.89);
@@ -33,7 +34,7 @@
 	&:hover,
 	&:focus {
 		border-color: rgba(0,0,0,.35);
-		background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+		@include background(linear-gradient(bottom, #ffffff, #ebebeb));
 		box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 	}
 }
@@ -43,8 +44,8 @@ a.btn_grey {
 }
 
 .btn_red {
-	color: #fff !important;
-	background-image: linear-gradient(to bottom, #729fcf, #4c8ed2);
+	color: #fff;
+	@include background(linear-gradient(#729fcf, #4c8ed2));
 	border: 1px solid rgba(#4c8ed2,.25);
 	border-radius: 3px;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.89);
@@ -54,6 +55,10 @@ a.btn_grey {
 		background: lighten(#4c8ed2, 5%);
 		box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 	}
+}
+
+a.btn_red {
+	color: #fff;
 }
 
 /* @end */

@@ -54,22 +54,6 @@ $h6-font-size: 0.618 * $base-font-size;
 //http://beta.compass-style.org/reference/compass/helpers/sprites/#sprite-map
 @import "compass/utilities/sprites/base";
 
-// Usage
-//$icons-map: sprite-map("icons/*.png", $spacing: 20px, $layout: vertical);
-//
-//.i-ico {
-//	background: $icons-map;
-//}
-//
-//.i-ico_dimensions {
-//	@include sprite($icons-map, ico-file-doc, true);
-//}
-//
-//.i-ico_position {
-//	//background-position: sprite-position($icons-map, ico-file-doc-hover);
-//	background-position: sprite-position($icons-map, ico-file-doc-hover, 3px, -2px);
-//}
-
 // ============================================================================
 //    Non-semantic grid support
 //=============================================================================

@@ -83,10 +83,8 @@ $formItemMargin: 5px;
 		height: $inputHeight;
 		line-height: $inputHeight;
 		max-width: 100%;
-		background: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+		@include background(linear-gradient(  #f2f2f2, #fdfdfd));
 		border: 1px solid rgba(0,0,0,.25);
-		border-radius: 3px;
-		box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
 
 		&:hover {
 			border-color: rgba(0,0,0,.35);
@@ -95,7 +93,6 @@ $formItemMargin: 5px;
 		&:focus {
 			outline: none;
 			border-color: #729fcf;
-			box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
 		}
 	}
 
@@ -244,12 +241,17 @@ $formItemMargin: 5px;
 .form__item {
 	float: left;
 	margin: 0 $formItemMargin 0 0;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
 }
 
 @each $itemWidth in 50, 100, 140, 200 {
 
 	.form__item_w-#{$itemWidth} {
-		width: $itemWidth + $formItemMargin;
+		width: $itemWidth;
 
 		input,
 		textarea {

@@ -69,9 +69,13 @@ dl dd {
 }
 
 .list_inline {
-	@extend .list_unstyled;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 
 	.list__item {
+		margin: 0;
+		padding: 0;
 		display: inline-block;
 		vertical-align: top;
 
