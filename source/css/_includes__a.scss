@@ -9,6 +9,13 @@
 	@include i-clfx;
 }
 
+.i-wai {
+	@include i-hide_vis;
+}
+
+/* @group i-psln
+  --------------------------------------------------------------------------- */
+
 .i-psln {
 	color: $lnColor;
 	text-decoration: none;
@@ -22,9 +29,7 @@
 	}
 }
 
-.i-wai {
-	@include i-hide_vis;
-}
+/* @end */
 
 /* @group i-img-container
   --------------------------------------------------------------------------- */

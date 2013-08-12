@@ -30,3 +30,19 @@ u {
 	text-decoration: none;
 	// remove textdecoration for save <a> style
 }
+
+// definition list
+
+dl {
+	margin: rhythm(1) 0;
+	padding-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+	font-style: italic;
+}
+
+dd {
+	margin-left: 1.5em;
+}

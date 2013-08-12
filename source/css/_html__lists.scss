@@ -9,14 +9,10 @@
   --------------------------------------------------------------------------- */
 
 ul,
-ol,
-dl {
+ol {
 	margin: rhythm(1) 0;
 	padding-left: 1.5em;
-}
 
-ul,
-ol {
 	li {
 		margin: rhythm(0.2) 0;
 	}
@@ -31,18 +27,7 @@ ol {
 }
 
 ol ul {
-	list-style: disc;
-	// ul inside ul fix
-}
-
-dl dt,
-dfn {
-	font-weight: bold;
-	font-style: italic;
-}
-
-dl dd {
-	margin-left: 1.5em;
+	list-style: disc;	// ul inside ul fix
 }
 
 /* @end */

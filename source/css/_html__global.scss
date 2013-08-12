@@ -12,8 +12,7 @@ footer, header, hgroup, nav, section {
 }
 
 html {
-	-webkit-text-size-adjust: 100%;
-	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
+	-webkit-text-size-adjust: 100%;	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
 	-ms-text-size-adjust: 100%;
 }
 
@@ -23,8 +22,7 @@ body {
 	font-family: $baseFontFamily;
 	color: $baseColor;
 	background: $mainBgColor;
-	margin: 0;
-	// Removes default margin.
+	margin: 0;	// Removes default margin.
 }
 
 ///* @group selection fixes

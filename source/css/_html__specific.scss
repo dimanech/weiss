@@ -7,8 +7,7 @@
 
 /* science */
 
-abbr,
-acronym {
+abbr {
 	border-bottom: 1px dotted #3a3739;
 	cursor: help;
 	font-weight: inherit;
@@ -53,15 +52,4 @@ kbd {
 	padding: .2em .3em;
 	white-space: nowrap;
 	border-radius: 4px;
-}
-
-/* other */
-
-del {
-	text-decoration: line-through;
-}
-
-ins {
-	text-decoration: none;
-	border-bottom: 1px dashed #3a3739;
 }

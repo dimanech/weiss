@@ -216,15 +216,6 @@ $formItemMargin: 5px;
 			}
 		}
 	}
-
-	// Colors for native form validition
-
-	// input:valid,
-	//textarea:valid {}
-	//
-	// input:invalid,
-	//textarea:invalid {}
-
 }
 
 /* @end */
@@ -236,6 +227,11 @@ $formItemMargin: 5px;
 	@extend .i-clfx;
 	padding: 5px 0;
 	margin: 0 $formRowMargin;
+
+	.ie6-7 & {
+		display: inline; // Fix IE7 wired indent of input
+		zoom: 1;
+	}
 }
 
 .form__item {
@@ -265,6 +261,10 @@ $formItemMargin: 5px;
 }
 
 .form__notes {
+
+}
+
+.form__req-sign {
 
 }
 
