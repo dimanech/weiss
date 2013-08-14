@@ -31,16 +31,6 @@ body {
 	@extend %container;
 }
 
-.l-global-header__left,
-.l-global-header__right {
-	width: grid-width(6);
-}
-
-.l-global-header__right {
-	float: right;
-	margin-right: 0;
-}
-
 /* @end */
 
 /* @group layout footer
