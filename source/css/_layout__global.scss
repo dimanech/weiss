@@ -55,15 +55,4 @@ body {
 	@extend %container;
 }
 
-.l-global-footer__left,
-.l-global-footer__right {
-	width: grid-width(6);
-}
-
-.l-global-footer__right {
-	float: right;
-	margin-right: 0;
-	text-align: right;
-}
-
 /* @end */

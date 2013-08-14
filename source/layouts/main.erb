@@ -62,15 +62,16 @@
 
 			<div class="l-main-aux__inner i-clfx">
 				<!-- /region-main-->
-				<div class="region-main i-clfx" role="main">
-					<%= partial "partials/block__breadcrumbs" %>
+				<div class="region-main i-clfx">
+					<main role="main">
+						<%= partial "partials/block__breadcrumbs" %>
 
-					<!-- /region-main__content -->
-					<div class="region-main__content">
-						<%= yield %>
-					</div>
-					<!-- /.region-main__content -->
-
+						<!-- /region-main__content -->
+						<div class="region-main__content">
+							<%= yield %>
+						</div>
+						<!-- /.region-main__content -->
+					</main>
 				</div>
 				<!-- /.region-main-->
 
@@ -118,7 +119,6 @@
 		<![endif]-->
 
 		<%= javascript_include_tag "jquery.min" %>
-		<%= javascript_include_tag "jquery.easing" %>
 		<%= javascript_include_tag "jquery.jstyling.pack" %>
 		<%= javascript_include_tag "jquery.placeholder.min" %>
 		<%= javascript_include_tag "jquery.fancybox-1.3.4.pack" %>

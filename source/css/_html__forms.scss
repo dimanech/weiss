@@ -247,7 +247,7 @@ $formItemMargin: 5px;
 @each $itemWidth in 50, 100, 140, 200 {
 
 	.form__item_w-#{$itemWidth} {
-		width: $itemWidth;
+		width: #{$itemWidth}px;
 
 		input,
 		textarea {
