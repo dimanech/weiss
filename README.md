@@ -18,11 +18,16 @@ Based around tasks and problems that arise with me every day on my work - so in 
 * CSS3 ready with mixins for working with vendor prefixes
 * Media Query structure and mixins
 * WAI ARIA support
-* Hg/Git -ignore
 
-![Weiss version 3.0 (Barry)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
+![Weiss version 3.1 (Barry)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
 
 ## Change Log
+
+**[v3.1](https://github.com/dimanech/weiss/archive/v3.1.zip)**
+
+* Added: Forms architecture example with styles
+* Added: Buttons example
+* Changed: all text to english
 
 **[v3.0](https://github.com/dimanech/weiss/archive/v3.0.zip)**
 

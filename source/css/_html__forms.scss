@@ -5,32 +5,30 @@
    Form support
 ============================================================================ */
 
-$inputPadding: 5px;
-$inputHeight: 27px;
-$formRowMargin: 0px;
-$formItemMargin: 5px;
+$inputPadding: 14px;
+$inputHeight: 30px;
+$formRowMargin: 10px;
+$formItemSpacing: 5px;
+$formColor: $baseColor;
 
 /* @group Forms generic reset
   --------------------------------------------------------------------------- */
 
 .form {
 	border: none;
-	margin: 0;
-	// IE7
+	margin: 0; // IE7
 
 	button,
 	input,
 	select,
 	textarea {
-		margin: 0;
-		// Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+		margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
 		padding: 0;
 		vertical-align: baseline;
 	}
 
 	input {
-		//&[type="button"],
-		//&[type="image"],
+		&[type="button"],
 		&[type="submit"],
 		&[type="reset"] {
 			-webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
@@ -40,7 +38,6 @@ $formItemMargin: 5px;
 		&[type="radio"] {
 			box-sizing: border-box; // Addresses box sizing set to `content-box` in IE 8/9.
 			padding: 0; // Removes excess padding in IE 8/9.
-			width: auto !important; // form__item_w* normilize
 		}
 
 		&[type="radio"] {
@@ -50,123 +47,14 @@ $formItemMargin: 5px;
 		&[type="checkbox"] {
 			vertical-align: baseline;
 		}
-
 	}
-
-}
-/* @end */
-
-/* @group Form generic themed styles
-	--------------------------------------------------------------------------- */
-
-.form {
-
-	button,
-	input,
-	select,
-	textarea {
-		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
-	}
-
-	label {
-		display: block;
-		line-height: $inputHeight;
-	}
-
-	// input[type="password"],
-	// input[type="search"],
-	input[type="text"],
-	select,
-	textarea {
-		padding: 0 $inputPadding;
-		margin: 0;
-		height: $inputHeight;
-		line-height: $inputHeight;
-		max-width: 100%;
-		@include background(linear-gradient(  #f2f2f2, #fdfdfd));
-		border: 1px solid rgba(0,0,0,.25);
-
-		&:hover {
-			border-color: rgba(0,0,0,.35);
-		}
-
-		&:focus {
-			outline: none;
-			border-color: #729fcf;
-		}
-	}
-
-	// button[disabled],
-	// input[disabled] {
-	//   cursor: default;
-	// }
-
-	textarea {
-		overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
-		vertical-align: top; //Improves readability and alignment in all browsers
-		height: auto; // overwrite theming on form element
-		min-height: 4em;
-		line-height: $base-line-height;
-		padding: 5px $inputPadding;
-		resize: vertical;
-	}
-
-	select {
-		&[multiple="multiple"] {
-			height: auto; // overwrite theming on form element
-		}
-	}
-
-}
-
-/* @end */
-
-/* @group Form Fieldsets
-  --------------------------------------------------------------------------- */
-
-.form {
-
-	fieldset {
-		margin: 0;
-		padding: 0;
-		border: none;
-	}
-
-	legend {
-		border: none; // Corrects color not being inherited in IE 8/9.
-		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
-	}
-
-	// generic
-
-	.form__set { // fieldset
-		position: relative;
-		padding: 20px 0 0;
-	}
-
-	.form__set__legend { // legend
-		border: none;
-		font-size: $h3-font-size;
-		font-weight: bold;
-
-		span {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-	}
-
-}
-
-/* @end */
-
-/* @group Form Additional resets
-  --------------------------------------------------------------------------- */
-
-.form {
 
 	button,
 	input {
+		&[disabled] {
+			cursor: default;
+		}
+
 		&::-moz-focus-inner {
 			border: none; // Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
 			padding: 0;
@@ -188,6 +76,134 @@ $formItemMargin: 5px;
 	}
 
 }
+/* @end */
+
+/* @group Form generic themed styles
+	--------------------------------------------------------------------------- */
+
+.form {
+
+	button,
+	input,
+	select,
+	textarea {
+		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+	}
+
+	label,
+	.form__label{
+		display: block;
+		line-height: $inputHeight;
+		@include vendor(user-select, none);
+
+		> span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: $base-line-height;
+
+			.ie6-7 & {
+				display: inline;
+				zoom: 1;
+			}
+		}
+	}
+
+	input[type="password"],
+	input[type="search"],
+	input[type="text"],
+	select,
+	textarea {
+		padding: 0 $inputPadding;
+		margin: 0;
+		height: $inputHeight;
+		line-height: $inputHeight;
+		width: 100%;
+		@include vendor(box-sizing, border-box);
+		border: 1px solid #a4a4a4;
+		border-top-color: #7f7f7f;
+		background: #fff;
+		color: $formColor;
+		font-style: italic;
+		box-shadow: 0 0 15px 3px transparent;
+		@include transition();
+
+		&:hover {
+			border-color: lighten(#a4a4a4, 5%);
+		}
+
+		&:focus {
+			outline: none;
+			border-color: lighten(#a4a4a4, 10%);
+			box-shadow: 0 0 0 3px #EBE66F; //#E4E4E4;
+		}
+
+		.ie6-7 & {
+			padding: 0;
+		}
+	}
+
+	textarea {
+		overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
+		vertical-align: top; //Improves readability and alignment in all browsers
+		height: auto; // overwrite theming on form element
+		min-height: 4em;
+		line-height: $base-line-height;
+		padding: 5px $inputPadding;
+		resize: vertical;
+	}
+
+	select {
+		&[multiple="multiple"] {
+			height: auto; // overwrite theming on form element
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Form field sets
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	// Reset
+
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		position: relative;
+	}
+
+	legend {
+		border: none; // Corrects color not being inherited in IE 8/9.
+		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+	}
+
+	// Generic
+
+	.form__set { // <fieldset>
+		padding: 20px 0 0;
+	}
+
+	.form__set-legend { // <legend>
+		font-size: $h3-font-size;
+		font-weight: bold;
+
+		span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+}
 
 /* @end */
 
@@ -199,22 +215,82 @@ $formItemMargin: 5px;
 	input {
 
 		&::-webkit-input-placeholder {
-			color: $baseColor;
+			font-style: normal;
+			color: lighten($formColor, 10%);
 		}
 
 		&:-moz-placeholder {
-			color: $baseColor;
+			font-style: normal;
+			color: lighten($formColor, 10%);
 		}
 
 		&:focus {
 			&::-webkit-input-placeholder {
-				color: lighten($baseColor, 10%);
+				color: lighten($formColor, 30%);
 			}
 
 			&:-moz-placeholder {
-				color: lighten($baseColor, 10%);
+				color: lighten($formColor, 30%);
 			}
 		}
+	}
+}
+
+/* @end */
+
+/* @group Form Layout
+  --------------------------------------------------------------------------- */
+
+.l-form__row {
+	@extend .i-clfx;
+	margin: $formRowMargin 0;
+	line-height: 1px; // fix inline box
+}
+
+.l-form__item {
+	float: left;
+	padding: 0 $formItemSpacing 0 0;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+@each $itemWidth in 100, 165, 200, 250, 395, 500, 705 {
+	.l-form__item_w-#{$itemWidth} {
+		width: #{$itemWidth}px; //percentage(($itemWidth - 5) / 710);
+	}
+}
+
+// table mods
+
+table.l-form__row {
+	border-collapse: collapse;	//Remove most spacing between table cells.
+	border-spacing: 0;	//Remove most spacing between table cells.
+	border-width: 0;
+	//width: 100%; // add this if width in percentage
+
+	.ie6-7 & {
+		display: table-row; // Fix IE7 wired indent of input
+	}
+}
+
+td.l-form__item {
+	float: none;
+	vertical-align: middle;
+}
+
+// fieldset mod
+
+.form {
+
+	fieldset.l-form__row {
+		margin: $formRowMargin 0;
+	}
+
+	legend.l-form__item {
+		padding: 0 $formItemSpacing 0 0;
 	}
 }
 
@@ -223,49 +299,320 @@ $formItemMargin: 5px;
 /* @group Form Elements
   --------------------------------------------------------------------------- */
 
-.form__row {
-	@extend .i-clfx;
-	padding: 5px 0;
-	margin: 0 $formRowMargin;
-
-	.ie6-7 & {
-		display: inline; // Fix IE7 wired indent of input
-		zoom: 1;
-	}
-}
-
-.form__item {
-	float: left;
-	margin: 0 $formItemMargin 0 0;
-
-	.ie6-7 & {
-		display: inline;
-		zoom: 1;
-	}
-}
-
-@each $itemWidth in 50, 100, 140, 200 {
-
-	.form__item_w-#{$itemWidth} {
-		width: #{$itemWidth}px;
-
-		input,
-		textarea {
-			width: $itemWidth - ($inputPadding * 2);
-		}
-	}
-}
-
-.form__row_submit {
-
-}
-
 .form__notes {
-
+	font-size: .8em;
 }
 
 .form__req-sign {
+	color: red;
+}
 
+/* @end */
+
+/* =============================================================================
+    For example purpose
+============================================================================= */
+
+.l-form__row_submit_right {
+	text-align: right;
+}
+
+.form .btn_no-tt {
+	text-transform: none;
+}
+
+td.l-form__item_va-b {
+	vertical-align: bottom;
+}
+
+/* @group form__input-w-ico
+  --------------------------------------------------------------------------- */
+
+.form__input-w-ico {
+	display: block;
+	position: relative;
+}
+
+.form__input-w-ico__ico {
+	position: absolute;
+	top: 2px;
+	right: 4px;
+	bottom: 1px;
+	z-index: 5;
+	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+	padding: 0 10px 0 20px;
+	line-height: $inputHeight;
+	text-align: center;
+
+	.i-ico {
+		vertical-align: text-top;
+	}
+}
+
+/* @end */
+
+/* @group Form input height
+  --------------------------------------------------------------------------- */
+
+@mixin input-height($inputHeight, $fz) {
+	label,
+	.form__label{
+		line-height: $inputHeight;
+	}
+
+	input[type="password"],
+	input[type="search"],
+	input[type="text"],
+	select,
+	textarea {
+		height: $inputHeight;
+		line-height: $inputHeight;
+		font-size: #{$fz};
+	}
+}
+
+.form__input-small {
+	@include input-height(14px, 12px);
+}
+
+.form__input-huge {
+	@include input-height(50px, inherit);
+}
+
+/* @end */
+
+/* @group form colors
+  --------------------------------------------------------------------------- */
+
+.form {
+	background-color: #f8f8f8;
+	padding: 23px 26px 23px 23px;
+}
+
+.form_flat {
+	background-color: transparent;
+	padding: 0;
+}
+
+/* @end */
+
+/* @group Form Fieldsets
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	.form__set {
+		padding: 40px 0 0;
+	}
+
+	.form__set-legend {
+		span {
+			text-transform: uppercase;
+			font-family: $futura;
+			font-size: $h4-font-size;
+			line-height: 40px;
+			font-weight: bold;
+			color: #2b2b2b;
+		}
+	}
+
+	// main fieldset block
+	.form__set_main {
+		padding: 50px 0 0;
+
+		> .form__set-legend {
+			span {
+				font-size: $h3-font-size;
+				line-height: 26px;
+				border-bottom: 2px solid $accentColor;
+				padding-bottom: 12px;
+			}
+		}
+	}
+
+	// IE7 field set inline
+
+	.form__set_inline {
+		padding: 0;
+
+		.form__set-legend {
+			position: relative;
+
+			span {
+				width: auto;
+				font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+				text-transform: none;
+				white-space: normal;
+				top: 5px;
+			}
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Advanced border
+  --------------------------------------------------------------------------- */
+
+.form__input-box {
+	display: block;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0px; // force virtual sizes
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		z-index: 1;
+		box-shadow: inset 0 1px 5px rgba(#000,.65);
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 1px;
+		right: 1px;
+		left: 1px;
+		top: 1px;
+		z-index: 2;
+		background: #fff;
+		box-shadow: inset 0 1px 0 rgba(#000,.1);
+	}
+
+	.form & input,
+	.form & textarea,
+	.form & select {
+		position: relative;
+		z-index: 3;
+		background-color: transparent;
+		border: none;
+
+		.ie6-8 & {
+			border: 1px solid #a4a4a4; // fix pseudo elements unsupport
+			border-top-color: #7f7f7f;
+		}
+	}
+
+	&:hover {
+		@extend %form__input-box_hover;
+	}
+}
+
+%form__input-box_hover {
+	&:after {
+		box-shadow: inset 0 1px 5px rgba(0,0,0,.85);
+	}
+}
+
+/* @end */
+
+/* @group Form Validation styles (example)
+  --------------------------------------------------------------------------- */
+
+.form__msg {
+	font-size: 14px;
+	line-height: 18px;
+	position: relative;
+	z-index: 4;
+	display: none;
+	padding: 10px 14px;
+	background: #078e89;
+	color: #fff;
+	box-shadow: 0 8px 30px -5px rgba(#000,.5);
+	margin-bottom: 5px;
+	@include vendor(animation, fadeIn ease-out .5s);
+
+	.ie6-7 & {
+		margin-left: 5px;
+		margin-bottom: -2px;
+	}
+}
+
+// msg types
+
+.l-form__item_value .form__msg {
+	display: block;
+}
+
+.l-form__item_value .form__msg_error {
+	background: #b33d5d;
+	color: #fff;
+
+	& + .form__input-box {
+		input[type='text'],
+		textarea {
+			@extend .form__element_error;
+		}
+	}
+
+	.form__msg__deco {
+		border-top-color: #b33d5d;
+	}
+}
+
+.form__element_error {
+	border: 1px solid #b33d5d !important;
+}
+
+.l-form__item_value .form__msg_warning {
+	background: #d5bb01;
+	color: #fff;
+
+	& + .form__input-box {
+		input[type='text'],
+		textarea {
+			@extend .form__element_warning;
+		}
+	}
+
+	.form__msg__deco {
+		border-top-color: #d5bb01;
+	}
+}
+
+.form__element_warning {
+	border: 1px solid #d5bb01 !important;
+}
+
+// msg content
+
+.form__msg__content {
+	margin: 0;
+}
+
+.form__msg__deco {
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 8px solid #078e89;
+	position: absolute;
+	bottom: -8px;
+	left: 25px;
+	z-index: 1;
+}
+
+.l-form__item_focus,
+.form__msg-loading {
+	input[type='text'],
+	textarea {
+		background: url(../images/loaders/inline-loader.gif) 100% 9px no-repeat;
+	}
+}
+
+@include keyframes(fadeIn) {
+	from {
+		@include vendor(transform, translateY(60px) rotateX(40deg));
+		opacity: 0;
+	}
+	to {
+		@include vendor(transform, translateY(0px) rotateX(0deg));
+		opacity: 1;
+	}
 }
 
 /* @end */

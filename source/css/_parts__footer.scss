@@ -19,12 +19,13 @@
 	width: 90px;
 	height: 31px;
 	vertical-align: middle;
-	background: url(../images/uplab-logo.svg) 0 0 no-repeat;
+	//background: url(../images/weiss-logo.svg) 0 0 no-repeat;
+	background: url(../images/weiss-logo_fallback.png) 0 0 no-repeat;
 	background-size: contain;
 	text-decoration: none;
 
 	.ie6-8 & {
-		background: url(../images/uplab-logo_fallback.png) 0 0 no-repeat;
+		background: url(../images/weiss-logo_fallback.png) 0 0 no-repeat;
 	}
 
 	.ie6-7 & {

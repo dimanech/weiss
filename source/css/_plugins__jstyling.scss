@@ -1,55 +1,182 @@
 @import "weiss__config";
 @import "weiss__mixins";
 
-/**
- *  Select
- */
+/* =============================================================================
+	Jstyling plugin
+============================================================================= */
 
-/* Select wrapper */
+/* @group file
+  --------------------------------------------------------------------------- */
 
-.jstyling-select {
+.jstyling-file {
+	@extend .form__input-box;
+	border: 1px solid #a4a4a4;
+	border-top-color: #7f7f7f;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	z-index: 0;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
 
-	width: 240px;
-	border: 1px solid #000;
-	cursor: pointer;
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	input[type=file] {
+		font-size: 200px;
+		cursor: pointer;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		opacity: 0;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 7;
+
+		.ie6-8 & {
+			filter: alpha(opacity=0);
+		}
+	}
+}
+
+.jstyling-file-f {
+	overflow: hidden;
+	white-space: nowrap;
+	height: 29px;
+	background: url(../images/plugins/jstyling/bg-input-file.png) right 0 no-repeat;
+	line-height: 32px;
+	font-style: italic;
+	color: #959595;
+	padding-left: 14px;
+	position: relative;
+	z-index: 5;
+
+	&:hover {
+		border-color: lighten($accentColor, 5%);
+	}
+}
+
+.jstyling-file-b {
+	position: absolute;
+	top: 0;
+	left: 14px;
+	z-index: 5;
+	overflow: hidden;
+	height: $inputHeight;
+	line-height: $inputHeight;
+	margin-right: 32px;
+	width: 90%;
+	font-style: italic;
+	color: #959595;
+}
+
+/* @end */
+
+/* @group Select
+  --------------------------------------------------------------------------- */
+
+$select-sprite-map: sprite-map("plugins/jstyling/select/*.png", $spacing: 30px, $layout: vertical);
+
+.jstyling-select {
+	@extend .form__input-box;
+	border: 1px solid #a4a4a4;
+	border-top-color: #7f7f7f;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	@include vendor(box-sizing, border-box);
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	&:hover {
+		.jstyling-select-s {
+			background-position: sprite-position($select-sprite-map, select-hover, 100%, 0);
+		}
+
+		.jstyling-select-t {
+			color: darken($baseColor, 10%);
+		}
+	}
+
+	&.active {
+		outline: none;
+		z-index: 700;
+		box-shadow: 0 0 0 3px #EBE66F;
+
+		.jstyling-select-s {
+			background-position: sprite-position($select-sprite-map, select-active, 100%, 0);
+		}
+
+		.jstyling-select-l {
+			display: block;
+		}
+	}
+
+	&.disabled {
+		cursor: default;
+		// !TODO
+
+		&:hover {
+			.jstyling-select-s {
+				background-position: sprite-position($select-sprite-map, select, 100%, 0);
+			}
+
+			.jstyling-select-t {
+				color: #959595;
+			}
+		}
+	}
 }
 
 /* Select current option */
 
 .jstyling-select-s {
-	padding: 2px;
-	height: 22px;
-	line-height: 22px;
-	background: url(../images/plugins/jstyling/jcusel-select.png) no-repeat top right;
+	height: $inputHeight;
+	line-height: $inputHeight;
+	background: $select-sprite-map;
+	background-repeat: no-repeat;
+	background-position: sprite-position($select-sprite-map, select, 100%, 0);
+	position: relative;
+	z-index: 4;
 }
 
 .jstyling-select-t {
 	white-space: nowrap;
 	overflow: hidden;
-
-	width: 202px;
+	text-overflow: ellipsis;
+	font-style: italic;
+	padding: 0 0 0 $inputPadding;
+	margin-right: 32px;
+	cursor: default;
+	@include vendor(user-select, none);
 }
 
 /* Select options list*/
 
 .jstyling-select-l {
 	margin: 0;
-	padding: 0;
+	padding: 5px 0;
 	width: 100%;
 	display: none;
 	position: absolute;
 	overflow-y: auto;
 	z-index: 1000;
-
+	box-shadow: 0 8px 30px -5px rgba(#000,.5);
 	max-height: 124px;
 	background: #fff;
-	border: 1px solid #000;
-	border-top: 0;
-	top: 27px;
+	border: 1px solid lighten(#000, 75%);
+	top: 29px;
 	left: -1px;
 
 	div {
@@ -57,13 +184,14 @@
 		display: block;
 		white-space: nowrap;
 		overflow: hidden;
-
+		line-height: 20px;
+		text-overflow: ellipsis;
 		height: 20px;
-		border-top: 1px dotted #ccc;
-		padding: 2px;
+		padding: 2px 2px 2px 10px;
+		cursor: default;
 
 		&:hover {
-			background: #eee;
+			background: #EBE66F;
 		}
 
 		&.disabled {
@@ -75,39 +203,25 @@
 		}
 
 		&:first-child {
-			border-top: 0
+			border-top: none;
 		}
 	}
 
 }
 
-.jstyling-select {
-	&.active {
-		background-position: 100% -28px;
-	}
+/* @end */
 
-	&.disabled {
-		background-color: #e5e5e5;
-	}
-}
-
-.jstyling-select.active {
-	z-index: 700;
-
-	.jstyling-select-l {
-		display: block;
-	}
-}
-
-/*
- * Checkbox
- */
+/* @group Checkbox radio
+  --------------------------------------------------------------------------- */
 
 .jstyling-checkbox,
 .jstyling-radio {
-	margin: 0;
+	margin: -3px 0 0;
 	padding: 0;
+	width: 15px;
+	height: 15px;
 	display: inline-block;
+	vertical-align: middle;
 	z-index: 1;
 
 	.ie6-7 & {
@@ -115,109 +229,138 @@
 		zoom: 1;
 	}
 
-	input[type=checkbox],
-	input[type=radio] {
+	input[type="checkbox"],
+	input[type="radio"] {
+		vertical-align: top;
 		opacity: 0;
-		filter: alpha(opacity=0);
 		z-index: 0;
+
+		.ie6-8 & {
+			filter: alpha(opacity=0);
+		}
 	}
 }
+
+$jstyling-sprite-map: sprite-map("plugins/jstyling/check-radio/*.png", $spacing: 30px, $layout: vertical);
 
 .jstyling-checkbox {
-	width: 16px;
-	height: 16px;
-	background: url(../images/plugins/jstyling/jcusel-checkbox-radio.png) no-repeat;
-	vertical-align: middle;
+	background: $jstyling-sprite-map;
+	background-repeat: no-repeat;
+	@include sprite($jstyling-sprite-map, checkbox, false);
+
+	&:hover {
+		@include sprite($jstyling-sprite-map, checkbox-hover, false);
+	}
 
 	&.active {
-		background-position: 100% -16px;
+		@include sprite($jstyling-sprite-map, checkbox-active, false);
+		@include vendor(animation, input-focus ease-out 2s);
+
+		&:hover {
+			@include sprite($jstyling-sprite-map, checkbox-active-hover, false);
+		}
 	}
 
 	&.disabled {
-		background-position: 100% -32px;
+		@include sprite($jstyling-sprite-map, checkbox-disabled, false);
 	}
 
 	&.active.disabled {
-		background-position: 100% -48px;
+		@include sprite($jstyling-sprite-map, checkbox-disabled-active, false);
 	}
 }
 
-/*
- * Radio button
- */
+.form label:hover {
+	.jstyling-checkbox {
+		@include sprite($jstyling-sprite-map, checkbox-hover, false);
+
+		&.active {
+			@include sprite($jstyling-sprite-map, checkbox-active-hover, false);
+		}
+
+		&.disabled {
+			@include sprite($jstyling-sprite-map, checkbox-disabled, false);
+		}
+
+		&.active.disabled {
+			@include sprite($jstyling-sprite-map, checkbox-disabled-active, false);
+		}
+	}
+}
 
 .jstyling-radio {
-	width: 16px;
-	height: 16px;
-	background: url(../images/plugins/jstyling/jcusel-checkbox-radio.png) no-repeat;
-	background-position: 100% -64px;
-	vertical-align: middle;
+	background: $jstyling-sprite-map;
+	@include sprite($jstyling-sprite-map, radio, false);
+	border-radius: 15px;
+
+	&:hover {
+		@include sprite($jstyling-sprite-map, radio-hover, false);
+	}
 
 	&.active {
-		background-position: 100% -80px;
+		@include sprite($jstyling-sprite-map, radio-active, false);
+		@include vendor(animation, input-focus ease-out 2s);
+
+		&:hover {
+			@include sprite($jstyling-sprite-map, radio-active-hover, false);
+		}
 	}
 
 	&.disabled {
-		background-position: 100% -96px;
+		@include sprite($jstyling-sprite-map, radio-disabled, false);
 	}
 
 	&.active.disabled {
-		background-position: 100% -112px;
+		@include sprite($jstyling-sprite-map, radio-disabled-active, false);
 	}
 }
 
-/*
- * File input
- */
+.form label:hover {
+	.jstyling-radio {
+		@include sprite($jstyling-sprite-map, radio-hover, false);
 
-.jstyling-file {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	position: relative;
+		&.active {
+			@include sprite($jstyling-sprite-map, radio-active-hover, false);
+		}
 
-	.ie6-7 & {
-		display: inline;
-		zoom: 1;
-	}
+		&.disabled {
+			@include sprite($jstyling-sprite-map, radio-disabled, false);
+		}
 
-	input[type=file] {
-		margin: 0;
-		padding: 0;
-		opacity: 0;
-		filter: alpha(opacity=0);
-		z-index: 1;
-		position: absolute;
-		top: 0;
-		right: 0;
+		&.active.disabled {
+			@include sprite($jstyling-sprite-map, radio-disabled-active, false);
+		}
 	}
 }
 
-.jstyling-file-f {
-	overflow: hidden;
-	white-space: nowrap;
+/* @end */
+
+/* @group Other elements
+  --------------------------------------------------------------------------- */
+
+// animations
+
+@include keyframes(input-focus) {
+	0%, 100% {
+		box-shadow: 0 0 15px 3px transparent;
+	}
+
+	30% {
+		box-shadow: 0 0 0 3px #EBE66F;
+	}
 }
 
-.jstyling-file-b {
-	position: relative;
-	overflow: hidden
+// fallback for form__input-box
+
+.form__input-box.jstyling-select,
+.form__input-box.jstyling-file {
+	border: none;
+
+	.ie6-8 & {
+		border: 1px solid #a4a4a4; // fix pseudo elements unsupport
+		border-top-color: #7f7f7f;
+		background-color: #fff;
+	}
 }
 
-.jstyling-file-f {
-	padding: 2px 2px;
-	width: 200px;
-	float: left;
-	border: 1px solid #ccc;
-	height: 20px;
-}
-
-.jstyling-file-b {
-	margin-left: 4px;
-	padding: 2px 2px;
-	width: 80px;
-	float: left;
-	border: 1px solid #ccc;
-	height: 20px;
-	background: #eee;
-	text-align: center;
-}
+/* @end */

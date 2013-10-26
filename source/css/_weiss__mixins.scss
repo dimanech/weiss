@@ -184,3 +184,13 @@ $transition-default: all linear .2s !default;
 	$prefix-for-mozilla:   $original-prefix-for-mozilla;
 	$prefix-for-spec:      $original-prefix-for-spec;
 }
+
+
+// ============================================================================
+//    EM support
+//=============================================================================
+
+@function em($target, $context: 14px) { // old $base-font-size
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}

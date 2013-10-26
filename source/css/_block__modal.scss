@@ -50,29 +50,6 @@
 
 /* @end */
 
-/* @group Modal animation
-  --------------------------------------------------------------------------- */
-
-.js-modal-animated {
-
-	.l-main-aux__inner {
-		-webkit-filter: blur(2px);
-	}
-}
-
-.l-main-aux__inner {
-	-webkit-filter: blur(0);
-	-webkit-transform: scale(1);
-	-webkit-transform: translateZ(0);
-	@include transition(all linear 200ms);
-}
-
-.modal__window {
-	@include transition(all linear 200ms);
-}
-
-/* @end */
-
 /* Modal styles
   --------------------------------------------------------------------------- */
 
