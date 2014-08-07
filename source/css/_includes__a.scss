@@ -34,7 +34,7 @@
 /* @group i-img-container
   --------------------------------------------------------------------------- */
 
-.i-img-container {
+.i-img-aux {
 	// image wrapper
 	overflow: hidden;
 	display: inline-block;
@@ -46,7 +46,7 @@
 	}
 
 	img {
-		line-height: 0;
+		line-height: 1px;
 		position: static;
 	}
 }

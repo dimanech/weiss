@@ -2,12 +2,12 @@
 
 Deveolped by Dmytro Nechepurenko. Distributed by MIT license.
 
-Some parts are based on works Nicolas Gallagher, Stefan Nitzsche, Tyler Tate, Yahoo UI, HTML5 Boilerplate, Twitter Bootstrap, Zen, Zurb Foundation and others.
+Some parts are based on Nicolas Gallagher, Stefan Nitzsche, Tyler Tate work, Yahoo UI, HTML5 Boilerplate, Twitter Bootstrap, Zen, Zurb Foundation and others.
 
 ## About
 
 Weiss is HTML5-CSS3 blank canvas sass-middleman helper for fast-start development.
-Based around tasks and problems that arise with me every day on my work - so in some cases it is not universal or full production ready framework.
+Based around tasks and problems that arise with me every day in my work, so in some case it`s not universal or full production ready framework.
 
 ### Main features:
 
@@ -19,9 +19,16 @@ Based around tasks and problems that arise with me every day on my work - so in 
 * Media Query structure and mixins
 * WAI ARIA support
 
-![Weiss version 3.1 (Barry)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
+![Weiss version 3.2 (Barry)](https://raw.github.com/dimanech/weiss/master/source/images/example/content-example-img.png)
 
 ## Change Log
+
+**[v3.2](https://github.com/dimanech/weiss/archive/v3.2.zip)**
+
+* Added media quiries example
+* Remove width visualizer
+* Cleaning up all code
+* Updating js libraries
 
 **[v3.1](https://github.com/dimanech/weiss/archive/v3.1.zip)**
 

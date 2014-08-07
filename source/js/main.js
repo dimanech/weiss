@@ -21,26 +21,20 @@ scripts.Common = {
 		$('input[placeholder], textarea[placeholder]').placeholder();
 	},
 
-	formSupport : function () {
-		var inputs = $('input[type="password"],input[type="search"], input[type="text"], textarea, select'),
-			validationItem = ".js-form-validation .l-form__item";
+    formSupport: function () {
+        var inputs = $('input[type="password"],input[type="search"], input[type="text"], textarea, select'),
+            validationItem = ".js-form-validation .l-form__item";
 
-		inputs.wrap('<span class="form__input-box">');
+        inputs.wrap('<span class="form__input-box">');
 
-		$("body").on("input propertychange", validationItem, function (e) {
-			$(this).toggleClass("l-form__item_value", !!$(e.target).val());
-		}).on("focus", validationItem, function () {
-				$(this).addClass("l-form__item_focus");
-			}).on("blur", validationItem, function () {
-				$(this).removeClass("l-form__item_focus");
-			});
-
-//		inputs.on('hover', function() {
-//			$(this).parent('.form__input-box').toggleClass('form__input-box_hover');
-//		});
-
-
-	},
+        $("body").on("input propertychange", validationItem,function (e) {
+            $(this).toggleClass("l-form__item_value", !!$(e.target).val());
+        }).on("focus", validationItem,function () {
+                $(this).addClass("l-form__item_focus");
+            }).on("blur", validationItem, function () {
+                $(this).removeClass("l-form__item_focus");
+            });
+    },
 
 	init: function () {
 		var scripts = this;

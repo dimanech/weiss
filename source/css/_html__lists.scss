@@ -37,12 +37,7 @@ ol ul {
 
 .list {}
 
-.list_unstyled {
-	padding: 0;
-	list-style: none;
-}
-
-.list_flat {
+%list-flat {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -53,14 +48,19 @@ ol ul {
 	}
 }
 
-.list_inline {
-	margin: 0;
+.list_unstyled {
 	padding: 0;
 	list-style: none;
+}
+
+.list_flat {
+	@extend %list-flat;
+}
+
+.list_inline {
+	@extend %list-flat;
 
 	.list__item {
-		margin: 0;
-		padding: 0;
 		display: inline-block;
 		vertical-align: top;
 

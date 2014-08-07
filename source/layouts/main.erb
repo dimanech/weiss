@@ -48,10 +48,11 @@
 		<meta name="description" content="" />
 
 		<%= stylesheet_link_tag "style" %>
-		<%= javascript_include_tag  "modernizr.custom" %>
+		<%= javascript_include_tag "modernizr.custom" %>
+		<%= javascript_include_tag "jquery.min" %>
 
 		<!--[if lt IE 9]>
-			<%= javascript_include_tag  "html5shiv" %>
+			<%= javascript_include_tag "html5shiv" %>
 		<![endif]-->
 	</head>
 	<body>
@@ -118,7 +119,6 @@
 			</div>
 		<![endif]-->
 
-		<%= javascript_include_tag "jquery.min" %>
 		<%= javascript_include_tag "jquery.jstyling.pack" %>
 		<%= javascript_include_tag "jquery.placeholder.min" %>
 		<%= javascript_include_tag "jquery.fancybox-1.3.4.pack" %>
@@ -138,27 +138,27 @@
 					aside2 = $('.region-aside_second');
 				// 2 columns sidebar second
 				$('#twocolumn-s').on('click', function() {
-					main.removeClass().addClass('region-main l-sidebar-second_main weiss-cf');
-					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-second_aside weiss-cf');
-					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-second_aside weiss-cf');
+					main.removeClass().addClass('region-main l-sidebar-second_main i-clfx');
+					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-second_aside i-clfx');
+					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-second_aside i-clfx');
 				});
 				// 2 columns sidebar first
 				$('#twocolumn-f').on('click', function() {
-					main.removeClass().addClass('region-main l-sidebar-first_main weiss-cf');
-					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-first_aside weiss-cf');
-					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-first_aside weiss-cf');
+					main.removeClass().addClass('region-main l-sidebar-first_main i-clfx');
+					aside1.removeClass().addClass('region-aside region-aside_first l-sidebar-first_aside i-clfx');
+					aside2.removeClass().addClass('region-aside region-aside_second l-sidebar-first_aside i-clfx');
 				});
 				// 3 columns
 				$('#threecolumn').on('click', function() {
-					main.removeClass().addClass('region-main l-2sidebars_main weiss-cf');
-					aside1.removeClass().addClass('region-aside region-aside_first l-2sidebars_sidebar-first weiss-cf');
-					aside2.removeClass().addClass('region-aside region-aside_second l-2sidebars_sidebar-second weiss-cf');
+					main.removeClass().addClass('region-main l-2sidebars_main i-clfx');
+					aside1.removeClass().addClass('region-aside region-aside_first l-2sidebars_sidebar-first i-clfx');
+					aside2.removeClass().addClass('region-aside region-aside_second l-2sidebars_sidebar-second i-clfx');
 				});
 				// no columns
 				$('#nocolumn').on('click', function() {
-					main.removeClass().addClass('region-main weiss-cf');
-					aside1.removeClass().addClass('region-aside region-aside_first weiss-cf');
-					aside2.removeClass().addClass('region-aside region-aside_second weiss-cf');
+					main.removeClass().addClass('region-main i-clfx');
+					aside1.removeClass().addClass('region-aside region-aside_first i-clfx');
+					aside2.removeClass().addClass('region-aside region-aside_second i-clfx');
 				});
 			});
 		</script>

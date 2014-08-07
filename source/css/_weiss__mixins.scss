@@ -6,17 +6,17 @@
 @mixin i-hide_vis {
 	border: none;
 	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
 	position: absolute !important;
-	width: 1px;
-
-	.ie6-7 & {
-		clip: rect(1px 1px 1px 1px);
-	}
 }
+
+//.ie6-7 & {
+//	clip: rect(1px 1px 1px 1px);
+//}
 
 // ============================================================================
 //  Layout support

@@ -23,7 +23,7 @@ function modal() {
 		modalType.find('.modal__content').html('').prepend($($(this).attr('href')).html());
 
 		modalType.fadeIn(200);
-		$('body, html').animate({scrollTop:0}, 500);
+//		$('body, html').animate({scrollTop:0}, 500);
 	});
 
 	modalClose.on('click', function () {

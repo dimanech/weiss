@@ -25,7 +25,7 @@ $twoSdbarsMainWidth: grid-width(4);
 
 .l-2sidebars_main {
 	float: left;
-	margin-left: $asideWidth + grid-width(12);
+	margin-left: $asideWidth;
 	width: $twoSdbarsMainWidth;
 
 	//.ie6-7 & {
