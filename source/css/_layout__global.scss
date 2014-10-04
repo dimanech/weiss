@@ -6,12 +6,12 @@
 ============================================================================= */
 
 %container {
-	width: $gw-total;
+	width: grid-width(12);
 	margin: 0 auto;
 }
 
 body {
-	min-width: $gw-total;
+	min-width: grid-width(12);
 }
 
 .l-main-aux {

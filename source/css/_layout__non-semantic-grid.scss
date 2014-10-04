@@ -13,7 +13,7 @@
 }
 
 .l-row_w {
-	width: $gw-total;
+	width: grid-width(12);
 	margin: 0 auto;
 }
 
@@ -24,12 +24,12 @@
 	float: left;
 }
 
-//@each $columns in 1, 2, 4, 6, 8, 10, 12 {
-//	.l-span_#{$columns} {
-//		width: grid-width($columns);
-//		margin-right: $gw-gutter;
-//	}
-//}
+@each $columns in 1, 2, 4, 6, 8, 10, 12 {
+	.l-span_#{$columns} {
+		width: grid-width($columns);
+		margin-right: $gw-gutter;
+	}
+}
 
 /* Non-semantic grid support : Layout type */
 
@@ -51,10 +51,10 @@
 // @group Susy
 //  ---------------------------------------------------------------------------
 
-@each $columns in 1, 2, 4, 6, 8, 10, 12 {
-	.l-span_#{$columns} {
-		@include span-columns($columns,12);
-	}
-}
+//@each $columns in 1, 2, 4, 6, 8, 10, 12 {
+//	.l-span_#{$columns} {
+//		@include span-columns($columns,12);
+//	}
+//}
 
 // @end

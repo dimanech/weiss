@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Pre-commit hooks
+
+gulp
+
+if [ $? -ne 0 ]; then
+ echo "Gulp precommit failed, please fix code and recommit"
+ exit 1
+fi
+ exit 0

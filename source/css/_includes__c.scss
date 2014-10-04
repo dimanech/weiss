@@ -2,10 +2,10 @@
 @import "weiss__mixins";
 
 /* ============================================================================
-		MASTER-CLASSES C
+		INCLUDE CLASSES C (responsive)
 ============================================================================= */
 
-/* @group Width targeting hide/show
+/* @group Media targeting for hide/show elements
   --------------------------------------------------------------------------- */
 
 .i-hide {
@@ -18,15 +18,23 @@
 		display: none;
 	}
 
-	.i-show_mobile {
+	.i-show_mobile_b {
 		display: block;
+	}
+
+	.i-show_mobile_ib {
+		display: inline-block;
+	}
+
+	.i-show_mobile_tc {
+		display: table-cell;
 	}
 
 }
 
 /* @end */
 
-/* @group Orientation targeting hide
+/* @group Orientation targeting for hide/show elements
   --------------------------------------------------------------------------- */
 
 .i-show_landscape,
@@ -42,10 +50,6 @@
 @media #{$media-portrait} {
 	.i-show_landscape,
 	.i-hide_portrait {
-		display: block;
-	}
-	.i-hide_landscape,
-	.i-show_portrait {
 		display: none;
 	}
 }
@@ -53,10 +57,6 @@
 @media #{$media-landscape} {
 	.i-show_portrait,
 	.i-hide_landscape {
-		display: block;
-	}
-	.i-hide_portrait,
-	.i-show_landscape {
 		display: none;
 	}
 }

@@ -224,6 +224,11 @@ $formColor: $baseColor;
 			color: lighten($formColor, 10%);
 		}
 
+		&::-ms-input-placeholder {
+			font-style: normal;
+			color: lighten($formColor, 10%);
+		}
+
 		&:focus {
 			&::-webkit-input-placeholder {
 				color: lighten($formColor, 30%);
@@ -231,6 +236,11 @@ $formColor: $baseColor;
 
 			&:-moz-placeholder {
 				color: lighten($formColor, 30%);
+			}
+
+			&::-ms-input-placeholder {
+				font-style: normal;
+				color: lighten($formColor, 10%);
 			}
 		}
 	}
