@@ -7,6 +7,18 @@ scripts.Common = {
 		$('html').removeClass('no-js');
 	},
 
+	isModernBrowser: function () {
+		if ( // modernizer alternative
+			'querySelector' in document &&
+			'localStorage' in window &&
+			'addEventListener' in window 
+			) {
+			return true;
+		} else {
+			return false;
+		}
+	},
+
 	jStylingInit: function () {
 		if ($('.js-form-custom').length) {
 			$.jStyling.createSelect($('.js-form-custom select'));
@@ -42,7 +54,7 @@ scripts.Common = {
 		scripts.detecting();
 
 		$(function () {
-//			if (!window.Modernizr || !Modernizr.generatedcontent) {
+//			if (!scripts.isModernBrowser) {
 //
 //			}
 

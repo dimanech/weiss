@@ -35,6 +35,21 @@ set :images_dir, 'images'
 #sudo middleman server -p 80 -e development
 
 ################################################################################
+# Helpers
+################################################################################
+
+helpers do
+
+  # Renders a stylesheet asset inline.
+  def stylesheet_inline( name )
+    content_tag :style do
+      sprockets[ "#{name}.css" ].to_s
+    end
+  end
+
+end
+
+################################################################################
 # Build
 ################################################################################
 
